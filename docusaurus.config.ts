@@ -10,7 +10,7 @@ import { micromark } from 'micromark';
 
 const config: Config = {
   title: 'Layr0 Org Documentation',
-  tagline: 'Official docs for layr0.org',
+  tagline: 'Official docs for Layr0 market Orchestrator',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -104,7 +104,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/intro',
+              to: '/docs/why-to-build-with-Layr0',
             },
           ],
         },
@@ -112,16 +112,16 @@ const config: Config = {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Layr0 Org',
+              href: 'https://layr0.org',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://community.layr0.org',
             },
             {
               label: 'X',
-              href: 'https://x.com/docusaurus',
+              href: 'https://x.com/Layr0org',
             },
           ],
         },
@@ -139,7 +139,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} Huntr One. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} Radii Lab. Built with Docusaurus.`,
     },
     prism: {
       theme: prismThemes.github,
