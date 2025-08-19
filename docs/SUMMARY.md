@@ -171,47 +171,7 @@
 
 * [Strategy Management](strategy-management.md)
 
-## Developers
-
-* [Design Documentation](developers/design-documentation/README.md)
-  * [Architecture](developers/design-documentation/architecture.md)
-  * [API Layer](developers/design-documentation/api-layer.md)
-  * [Broker Integerations](developers/design-documentation/broker-integerations.md)
-  * [Database Layer](developers/design-documentation/database-layer.md)
-  * [Authentication Platforms](developers/design-documentation/authentication-platforms.md)
-  * [Configuration](developers/design-documentation/configuration.md)
-  * [Utilities](developers/design-documentation/utilities.md)
-  * [Broker Integration Checklist](developers/design-documentation/broker-integration-checklist.md)
 
 ## Change Log
 
-* [Version 1.0.0.29 Launched](change-log/version-1.0.0.29-launched.md)
-* [Version 1.0.0.28 Launched](change-log/version-1.0.0.28-launched.md)
-* [Version 1.0.0.27 Launched](change-log/version-1.0.0.27-launched.md)
-* [Version 1.0.0.26 Launched](change-log/version-1.0.0.26-launched.md)
-* [Version 1.0.0.25 Launched](change-log/version-1.0.0.25-launched.md)
-* [Version 1.0.0.24 Launched](change-log/version-1.0.0.24-launched.md)
-* [Version 1.0.0.23 Launched](change-log/version-1.0.0.23-launched.md)
-* [Version 1.0.0.22 Launched](change-log/version-1.0.0.22-launched.md)
-* [Version 1.0.0.21 Launched](change-log/version-1.0.0.21-launched.md)
-* [Version 1.0.0.20 Launched](change-log/version-1.0.0.20-launched.md)
-* [Version 1.0.0.19 Launched](change-log/version-1.0.0.19-launched.md)
-* [Version 1.0.0.18 Launched](change-log/version-1.0.0.18-launched.md)
-* [Version 1.0.0.17 Launched](change-log/version-1.0.0.17-launched.md)
-* [Version 1.0.0.16 Launched](change-log/version-1.0.0.16-launched.md)
-* [Version 1.0.0.15 Launched](change-log/version-1.0.0.15-launched.md)
-* [Version 1.0.0.14 Launched](change-log/version-1.0.0.14-launched.md)
-* [Version 1.0.0.13 Launched](change-log/version-1.0.0.13-launched.md)
-* [Version 1.0.0.12 Launched](change-log/version-1.0.0.12-launched.md)
-* [Version 1.0.0.11 Launched](change-log/version-1.0.0.11-launched.md)
-* [Version 1.0.0.10 Launched](change-log/version-1.0.0.10-launched.md)
-* [Version 1.0.0.9 Launched](change-log/version-1.0.0.9-launched.md)
-* [Version 1.0.0.8 Launched](change-log/version-1.0.0.8-launched.md)
-* [Version 1.0.0.7 Launched](change-log/version-1.0.0.7-launched.md)
-* [Version 1.0.0.6 Launched](change-log/version-1.0.0.6-launched.md)
-* [Version 1.0.0.5 Launched](change-log/version-1.0.0.5-launched.md)
-* [Version 1.0.0.4 Launched](change-log/version-1.0.0.4-launched.md)
-* [Version 1.0.0.3 Launched](change-log/version-1.0.0.3-launched.md)
-* [Version 1.0.0.2 Launched](change-log/version-1.0.0.2-launched.md)
-* [Version 1.0.0.1 Launched](change-log/version-1.0.0.1-launched.md)
-* [Version 1.0.0.0 Launched](change-log/version-1.0.0.0-launched.md)
+
