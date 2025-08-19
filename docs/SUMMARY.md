@@ -40,41 +40,6 @@
   * [Zebu](connect-brokers/brokers/zebu.md)
   * [Zerodha](connect-brokers/brokers/zerodha.md)
 
-## Installation Guidelines
-
-***
-
-* [Getting Started](getting-started/README.md)
-  * [Windows Installation](getting-started/windows-installation/README.md)
-    * [Pre-Requesites](getting-started/windows-installation/pre-requesites.md)
-    * [Setup](getting-started/windows-installation/setup.md)
-    * [Install Dependencies](getting-started/windows-installation/install-dependencies.md)
-    * [Ngrok Config](getting-started/windows-installation/ngrok-config.md)
-    * [Environmental Variables](getting-started/windows-installation/environmental-variables.md)
-    * [Start OpenAlgo](getting-started/windows-installation/start-openalgo.md)
-    * [SSL Verification Failed](getting-started/windows-installation/ssl-verification-failed.md)
-    * [Accessing OpenAlgo](getting-started/windows-installation/accessing-openalgo.md)
-  * [Windows Server Installation](getting-started/windows-server-installation.md)
-  * [Mac OS Installation](getting-started/mac-os-installation/README.md)
-    * [Pre-Requesties](getting-started/mac-os-installation/pre-requesties.md)
-    * [Setup](getting-started/mac-os-installation/setup.md)
-    * [Install Dependencies](getting-started/mac-os-installation/install-dependencies.md)
-    * [Ngrok Config](getting-started/mac-os-installation/ngrok-config.md)
-    * [Environmental Variables](getting-started/mac-os-installation/environmental-variables.md)
-    * [Start OpenAlgo](getting-started/mac-os-installation/start-openalgo.md)
-    * [Install certifi](getting-started/mac-os-installation/install-certifi.md)
-    * [Accessing OpenAlgo](getting-started/mac-os-installation/accessing-openalgo.md)
-  * [Amazon Elastic Beanstalk](getting-started/amazon-elastic-beanstalk.md)
-  * [Ubuntu (No Custom Domain)](getting-started/ubuntu-no-custom-domain.md)
-  * [Ubuntu Server Installation](getting-started/ubuntu-server-installation.md)
-  * [Docker Development](getting-started/docker-development.md)
-  * [Testing OpenAlgo in Cloud](getting-started/testing-openalgo-in-cloud.md)
-  * [SMTP Settings](getting-started/smtp-settings.md)
-  * [TOTP Configuration](getting-started/totp-configuration.md)
-  * [Forgot Password](getting-started/forgot-password.md)
-  * [Upgrade](getting-started/upgrade.md)
-* [Static IP](static-ip.md)
-* [Latency](latency.md)
 
 ## API Documentation
 
