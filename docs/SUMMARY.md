@@ -1,7 +1,7 @@
 # Table of contents
 
 * [What is OpenAlgo?](README.md)
-* [Why to Build with OpenAlgo?](why-to-build-with-openalgo.md)
+* [Why to Build with OpenAlgo?](why-to-build-with-Layr0)
 * [OpenAlgo Architecture](openalgo-architecture.md)
 * [Mini FOSS Universe](mini-foss-universe.md)
 * [Community Support](community-support.md)
@@ -11,7 +11,6 @@
   * [API Analyzer](new-features/api-analyzer.md)
   * [Traffic/Latency Monitor](new-features/traffic-latency-monitor.md)
   * [Chartink Integration](new-features/chartink-integration.md)
-* [Monetization](monetization.md)
 
 ## Connect Brokers
 
