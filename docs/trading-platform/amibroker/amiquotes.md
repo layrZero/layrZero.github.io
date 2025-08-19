@@ -22,11 +22,13 @@ Note :  As of now kotak not supporting intraday/historical data API
 
 
 
-{% file src="../../.gitbook/assets/OpenAlgo.ads" %}
+[Get the Amiquotes Plugin Here](@site/static/img/assets/OpenAlgo.ads)
 
 Download the file and save under **Amibroker -> Amiquotes -> DataSource Folder**
 
-<figure><img src="../../.gitbook/assets/image (64).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (64).png').default}
+/>
 
 
 
@@ -34,21 +36,29 @@ Download the file and save under **Amibroker -> Amiquotes -> DataSource Folder**
 
 Open Amibroker Goto File Menu -> New -> Database
 
-<figure><img src="../../.gitbook/assets/image (65).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (65).png').default}
+/>
 
 Create a New Database
 
 Enter the Database Name, Base Time Interval and Click Create
 
-<figure><img src="../../.gitbook/assets/image (66).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (66).png').default}
+/>
 
 Enter the Database Source as (local database) and Number of Bars as 75000
 
-<figure><img src="../../.gitbook/assets/image (67).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (67).png').default}
+/>
 
 Now click on Intraday Settings and Enable Allow Mixed EOD/Interval data and press ok
 
-<figure><img src="../../.gitbook/assets/image (68).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (68).png').default}
+/>
 
 
 
@@ -56,15 +66,21 @@ Now click on Intraday Settings and Enable Allow Mixed EOD/Interval data and pres
 
 Add Ticker Symbols from the Symbols menu -> New
 
-<figure><img src="../../.gitbook/assets/image (69).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/Split Order - Options.png').default}
+/>
 
 You can Also add the ticker symbol with comma separated
 
-<figure><img src="../../.gitbook/assets/image (70).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/Split Order - Options.png').default}
+/>
 
 If you want to import bulk symbols consider using Watchlist import method (Supports .txt or .csv or .tls format)
 
-<figure><img src="../../.gitbook/assets/image (71).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (71).png').default}
+/>
 
 
 
@@ -72,15 +88,21 @@ If you want to import bulk symbols consider using Watchlist import method (Suppo
 
 Open Amiquote from Tools Menu -> Auto-update quotes (AmiQuote)
 
-<figure><img src="../../.gitbook/assets/image (72).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (72).png').default}
+/>
 
 From the dropdown of Amiquote Select OpenAlgo
 
-<figure><img src="../../.gitbook/assets/image (73).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (73).png').default}
+/>
 
 Alternatively, you can also import the openalgo template using the import method. Goto **Data Source Menu -> Import**
 
-<figure><img src="../../.gitbook/assets/image (76).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (76).png').default}
+/>
 
 
 
@@ -90,23 +112,33 @@ Get the OpenAlgo API Key by visiting **openalgo -> Dashboard -> Click on Profile
 
 Create one if you installed openalgo for the first time. Copy the API key and paste in the User-definable data source -> API Key Section as shown below and press ok
 
-<figure><img src="../../.gitbook/assets/image (78).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (78).png').default}
+/>
 
 Now Select the desired interval and set Run every 1min  and press the play button
 
-<figure><img src="../../.gitbook/assets/image (79).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (79).png').default}
+/>
 
 Now the Data Download from the Broker via OpenAlgo Starts
 
-<figure><img src="../../.gitbook/assets/image (80).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (80).png').default}
+/>
 
 Now you can see that openalgo is Auto updating the Amibroker Database every 1 minute
 
-<figure><img src="../../.gitbook/assets/image (81).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (81).png').default}
+/>
 
 Make sure that Charts are loaded properly.
 
-<figure><img src="../../.gitbook/assets/Amibroker Chart.png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/Amibroker Chart.png').default}
+/>
 
 Start using your brokers data for your analysis purpose.\
 

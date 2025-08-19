@@ -4,7 +4,9 @@
 
 This python code fetches and visualizes  Open Interest (OI) profile for NIFTY options, helping traders identify support and resistance levels based on options market data.
 
-<figure><img src="../../.gitbook/assets/Nifty Open Interest.png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/Nifty Open Interest.png').default}
+/>
 
 ### Features
 

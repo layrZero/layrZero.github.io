@@ -2,7 +2,9 @@
 
 This OpenAlgo SplitOrder Trading Module for AmiBroker is designed to seamlessly integrate manual button-based trading into an algorithmic workflow. It allows traders to place orders on options (ATM, ITM, OTM for both Calls and Puts) directly from the AmiBroker chart interface by clicking visual buttons. Each button sends orders through the OpenAlgo Bridge using the `/splitorder` endpoint, which intelligently splits large orders into smaller chunks as per the configured split size. The system dynamically calculates the ATM, ITM, and OTM strikes based on live market data, user-defined offsets, and strike intervals, ensuring that the correct option symbols are generated for execution. A graphical dashboard embedded in the chart shows the current calculated strikes, internal memory for each option leg, cumulative quantities traded, and the current algo enable/disable status, providing traders with full visibility and control.
 
-<figure><img src="../../.gitbook/assets/Split Order - Options.png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/Split Order - Options.png').default}
+/>
 
 Additionally, the module tracks how many shares or lots have been cumulatively ordered through each button. This allows precise exits later by automatically sending exactly the accumulated quantity in the opposite direction, ensuring positions are squared off cleanly. It includes a “Close All” button that closes all open positions for all option legs using the exact quantities stored in memory, and also provides a “Clear Memory” button to reset internal counters without sending any orders. The system can be configured for both option buyers (to initiate long call or put positions) and option sellers (to short calls or puts and later cover), making it highly versatile for different option trading strategies. This entire workflow is designed for intraday or short-term traders who want to streamline order placement, reduce manual errors, and maintain a tight control over their option trades directly from their AmiBroker environment.
 

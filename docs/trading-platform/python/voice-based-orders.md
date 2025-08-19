@@ -2,11 +2,13 @@
 
 
 
-{% embed url="https://www.youtube.com/watch?v=4aUJFCw8gmM" %}
+import YouTube from '@site/src/components/YouTube';
+
+<YouTube id="4aUJFCw8gmM" title="Voice-based-Orders" />
 
 This is an experimental feature using OpenAlgo & Groq (Whisper Large V3 Model). This system allows users to place orders via voice commands. The voice commands are translated from speech to text using the OpenAI Whisper large v3 model, and then the transcription is fed to OpenAlgo to execute the order.
 
-{% embed url="https://github.com/marketcalls/openalgo-voice-based-orders" %}
+[Checkout the Github for this project](https://github.com/marketcalls/openalgo-voice-based-orders)
 
 **How to Use the OpenAlgo Voice-Based Trading System**
 

@@ -51,7 +51,7 @@ The template contains two main sheets:
 | G3     | Total Quantity  | 100                                                                                      |
 | H3     | Price           | 1500.50 (for LIMIT/STOP)                                                                 |
 | I3     | Trigger Price   | 1480.00 (for STOP)                                                                       |
-| J3     | Split Size      | <p>0 - No SplitOrder<br>Specific Number - Send Split order  with split size quantity</p> |
+| J3     | Split Size      | <p>0 - No SplitOrder<br/>Specific Number - Send Split order  with split size quantity</p> |
 | K3     | Product Type    | INTRADAY/DELIVERY                                                                        |
 
 #### Split Order Functionality

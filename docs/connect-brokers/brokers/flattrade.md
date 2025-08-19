@@ -29,7 +29,7 @@ Enter your Shoonya login credentials.
 | App Name      | Your App Name                                                                                                                                            |
 | ------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | App ShortName | Short Name of your APP                                                                                                                                   |
-| Redirect URL  | <p>URL to which we need to redirect after successful login authentication.<br>Note: Code to generate the token will be sent as parameter to this URL</p> |
+| Redirect URL  | <p>URL to which we need to redirect after successful login authentication.<br/>Note: Code to generate the token will be sent as parameter to this URL</p> |
 | Postback URL  | URL to which you will be reciving order updates for the orders placed through API.                                                                       |
 | Description   | Short description about your app                                                                                                                         |
 

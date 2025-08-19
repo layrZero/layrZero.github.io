@@ -18,13 +18,17 @@ Once logged in:
 
 1. Go to `My App` > `Create New Application`
 
-<figure><img src="../../.gitbook/assets/image (103).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (103).png').default}
+/>
 
 1. Create two separate apps:
    * **Interactive Order API**
    * **Market Data API**
 
-<figure><img src="../../.gitbook/assets/image (104).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (104).png').default}
+/>
 
 #### Details to Fill:
 
@@ -34,7 +38,9 @@ Once logged in:
 * **Company Name**: OpenAlgo (or your own)
 * Choose the correct **API Package** depending on the app (Order or Market Data).
 
-<figure><img src="../../.gitbook/assets/image (105).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (105).png').default}
+/>
 
 Once submitted, wait for approval from the broker. After approval, the status will turn **Active**.
 

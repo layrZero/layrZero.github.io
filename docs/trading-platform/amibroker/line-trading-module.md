@@ -5,7 +5,9 @@ The line Trading Automation tool is designed for Manual traders who want to perf
 \
 
 
-<figure><img src="../../.gitbook/assets/image (42).png" alt=""><figcaption><p>Line Trade Automation v1.0</p></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (42).png').default}
+/>
 
 ### **What is Line Trading Automation 1.0?**
 
@@ -935,39 +937,54 @@ _SECTION_END();
 
 where the characters ‘B’. ‘X’, ‘S’, ‘C’ are used along with horizontal or trendline study names.
 
-<figure><img src="../../.gitbook/assets/image (43).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (43).png').default}
+/>
 
 ### Type of Trendline Signals
 
 \
 
 
-<figure><img src="../../.gitbook/assets/image (44).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (44).png').default}
+/>
 
 ### Type of Entry and Exit Trendlines
 
 \
 
 
-<figure><img src="../../.gitbook/assets/image (45).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (45).png').default}
+/>
 
 ### Drawing Trend Line and Assigning Study Name
 
 \
 
 
-<figure><img src="../../.gitbook/assets/image (46).png" alt=""><figcaption><p>Drawing trendlines and Assigning study ID</p></figcaption></figure>
+
+<img
+  src={require('@site/static/img/assets/image (46).png').default}
+/>
 
 ### Pyramiding and Pyramiding Settings with Targets
 
 \
 
 
-<figure><img src="../../.gitbook/assets/image (47).png" alt=""><figcaption><p>Using Line Automation for Pyramiding</p></figcaption></figure>
+
+<img
+  src={require('@site/static/img/assets/image (47).png').default}
+/>
 
 ### Creating Multiple Entries and Multiple Stops using Line Automation Module
 
 \
 
 
-<figure><img src="../../.gitbook/assets/image (48).png" alt=""><figcaption><p>Using Line Automation with Multiple Long Entry and Long Exit Signals</p></figcaption></figure>
+
+<img
+  src={require('@site/static/img/assets/image (48).png').default}
+/>

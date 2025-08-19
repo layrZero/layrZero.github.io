@@ -4,7 +4,7 @@ This CSV Exploration Module can be used to trade intraday/positional strategies 
 \
 Download the CSV Files (Keep the csv file in the filepath defined in the AFL Code path)
 
-{% file src="../../.gitbook/assets/symbols.zip" %}
+[Get the CSV files here](@site/static/img/assets/symbols.zip)
 
 Amibroker AFL Code for CSV Exploration Module (Internet Functions Module - Modern Method)
 

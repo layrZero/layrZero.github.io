@@ -18,7 +18,9 @@ OpenAlgo makes algorithmic trading accessible and straightforward by providing s
 
 
 
-<figure><img src="../../.gitbook/assets/image (38).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (38).png').default}
+/>
 
 * **Enable TOTP:**
   * If you already have TOTP enabled but do not have the "TOTP Key," you will need to disable TOTP and then enable it again.
@@ -42,14 +44,18 @@ OpenAlgo makes algorithmic trading accessible and straightforward by providing s
    * Go to `Developer’s APIs -> Get API Keys`.
    * Keep this page open and proceed to the next step.
 
-<figure><img src="../../.gitbook/assets/image (39).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (39).png').default}
+/>
 
 ### **Step 3: Save API Details**
 
 1. **Save API Details:**
    * Save the generated User Key, User ID. Encryption Key, Later, you will add these details to the environmental variables along with the redirect URL.
 
-<figure><img src="../../.gitbook/assets/image (40).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (40).png').default}
+/>
 
 **Get the Client ID**&#x20;
 
@@ -65,7 +71,9 @@ OpenAlgo makes algorithmic trading accessible and straightforward by providing s
 \
 
 
-<figure><img src="../../.gitbook/assets/image (41).png" alt=""><figcaption></figcaption></figure>
+<img
+  src={require('@site/static/img/assets/image (41).png').default}
+/>
 
 Save the generated User\_Key, User\_ID, client\_id and Encryption\_Key. Later we will be adding the apikey in the [environmental variable](https://docs.openalgo.in/getting-started/windows-installation/environmental-variables) along with the redirect url
 
