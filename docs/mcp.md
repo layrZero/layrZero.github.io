@@ -65,15 +65,13 @@ Add the following configuration to your MCP client, replacing the placeholder pa
       "args": [
         "exec",
         "-i",
-        "-e", "HOST_SERVER=<YOUR PUBLIC STATIC URL>",
-        "-e", "MCP_PUBLIC_BASE_URL=<YOUR PUBLIC STATIC URL>",
-        "-e", "OPENALGO_HOST=<YOUR PUBLIC STATIC URL>",
         "openalgo-web",
         "/app/.venv/bin/python",
         "/app/mcp/mcpserver.pyc"
       ]
     }
   }
+}
 
 ```
 
