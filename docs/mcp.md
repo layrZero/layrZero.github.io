@@ -61,15 +61,20 @@ Add the following configuration to your MCP client, replacing the placeholder pa
 {
   "mcpServers": {
     "openalgo": {
-      "command": "D:\\openalgo-mcp\\openalgo\\.venv\\Scripts\\python.exe",
+      "command": "docker",
       "args": [
-        "D:\\openalgo-mcp\\openalgo\\mcp\\mcpserver.py",
-        "YOUR_API_KEY_HERE",
-        "http://127.0.0.1:5000"
+        "exec",
+        "-i",
+        "-e", "HOST_SERVER=<YOUR PUBLIC STATIC URL>",
+        "-e", "MCP_PUBLIC_BASE_URL=<YOUR PUBLIC STATIC URL>",
+        "-e", "OPENALGO_HOST=<YOUR PUBLIC STATIC URL>",
+        "openalgo-web",
+        "/app/.venv/bin/python",
+        "/app/mcp/mcpserver.pyc"
       ]
     }
   }
-}
+
 ```
 
 **Configuration File Locations:**
