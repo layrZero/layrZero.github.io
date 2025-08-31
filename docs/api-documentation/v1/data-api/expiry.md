@@ -70,6 +70,8 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/expiry
 - 429 Too Many Requests: Rate limit exceeded (where detectable).
 - 500 Internal Server Error: Unclassified internal failure.
 
+See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
+
 #### NIFTY Options (NFO)
 
 **Request:**
@@ -210,12 +212,14 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/expiry
 
 ### Error Codes
 
-| HTTP Status | Error Type   | Description                    |
-| ----------- | ------------ | ------------------------------ |
-| 200         | Success      | Request processed successfully |
-| 400         | Bad Request  | Invalid request parameters     |
-| 403         | Forbidden    | Invalid API key                |
-| 500         | Server Error | Internal server error          |
+| HTTP Status | Error Type           | Description                                                     |
+| ----------- | -------------------- | --------------------------------------------------------------- |
+| 200         | Success              | Request processed successfully                                   |
+| 400         | Bad Request          | Invalid request parameters                                       |
+| 401         | Unauthorized         | Invalid/expired broker session or unauthorized                   |
+| 403         | Forbidden            | Invalid OpenAlgo API key or permission error                     |
+| 429         | Too Many Requests    | Rate limit exceeded (where detectable)                           |
+| 500         | Server Error         | Internal server error (unclassified internal failure)            |
 
 ### Error Messages
 

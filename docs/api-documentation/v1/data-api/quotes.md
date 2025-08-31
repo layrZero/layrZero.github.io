@@ -84,3 +84,5 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/quotes
 - 403 Forbidden: Invalid OpenAlgo API key or permission error.
 - 429 Too Many Requests: Rate limit exceeded (where detectable).
 - 500 Internal Server Error: Unclassified internal failure.
+
+See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.

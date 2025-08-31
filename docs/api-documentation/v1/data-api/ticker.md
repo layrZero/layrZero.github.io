@@ -93,6 +93,8 @@ GET http://127.0.0.1:5000/api/v1/ticker/NSE:RELIANCE?apikey=your_api_key_here&in
 | 429  | Too Many Requests - Rate limit exceeded (where detectable)      |
 | 500  | Internal Server Error - Unclassified internal failure           |
 
+See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
+
 ### Example Usage
 
 For example, to get 5-minute bars for RELIANCE stock from NSE:
