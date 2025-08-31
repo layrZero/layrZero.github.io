@@ -79,3 +79,10 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/symbol
 | symbol         | String  | Trading symbol                             |
 | tick\_size     | Float   | Minimum price movement                     |
 | token          | String  | Token ID                                   |
+
+## Error Responses
+
+- 401 Unauthorized: Invalid/expired broker session or unauthorized.
+- 403 Forbidden: Invalid OpenAlgo API key or permission error.
+- 429 Too Many Requests: Rate limit exceeded (where detectable).
+- 500 Internal Server Error: Unclassified internal failure.

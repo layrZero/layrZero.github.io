@@ -38,7 +38,8 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/quotes
     "oi": 106860000,
     "open": 269,
     "prev_close": 268.52,
-    "volume": 4214304
+    "volume": 4214304,
+    "timestamp": 1621818065
   },
   "status": "success"
 }
@@ -75,3 +76,11 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/quotes
 | oi          | number | Open Interest                |
 | prev\_close | number | Previous day's closing price |
 | volume      | number | Total traded volume          |
+| timestamp   | number | Unix epoch time for the quote|
+
+## Error Responses
+
+- 401 Unauthorized: Invalid/expired broker session or unauthorized.
+- 403 Forbidden: Invalid OpenAlgo API key or permission error.
+- 429 Too Many Requests: Rate limit exceeded (where detectable).
+- 500 Internal Server Error: Unclassified internal failure.

@@ -104,3 +104,10 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/history
 1. Always check supported intervals first using the intervals API
 2. Use exact interval strings from intervals API response
 3. All timestamps are in Unix epoch format
+
+## Error Responses
+
+- 401 Unauthorized: Invalid/expired broker session or unauthorized.
+- 403 Forbidden: Invalid OpenAlgo API key or permission error.
+- 429 Too Many Requests: Rate limit exceeded (where detectable).
+- 500 Internal Server Error: Unclassified internal failure.

@@ -82,11 +82,13 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/search
 
 ### Error Codes
 
-| Code | Description                      |
-| ---- | -------------------------------- |
-| 400  | Bad Request - Invalid parameters |
-| 403  | Forbidden - Invalid API key      |
-| 500  | Internal Server Error            |
+| Code | Description                                                     |
+| ---- | --------------------------------------------------------------- |
+| 400  | Bad Request - Invalid parameters                                |
+| 401  | Unauthorized - Invalid/expired broker session or unauthorized   |
+| 403  | Forbidden - Invalid OpenAlgo API key or permission error        |
+| 429  | Too Many Requests - Rate limit exceeded (where detectable)      |
+| 500  | Internal Server Error - Unclassified internal failure           |
 
 ### Examples
 

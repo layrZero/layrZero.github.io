@@ -84,10 +84,14 @@ GET http://127.0.0.1:5000/api/v1/ticker/NSE:RELIANCE?apikey=your_api_key_here&in
 
 ### Error Responses
 
-* 400: Bad Request - Invalid parameters
-* 403: Forbidden - Invalid API key
-* 404: Not Found - Broker module not found
-* 500: Internal Server Error - Unexpected error
+| Code | Description                                                     |
+| ---- | --------------------------------------------------------------- |
+| 400  | Bad Request - Invalid parameters                                |
+| 401  | Unauthorized - Invalid/expired broker session or unauthorized   |
+| 403  | Forbidden - Invalid OpenAlgo API key or permission error        |
+| 404  | Not Found - Broker module not found                             |
+| 429  | Too Many Requests - Rate limit exceeded (where detectable)      |
+| 500  | Internal Server Error - Unclassified internal failure           |
 
 ### Example Usage
 
