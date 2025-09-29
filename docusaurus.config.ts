@@ -11,7 +11,7 @@ import { micromark } from 'micromark';
 const config: Config = {
   title: 'Layr0 Org Documentation',
   tagline: 'Official docs for Layr0 market Orchestrator',
-  favicon: 'img/favicon.ico',
+  favicon: 'img/logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -116,7 +116,7 @@ const config: Config = {
           items: [
             {
               label: 'Tutorial',
-              to: '/docs/why-to-build-with-Layr0',
+              to: '/docs/SUMMARY',
             },
           ],
         },
