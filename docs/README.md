@@ -1,162 +1,54 @@
-# What is OpenAlgo?
+# What is Layr0 India Market Connector?
 
-[OpenAlgo ](https://openalgo.in/)is a self-hosted platform that makes automating trading orders easy and efficient. Designed with the flexibility to operate from your desktop, laptop, or on servers, OpenAlgo is built using the Python Flask Framework. It features a sleek and user-friendly UI designed with DaisyUI/Tailwind CSS and uses a robust SQLite database for seamless local data management.
+Layr0 India Market Connector (IMC) is a self-hosted broker gateway for Indian market automation. It gives trading apps, scripts, and internal tools one local REST and WebSocket interface while the connector handles broker-specific order routing, analyzer mode, account reads, market data, and strategy reconciliation.
 
+IMC is designed for local-first control. You run the connector, connect the broker account, generate an API key, and call `http://127.0.0.1:5000/api/v1/...` from your app or automation code.
 
+## Core Capabilities
 
-import YouTube from '@site/src/components/YouTube';
+- REST APIs for order placement, modification, cancellation, close-by-strategy, order status, funds, holdings, position book, trade book, market data, options, GTT, and strategy analytics.
+- WebSocket market data for LTP, quote, and depth streams through the IMC WebSocket proxy.
+- Analyzer mode for broker-key scoped simulated execution, with live/analyze mode metadata returned to API clients.
+- Protected mode preconditions for trading/write endpoints so a client cannot unknowingly trade after the server mode changes.
+- Read-only reconciliation through `positionsopen`, which verifies strategy exposure without creating a protected mode lease.
+- Python SDK support through the public `layr0-IMC` package.
 
-<YouTube id="YTvcWxsRvPc" title="MCP Configuration" />
+## Typical Flow
 
-**Download OpenAlgo from Github**
+1. Start the IMC server locally or on your own host.
+2. Connect and authenticate the broker from the IMC UI.
+3. Generate an API key for the selected broker account.
+4. Read account/mode context from APIs such as `funds` or analyzer status.
+5. Send trading requests with the returned mode precondition fields.
+6. Verify orders using `orderstatus` and verify close lifecycle using `positionsopen`.
 
-[Get the Docs downloaded](https://github.com/marketcalls/openalgo)
+## Safety Model
 
-### Key Features 
+IMC separates read paths from write paths:
 
-#### Smart Trading Tools 
+- Trading/write endpoints use protected mode leases.
+- Reconciliation reads such as `positionsopen` are mode-checked but do not create leases.
+- If the server mode changed after the client's last snapshot, IMC returns `SERVER_MODE_SWITCH_DETECTED`.
+- If required mode fields are missing, IMC returns `MODE_PRECONDITION_REQUIRED`.
 
-• **Advanced Order Placement**: Execute trades with precision using smart tools like position size management and automated order splitting.
+## Public SDK
 
-• **Real-Time Order Analysis**: Validate your trading strategies before live deployment using the Analyzer mode to identify and fix issues beforehand.
+Install the SDK:
 
-• **Automated Square-Off:** Utilize one-click and time-based auto square-off functionalities to optimize trading outcomes.
+```bash
+pip install layr0-IMC
+```
 
-• **Position Management**: Ensure trades align with your strategy through smart position tracking and automatic matching.
+Use the SDK:
 
+```python
+import layr0_imc
 
+client = layr0_imc.api(
+    api_key="YOUR_API_KEY",
+    host="http://127.0.0.1:5000",
+)
 
-#### Trading Modes
-
-
-
-• **Live Trading Mode**: Execute real trades with your connected broker when ready.
-
-• **Analyze Mode:** Test and validate strategies without actual execution – ideal for development and testing.
-
-
-
-#### Powerful Integration
-
-
-
-• **Multi-Broker Support**: Compatible with major Indian brokers
-
-
-
-• **Multi-Exchange Support:** Trade across leading Indian exchanges:
-
-• NSE (Equity), NFO (Futures & Options)
-
-• BSE (Equity), BFO (BSE F\&O)
-
-• MCX (Commodity), CDS/BCD (Currency)
-
-• NCDEX (Commodity)
-
-
-
-• **Platform Integration**: Connect with popular trading platforms such as:
-
-• Amibroker, TradingView, MetaTrader 5
-
-• Python, NodeJS, Excel, Google Sheets
-
-\
-
-
-#### Risk Management
-
-
-
-• **Order Validation:** Automatic validation of all order parameters before execution.
-
-• **Position Monitoring:** Real-time tracking of positions and order status.
-
-• **Risk Controls:** Built-in checks for position sizes, order quantities, and price limits.
-
-
-
-
-
-#### Data & Security
-
-
-
-• Local Data Storage: Your data is securely stored on your local device.
-
-• Complete Data Control: Retain full ownership and control of your trading data.
-
-• Detailed Logging: Comprehensive API and order logs for analysis and debugging.
-
-
-
-#### User Experience
-
-\
-
-
-• **Interactive Dashboard**: Monitor algo trading activities in real-time with an intuitive interface.
-
-• **Real-Time Notifications**: Receive instant updates on order status, executions, and system events.
-
-• **Performance Analytics:** Analyze your trading performance with built-in tools.
-
-
-
-#### &#x20;API & Development
-
-
-
-**Flexible API Access:**
-
-• Local API access for desktop applications.
-
-• Ngrok-based internet access for remote connectivity.
-
-• Hosted API access for server deployments.
-
-
-
-**Developer Tools:**
-
-• Comprehensive API documentation.
-
-• Sample strategies and code.
-
-• Debug and testing capabilities.
-
-• WebSocket support for real-time updates.
-
-• **Custom Integration**: Set up your own webhook URL to place trades, enabling unlimited customization.
-
-
-
-### Getting Started 
-
-1\. Download OpenAlgo from GitHub.
-
-2\. Follow the installation guide for your platform (Windows/Mac/Linux).
-
-3\. Connect your broker.
-
-4\. Start automating your trades.
-
-
-
-### Support
-
-
-
-• Join an active Discord community.
-
-• Access comprehensive documentation.
-
-• Benefit from regular updates and improvements.
-
-• Explore professional support options.
-
-\
-
-
-OpenAlgo is more than a trading platform – it’s a complete ecosystem for algorithmic trading. Whether you’re a beginner automating your first strategy or an experienced trader needing advanced capabilities, OpenAlgo equips you with the tools and flexibility to excel in algorithmic trading.
+funds = client.funds()
+print(funds)
+```

@@ -80,11 +80,11 @@ import signal
 import pandas as pd
 import pandas_ta as ta
 from datetime import datetime, timedelta
-from openalgo import api
+from Layr0 IMC import api
 
-# Initialize OpenAlgo client
+# Initialize Layr0 IMC client
 client = api(
-    api_key="openalgo-api-key",
+    api_key="Layr0 IMC-api-key",
     host="http://127.0.0.1:5000",
     ws_url="ws://127.0.0.1:8765"
 )

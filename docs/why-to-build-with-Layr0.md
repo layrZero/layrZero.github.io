@@ -4,7 +4,7 @@ sidebar_position: 4
 
 # Why to Build with Layr0?
 
-_“Why should I use OpenAlgo when I can just build my strategy directly on top of the broker’s SDK or API?”_
+_“Why should I use Layr0 IMC when I can just build my strategy directly on top of the broker’s SDK or API?”_
 
 If you’ve been asking this, you're not alone. Many developers and traders start with direct broker APIs, thinking it’s the fastest way to automate trades. And sure—it works. But then the real issues show up:
 
@@ -16,7 +16,7 @@ What if you want to migrate your strategy from Broker A to Broker B?
 
 That’s when most realize the broker SDK is just the starting point—not the solution.
 
-**OpenAlgo is built to handle all that overhead for you.** It’s a full-stack automation framework, not just an API wrapper. And it’s fully **open source under the AGPL license**, meaning you have the freedom to modify, deploy, and self-host without vendor lock-in or commercial restriction.
+**Layr0 IMC is built to handle all that overhead for you.** It’s a full-stack automation framework, not just an API wrapper. And it’s fully **open source under the AGPL license**, meaning you have the freedom to modify, deploy, and self-host without vendor lock-in or commercial restriction.
 
 <img
   src={require('@site/static/img/assets/image (110).png').default}
@@ -25,7 +25,7 @@ That’s when most realize the broker SDK is just the starting point—not the s
 
 ***
 
-### What Makes OpenAlgo Different?
+### What Makes Layr0 IMC Different?
 
 #### Strategy Management Engine
 
@@ -33,11 +33,11 @@ Define, activate, pause, and monitor strategies—whether they come from Python,
 
 #### Real-Time Quote Layer (Common WebSockets)
 
-Instead of rewriting code for each broker’s WebSocket implementation, OpenAlgo offers a **Common WebSocket layer**. One interface, multiple brokers—streaming normalized market data, ready for use by your strategies.
+Instead of rewriting code for each broker’s WebSocket implementation, Layr0 IMC offers a **Common WebSocket layer**. One interface, multiple brokers—streaming normalized market data, ready for use by your strategies.
 
 #### Unified Symbol System
 
-OpenAlgo maintains a **Common Symbol Format**, so a strategy written using one broker’s symbol conventions will continue to work with others—no tedious renaming or mapping required. Whether it's NSE, BSE, or MCX, symbol translation is handled internally.
+Layr0 IMC maintains a **Common Symbol Format**, so a strategy written using one broker’s symbol conventions will continue to work with others—no tedious renaming or mapping required. Whether it's NSE, BSE, or MCX, symbol translation is handled internally.
 
 #### Broker-Agnostic API Layer
 
@@ -49,7 +49,7 @@ All REST APIs for placing orders, fetching positions, or getting quotes are **br
 
 ### Speed, Stability, and Control
 
-* **HTTP Connection Pooling** is baked into OpenAlgo's broker interfaces. This drops your order latency to **50ms–120ms**, compared to **150ms–250ms** if you hit broker APIs directly via standalone scripts.
+* **HTTP Connection Pooling** is baked into Layr0 IMC's broker interfaces. This drops your order latency to **50ms–120ms**, compared to **150ms–250ms** if you hit broker APIs directly via standalone scripts.
 * **Historify** module manages all your historical data download needs: 1-minute bars, EOD data, and master contract management are scheduled and stored automatically—no scripts required.
 * **API Analyzer** acts as a local sandbox to simulate trades and strategy inputs without sending real orders—perfect for debugging signals.
 
@@ -57,7 +57,7 @@ All REST APIs for placing orders, fetching positions, or getting quotes are **br
 
 ### Deployment Comes Secure by Default
 
-OpenAlgo ships with strong default protections:
+Layr0 IMC ships with strong default protections:
 
 * Cross-Origin Resource Sharing (CORS) rules
 * Content Security Policy (CSP) headers
@@ -83,13 +83,13 @@ You certainly can. But here’s what you’d likely need to build on your own:
 * Historical data download and storage
 * Monitoring, recon, and logging infrastructure
 
-OpenAlgo gives you all of this—**pre-wired, tested, documented**, and ready to use.
+Layr0 IMC gives you all of this—**pre-wired, tested, documented**, and ready to use.
 
 ***
 
 ### Open Source That Gives You Real Freedom
 
-OpenAlgo is licensed under **AGPL**, which means:
+Layr0 IMC is licensed under **AGPL**, which means:
 
 * You can self-host and modify everything
 * You can build commercial systems on top of it (with license compliance)
@@ -104,9 +104,9 @@ You’re not just running a script—you’re running an infrastructure designed
 
 If you're building your own trading system, don't just look at what a broker's API _can_ do. Look at what it _doesn’t_ do.
 
-OpenAlgo doesn’t replace your strategy logic—it **amplifies it** with the tools needed to operate, monitor, test, and deploy with confidence.
+Layr0 IMC doesn’t replace your strategy logic—it **amplifies it** with the tools needed to operate, monitor, test, and deploy with confidence.
 
-And when the day comes that you want to switch brokers or scale across multiple ones, you’ll be glad your system was built on **OpenAlgo’s broker-agnostic foundation**.
+And when the day comes that you want to switch brokers or scale across multiple ones, you’ll be glad your system was built on **Layr0 IMC’s broker-agnostic foundation**.
 
 ***
 

@@ -1,6 +1,6 @@
 # 5Paisa
 
-OpenAlgo makes algorithmic trading accessible and straightforward by providing seamless integration with various brokers, including 5Paisa. This documentation will guide you through the process of configuring your 5Paisa account to work with OpenAlgo, ensuring you can automate your trading strategies efficiently. Follow the steps below to enable TOTP, generate APIs, and set up your environment for a smooth trading experience.
+Layr0 IMC makes algorithmic trading accessible and straightforward by providing seamless integration with various brokers, including 5Paisa. This documentation will guide you through the process of configuring your 5Paisa account to work with Layr0 IMC, ensuring you can automate your trading strategies efficiently. Follow the steps below to enable TOTP, generate APIs, and set up your environment for a smooth trading experience.
 
 ### **Step 1: Enable TOTP**
 
@@ -75,7 +75,7 @@ OpenAlgo makes algorithmic trading accessible and straightforward by providing s
   src={require('@site/static/img/assets/image (41).png').default}
 />
 
-Save the generated User\_Key, User\_ID, client\_id and Encryption\_Key. Later we will be adding the apikey in the [environmental variable](https://docs.openalgo.in/getting-started/windows-installation/environmental-variables) along with the redirect url
+Save the generated User\_Key, User\_ID, client\_id and Encryption\_Key. Later we will be adding the apikey in the [environmental variable](https://docs.Layr0 IMC.in/getting-started/windows-installation/environmental-variables) along with the redirect url
 
 Here is a sample of how the details would appear in a .env file for reference:
 
@@ -89,4 +89,4 @@ REDIRECT_URL = 'http://127.0.0.1:5000/fivepaisa/callback'
 
 #### Conclusion
 
-By following the steps outlined in this guide, you have successfully configured your 5Paisa account for use with OpenAlgo. You can now leverage the power of algorithmic trading to enhance your trading strategies and make data-driven decisions. Should you encounter any issues or need further assistance, please refer to the OpenAlgo community or support resources. Happy trading!
+By following the steps outlined in this guide, you have successfully configured your 5Paisa account for use with Layr0 IMC. You can now leverage the power of algorithmic trading to enhance your trading strategies and make data-driven decisions. Should you encounter any issues or need further assistance, please refer to the Layr0 IMC community or support resources. Happy trading!

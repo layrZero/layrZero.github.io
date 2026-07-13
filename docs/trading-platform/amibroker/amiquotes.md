@@ -6,23 +6,23 @@
 
 ### Prerequisites
 
-OpenAlgo  and OpenAlgo API Key
+Layr0 IMC  and Layr0 IMC API Key
 
 Amibroker 6.0 or higher
 
 Amiquotes 4.10 or higher (mostly preinstalled with Amibroker) if not download from [Amibroker Download section](https://amibroker.com/download.html)
 
-OpenAlgo supported Brokers providing Historical Data / Intraday Data API
+Layr0 IMC supported Brokers providing Historical Data / Intraday Data API
 
 Note :  As of now kotak not supporting intraday/historical data API
 
 
 
-### Step 1 : Download OpenAlgo - Amiquotes (Plugin)
+### Step 1 : Download Layr0 IMC - Amiquotes (Plugin)
 
 
 
-[Get the Amiquotes Plugin Here](@site/static/img/assets/OpenAlgo.ads)
+[Get the Amiquotes Plugin Here](@site/static/img/assets/Layr0 IMC.ads)
 
 Download the file and save under **Amibroker -> Amiquotes -> DataSource Folder**
 
@@ -62,7 +62,7 @@ Now click on Intraday Settings and Enable Allow Mixed EOD/Interval data and pres
 
 
 
-### Step 3 : Add OpenAlgo Ticker Symbols
+### Step 3 : Add Layr0 IMC Ticker Symbols
 
 Add Ticker Symbols from the Symbols menu -> New
 
@@ -92,13 +92,13 @@ Open Amiquote from Tools Menu -> Auto-update quotes (AmiQuote)
   src={require('@site/static/img/assets/image (72).png').default}
 />
 
-From the dropdown of Amiquote Select OpenAlgo
+From the dropdown of Amiquote Select Layr0 IMC
 
 <img
   src={require('@site/static/img/assets/image (73).png').default}
 />
 
-Alternatively, you can also import the openalgo template using the import method. Goto **Data Source Menu -> Import**
+Alternatively, you can also import the Layr0 IMC template using the import method. Goto **Data Source Menu -> Import**
 
 <img
   src={require('@site/static/img/assets/image (76).png').default}
@@ -106,11 +106,11 @@ Alternatively, you can also import the openalgo template using the import method
 
 
 
-configure the OpenAlgo API key
+configure the Layr0 IMC API key
 
-Get the OpenAlgo API Key by visiting **openalgo -> Dashboard -> Click on Profile Icon -> APIKey**
+Get the Layr0 IMC API Key by visiting **Layr0 IMC -> Dashboard -> Click on Profile Icon -> APIKey**
 
-Create one if you installed openalgo for the first time. Copy the API key and paste in the User-definable data source -> API Key Section as shown below and press ok
+Create one if you installed Layr0 IMC for the first time. Copy the API key and paste in the User-definable data source -> API Key Section as shown below and press ok
 
 <img
   src={require('@site/static/img/assets/image (78).png').default}
@@ -122,13 +122,13 @@ Now Select the desired interval and set Run every 1min  and press the play butto
   src={require('@site/static/img/assets/image (79).png').default}
 />
 
-Now the Data Download from the Broker via OpenAlgo Starts
+Now the Data Download from the Broker via Layr0 IMC Starts
 
 <img
   src={require('@site/static/img/assets/image (80).png').default}
 />
 
-Now you can see that openalgo is Auto updating the Amibroker Database every 1 minute
+Now you can see that Layr0 IMC is Auto updating the Amibroker Database every 1 minute
 
 <img
   src={require('@site/static/img/assets/image (81).png').default}
@@ -145,4 +145,4 @@ Start using your brokers data for your analysis purpose.\
 
 For more details and troubleshooting refer the [Ticker API](../../api-documentation/v1/data-api/ticker.md)
 
-Make sure to login to openalgo every day to fetch the live intraday/EOD quotes
+Make sure to login to Layr0 IMC every day to fetch the live intraday/EOD quotes

@@ -3,20 +3,20 @@
 Here is a coding snippet of python based EMA Crossover strategy implementing using placesmartorder function.
 
 ```python
-from openalgo import api
+from Layr0 IMC import api
 import pandas as pd
 import numpy as np
 import time
 import threading
 from datetime import datetime, timedelta
 
-# Get API key from openalgo portal
-api_key = 'your-openalgo-api-key'
+# Get API key from Layr0 IMC portal
+api_key = 'your-Layr0 IMC-api-key'
 
 
 # Set the strategy details and trading parameters
 strategy = "EMA Crossover Python"
-symbol = "BHEL"  # OpenAlgo Symbol
+symbol = "BHEL"  # Layr0 IMC Symbol
 exchange = "NSE"
 product = "MIS"
 quantity = 1
@@ -73,7 +73,7 @@ def ema_strategy():
             end_date = datetime.now().strftime("%Y-%m-%d")
             start_date = (datetime.now() - timedelta(days=7)).strftime("%Y-%m-%d")
 
-            # Fetch 1-minute historical data using OpenAlgo
+            # Fetch 1-minute historical data using Layr0 IMC
             df = client.history(
                 symbol=symbol,
                 exchange=exchange,

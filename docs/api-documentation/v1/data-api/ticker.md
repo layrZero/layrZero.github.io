@@ -41,7 +41,7 @@ API key must be provided either:
 * In the request header as `X-API-KEY`
 * As a query parameter `apikey`
 
-**Note**: The API key must be obtained from your OpenAlgo instance dashboard under the API Key section.
+**Note**: The API key must be obtained from your IMC instance dashboard under the API Key section.
 
 #### AmiBroker Integration
 
@@ -88,7 +88,7 @@ GET http://127.0.0.1:5000/api/v1/ticker/NSE:RELIANCE?apikey=your_api_key_here&in
 | ---- | --------------------------------------------------------------- |
 | 400  | Bad Request - Invalid parameters                                |
 | 401  | Unauthorized - Invalid/expired broker session or unauthorized   |
-| 403  | Forbidden - Invalid OpenAlgo API key or permission error        |
+| 403  | Forbidden - Invalid IMC API key or permission error        |
 | 404  | Not Found - Broker module not found                             |
 | 429  | Too Many Requests - Rate limit exceeded (where detectable)      |
 | 500  | Internal Server Error - Unclassified internal failure           |
@@ -190,7 +190,7 @@ Error messages are returned as plain text with appropriate HTTP status codes.
 Example:
 
 ```
-Invalid openalgo apikey
+Invalid IMC apikey
 ```
 
 #### JSON Format
@@ -198,7 +198,7 @@ Invalid openalgo apikey
 ```json
 {
     "status": "error",
-    "message": "Invalid openalgo apikey"
+    "message": "Invalid IMC apikey"
 }
 ```
 

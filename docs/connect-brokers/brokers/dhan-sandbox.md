@@ -6,9 +6,9 @@ Dhan SandBox API is a simulated testing environment designed for developers and 
 
 ***
 
-**Who Should Integrate Dhan SandBox API with OpenAlgo?**
+**Who Should Integrate Dhan SandBox API with Layr0 IMC?**
 
-OpenAlgo is an open-source algo trading automation framework that connects with platforms like TradingView, Amibroker, and custom dashboards. Integrating Dhan’s SandBox API with OpenAlgo is highly recommended for:
+Layr0 IMC is an open-source algo trading automation framework that connects with platforms like TradingView, Amibroker, and custom dashboards. Integrating Dhan’s SandBox API with Layr0 IMC is highly recommended for:
 
 * **Algo Developers** building broker connectors.
 * **Traders** who want to simulate real-time automated strategies before going live.
@@ -20,7 +20,7 @@ OpenAlgo is an open-source algo trading automation framework that connects with 
 
 **Step-by-Step: How to Get Started with Dhan SandBox API**
 
-Here’s how to register, access tokens, and start testing with OpenAlgo:
+Here’s how to register, access tokens, and start testing with Layr0 IMC:
 
 #### 1. **Visit DhanHQ DevPortal**
 
@@ -66,7 +66,7 @@ Enter both to complete verification.
 
 Once inside, go to the **Sandbox** tab. You’ll see:
 
-* Application Name (e.g., `openalgo`)
+* Application Name (e.g., `Layr0 IMC`)
 * **Access Token** (JWT for authorization)
 * **Client ID** (unique to your application)
 * API Playground and documentation links
@@ -75,7 +75,7 @@ Once inside, go to the **Sandbox** tab. You’ll see:
   src={require('@site/static/img/assets/image (3) (1).png').default}
 />
 
-These credentials are what you will use inside OpenAlgo’s configuration or `.env` file to test trading orders programmatically.
+These credentials are what you will use inside Layr0 IMC’s configuration or `.env` file to test trading orders programmatically.
 
 ***
 
@@ -91,9 +91,9 @@ Once you've successfully logged into the DhanHQ DevPortal and created your sandb
 
 It acts like a password (JWT format) to authenticate your API requests.
 
-#### Configuration for OpenAlgo
+#### Configuration for Layr0 IMC
 
-Inside your OpenAlgo project (or any backend using Dhan APIs), create or update the `.env` file with the following keys:
+Inside your Layr0 IMC project (or any backend using Dhan APIs), create or update the `.env` file with the following keys:
 
 ```bash
 BROKER_API_KEY = 'your_dhan_sandbox_clientid_here' 
@@ -101,13 +101,13 @@ BROKER_API_SECRET = 'your_dhan_sandbox_token_here'
 REDIRECT_URL = 'http://127.0.0.1:5000/dhan_sandbox/callback'
 ```
 
-**Summary: Why It Matters for OpenAlgo**
+**Summary: Why It Matters for Layr0 IMC**
 
-Integrating Dhan SandBox with OpenAlgo means:
+Integrating Dhan SandBox with Layr0 IMC means:
 
 * Safer testing for order placement, cancellation, and position handling.
 * No compliance delay since no KYC is needed.
 * Faster debugging and integration turnaround.
 * Enables workshops, testing, and community support for algo development.
 
-By setting up your sandbox environment with Dhan and OpenAlgo, you accelerate your readiness for live algorithmic trading while ensuring a risk-free development experience.
+By setting up your sandbox environment with Dhan and Layr0 IMC, you accelerate your readiness for live algorithmic trading while ensuring a risk-free development experience.

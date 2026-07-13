@@ -1,23 +1,23 @@
 # Python
 
-To install the OpenAlgo Python library, use pip:
+To install the Layr0 IMC Python library, use pip:
 
 ```bash
-pip install openalgo
+pip install Layr0 IMC
 ```
 
-### Get the OpenAlgo apikey
+### Get the Layr0 IMC apikey
 
-Make Sure that your OpenAlgo Application is running. Login to OpenAlgo Application with valid credentials and get the OpenAlgo apikey
+Make Sure that your Layr0 IMC Application is running. Login to Layr0 IMC Application with valid credentials and get the Layr0 IMC apikey
 
-For detailed function parameters refer to the [API Documentation](https://docs.openalgo.in/api-documentation/v1)
+For detailed function parameters refer to the [API Documentation](https://docs.Layr0 IMC.in/api-documentation/v1)
 
-### Getting Started with OpenAlgo
+### Getting Started with Layr0 IMC
 
-First, import the `api` class from the OpenAlgo library and initialize it with your API key:
+First, import the `api` class from the Layr0 IMC library and initialize it with your API key:
 
 ```python
-from openalgo import api
+from Layr0 IMC import api
 
 # Replace 'your_api_key_here' with your actual API key
 # Specify the host URL with your hosted domain or ngrok domain. 
@@ -26,11 +26,11 @@ client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
 
 ```
 
-### Check OpenAlgo Version
+### Check Layr0 IMC Version
 
 ```python
-import openalgo 
-openalgo.__version__
+import Layr0 IMC 
+Layr0 IMC.__version__
 ```
 
 ### Examples
@@ -348,12 +348,12 @@ print(response)
 
 ```
 
-### OpenPosition Example
+### positionsopen Example
 
-To Get the Current OpenPosition
+To Get the Current positionsopen
 
 ```python
-response = client.openposition(
+response = client.positionsopen(
             strategy="Test Strategy",
             symbol="YESBANK",
             exchange="NSE",
@@ -362,7 +362,7 @@ response = client.openposition(
 print(response)
 ```
 
-OpenPosition Response
+positionsopen Response
 
 ```json
 {'quantity': '-10', 'status': 'success'}
@@ -892,12 +892,12 @@ Analyzer Toggle Response
 ### LTP Data (Streaming Websocket)
 
 ```python
-from openalgo import api
+from Layr0 IMC import api
 import time
 
-# Initialize OpenAlgo client
+# Initialize Layr0 IMC client
 client = api(
-    api_key="your_api_key",                  # Replace with your actual OpenAlgo API key
+    api_key="your_api_key",                  # Replace with your actual Layr0 IMC API key
     host="http://127.0.0.1:5000",            # REST API host
     ws_url="ws://127.0.0.1:8765"             # WebSocket host
 )
@@ -929,12 +929,12 @@ finally:
 ### Quotes (Streaming Websocket)
 
 ```python
-from openalgo import api
+from Layr0 IMC import api
 import time
 
-# Initialize OpenAlgo client
+# Initialize Layr0 IMC client
 client = api(
-    api_key="your_api_key",                  # Replace with your actual OpenAlgo API key
+    api_key="your_api_key",                  # Replace with your actual Layr0 IMC API key
     host="http://127.0.0.1:5000",            # REST API host
     ws_url="ws://127.0.0.1:8765"             # WebSocket host
 )
@@ -966,12 +966,12 @@ finally:
 ### Depth (Streaming Websocket)
 
 ```python
-from openalgo import api
+from Layr0 IMC import api
 import time
 
-# Initialize OpenAlgo client
+# Initialize Layr0 IMC client
 client = api(
-    api_key="your_api_key",                  # Replace with your actual OpenAlgo API key
+    api_key="your_api_key",                  # Replace with your actual Layr0 IMC API key
     host="http://127.0.0.1:5000",            # REST API host
     ws_url="ws://127.0.0.1:8765"             # WebSocket host
 )

@@ -1,23 +1,23 @@
-# OpenAlgo MQL5 Functions
+# Layr0 IMC MQL5 Functions
 
-Below is the API documentation for the OpenAlgoAPI functions provided in your MQL5 header file:
+Below is the API documentation for the Layr0 IMCAPI functions provided in your MQL5 header file:
 
 ***
 
-## OpenAlgoAPI Function Documentation
+## Layr0 IMCAPI Function Documentation
 
 
 
 ### `PlaceOrder`
 
-Places an order with the specified parameters by sending a POST request to the OpenAlgo API.
+Places an order with the specified parameters by sending a POST request to the Layr0 IMC API.
 
 #### Parameters:
 
 * `actionParam`: The trade action, either "BUY" or "SELL".
 * `quantityParam`: The quantity of the asset to trade.
-* `apiUrlParam`: The URL of the OpenAlgo API.
-* `apiKeyParam`: The API key for authentication with OpenAlgo.
+* `apiUrlParam`: The URL of the Layr0 IMC API.
+* `apiKeyParam`: The API key for authentication with Layr0 IMC.
 * `strategyParam`: The name of the trading strategy.
 * `symbolParam`: The symbol for the asset being traded.
 * `exchangeParam`: The exchange on which the trade will be executed.
@@ -70,8 +70,8 @@ Cancels an existing order.
 #### Parameters:
 
 * `orderidParam`: The ID of the order to be canceled.
-* `apiUrlParam`: The URL of the OpenAlgo API.
-* `apiKeyParam`: The API key for authentication with OpenAlgo.
+* `apiUrlParam`: The URL of the Layr0 IMC API.
+* `apiKeyParam`: The API key for authentication with Layr0 IMC.
 * `strategyParam`: The name of the trading strategy.
 
 #### Usage:
@@ -86,8 +86,8 @@ Closes all open positions associated with a given strategy.
 
 #### Parameters:
 
-* `apiUrlParam`: The URL of the OpenAlgo API.
-* `apiKeyParam`: The API key for authentication with OpenAlgo.
+* `apiUrlParam`: The URL of the Layr0 IMC API.
+* `apiKeyParam`: The API key for authentication with Layr0 IMC.
 * `strategyParam`: The name of the trading strategy to close positions for.
 
 #### Usage:
@@ -102,8 +102,8 @@ Cancels all orders associated with a given strategy.
 
 #### Parameters:
 
-* `apiUrlParam`: The URL of the OpenAlgo API.
-* `apiKeyParam`: The API key for authentication with OpenAlgo.
+* `apiUrlParam`: The URL of the Layr0 IMC API.
+* `apiKeyParam`: The API key for authentication with Layr0 IMC.
 * `strategyParam`: The name of the trading strategy to cancel orders for.
 
 #### Usage:
@@ -114,4 +114,4 @@ CancelAllOrders("http://127.0.0.1:5000", "your_api_key", "Meta Strategy");
 
 ***
 
-**Note**: Replace placeholder values like `"your_api_key"` and `"http://127.0.0.1:5000"` with actual API keys and URLs as required by your setup. All functions assume the existence of a network communication setup within the MetaTrader 5 environment, as well as an OpenAlgo API that responds to the specified endpoints. Ensure proper error handling and API rate limiting as per the service provider's specifications.
+**Note**: Replace placeholder values like `"your_api_key"` and `"http://127.0.0.1:5000"` with actual API keys and URLs as required by your setup. All functions assume the existence of a network communication setup within the MetaTrader 5 environment, as well as an Layr0 IMC API that responds to the specified endpoints. Ensure proper error handling and API rate limiting as per the service provider's specifications.

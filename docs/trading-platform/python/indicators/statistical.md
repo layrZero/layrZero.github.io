@@ -1,19 +1,19 @@
 # Statistical
 
-## OpenAlgo Statistical Indicators Documentation
+## Layr0 IMC Statistical Indicators Documentation
 
 Statistical indicators analyze price data using mathematical and statistical methods to identify patterns, relationships, and forecast future price movements.
 
 ### Import Statement
 
 ```python
-from openalgo import ta
+from Layr0 IMC import ta
 ```
 
 ### Getting Market Data
 
 ```python
-from openalgo import api
+from Layr0 IMC import api
 
 client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
 
@@ -384,7 +384,7 @@ df['VOLUME_MODE'] = volume_mode
 
 ```python
 import pandas as pd
-from openalgo import api, ta
+from Layr0 IMC import api, ta
 
 # Get market data
 client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')

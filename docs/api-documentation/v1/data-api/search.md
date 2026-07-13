@@ -22,7 +22,7 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/search
 
 | Parameter | Type   | Required | Description                                               |
 | --------- | ------ | -------- | --------------------------------------------------------- |
-| apikey    | string | Yes      | Your OpenAlgo API key                                     |
+| apikey    | string | Yes      | Your IMC API key                                     |
 | query     | string | Yes      | Search query (symbol name, partial name, or option chain) |
 | exchange  | string | No       | Exchange filter (NSE, BSE, NFO, MCX, etc.)                |
 
@@ -86,7 +86,7 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/search
 | ---- | --------------------------------------------------------------- |
 | 400  | Bad Request - Invalid parameters                                |
 | 401  | Unauthorized - Invalid/expired broker session or unauthorized   |
-| 403  | Forbidden - Invalid OpenAlgo API key or permission error        |
+| 403  | Forbidden - Invalid IMC API key or permission error        |
 | 429  | Too Many Requests - Rate limit exceeded (where detectable)      |
 | 500  | Internal Server Error - Unclassified internal failure           |
 

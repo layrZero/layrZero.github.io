@@ -10,12 +10,12 @@ Amibroker AFL Code for CSV Exploration Module (Internet Functions Module - Moder
 
 ```clike
 ////////////////////////////////////////////////////////////
-// OpenAlgo - CSV Exploration Module (Refactored to Modern Methods)
+// Layr0 IMC - CSV Exploration Module (Refactored to Modern Methods)
 // Ensure CSV file is placed in the specified path
 // Ensure Symbol mapping is done in the CSV properly
 // Ensure corresponding Watchlist Symbols are created for Exploration
 //
-// Coded by Rajandran R - Creator, OpenAlgo
+// Coded by Rajandran R - Creator, Layr0 IMC
 // Original Date : 19/08/2024
 // Refactored to Modern Methods : (Current Date)
 ////////////////////////////////////////////////////////////
@@ -25,7 +25,7 @@ _SECTION_BEGIN("Exploration Module Order Controls");
 RequestTimedRefresh(1, False); // Optional if you want periodic refresh
 
 strategy = ParamStr("Strategy Name", "Exploration Strategy");
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 pricetype = ParamStr("Price Type", "MARKET");
 host = ParamStr("host","http://127.0.0.1:5000");
 ver = ParamStr("API Version","v1");
@@ -35,7 +35,7 @@ bridgeurl = host+"/api/"+ver;
 EntryDelay = Param("Entry Delay",0,0,1,1);
 ExitDelay = Param("Exit Delay",0,0,1,1);
 filepath = ParamStr("Filepath","C:\\symbols\\symbols.csv");
-EnableAlgo = ParamList("OpenAlgo","Disable|Enable|LongOnly|ShortOnly");
+EnableAlgo = ParamList("Layr0 IMC","Disable|Enable|LongOnly|ShortOnly");
 
 // Configure Trade Execution Delay (for recently generated signals)
 AlgoBuy = LastValue(Ref(Buy,-EntryDelay));
@@ -370,14 +370,14 @@ Amibroker AFL Code for CSV Exploration Module (VB Script Module - Legacy Method)
 
 ```clike
 
-//OpenAlgo - CSV Exploration Module
+//Layr0 IMC - CSV Exploration Module
 //Ensure CSV file is placed in the right path
 //Ensure Symbol mapping is done in the CSV properly
 //Ensure Corresponding Watchlist Symbols are Created for Exploration
 
 //////////////////////////////////////////////
 //Amibroker CSV Exploration Module
-//Coded by Rajandran R - Creator, OpenAlgo
+//Coded by Rajandran R - Creator, Layr0 IMC
 //Date : 19/08/2024
 //////////////////////////////////////////////
 
@@ -387,7 +387,7 @@ _SECTION_BEGIN("Exploration Module Order Controls");
 
 
 strategy = ParamStr("Strategy Name", "Exploration Strategy");
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 pricetype = ParamStr("Price Type", "MARKET");
 host = ParamStr("host","http://127.0.0.1:5000");
 ver = ParamStr("API Version","v1");
@@ -397,7 +397,7 @@ bridgeurl = host+"/api/"+ver;
 EntryDelay = Param("Entry Delay",0,0,1,1);
 ExitDelay = Param("Exit Delay",0,0,1,1);
 filepath = ParamStr("Filepath","C:\\symbols\\symbols.csv");
-EnableAlgo = ParamList("OpenAlgo","Disable|Enable|LongOnly|ShortOnly");
+EnableAlgo = ParamList("Layr0 IMC","Disable|Enable|LongOnly|ShortOnly");
 
 
 //Configure Trade Execution Delay (for recently signals)
@@ -521,7 +521,7 @@ End Sub
 
 %>
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 //Execution Module
 
@@ -621,7 +621,7 @@ if(EnableAlgo != "Disable")
             {
             // reverse Long Entry 
 				quantity = lastvalue(entryquantity+exitshortquantity);
-                openalgo.PlaceOrder("BUY",quantity);
+                Layr0 IMC.PlaceOrder("BUY",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -641,7 +641,7 @@ if(EnableAlgo != "Disable")
             // Long Entry 
 				quantity = LastValue(entryquantity);
                 
-                openalgo.PlaceOrder("BUY",quantity);
+                Layr0 IMC.PlaceOrder("BUY",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -661,7 +661,7 @@ if(EnableAlgo != "Disable")
             // Long Exit 
 				quantity = LastValue(exitbuyquantity);
 				
-                openalgo.PlaceOrder("SELL",quantity);
+                Layr0 IMC.PlaceOrder("SELL",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -679,7 +679,7 @@ if(EnableAlgo != "Disable")
             // reverse Short Entry 
 				quantity = LastValue(exitbuyquantity+entryquantity);
                 
-                openalgo.PlaceOrder("SELL",quantity);
+                Layr0 IMC.PlaceOrder("SELL",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -698,7 +698,7 @@ if(EnableAlgo != "Disable")
             // Short Entry
 				quantity = LastValue(entryquantity);
                 
-                openalgo.PlaceOrder("SELL",quantity);
+                Layr0 IMC.PlaceOrder("SELL",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -717,7 +717,7 @@ if(EnableAlgo != "Disable")
             // Short Exit
 				quantity = LastValue(exitshortquantity);
                 
-                openalgo.PlaceOrder("BUY",quantity);
+                Layr0 IMC.PlaceOrder("BUY",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -740,7 +740,7 @@ if(EnableAlgo != "Disable")
             //  Long Entry
 				quantity = LastValue(entryquantity);
                 
-                openalgo.PlaceOrder("BUY",quantity);
+                Layr0 IMC.PlaceOrder("BUY",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -759,7 +759,7 @@ if(EnableAlgo != "Disable")
             // Long Exit
 				quantity = LastValue(exitbuyquantity);
                 
-                openalgo.PlaceOrder("SELL",quantity);
+                Layr0 IMC.PlaceOrder("SELL",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -781,7 +781,7 @@ if(EnableAlgo != "Disable")
             // Short Entry
 				quantity = LastValue(entryquantity);
                 
-                openalgo.PlaceOrder("SELL",quantity);
+                Layr0 IMC.PlaceOrder("SELL",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);
@@ -800,7 +800,7 @@ if(EnableAlgo != "Disable")
             // Short Exit
 				quantity = LastValue(exitshortquantity);
                 
-                openalgo.PlaceOrder("BUY",quantity);
+                Layr0 IMC.PlaceOrder("BUY",quantity);
                 
 				_TRACE("API Request : "+api_request);
 				_TRACE("API Response : "+api_response);

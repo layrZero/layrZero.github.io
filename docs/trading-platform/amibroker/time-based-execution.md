@@ -2,18 +2,18 @@
 
 ```
 
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker TimeBased Execution Module v1.0
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker TimeBased Execution Module v1.0
 //Date - 23/08/2024
 
 
-_SECTION_BEGIN("OpenAlgo Trading Controls");
+_SECTION_BEGIN("Layr0 IMC Trading Controls");
 
 RequestTimedRefresh(0.1,False);
 EnableTextOutput(False);
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Amibroker");
 symbol = ParamStr("Symbol", "YESBANK");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");
@@ -52,7 +52,7 @@ printf("\nExit Time :"+exittime);
 printf("\nExit Time Enabled :"+StaticVarGet(static_name_+"EXitTime"));
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -81,7 +81,7 @@ StaticVarSet(static_name_algo, 0);
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -141,7 +141,7 @@ End Sub
 
 %>
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 if(EnableAlgo != "Disable")
 	{
@@ -149,7 +149,7 @@ if(EnableAlgo != "Disable")
 		
 		if( Now(4)>=entrytime AND Nz(StaticVarGet(static_name_+"EntryTime"))==0 ) 
 			{
-				openalgo.placeorder("BUY",quantity);
+				Layr0 IMC.placeorder("BUY",quantity);
 				if(VoiceAlert == "Enable"){
 						Say("Buy Order Triggered");  	
 					}
@@ -165,7 +165,7 @@ if(EnableAlgo != "Disable")
 			
 		if( Now(4)>=exittime AND Nz(StaticVarGet(static_name_+"ExitTime"))==0 ) 
 			{
-				openalgo.placeorder("SELL",quantity);
+				Layr0 IMC.placeorder("SELL",quantity);
 				if(VoiceAlert == "Enable"){
 						Say("Sell Order Triggered");  	
 					}

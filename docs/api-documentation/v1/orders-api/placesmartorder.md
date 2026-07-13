@@ -66,7 +66,7 @@ import YouTube from '@site/src/components/YouTube';
 
 PlaceSmartOrder API function, which allows traders to build intelligent trading systems that can automatically place orders based on existing trade positions in the position book.
 
-| Action | Qty (API) | Pos Size (API) | Current Open Pos | Action by OpenAlgo                      |
+| Action | Qty (API) | Pos Size (API) | Current Open Pos | Action by IMC                      |
 | ------ | --------- | -------------- | ---------------- | --------------------------------------- |
 | BUY    | 100       | 0              | 0                | No Open Pos Found. Buy +100 qty         |
 | BUY    | 100       | 100            | -100             | BUY 200 to match Open Pos in API Param  |

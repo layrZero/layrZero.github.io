@@ -1,6 +1,6 @@
 # AliceBlue
 
-OpenAlgo provides seamless integration with AliceBlue, enabling you to connect your trading strategies with AliceBlue’s brokerage services. Follow this guide to set up your AliceBlue broker account with OpenAlgo.
+Layr0 IMC provides seamless integration with AliceBlue, enabling you to connect your trading strategies with AliceBlue’s brokerage services. Follow this guide to set up your AliceBlue broker account with Layr0 IMC.
 
 ### Prerequisites
 
@@ -8,7 +8,7 @@ Before proceeding, ensure you have the following:
 
 * An active AliceBlue trading account.
 * Access to the AliceBlue ANT website.
-* OpenAlgo installed and configured on your local machine.
+* Layr0 IMC installed and configured on your local machine.
 
 ### Steps to Create the AliceBlue API Secret Key
 
@@ -46,5 +46,5 @@ Replace `your_client_id` with your AliceBlue login user ID and `your_api_secret_
 * Ensure that your **API Secret Key** is stored securely and is not shared publicly.
 * The **REDIRECT\_URL** should match the one registered with your API application.
 
-Follow these steps to integrate AliceBlue with OpenAlgo successfully. If you encounter any issues, refer to the AliceBlue API documentation for further assistance.
+Follow these steps to integrate AliceBlue with Layr0 IMC successfully. If you encounter any issues, refer to the AliceBlue API documentation for further assistance.
 

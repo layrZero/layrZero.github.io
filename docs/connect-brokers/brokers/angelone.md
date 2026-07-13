@@ -1,6 +1,6 @@
 # AngelOne
 
-AngelOne, previously known as Angel Broking, is a prominent Indian stock brokerage firm offering a wide range of trading and investment services. For developers and fintech companies looking to integrate algorithmic trading capabilities, AngelOne provides an API gateway through its platform. This API, often referred to in the context of OpenAlgo integration, enables automated trading strategies, real-time market data access, and more.
+AngelOne, previously known as Angel Broking, is a prominent Indian stock brokerage firm offering a wide range of trading and investment services. For developers and fintech companies looking to integrate algorithmic trading capabilities, AngelOne provides an API gateway through its platform. This API, often referred to in the context of Layr0 IMC integration, enables automated trading strategies, real-time market data access, and more.
 
 
 
@@ -51,7 +51,7 @@ Goto the [Smart API Developer Portal](https://smartapi.angelbroking.com/signin) 
 
 Enter the App name, Redirect URL (use dummy url https://google.com) and your Angel Client ID
 
-Save the generated apikey. Later we will be adding the apikey in the [environmental variable](https://docs.openalgo.in/getting-started/windows-installation/environmental-variables)
+Save the generated apikey. Later we will be adding the apikey in the [environmental variable](https://docs.Layr0 IMC.in/getting-started/windows-installation/environmental-variables)
 
 Here is a sample of how the details would appear in a .env file for reference:
 
@@ -63,4 +63,4 @@ REDIRECT_URL = 'http://127.0.0.1:5000/angel/callback'
 
 
 
-Integrating OpenAlgo with AngelOne's API opens up possibilities for automated trading strategies, providing a powerful tool for traders and developers to exploit market opportunities efficiently. It's essential to follow best practices for API integration, including handling rate limits, managing API keys securely, and ensuring robust error handling and logging mechanisms are in place.
+Integrating Layr0 IMC with AngelOne's API opens up possibilities for automated trading strategies, providing a powerful tool for traders and developers to exploit market opportunities efficiently. It's essential to follow best practices for API integration, including handling rate limits, managing API keys securely, and ensuring robust error handling and logging mechanisms are in place.

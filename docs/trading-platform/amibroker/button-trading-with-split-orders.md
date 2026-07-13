@@ -1,19 +1,19 @@
 # Button Trading with Split Orders
 
 ```clike
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker Button Trading Split Order Module v1.0
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker Button Trading Split Order Module v1.0
 //Date - 21/08/2024
 
-_SECTION_BEGIN("OpenAlgo Button Trading with Split Orders");
+_SECTION_BEGIN("Layr0 IMC Button Trading with Split Orders");
 
 RequestTimedRefresh(1, False);
 
 // Parameters for trading settings
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Button Trading");
-symbol = ParamStr("Symbol", "NIFTY29AUG2424600CE"); //OpenAlgo Symbol
+symbol = ParamStr("Symbol", "NIFTY29AUG2424600CE"); //Layr0 IMC Symbol
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS",1);
 pricetype = ParamStr("Price Type", "MARKET");
 product = ParamList("Product", "MIS|NRML|CNC");
@@ -37,7 +37,7 @@ static_name_algo = static_name_+interval(2)+strategy+"algostatus";
 
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -66,7 +66,7 @@ StaticVarSet(static_name_algo, 0);
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -169,7 +169,7 @@ End Sub
 %>
 
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 // Function to split orders and place them in smaller batches based on freezeqty
 function PlaceSplitOrders(action, totalQuantity) {
@@ -183,7 +183,7 @@ function PlaceSplitOrders(action, totalQuantity) {
         }
 
         // Place the order with the calculated order quantity
-        openalgo.PlaceOrder(action, orderQuantity);
+        Layr0 IMC.PlaceOrder(action, orderQuantity);
         _TRACE("Placed " + action + " order for " + orderQuantity + " qty");
 		_TRACE("API Request : " + api_request);
         _TRACE("API Response : " + api_response);
@@ -286,7 +286,7 @@ if (EnableAlgo == "Enable") {
 
     // CLOSE ALL Button Click Event
     if (CXButtonClick AND StaticVarGet(Name() + GetChartID() + "CXAlgo") == 0) {
-        openalgo.SquareoffAll();  // Call the function to close all open positions
+        Layr0 IMC.SquareoffAll();  // Call the function to close all open positions
         if (VoiceAlert == "Enable") {
             Say("Squareoff All Triggered");
         }

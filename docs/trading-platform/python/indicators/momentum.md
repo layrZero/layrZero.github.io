@@ -5,7 +5,7 @@ Momentum indicators measure the speed and strength of price movements, helping i
 ### Import Statement
 
 ```python
-from openalgo import ta
+from Layr0 IMC import ta
 ```
 
 ### Available Momentum Indicators
@@ -34,7 +34,7 @@ rsi_result = ta.rsi(data, period=14)
 #### Example
 
 ```python
-from openalgo import api, ta
+from Layr0 IMC import api, ta
 
 # Get market data
 client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
@@ -341,7 +341,7 @@ print(df[['close', 'CRSI', 'CRSI_Custom']].tail())
 ### Complete Example: Multiple Momentum Indicators
 
 ```python
-from openalgo import api, ta
+from Layr0 IMC import api, ta
 import pandas as pd
 
 # Get market data

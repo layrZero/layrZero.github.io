@@ -1,6 +1,6 @@
 # Spot/Futures to Options Module (Single Leg)
 
-This tutorial provides instructions on how to utilize simple buy and sell trading signals in Spot/Future charts to place option orders (including ATM, ITM, and OTM options) on the OpenAlgo platform. Implementing this system can help traders mitigate risk, particularly in the event of unexpected market movements that may result in significant losses. Additionally, implementing ATM or ITM option buying strategies, as opposed to futures, may help to reduce the risk of extreme black swan events and significantly mitigate the potential for large gap up or gap down risks when carrying forward positions.
+This tutorial provides instructions on how to utilize simple buy and sell trading signals in Spot/Future charts to place option orders (including ATM, ITM, and OTM options) on the Layr0 IMC platform. Implementing this system can help traders mitigate risk, particularly in the event of unexpected market movements that may result in significant losses. Additionally, implementing ATM or ITM option buying strategies, as opposed to futures, may help to reduce the risk of extreme black swan events and significantly mitigate the potential for large gap up or gap down risks when carrying forward positions.
 
 **Features of the Options Execution Module**
 
@@ -12,19 +12,19 @@ Internet Functions Method (Modern)
 
 ```clike
 /* 
-OpenAlgo - Modern Spot/Futures to Options Trading Module 
-Created By: Rajandran R (Founder - Marketcalls / Creator OpenAlgo) 
+Layr0 IMC - Modern Spot/Futures to Options Trading Module 
+Created By: Rajandran R (Founder - layr0 / Creator Layr0 IMC) 
 Created On: 23 Dec 2024 
-Website: www.marketcalls.in / www.openalgo.in 
+Website: www.layr0.in / www.Layr0 IMC.in 
 */
 
-_SECTION_BEGIN("OpenAlgo - Spot/Futures to Options Module");
+_SECTION_BEGIN("Layr0 IMC - Spot/Futures to Options Module");
 
 // Parameter Definitions
 RequestTimedRefresh(1, False);
 EnableTextOutput(False);
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy Name", "Test Strategy");
 spot = ParamList("Spot Symbol", "NIFTY|BANKNIFTY|FINNIFTY|SENSEX|CRUDEOILM");
 expiry = ParamStr("Expiry Date", "17SEP25");
@@ -55,7 +55,7 @@ static_name_ = Name()+GetChartID()+interval(2)+strategy;
 static_name_algo = static_name_+interval(2)+strategy+"algostatus";
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -323,14 +323,14 @@ VB Script Method (Legacy)
 ```clike
 
 /*
-OpenAlgo - Smart Spot/Futures to Options Trading Module
-Created By : Rajandran R(Founder - Marketcalls / Creator OpenAlgo )
+Layr0 IMC - Smart Spot/Futures to Options Trading Module
+Created By : Rajandran R(Founder - layr0 / Creator Layr0 IMC )
 Created on : 31 MAY 2024.
-Website : www.marketcalls.in / www.openalgo.in
+Website : www.layr0.in / www.Layr0 IMC.in
 */
 
 
-_SECTION_BEGIN("Openalgo - Spot/Futures to Options Module");
+_SECTION_BEGIN("Layr0 IMC - Spot/Futures to Options Module");
 
 
 // Send orders even if Amibroker is minimized or Chart is not active
@@ -338,7 +338,7 @@ RequestTimedRefresh(1, False);
 EnableTextOutput(False);
 
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 
 strategy = ParamStr("Strategy Name", "Test Strategy");
 
@@ -481,7 +481,7 @@ _SECTION_END();
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -613,7 +613,7 @@ End Sub
 
 %>
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 
 
@@ -640,8 +640,8 @@ if(EnableAlgo != "Disable")
 				
 				
 				//Long Call and Exit Long Put Option
-				openalgo.ExitOrder("SELL", "PE"); 
-				openalgo.PlaceOrder("BUY", "CE",quantity);
+				Layr0 IMC.ExitOrder("SELL", "PE"); 
+				Layr0 IMC.PlaceOrder("BUY", "CE",quantity);
 
 				
 				
@@ -650,8 +650,8 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="SELL")
 				{
 				//Short Put and Exit Short Call Option
-				openalgo.ExitOrder("BUY" , "CE"); 
-				openalgo.PlaceOrder("SELL" ,"PE",quantity);
+				Layr0 IMC.ExitOrder("BUY" , "CE"); 
+				Layr0 IMC.PlaceOrder("SELL" ,"PE",quantity);
 				
 				
 				
@@ -678,7 +678,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="BUY")
 				{
 				//Long Call and Exit Long Put Option
-				openalgo.PlaceOrder("BUY","CE",quantity);
+				Layr0 IMC.PlaceOrder("BUY","CE",quantity);
 
 				
 				}
@@ -686,7 +686,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="SELL")
 				{
 				//Short Put
-				openalgo.PlaceOrder("SELL","PE",quantity);
+				Layr0 IMC.PlaceOrder("SELL","PE",quantity);
 				
 					
 				}
@@ -710,14 +710,14 @@ if(EnableAlgo != "Disable")
 				{
 				//Exit Long Call Option
 				
-				openalgo.ExitOrder("SELL","CE"); 
+				Layr0 IMC.ExitOrder("SELL","CE"); 
 				
 				}
 				
 				if(tradetype=="SELL")
 				{
 				//Exit Short Put Option
-				openalgo.ExitOrder("BUY","PE"); 
+				Layr0 IMC.ExitOrder("BUY","PE"); 
 				
 				}
                 
@@ -739,8 +739,8 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="BUY")
 				{
 				//Long Put and Exit Long Call Option
-				openalgo.ExitOrder("SELL","CE"); 
-				openalgo.PlaceOrder("BUY","PE",quantity);
+				Layr0 IMC.ExitOrder("SELL","CE"); 
+				Layr0 IMC.PlaceOrder("BUY","PE",quantity);
 				
 				
 				}
@@ -748,8 +748,8 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="SELL")
 				{
 				//Short Call and Exit Short Put Option
-				openalgo.ExitOrder("BUY","PE");
-				openalgo.PlaceOrder("SELL","CE",quantity);
+				Layr0 IMC.ExitOrder("BUY","PE");
+				Layr0 IMC.PlaceOrder("SELL","CE",quantity);
 				 
 				
 				}
@@ -774,7 +774,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="BUY")
 				{
 				//Long Put
-				openalgo.PlaceOrder("BUY","PE",quantity);
+				Layr0 IMC.PlaceOrder("BUY","PE",quantity);
 				
 				
 				}
@@ -782,7 +782,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="SELL")
 				{
 				//Short Call
-				openalgo.PlaceOrder("SELL","CE",quantity);
+				Layr0 IMC.PlaceOrder("SELL","CE",quantity);
 							
 				}
 				
@@ -806,14 +806,14 @@ if(EnableAlgo != "Disable")
 				{
 				//Exit Long Put Option
 				
-				openalgo.ExitOrder("SELL","PE"); 
+				Layr0 IMC.ExitOrder("SELL","PE"); 
 				
 				}
 				
 				if(tradetype=="SELL")
 				{
 				//Exit Short Call Option
-				openalgo.ExitOrder("BUY","CE"); 
+				Layr0 IMC.ExitOrder("BUY","CE"); 
 				
 				}
                
@@ -842,7 +842,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="BUY")
 				{
 				//Long Call and Exit Long Put Option
-				openalgo.PlaceOrder("BUY","CE",quantity);
+				Layr0 IMC.PlaceOrder("BUY","CE",quantity);
 				
 				
 				}
@@ -850,7 +850,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="SELL")
 				{
 				//Short Put
-				openalgo.PlaceOrder("SELL","PE",quantity);
+				Layr0 IMC.PlaceOrder("SELL","PE",quantity);
 					
 				}
 				
@@ -877,14 +877,14 @@ if(EnableAlgo != "Disable")
 				{
 				//Exit Long Call Option
 				
-				openalgo.ExitOrder("SELL","CE"); 
+				Layr0 IMC.ExitOrder("SELL","CE"); 
 				
 				}
 				
 				if(tradetype=="SELL")
 				{
 				//Exit Short Put Option
-				openalgo.ExitOrder("BUY","PE"); 
+				Layr0 IMC.ExitOrder("BUY","PE"); 
 				
 				}
 				
@@ -909,7 +909,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="BUY")
 				{
 				//Long Put
-				openalgo.PlaceOrder("BUY","PE",quantity);
+				Layr0 IMC.PlaceOrder("BUY","PE",quantity);
 				
 				
 				}
@@ -917,7 +917,7 @@ if(EnableAlgo != "Disable")
 				if(tradetype=="SELL")
 				{
 				//Short Call
-				openalgo.PlaceOrder("SELL","CE",quantity);
+				Layr0 IMC.PlaceOrder("SELL","CE",quantity);
 							
 				}
 				
@@ -940,14 +940,14 @@ if(EnableAlgo != "Disable")
 				{
 				//Exit Long Put Option
 				
-				openalgo.ExitOrder("SELL","PE"); 
+				Layr0 IMC.ExitOrder("SELL","PE"); 
 				
 				}
 				
 				if(tradetype=="SELL")
 				{
 				//Exit Short Call Option
-				openalgo.ExitOrder("BUY","CE"); 
+				Layr0 IMC.ExitOrder("BUY","CE"); 
 				
 				}
                

@@ -1,6 +1,6 @@
 # Chartink Integration
 
-OpenAlgo now supports seamless Chartink integration for automated trading based on scanner alerts. Key features include:
+Layr0 IMC now supports seamless Chartink integration for automated trading based on scanner alerts. Key features include:
 
 • Automated Order Placement: Place orders automatically based on BUY, SELL, SHORT, or COVER alerts.
 
@@ -17,4 +17,4 @@ OpenAlgo now supports seamless Chartink integration for automated trading based 
 \
 
 
-Simply connect your Chartink webhook, configure strategies in OpenAlgo, and automate your trading flow.
+Simply connect your Chartink webhook, configure strategies in Layr0 IMC, and automate your trading flow.

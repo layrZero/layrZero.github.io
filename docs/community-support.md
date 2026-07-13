@@ -1,10 +1,10 @@
 # Community Support
 
-Welcome to the OpenAlgo Community on Discord! This is your hub for connecting with fellow developers and algo traders, sharing insights, getting support, and collaborating on projects.
+Welcome to the Layr0 IMC Community on Discord! This is your hub for connecting with fellow developers and algo traders, sharing insights, getting support, and collaborating on projects.
 
 ### How to Join
 
-To become a part of our growing community, please use the invitation link below: [Join the OpenAlgo Discord Community](https://discord.gg/UPh7QPsNhP) and you can raise your issues and feature request in [openalgo github section ](https://github.com/marketcalls/openalgo/issues)
+To become a part of our growing community, please use the invitation link below: [Join the Layr0 IMC Discord Community](https://discord.gg/UPh7QPsNhP) and you can raise your issues and feature request in [Layr0 IMC github section ](https://github.com/layr0/Layr0 IMC/issues)
 
 ### Community Guidelines
 
@@ -17,15 +17,15 @@ To become a part of our growing community, please use the invitation link below:
 ### Channels and Their Purposes
 
 * **#general:** General discussions related to algo trading and development.
-* **#developers:** Technical discussions about OpenAlgo's API, SDKs, and development.
+* **#developers:** Technical discussions about Layr0 IMC's API, SDKs, and development.
 * **#algotraders:** Strategies, tips, and discussion for algo traders.
 * **#announcements:** Stay updated with the latest news and events.
 * **#trading-platforms:** Discuss various platforms and tools for trading.
 
-### [OpenAlgo Virtual Meet](https://learn.marketcalls.in/courses/-OpenAlgo-Developer-Meet---Mar-22-2024-65fd4c74a2a47848adb27c40)
+### [Layr0 IMC Virtual Meet](https://learn.layr0.in/courses/-Layr0 IMC-Developer-Meet---Mar-22-2024-65fd4c74a2a47848adb27c40)
 
 * **Event Time:** 02nd April 2024 (7.30 p.m IST)
-* **Agenda Highlights:** Discover features of OpenAlgo v1.0, integration techniques, plugin systems, and the roadmap for v2.0.
+* **Agenda Highlights:** Discover features of Layr0 IMC v1.0, integration techniques, plugin systems, and the roadmap for v2.0.
 
 ### Support and FAQ
 
@@ -35,7 +35,7 @@ Post your question in the relevant channel. For technical issues, use #developer
 
 #### Are there any regular events or meetups?
 
-Yes, we host the OpenAlgo Virtual Meet annually. You can find the details in the #announcements channel.
+Yes, we host the Layr0 IMC Virtual Meet annually. You can find the details in the #announcements channel.
 
 #### How do I report inappropriate behavior?
 
@@ -43,11 +43,11 @@ Contact a moderator via direct message or use the `@moderator` tag in the #gener
 
 ### Resources
 
-* \[OpenAlgo API Documentation]
+* \[Layr0 IMC API Documentation]
 * \[Tutorials and Guides]
 * \[Trading Strategies and Tips]
 * \[Code Repositories]
 
 ### Contact Us
 
-For direct support or inquiries, please contact the community moderators or reach out through the following email: support@openalgo.com.
+For direct support or inquiries, please contact the community moderators or reach out through the following email: support@Layr0 IMC.com.

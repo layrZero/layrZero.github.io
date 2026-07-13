@@ -1,11 +1,11 @@
-# OpenAlgo Architecture
+# Layr0 IMC Architecture
 
 
 
 ## Windows/Mac Hosting Architecture
 
 <img
-  src={require('@site/static/img/assets/OpenAlgo Windows Architecture - Diagram.png').default}
+  src={require('@site/static/img/assets/Layr0 IMC Windows Architecture - Diagram.png').default}
 />
 
 
@@ -13,5 +13,5 @@
 ## Linux Server Hosting Architecture
 
 <img
-  src={require('@site/static/img/assets/OpenAlgo Ubuntu Architecture.jpeg').default}
+  src={require('@site/static/img/assets/Layr0 IMC Ubuntu Architecture.jpeg').default}
 />

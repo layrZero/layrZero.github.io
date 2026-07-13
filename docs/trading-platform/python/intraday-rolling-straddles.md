@@ -2,7 +2,7 @@
 
 ### **Overview**
 
-This sample strategy implements an **intraday rolling short straddle** for NIFTY index options using OpenAlgo Python APIs. The bot sells an at-the-money (ATM) NIFTY straddle at a configurable time, then automatically rolls (closes and reopens a new straddle) whenever the NIFTY spot moves ±0.4% from the last entry reference, up to a user-defined daily limit. All open positions are force-closed (squared off) at a specified time before market close.
+This sample strategy implements an **intraday rolling short straddle** for NIFTY index options using Layr0 IMC Python APIs. The bot sells an at-the-money (ATM) NIFTY straddle at a configurable time, then automatically rolls (closes and reopens a new straddle) whenever the NIFTY spot moves ±0.4% from the last entry reference, up to a user-defined daily limit. All open positions are force-closed (squared off) at a specified time before market close.
 
 ***
 
@@ -24,10 +24,10 @@ This sample strategy implements an **intraday rolling short straddle** for NIFTY
 import time as systime
 from datetime import datetime, time as dtime
 from apscheduler.schedulers.background import BackgroundScheduler
-from openalgo import api
+from Layr0 IMC import api
 import pytz
 
-print("🔁 OpenAlgo Python Bot is running.")
+print("🔁 Layr0 IMC Python Bot is running.")
 
 # === USER PARAMETERS ===
 
@@ -48,7 +48,7 @@ EXCHANGE = "NSE_INDEX"
 OPTION_EXCHANGE = "NFO"
 STRIKE_INTERVAL = 50
 
-API_KEY = "YOU-OPENALGO-APIKEY"
+API_KEY = "YOU-Layr0 IMC-APIKEY"
 API_HOST = "http://127.0.0.1:5000"
 
 client = api(api_key=API_KEY, host=API_HOST)
@@ -154,14 +154,14 @@ except (KeyboardInterrupt, SystemExit):
 | `SQUAREOFF_HOUR`        | Hour to force square-off all legs                 | `15`        |
 | `SQUAREOFF_MINUTE`      | Minute to force square-off all legs               | `15`        |
 | `MAX_STRADDLES_PER_DAY` | Max straddles allowed per day                     | `3`         |
-| `EXPIRY`                | Expiry date for all option legs (OpenAlgo format) | `"19JUN25"` |
+| `EXPIRY`                | Expiry date for all option legs (Layr0 IMC format) | `"19JUN25"` |
 | `LOT_SIZE`              | Number of options per leg (NIFTY = 75 as of 2025) | `75`        |
 
 ***
 
 ### **Order Format**
 
-All orders use the OpenAlgo symbol format:
+All orders use the Layr0 IMC symbol format:
 
 * **Call Example:** `NIFTY19JUN2522350CE`
 * **Put Example:** `NIFTY19JUN2522350PE`
@@ -195,7 +195,7 @@ Orders are placed as:
 ### **Usage**
 
 * Edit the parameters at the top of the script as needed (no need for .env or environment variables).
-* Run the script. Ensure your OpenAlgo API is running and accessible.
+* Run the script. Ensure your Layr0 IMC API is running and accessible.
 * All actions and errors will be displayed in your terminal or console.
 
 ***
@@ -205,7 +205,7 @@ Orders are placed as:
 * This sample does **not** use persistent order logging or database.
 * No explicit risk management or stop loss (can be added if desired).
 * Only supports one instrument/expiry at a time.
-* Ensure your OpenAlgo symbol format and expiry match your broker’s contract details.
+* Ensure your Layr0 IMC symbol format and expiry match your broker’s contract details.
 
 ***
 

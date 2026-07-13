@@ -1,6 +1,6 @@
 # ChartInk
 
-OpenAlgo supports integration with Chartink for automated trading based on scanner alerts. This integration allows you to:
+Layr0 IMC supports integration with Chartink for automated trading based on scanner alerts. This integration allows you to:
 
 * Create and manage trading strategies
 * Configure symbols with quantities and product types
@@ -15,7 +15,7 @@ OpenAlgo supports integration with Chartink for automated trading based on scann
 
 ### Requirements
 
-ChartInk Paid Account (Supports Webhook Features to send Alerts to OpenAlgo)
+ChartInk Paid Account (Supports Webhook Features to send Alerts to Layr0 IMC)
 
 Ngrok with Custom Domain Configuration (Provides Webhooks to Chartink/Tradingview) if hosted locally in Laptop/Desktop.&#x20;
 
@@ -33,7 +33,7 @@ import YouTube from '@site/src/components/YouTube';
 
 
 
-OpenAlgo uses a dual-queue system to handle orders efficiently:
+Layr0 IMC uses a dual-queue system to handle orders efficiently:
 
 1. Regular Order Queue (Entry Orders):
    * Handles BUY and SHORT orders
@@ -63,7 +63,7 @@ OpenAlgo uses a dual-queue system to handle orders efficiently:
 />
 
 
-1. Go to the Chartink section in OpenAlgo
+1. Go to the Chartink section in Layr0 IMC
 2. Click "New Strategy" button
 3. Fill in the strategy details:
    * Name: A unique name for your strategy (will be prefixed with 'chartink\_')
@@ -168,7 +168,7 @@ Creating Alert
 3.  Copy and paste your strategy's webhook URL:
 
     ```
-    https://your-openalgo-domain/chartink/webhook/<webhook-id>
+    https://your-Layr0 IMC-domain/chartink/webhook/<webhook-id>
     ```
 4. Configure other alert settings as needed
 5. Click "Save alert" button
@@ -184,7 +184,7 @@ Creating Alert
 
 
 1. When your scanner conditions are met, Chartink sends an alert to your webhook URL
-2. OpenAlgo receives the alert and:
+2. Layr0 IMC receives the alert and:
    * Validates the webhook ID
    * Checks if strategy is active
    * Validates the alert name for action keyword
@@ -326,7 +326,7 @@ For intraday strategies:
 
 
 
-OpenAlgo handles various error scenarios:
+Layr0 IMC handles various error scenarios:
 
 * Invalid webhook IDs
 * Missing action keywords in alert names

@@ -4,7 +4,7 @@ Firstock is an Indian discount brokerage firm offering seamless trading services
 
 ## Getting API Credentials
 
-To integrate Firstock with OpenAlgo, follow these steps to obtain your API key and secret:
+To integrate Firstock with Layr0 IMC, follow these steps to obtain your API key and secret:
 
 1\. Log in to Firstock Connect
 
@@ -28,9 +28,9 @@ To integrate Firstock with OpenAlgo, follow these steps to obtain your API key a
   src={require('@site/static/img/assets/Screenshot 2024-12-24 at 2.49.44 PM.png').default}
 />
 
-3\. Configure OpenAlgo:
+3\. Configure Layr0 IMC:
 
-• In your OpenAlgo .env file, set the following variables:
+• In your Layr0 IMC .env file, set the following variables:
 
 ```bash
 BROKER_API_KEY = 'Your Vendor Code'

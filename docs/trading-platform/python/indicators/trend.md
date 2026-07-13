@@ -1,11 +1,11 @@
 # Trend
 
-Trend indicators help identify the direction and strength of market trends. All examples use real market data fetched via OpenAlgo API.
+Trend indicators help identify the direction and strength of market trends. All examples use real market data fetched via Layr0 IMC API.
 
 ### Data Setup
 
 ```python
-from openalgo import api, ta
+from Layr0 IMC import api, ta
 import pandas as pd
 
 # Initialize API client
@@ -424,7 +424,7 @@ print(peak_periods[['close', 'EMA_20', 'DEMA_20', 'TEMA_20']].tail())
 ### Complete Trading Analysis Example
 
 ```python
-from openalgo import api, ta
+from Layr0 IMC import api, ta
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -490,4 +490,4 @@ plt.tight_layout()
 plt.show()
 ```
 
-This documentation demonstrates how to use OpenAlgo trend indicators with real market data fetched via the OpenAlgo API, maintaining pandas DataFrame structure throughout the analysis process.
+This documentation demonstrates how to use Layr0 IMC trend indicators with real market data fetched via the Layr0 IMC API, maintaining pandas DataFrame structure throughout the analysis process.

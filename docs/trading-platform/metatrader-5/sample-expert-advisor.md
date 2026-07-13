@@ -1,19 +1,19 @@
 # Sample Expert Advisor
 
-Here is a sample EMA Crossover Based Simple Expert Advisor which places orders to OpenAlgo Connected Brokers
+Here is a sample EMA Crossover Based Simple Expert Advisor which places orders to Layr0 IMC Connected Brokers
 
 ```cpp
 //+------------------------------------------------------------------+
-//|                                                      OpenAlgo.mq5|
-//|                        Copyright 2024, OpenAlgo.in               |
-//|                        https://www.openalgo.in                   |
+//|                                                      Layr0 IMC.mq5|
+//|                        Copyright 2024, Layr0 IMC.in               |
+//|                        https://www.Layr0 IMC.in                   |
 //+------------------------------------------------------------------+
-#property copyright "Copyright 2024, OpenAlgo.in"
-#property link      "https://www.openalgo.in"
+#property copyright "Copyright 2024, Layr0 IMC.in"
+#property link      "https://www.Layr0 IMC.in"
 #property version   "1.00"
 #property strict
 
-#include <OpenAlgo/OpenAlgoApi.mqh>
+#include <Layr0 IMC/Layr0 IMCApi.mqh>
 
 input string ApiUrl = "http://127.0.0.1:5000";
 input string ApiKey = "your_app_apikey";

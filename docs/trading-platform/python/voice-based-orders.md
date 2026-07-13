@@ -6,11 +6,11 @@ import YouTube from '@site/src/components/YouTube';
 
 <YouTube id="4aUJFCw8gmM" title="Voice-based-Orders" />
 
-This is an experimental feature using OpenAlgo & Groq (Whisper Large V3 Model). This system allows users to place orders via voice commands. The voice commands are translated from speech to text using the OpenAI Whisper large v3 model, and then the transcription is fed to OpenAlgo to execute the order.
+This is an experimental feature using Layr0 IMC & Groq (Whisper Large V3 Model). This system allows users to place orders via voice commands. The voice commands are translated from speech to text using the OpenAI Whisper large v3 model, and then the transcription is fed to Layr0 IMC to execute the order.
 
-[Checkout the Github for this project](https://github.com/marketcalls/openalgo-voice-based-orders)
+[Checkout the Github for this project](https://github.com/layr0/Layr0 IMC-voice-based-orders)
 
-**How to Use the OpenAlgo Voice-Based Trading System**
+**How to Use the Layr0 IMC Voice-Based Trading System**
 
 1. Select the desired Exchange and Product Type from the dropdown menus.
 2. Click the "Start Listening" button to begin.
@@ -24,11 +24,11 @@ This is an experimental feature using OpenAlgo & Groq (Whisper Large V3 Model). 
 
 **Product Types:** MIS (Margin Intraday Square off), CNC (Cash and Carry for equity)
 
-**Setting up Groq and OpenAlgo API keys:**
+**Setting up Groq and Layr0 IMC API keys:**
 
 1. Go to [console.groq.com](https://www.google.com/url?sa=E\&q=https%3A%2F%2Fconsole.groq.com)
 2. Create an API key and copy it to your clipboard.
-3. In your OpenAlgo application, go to "API Key". Get your OpenAlgo API Key.
+3. In your Layr0 IMC application, go to "API Key". Get your Layr0 IMC API Key.
 
 
 

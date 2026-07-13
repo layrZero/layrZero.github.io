@@ -20,7 +20,7 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/expiry
 
 | Parameter        | Type   | Required | Description                                          |
 | ---------------- | ------ | -------- | ---------------------------------------------------- |
-| `apikey`         | string | Yes      | Your OpenAlgo API key for authentication             |
+| `apikey`         | string | Yes      | Your IMC API key for authentication             |
 | `symbol`         | string | Yes      | Underlying symbol (e.g., NIFTY, BANKNIFTY, RELIANCE) |
 | `exchange`       | string | Yes      | Exchange code (NFO, BFO, MCX, CDS)                   |
 | `instrumenttype` | string | Yes      | Type of instrument - "futures" or "options"          |
@@ -42,7 +42,7 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/expiry
 
 ```json
 {
-    "apikey": "openalgo-api-key",
+    "apikey": "IMC-api-key",
     "symbol": "NIFTY",
     "exchange": "NFO",
     "instrumenttype": "futures"
@@ -66,7 +66,7 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/expiry
 ### Error Responses
 
 - 401 Unauthorized: Invalid/expired broker session or unauthorized.
-- 403 Forbidden: Invalid OpenAlgo API key or permission error.
+- 403 Forbidden: Invalid IMC API key or permission error.
 - 429 Too Many Requests: Rate limit exceeded (where detectable).
 - 500 Internal Server Error: Unclassified internal failure.
 
@@ -78,7 +78,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 
 ```json
 {
-    "apikey": "openalgo-api-key",
+    "apikey": "IMC-api-key",
     "symbol": "NIFTY",
     "exchange": "NFO",
     "instrumenttype": "options"
@@ -120,7 +120,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 
 ```json
 {
-    "apikey": "openalgo-api-key",
+    "apikey": "IMC-api-key",
     "symbol": "GOLD",
     "exchange": "MCX",
     "instrumenttype": "futures"
@@ -150,7 +150,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 
 ```json
 {
-    "apikey": "openalgo-api-key",
+    "apikey": "IMC-api-key",
     "symbol": "USDINR",
     "exchange": "CDS",
     "instrumenttype": "futures"
@@ -196,7 +196,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 ```json
 {
     "status": "error",
-    "message": "Invalid openalgo apikey"
+    "message": "Invalid IMC apikey"
 }
 ```
 
@@ -217,7 +217,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 | 200         | Success              | Request processed successfully                                   |
 | 400         | Bad Request          | Invalid request parameters                                       |
 | 401         | Unauthorized         | Invalid/expired broker session or unauthorized                   |
-| 403         | Forbidden            | Invalid OpenAlgo API key or permission error                     |
+| 403         | Forbidden            | Invalid IMC API key or permission error                     |
 | 429         | Too Many Requests    | Rate limit exceeded (where detectable)                           |
 | 500         | Server Error         | Internal server error (unclassified internal failure)            |
 
@@ -225,7 +225,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 
 | Message                                                                | Description                              |
 | ---------------------------------------------------------------------- | ---------------------------------------- |
-| "Invalid openalgo apikey"                                              | The provided API key is invalid          |
+| "Invalid IMC apikey"                                              | The provided API key is invalid          |
 | "Symbol parameter is required and cannot be empty"                     | Symbol field is missing or empty         |
 | "Exchange parameter is required and cannot be empty"                   | Exchange field is missing or empty       |
 | "Instrumenttype parameter is required and cannot be empty"             | Instrumenttype field is missing or empty |
@@ -239,11 +239,11 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 * Dates are sorted chronologically from earliest to latest
 * The API uses exact symbol matching to avoid confusion (e.g., "NIFTY" won't match "BANKNIFTY")
 * Different exchanges use different instrument type codes internally but the API accepts standardized "futures" and "options" parameters
-* Rate limiting is applied as per your OpenAlgo server configuration
+* Rate limiting is applied as per your IMC server configuration
 
 ### Rate Limits
 
-This API endpoint is subject to rate limiting. The default rate limit is 10 requests per second per API key, but this may vary based on your OpenAlgo server configuration.
+This API endpoint is subject to rate limiting. The default rate limit is 10 requests per second per API key, but this may vary based on your IMC server configuration.
 
 ### Common Use Cases
 
@@ -257,4 +257,4 @@ This API endpoint is subject to rate limiting. The default rate limit is 10 requ
 * Filter expiry dates based on your trading strategy requirements
 * Consider time to expiry when selecting contracts
 * Use the chronologically sorted expiry dates for time-based analysis
-* Validate the symbol format according to OpenAlgo symbol conventions before making API calls
+* Validate the symbol format according to IMC symbol conventions before making API calls

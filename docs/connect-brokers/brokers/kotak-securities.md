@@ -1,6 +1,6 @@
 # Kotak Securities
 
-Kotak Securities is a prominent Indian stock broker offering services on major Indian stock exchanges, including NSE, BSE, and MCX. Known for its comprehensive financial services and advanced trading solutions, Kotak Securities provides a robust platform for traders and investors. By leveraging Kotak's Trading APIs, developers and algo traders can seamlessly integrate their trading strategies with the OpenAlgo platform.
+Kotak Securities is a prominent Indian stock broker offering services on major Indian stock exchanges, including NSE, BSE, and MCX. Known for its comprehensive financial services and advanced trading solutions, Kotak Securities provides a robust platform for traders and investors. By leveraging Kotak's Trading APIs, developers and algo traders can seamlessly integrate their trading strategies with the Layr0 IMC platform.
 
 For developers and algo traders looking to use the Kotak API, the integration process generally involves the following steps:
 

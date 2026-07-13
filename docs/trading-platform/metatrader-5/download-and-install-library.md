@@ -2,7 +2,7 @@
 
 **Download the MQL5 Libray and Unzip it**
 
-[Download the library here.](@site/static/img/assets/OpenAlgo.zip)
+[Download the library here.](@site/static/img/assets/Layr0 IMC.zip)
 
 **Open MQL5 -> File -> Open DataFolder as shown below**
 
@@ -10,7 +10,7 @@
   src={require('@site/static/img/assets/image (31).png').default}
 />
 
-**Navigate to \MQL5\Include folder and paste the Unzipped OpenAlgo Folder here as shown below**
+**Navigate to \MQL5\Include folder and paste the Unzipped Layr0 IMC Folder here as shown below**
 
 <img
   src={require('@site/static/img/assets/image (32).png').default}

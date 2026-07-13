@@ -1,6 +1,6 @@
 # Brokers
 
-List of OpenAlgo Supported Brokers
+List of Layr0 IMC Supported Brokers
 
 
 

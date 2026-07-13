@@ -6,7 +6,7 @@
 
 Pocketful is a SEBI-registered Indian stock broker offering a modern trading platform with support for multiple asset classes and a powerful API suite. With a focus on automation, speed, and flexibility, Pocketful provides developers and trading system builders direct access to its brokerage services through the [developer portal](https://api.pocketful.in/).
 
-For OpenAlgo integration, Pocketful enables algorithmic trading with secure API authentication, real-time data streaming, and efficient order placement across equities and derivatives.
+For Layr0 IMC integration, Pocketful enables algorithmic trading with secure API authentication, real-time data streaming, and efficient order placement across equities and derivatives.
 
 ***
 
@@ -34,7 +34,7 @@ Click on “+ Create App”.
 
 **Step 3 – Fill App Details**
 
-* App Name: `OpenAlgo`
+* App Name: `Layr0 IMC`
 * Redirect URL: `http://127.0.0.1:5000/pocketful/callback`
 * Accept the terms and conditions and click **Create App**
 
@@ -55,7 +55,7 @@ Once created, the following credentials will be generated:
 
 #### API Authentication
 
-Pocketful follows OAuth2-based authentication using redirect URI and access tokens. After app creation, OpenAlgo uses the client credentials to initiate authorization and securely fetch access tokens.
+Pocketful follows OAuth2-based authentication using redirect URI and access tokens. After app creation, Layr0 IMC uses the client credentials to initiate authorization and securely fetch access tokens.
 
 Here is a sample of how the details would appear in a `.env` file for reference:
 
@@ -67,9 +67,9 @@ REDIRECT_URL = 'http://127.0.0.1:5000/pocketful/callback'
 
 ***
 
-#### Connecting Pocketful to OpenAlgo
+#### Connecting Pocketful to Layr0 IMC
 
-Once your `.env` file is populated with the credentials, OpenAlgo can initiate the login flow. This can be triggered locally:
+Once your `.env` file is populated with the credentials, Layr0 IMC can initiate the login flow. This can be triggered locally:
 
 ```
 http://127.0.0.1:5000/pocketful/login
@@ -79,6 +79,6 @@ You will be redirected to Pocketful’s login screen. After successful login, th
 
 ***
 
-Integrating OpenAlgo with Pocketful's API allows traders and developers to leverage a powerful, cost-effective, and scalable infrastructure for building and deploying fully automated trading strategies. To ensure smooth performance, it is advisable to manage API limits, rotate tokens securely, and build retry/error-handling logic in production systems.
+Integrating Layr0 IMC with Pocketful's API allows traders and developers to leverage a powerful, cost-effective, and scalable infrastructure for building and deploying fully automated trading strategies. To ensure smooth performance, it is advisable to manage API limits, rotate tokens securely, and build retry/error-handling logic in production systems.
 
 ***

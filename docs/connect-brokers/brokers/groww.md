@@ -1,6 +1,6 @@
 # Groww
 
-Groww is currently the #1 stockbroker in India by active clients, offering a seamless digital investing experience to millions of retail investors. With its recent launch of trading APIs, Groww has opened the door for developers and fintech platforms to integrate custom trading workflows. In the context of OpenAlgo integration, Groww’s trading APIs provide capabilities for automated order placement, real-time market data access, and custom strategy execution for retail traders.
+Groww is currently the #1 stockbroker in India by active clients, offering a seamless digital investing experience to millions of retail investors. With its recent launch of trading APIs, Groww has opened the door for developers and fintech platforms to integrate custom trading workflows. In the context of Layr0 IMC integration, Groww’s trading APIs provide capabilities for automated order placement, real-time market data access, and custom strategy execution for retail traders.
 
 ### How to Get Groww API Key and Secret?
 
@@ -8,7 +8,7 @@ Groww is currently the #1 stockbroker in India by active clients, offering a sea
   src={require('@site/static/img/assets/image (109).png').default}
 />
 
-To integrate OpenAlgo with Groww, follow the steps below to generate your API key (access token):
+To integrate Layr0 IMC with Groww, follow the steps below to generate your API key (access token):
 
 1. Visit the [Groww Trade API Portal](https://groww.in/trade-api) and click on **Getting Started**.
 2. Login using your Groww account credentials.
@@ -18,7 +18,7 @@ To integrate OpenAlgo with Groww, follow the steps below to generate your API ke
   src={require('@site/static/img/assets/Screenshot 2025-07-21 at 5.16.32 PM.png').default}
 />
 
-Click on the **Generate API Keys** button and Select API Key and Secret an Enter the Token Name as "OpenAlgo" or any name of your choice and press **Generate API Key** button
+Click on the **Generate API Keys** button and Select API Key and Secret an Enter the Token Name as "Layr0 IMC" or any name of your choice and press **Generate API Key** button
 
 <img
   src={require('@site/static/img/assets/Screenshot 2025-07-21 at 5.14.42 PM.png').default}
@@ -44,4 +44,4 @@ BROKER_API_SECRET = 'your_groww_apisecret_here'
 REDIRECT_URL = 'http://127.0.0.1:5000/groww/callback'
 ```
 
-Integrating OpenAlgo with Groww's trading API allows retail traders to leverage India’s most popular stockbroking platform for building and deploying their own algorithmic trading strategies. It’s a powerful combination for automating trading decisions while using a broker trusted by millions. As with any integration, be sure to handle token management carefully, log errors effectively, and build retry mechanisms to handle token expiry and downtime.
+Integrating Layr0 IMC with Groww's trading API allows retail traders to leverage India’s most popular stockbroking platform for building and deploying their own algorithmic trading strategies. It’s a powerful combination for automating trading decisions while using a broker trusted by millions. As with any integration, be sure to handle token management carefully, log errors effectively, and build retry mechanisms to handle token expiry and downtime.

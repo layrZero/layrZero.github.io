@@ -3,20 +3,20 @@
 ## Internet Function Method
 
 ```clike
-// Rajandran R - Creator of OpenAlgo
-// Website - openalgo.in / marketcalls.in
-// OpenAlgo - Amibroker Trailing Stoploss Execution Module
+// Rajandran R - Creator of Layr0 IMC
+// Website - Layr0 IMC.in / layr0.in
+// Layr0 IMC - Amibroker Trailing Stoploss Execution Module
 // Date - 13/12/2024
 
 
-_SECTION_BEGIN("OpenAlgo Trailing Stoploss Execution Module");
+_SECTION_BEGIN("Layr0 IMC Trailing Stoploss Execution Module");
 
 // Initial setup and parameters
 RequestTimedRefresh(1, False);
 EnableTextOutput(False);
 
-// OpenAlgo Configuration Parameters
-apikey = ParamStr("OpenAlgo API Key", "******");
+// Layr0 IMC Configuration Parameters
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "TSL_Strategy");
 symbol = ParamStr("Symbol", "YESBANK");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");

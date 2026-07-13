@@ -44,7 +44,7 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/analyzer/toggle
 
 | Parameter | Type    | Required | Description                                |
 | --------- | ------- | -------- | ------------------------------------------ |
-| apikey    | string  | Yes      | Your OpenAlgo API key                      |
+| apikey    | string  | Yes      | Your IMC API key                      |
 | mode      | boolean | Yes      | Target mode (true = analyze, false = live) |
 
 ### Response Fields

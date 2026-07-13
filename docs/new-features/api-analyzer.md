@@ -1,8 +1,8 @@
 # API Analyzer
 
-OpenAlgo API Analyzer Documentation
+Layr0 IMC API Analyzer Documentation
 
-The **OpenAlgo API Analyzer** is a versatile tool designed to assist both traders and developers in testing, validating, and monitoring their trading integrations seamlessly and in real-time.
+The **Layr0 IMC API Analyzer** is a versatile tool designed to assist both traders and developers in testing, validating, and monitoring their trading integrations seamlessly and in real-time.
 
 ***
 

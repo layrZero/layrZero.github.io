@@ -27,17 +27,17 @@ The line Trading Automation tool is designed for Manual traders who want to perf
 
 ```clike
 //Module - Line Pair Tading Automation Module 
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker SmartOrder Chart Trading Module v1.0
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker SmartOrder Chart Trading Module v1.0
 //Date - 29/05/2024
 
 
-_SECTION_BEGIN("OpenAlgo Trading Controls");
+_SECTION_BEGIN("Layr0 IMC Trading Controls");
 
 RequestTimedRefresh(1,False);
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Amibroker");
 symbol = ParamStr("Symbol", "YESBANK");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");
@@ -95,7 +95,7 @@ StaticVarSet(static_name_algo, 0);
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -314,7 +314,7 @@ End Sub
 
 %>
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 
 
@@ -448,7 +448,7 @@ if(IntradayMode=="ON" AND LastValue(TimeNum())== ExitTradeTime AND Nz(StaticVarG
 {
 
 
-openalgo.ExitOrder("SELL");
+Layr0 IMC.ExitOrder("SELL");
 
 
 StaticVarSet(staticvar+"SquareOffIndex",LastValue(BarIndex()));
@@ -463,7 +463,7 @@ if(BuyMode==0 AND LastValue(Cross(H,B1)) AND Nz(StaticVarGet(staticvar+"B1"))==0
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
 
-openalgo.placeorder("BUY",buyquantity1);
+Layr0 IMC.placeorder("BUY",buyquantity1);
 StaticVarSet(staticvar+"B1index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"B1",1);
 _TRACE("Buy Above B1 Triggered");
@@ -476,7 +476,7 @@ if(BuyMode==1 AND LastValue(Cross(B1,L)) AND Nz(StaticVarGet(staticvar+"B1"))==0
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("BUY",buyquantity1);
+Layr0 IMC.placeorder("BUY",buyquantity1);
 StaticVarSet(staticvar+"B1index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"B1",1);
 _TRACE("Buy Below B1 Triggered");
@@ -487,7 +487,7 @@ if(BuyMode==0 AND LastValue(Cross(H,B2)) AND Nz(StaticVarGet(staticvar+"B2"))==0
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("BUY",buyquantity2);
+Layr0 IMC.placeorder("BUY",buyquantity2);
 StaticVarSet(staticvar+"B2index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"B2",1);
 _TRACE("Buy Above B2 Triggered");
@@ -498,7 +498,7 @@ if(BuyMode==1 AND LastValue(Cross(B2,L)) AND Nz(StaticVarGet(staticvar+"B2"))==0
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("BUY",buyquantity2);
+Layr0 IMC.placeorder("BUY",buyquantity2);
 StaticVarSet(staticvar+"B2index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"B2",1);
 _TRACE("Buy Below B2 Triggered");
@@ -509,7 +509,7 @@ if(BuyMode==0 AND LastValue(Cross(H,B3)) AND Nz(StaticVarGet(staticvar+"B3"))==0
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("BUY",buyquantity3);
+Layr0 IMC.placeorder("BUY",buyquantity3);
 StaticVarSet(staticvar+"B3index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"B3",1);
 _TRACE("Buy Above B3 Triggered");
@@ -520,7 +520,7 @@ if(BuyMode==1 AND LastValue(Cross(B3,L)) AND Nz(StaticVarGet(staticvar+"B3"))==0
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("BUY",buyquantity3);
+Layr0 IMC.placeorder("BUY",buyquantity3);
 StaticVarSet(staticvar+"B3index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"B3",1);
 _TRACE("Buy Below B3 Triggered");
@@ -537,12 +537,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.placeorder("SELL",buyquantity1);
+Layr0 IMC.placeorder("SELL",buyquantity1);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("SELL");
+Layr0 IMC.ExitOrder("SELL");
 }
 
 StaticVarSet(staticvar+"X1index",LastValue(BarIndex()));
@@ -559,12 +559,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.placeorder("SELL",buyquantity1);
+Layr0 IMC.placeorder("SELL",buyquantity1);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("SELL");
+Layr0 IMC.ExitOrder("SELL");
 }
 
 
@@ -581,12 +581,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.placeorder("SELL",buyquantity2);
+Layr0 IMC.placeorder("SELL",buyquantity2);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("SELL");
+Layr0 IMC.ExitOrder("SELL");
 }
 
 
@@ -603,12 +603,12 @@ if((IntradayMode=="ON" AND TimeNum()== ExitTradeTime) OR IntradayMode=="OFF")
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.placeorder("SELL",buyquantity2);
+Layr0 IMC.placeorder("SELL",buyquantity2);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("SELL");
+Layr0 IMC.ExitOrder("SELL");
 }
 
 StaticVarSet(staticvar+"X2index",LastValue(BarIndex()));
@@ -624,12 +624,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.placeorder("SELL",buyquantity3);
+Layr0 IMC.placeorder("SELL",buyquantity3);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("SELL");
+Layr0 IMC.ExitOrder("SELL");
 }
 
 
@@ -647,12 +647,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.placeorder("SELL",buyquantity3);
+Layr0 IMC.placeorder("SELL",buyquantity3);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("SELL");
+Layr0 IMC.ExitOrder("SELL");
 }
 
 
@@ -666,7 +666,7 @@ if(ShortMode==0 AND LastValue(Cross(H,S1)) AND Nz(StaticVarGet(staticvar+"S1"))=
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("SELL",shortquantity1);
+Layr0 IMC.placeorder("SELL",shortquantity1);
 StaticVarSet(staticvar+"S1index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"S1",1);
 _TRACE("Short Above S1 Triggered");
@@ -677,7 +677,7 @@ if(ShortMode==1 AND LastValue(Cross(S1,L)) AND Nz(StaticVarGet(staticvar+"S1"))=
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("SELL",shortquantity1);
+Layr0 IMC.placeorder("SELL",shortquantity1);
 StaticVarSet(staticvar+"S1index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"S1",1);
 _TRACE("Short Below S1 Triggered");
@@ -688,7 +688,7 @@ if(ShortMode==0 AND LastValue(Cross(H,S2)) AND Nz(StaticVarGet(staticvar+"S2"))=
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("SELL",shortquantity2);
+Layr0 IMC.placeorder("SELL",shortquantity2);
 StaticVarSet(staticvar+"S2index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"S2",1);
 _TRACE("Short Above S2 Triggered");
@@ -699,7 +699,7 @@ if(ShortMode==1 AND LastValue(Cross(S2,L)) AND Nz(StaticVarGet(staticvar+"S2"))=
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("SELL",shortquantity2);
+Layr0 IMC.placeorder("SELL",shortquantity2);
 StaticVarSet(staticvar+"S2index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"S2",1);
 _TRACE("Short Below S2 Triggered");
@@ -710,7 +710,7 @@ if(ShortMode==0 AND LastValue(Cross(H,S3)) AND Nz(StaticVarGet(staticvar+"S3"))=
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("SELL",shortquantity3);
+Layr0 IMC.placeorder("SELL",shortquantity3);
 StaticVarSet(staticvar+"S3index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"S3",1);
 _TRACE("Short Above S3 Triggered");
@@ -721,7 +721,7 @@ if(ShortMode==1 AND LastValue(Cross(S3,L)) AND Nz(StaticVarGet(staticvar+"S3"))=
 {
 if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(TimeNum()) <= EndTradeTime) OR IntradayMode=="OFF")
 {
-openalgo.placeorder("SELL",shortquantity3);
+Layr0 IMC.placeorder("SELL",shortquantity3);
 StaticVarSet(staticvar+"S3index",LastValue(BarIndex()));
 StaticVarSet(staticvar+"S3",1);
 _TRACE("Short Below S3 Triggered");
@@ -737,12 +737,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.PlaceOrder("BUY",shortquantity1);
+Layr0 IMC.PlaceOrder("BUY",shortquantity1);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("BUY");
+Layr0 IMC.ExitOrder("BUY");
 }
 
 StaticVarSet(staticvar+"C1index",LastValue(BarIndex()));
@@ -759,12 +759,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.PlaceOrder("BUY",shortquantity1);
+Layr0 IMC.PlaceOrder("BUY",shortquantity1);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("BUY");
+Layr0 IMC.ExitOrder("BUY");
 }
 
 
@@ -783,12 +783,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.PlaceOrder("BUY",shortquantity2);
+Layr0 IMC.PlaceOrder("BUY",shortquantity2);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("BUY");
+Layr0 IMC.ExitOrder("BUY");
 }
 
 
@@ -805,12 +805,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.PlaceOrder("BUY",shortquantity2);
+Layr0 IMC.PlaceOrder("BUY",shortquantity2);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("BUY");
+Layr0 IMC.ExitOrder("BUY");
 }
 
 
@@ -828,12 +828,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.PlaceOrder("BUY",shortquantity3);
+Layr0 IMC.PlaceOrder("BUY",shortquantity3);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("BUY");
+Layr0 IMC.ExitOrder("BUY");
 }
 
 
@@ -857,12 +857,12 @@ if((IntradayMode=="ON" AND LastValue(TimeNum())>= StartTradeTime AND LastValue(T
 if(ExitPos=="CURRENT")
 {
 //If positive open positions are there only then exit the Current Order Quantity 
-openalgo.PlaceOrder("BUY",shortquantity3);
+Layr0 IMC.PlaceOrder("BUY",shortquantity3);
 }
 if(ExitPos=="ALLOPENPOSITIONS")
 {
 //If positive open positions are there only then exit the All Open Positions 
-openalgo.ExitOrder("BUY");
+Layr0 IMC.ExitOrder("BUY");
 }
 
 StaticVarSet(staticvar+"C3index",LastValue(BarIndex()));
@@ -925,9 +925,9 @@ _SECTION_END();
 
 ### **Requirements**
 
-●OpenAlgo Downloaded and Configured
+●Layr0 IMC Downloaded and Configured
 
-●OpenAlgo Supported Broker
+●Layr0 IMC Supported Broker
 
 ●Amibroker 6.0 or Higher
 

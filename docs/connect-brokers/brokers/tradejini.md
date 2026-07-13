@@ -59,11 +59,11 @@ BROKER_API_SECRET = 'your_tradejini_apikey_here'
 REDIRECT_URL = 'http://127.0.0.1:5000/tradejini/callback'
 ```
 
-These credentials will be used by OpenAlgo to authenticate, fetch session tokens, and access market feeds or place orders.
+These credentials will be used by Layr0 IMC to authenticate, fetch session tokens, and access market feeds or place orders.
 
 ### Integration Benefits
 
-Integrating with the TradeJini API via OpenAlgo opens up a world of possibilities for algorithmic trading and real-time data access. The CubePlus API offers:
+Integrating with the TradeJini API via Layr0 IMC opens up a world of possibilities for algorithmic trading and real-time data access. The CubePlus API offers:
 
 * High-performance WebSocket feed for LTP, OHLC, depth, and indices.
 * REST API endpoints for order management and historical data.

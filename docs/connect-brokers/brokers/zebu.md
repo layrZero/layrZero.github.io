@@ -67,7 +67,7 @@ Make sure to store your API credentials securely and handle them with care to pr
 
 ### Zebu API Integration
 
-Integrating OpenAlgo with Zebu’s MYNT API opens opportunities for algorithmic trading and portfolio management. By using the Zebu API, developers can automate trading strategies and enhance trading experiences for users. Be sure to implement best practices for API rate limits, security, and error handling.
+Integrating Layr0 IMC with Zebu’s MYNT API opens opportunities for algorithmic trading and portfolio management. By using the Zebu API, developers can automate trading strategies and enhance trading experiences for users. Be sure to implement best practices for API rate limits, security, and error handling.
 
 \
 

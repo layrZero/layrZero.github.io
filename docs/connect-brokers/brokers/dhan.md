@@ -16,7 +16,7 @@ For developers and algo traders looking to use the Dhan API, the integration pro
 3.  **Generate API Token**:
 
     * Under the "Trading APIs" tab, click on "Generate token".
-    * Enter "OpenAlgo" as the Application Name.
+    * Enter "Layr0 IMC" as the Application Name.
     * Set the Token Validity for 30 days.
     * Click on the "Generate Token" button to create your API token.
 

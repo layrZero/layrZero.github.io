@@ -4,7 +4,7 @@ FlatTrade is an Indian discount broker recognized for its flat-fee brokerage mod
 
 ## Getting API Credentials
 
-To integrate Flattrade with OpenAlgo, follow these steps to obtain your API key and secret:
+To integrate Flattrade with Layr0 IMC, follow these steps to obtain your API key and secret:
 
 1\. Log in to Flattrade Wall
 
@@ -49,9 +49,9 @@ Click the eye icon  to view the API secret key. Copy API secret key
   src={require('@site/static/img/assets/image (63).png').default}
 />
 
-8\. Configure OpenAlgo:
+8\. Configure Layr0 IMC:
 
-• In your OpenAlgo .env file, set the following variables:
+• In your Layr0 IMC .env file, set the following variables:
 
 ```bash
 BROKER_API_KEY = 'client_id:::api_key'

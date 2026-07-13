@@ -1,41 +1,41 @@
 ---
-description: OpenAlgo - Model Context Protocol
+description: Layr0 IMC - Model Context Protocol
 ---
 
 # MCP
 
-## OpenAlgo MCP - AI Trading Assistant
+## Layr0 IMC MCP - AI Trading Assistant
 
 
 
-An AI-powered trading assistant platform for OpenAlgo, leveraging Model Context Protocol (MCP) and Large Language Models to provide intelligent trading capabilities.
+An AI-powered trading assistant platform for Layr0 IMC, leveraging Model Context Protocol (MCP) and Large Language Models to provide intelligent trading capabilities.
 
 ### Overview
 
-OpenAlgo MCP integrates the powerful OpenAlgo trading platform with advanced AI capabilities through:
+Layr0 IMC MCP integrates the powerful Layr0 IMC trading platform with advanced AI capabilities through:
 
-1. An MCP server that exposes OpenAlgo API functions as tools for AI interaction
+1. An MCP server that exposes Layr0 IMC API functions as tools for AI interaction
 2. An intelligent client application providing a conversational interface for trading
 
-This bridge between OpenAlgo's trading capabilities and AI allows for a natural language interface to complex trading operations, making algorithmic trading more accessible to users of all technical backgrounds.
+This bridge between Layr0 IMC's trading capabilities and AI allows for a natural language interface to complex trading operations, making algorithmic trading more accessible to users of all technical backgrounds.
 
 <img
   src={require('@site/static/img/assets/Screenshot 2025-01-04 at 6.01.17 PM.png').default}
 />
 
-## OpenAlgo MCP Server
+## Layr0 IMC MCP Server
 
-This is a Model Context Protocol (MCP) server that provides trading and market data functionality through the OpenAlgo platform. It enables AI assistants to execute trades, manage positions, and retrieve market data directly from supported brokers.
+This is a Model Context Protocol (MCP) server that provides trading and market data functionality through the Layr0 IMC platform. It enables AI assistants to execute trades, manage positions, and retrieve market data directly from supported brokers.
 
 ### Prerequisites
 
-#### 1. OpenAlgo Server Setup
+#### 1. Layr0 IMC Server Setup
 
-Ensure your OpenAlgo server is running and properly configured:
+Ensure your Layr0 IMC server is running and properly configured:
 
-1. **Start OpenAlgo Server**: Your OpenAlgo server should be running (e.g., on `http://127.0.0.1:5000`)
+1. **Start Layr0 IMC Server**: Your Layr0 IMC server should be running (e.g., on `http://127.0.0.1:5000`)
 2. **Nodejs** : Ensure NodeJS is installed
-3. **Broker Authentication**: Ensure your broker credentials are properly configured in OpenAlgo.
+3. **Broker Authentication**: Ensure your broker credentials are properly configured in Layr0 IMC.
 
 import YouTube from '@site/src/components/YouTube';
 
@@ -43,9 +43,9 @@ import YouTube from '@site/src/components/YouTube';
 
 #### 2. API Key
 
-To get your OpenAlgo API key:
+To get your Layr0 IMC API key:
 
-1. Open your OpenAlgo web interface (e.g., `http://127.0.0.1:5000`)
+1. Open your Layr0 IMC web interface (e.g., `http://127.0.0.1:5000`)
 2. Navigate to **Settings → API Keys**.
 3. Generate or copy your existing API key.
 
@@ -60,12 +60,12 @@ Add the following configuration to your MCP client, replacing the placeholder pa
 ```json
 {
   "mcpServers": {
-    "openalgo": {
+    "Layr0 IMC": {
       "command": "docker",
       "args": [
         "exec",
         "-i",
-        "openalgo-web",
+        "Layr0 IMC-web",
         "/app/.venv/bin/python",
         "/app/mcp/mcpserver.pyc"
       ]
@@ -93,10 +93,10 @@ Add the following configuration to your MCP client, replacing the placeholder pa
 ```json
 {
   "mcpServers": {
-    "openalgo": {
-      "command": "/Users/your_username/openalgo/.venv/bin/python3",
+    "Layr0 IMC": {
+      "command": "/Users/your_username/Layr0 IMC/.venv/bin/python3",
       "args": [
-        "/Users/your_username/openalgo/mcp/mcpserver.py",
+        "/Users/your_username/Layr0 IMC/mcp/mcpserver.py",
         "YOUR_API_KEY_HERE",
         "http://127.0.0.1:5000"
       ]
@@ -118,10 +118,10 @@ Add the following configuration to your MCP client, replacing the placeholder pa
 ```json
 {
   "mcpServers": {
-    "openalgo": {
-      "command": "/home/your_username/openalgo/.venv/bin/python3",
+    "Layr0 IMC": {
+      "command": "/home/your_username/Layr0 IMC/.venv/bin/python3",
       "args": [
-        "/home/your_username/openalgo/mcp/mcpserver.py",
+        "/home/your_username/Layr0 IMC/mcp/mcpserver.py",
         "YOUR_API_KEY_HERE",
         "http://127.0.0.1:5000"
       ]
@@ -140,7 +140,7 @@ Add the following configuration to your MCP client, replacing the placeholder pa
 
 **Important**: Replace the paths in the examples above with your actual installation paths:
 
-* **Windows**: Replace `D:\\openalgo-zerodha\\openalgo` with your actual OpenAlgo installation path
+* **Windows**: Replace `D:\\Layr0 IMC-zerodha\\Layr0 IMC` with your actual Layr0 IMC installation path
 * **macOS/Linux**: Replace `/Users/your_username` or `/home/your_username` with your actual home directory path
 
 To find your Python virtual environment path:
@@ -195,7 +195,7 @@ The MCP server provides the following categories of tools:
 
 #### Utilities
 
-* `get_openalgo_version` - Check OpenAlgo version
+* `get_Layr0 IMC_version` - Check Layr0 IMC version
 * `validate_order_constants` - Display valid order parameters
 
 ### Usage Examples
@@ -225,16 +225,16 @@ Once configured, you can ask your AI assistant to:
 
 ### Troubleshooting
 
-1. **Connection Issues**: Verify OpenAlgo server is running on `http://127.0.0.1:5000`
+1. **Connection Issues**: Verify Layr0 IMC server is running on `http://127.0.0.1:5000`
 2. **Authentication Errors**: Check your API key is correct and valid
 3. **Permission Errors**: Ensure the Python virtual environment has proper permissions
 4. **Order Failures**: Verify your broker connection and trading permissions
-5. **Order Failures**: Verify broker credentials in OpenAlgo are valid and active
+5. **Order Failures**: Verify broker credentials in Layr0 IMC are valid and active
 
 ### Support
 
 For issues related to:
 
-* **OpenAlgo Platform**: Visit the OpenAlgo documentation
+* **Layr0 IMC Platform**: Visit the Layr0 IMC documentation
 * **MCP Protocol**: Check the Model Context Protocol specifications
 * **Trading Errors**: Verify your broker connection and trading permissions

@@ -4,7 +4,7 @@ Shoonya, developed by Finvasia, is a trading platform in India that allows users
 
 ## Getting API Credentials
 
-To integrate Shoonya with OpenAlgo, follow these steps to obtain your API key and secret:
+To integrate Shoonya with Layr0 IMC, follow these steps to obtain your API key and secret:
 
 1\. Log in to Shoonya Prism:
 
@@ -24,9 +24,9 @@ To integrate Shoonya with OpenAlgo, follow these steps to obtain your API key an
 
 • Your Vendor Code and API Key will be displayed.
 
-3\. Configure OpenAlgo:
+3\. Configure Layr0 IMC:
 
-• In your OpenAlgo .env file, set the following variables:
+• In your Layr0 IMC .env file, set the following variables:
 
 ```bash
 BROKER_API_KEY = 'Your Vendor Code'

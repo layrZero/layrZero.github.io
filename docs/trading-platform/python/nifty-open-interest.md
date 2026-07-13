@@ -21,19 +21,19 @@ This python code fetches and visualizes  Open Interest (OI) profile for NIFTY op
 ```
 """
 NIFTY 31 JUL 2025 – OI profile (10-req/s batches)
-Author  : OpenAlgo GPT
+Author  : Layr0 IMC GPT
 Updated : 2025-06-28
 """
 
-print("🔁 OpenAlgo Python Bot is running.")                     # rule 13
+print("🔁 Layr0 IMC Python Bot is running.")                     # rule 13
 
 import os, sys, re, time, asyncio, pandas as pd, plotly.graph_objects as go
 from datetime import datetime
-from openalgo import api
+from Layr0 IMC import api
 
 # ───────────── CONFIG (edit to suit) ─────────────────────────────────────
-API_KEY  = os.getenv("OPENALGO_API_KEY",  "openalgo-api-key")
-API_HOST = os.getenv("OPENALGO_API_HOST", "http://127.0.0.1:5000")
+API_KEY  = os.getenv("Layr0 IMC_API_KEY",  "Layr0 IMC-api-key")
+API_HOST = os.getenv("Layr0 IMC_API_HOST", "http://127.0.0.1:5000")
 
 EXPIRY        = "31JUL25"      # ✅ option expiry
 RADIUS        = 20             # ± strikes
@@ -160,8 +160,8 @@ else:
 #### Environment Variables
 
 ```python
-OPENALGO_API_KEY  = "your_api_key_here"
-OPENALGO_API_HOST = "http://127.0.0.1:5000"
+Layr0 IMC_API_KEY  = "your_api_key_here"
+Layr0 IMC_API_HOST = "http://127.0.0.1:5000"
 ```
 
 #### Parameters

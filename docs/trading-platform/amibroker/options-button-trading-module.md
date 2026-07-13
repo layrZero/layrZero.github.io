@@ -1,16 +1,16 @@
 # Options Button Trading Module
 
-This AFL script is an advanced interactive trading tool designed for AmiBroker, specifically to facilitate manual execution of options trades via a graphical interface connected to the OpenAlgo bridge API. It calculates key strike prices (ATM, ITM, OTM) for Call (CE) and Put (PE) options based on parameters such as the underlying spot, expiry, strike intervals, and offsets relative to the spot price (which can be based on previous open, close, or today’s open). It constructs standard option symbols for execution and visually displays the Algo status on the chart. The script also maintains static variables to track open trades and ensures strike recalculations align with user-selected inputs.
+This AFL script is an advanced interactive trading tool designed for AmiBroker, specifically to facilitate manual execution of options trades via a graphical interface connected to the Layr0 IMC bridge API. It calculates key strike prices (ATM, ITM, OTM) for Call (CE) and Put (PE) options based on parameters such as the underlying spot, expiry, strike intervals, and offsets relative to the spot price (which can be based on previous open, close, or today’s open). It constructs standard option symbols for execution and visually displays the Algo status on the chart. The script also maintains static variables to track open trades and ensures strike recalculations align with user-selected inputs.
 
 ```clike
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker Options Button Trading Module v1.0
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker Options Button Trading Module v1.0
 //Date - 20/08/2024
 
 
 
-_SECTION_BEGIN("OpenAlgo Options Button Trading");
+_SECTION_BEGIN("Layr0 IMC Options Button Trading");
 
 RequestTimedRefresh(1,False);
 
@@ -19,11 +19,11 @@ EnableTextOutput(False);
 SetOption("StaticVarAutoSave", 30 );
 
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 
 strategy = ParamStr("Strategy Name", "Test Strategy");
 
-spot = Paramlist("Spot Symbol","NIFTY|BANKNIFTY|FINNIFTY|SENSEX|CRUDEOILM");  //OpenAlgo Underlying Symbol - used for Formulation of OpenAlgo Option Symbols
+spot = Paramlist("Spot Symbol","NIFTY|BANKNIFTY|FINNIFTY|SENSEX|CRUDEOILM");  //Layr0 IMC Underlying Symbol - used for Formulation of Layr0 IMC Option Symbols
 expiry = ParamStr("Expiry Date","17JUL25");
 
 exchange = ParamList("Exchange","NFO|BFO|MCX",0); 
@@ -72,7 +72,7 @@ static_name_algo = Name()+GetChartID()+interval(2)+strategy+"algostatus";
 
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -135,7 +135,7 @@ ITMstrikePE = strike - (ITMoffsetPE * iInterval);
 OTMstrikeCE = strike + (OTMoffsetCE * iInterval);
 OTMstrikePE = strike - (OTMoffsetPE * iInterval);
 
-//ATM/ITM/OTM OpenAlgoSymbol Format
+//ATM/ITM/OTM Layr0 IMCSymbol Format
 
 ATMsymbolCE = spot+expiry+ATMstrikeCE+"CE";
 ATMsymbolPE = spot+expiry+ATMstrikePE+"PE";
@@ -168,7 +168,7 @@ printf("\n OTMsymbolPE is : " + StaticVarGetText(static_name_+"OTMsymbolPE"));
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -337,7 +337,7 @@ End Sub
 %>
 
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 
 
@@ -429,7 +429,7 @@ if(EnableAlgo == "Enable")
 	// ATM CE entry and exit logic
 	if (ATMCEButtonClick AND StaticVarGet(static_name_ + "ATMCEAlgo") == 0) {
 		_TRACE("Placing ATM CE Entry Order");
-		openalgo.placeorder(ATMsymbolCE, tradetype, quantity);
+		Layr0 IMC.placeorder(ATMsymbolCE, tradetype, quantity);
 		StaticVarSetText(static_name_+"ATMsymbolCE",ATMsymbolCE,True);
 		if (VoiceAlert == "Enable") { Say("ATM CE Order Triggered"); }
 		_TRACE("API Request : " + api_request);
@@ -442,7 +442,7 @@ if(EnableAlgo == "Enable")
 		exitsymbol = StaticVarGetText(static_name_+"ATMsymbolCE");
 		if(exitsymbol!="")
 		{
-		openalgo.exitorder(exitsymbol);
+		Layr0 IMC.exitorder(exitsymbol);
 		StaticVarSetText(static_name_+"ATMsymbolCE","");
 		if (VoiceAlert == "Enable") { Say("Exit ATM CE Order Triggered"); }
 		_TRACE("API Request : " + ex_api_request);
@@ -459,7 +459,7 @@ if(EnableAlgo == "Enable")
 	// ITM CE entry and exit logic
 	if (ITMCEButtonClick AND StaticVarGet(static_name_ + "ITMCEAlgo") == 0) {
 		_TRACE("Placing ITM CE Entry Order");
-		openalgo.placeorder(ITMsymbolCE, tradetype, quantity);
+		Layr0 IMC.placeorder(ITMsymbolCE, tradetype, quantity);
 		StaticVarSetText(static_name_+"ITMsymbolCE",ITMsymbolCE,True);
 		if (VoiceAlert == "Enable") { Say("ITM CE Order Triggered"); }
 		_TRACE("API Request : " + api_request);
@@ -472,7 +472,7 @@ if(EnableAlgo == "Enable")
 		exitsymbol = StaticVarGetText(static_name_+"ITMsymbolCE");
 		if(exitsymbol!="")
 		{
-		openalgo.exitorder(exitsymbol);
+		Layr0 IMC.exitorder(exitsymbol);
 		StaticVarSetText(static_name_+"ITMsymbolCE","");
 		if (VoiceAlert == "Enable") { Say("Exit ITM CE Order Triggered"); }
 		_TRACE("API Request : " + ex_api_request);
@@ -489,7 +489,7 @@ if(EnableAlgo == "Enable")
 	// OTM CE entry and exit logic
 	if (OTMCEButtonClick AND StaticVarGet(static_name_ + "OTMCEAlgo") == 0) {
 		_TRACE("Placing OTM CE Entry Order");
-		openalgo.placeorder(OTMsymbolCE, tradetype, quantity);
+		Layr0 IMC.placeorder(OTMsymbolCE, tradetype, quantity);
 		StaticVarSetText(static_name_+"OTMsymbolCE",OTMsymbolCE,True);
 		if (VoiceAlert == "Enable") { Say("OTM CE Order Triggered"); }
 		_TRACE("API Request : " + api_request);
@@ -502,7 +502,7 @@ if(EnableAlgo == "Enable")
 		exitsymbol = StaticVarGetText(static_name_+"OTMsymbolCE");
 		if(exitsymbol!="")
 		{
-		openalgo.exitorder(exitsymbol);
+		Layr0 IMC.exitorder(exitsymbol);
 		StaticVarSetText(static_name_+"OTMsymbolCE","");
 		if (VoiceAlert == "Enable") { Say("Exit OTM CE Order Triggered"); }
 		_TRACE("API Request : " + ex_api_request);
@@ -519,7 +519,7 @@ if(EnableAlgo == "Enable")
 	// ATM PE entry and exit logic
 	if (ATMPEButtonClick AND StaticVarGet(static_name_ + "ATMPEAlgo") == 0) {
 		_TRACE("Placing ATM PE Entry Order");
-		openalgo.placeorder(ATMsymbolPE, tradetype, quantity);
+		Layr0 IMC.placeorder(ATMsymbolPE, tradetype, quantity);
 		StaticVarSetText(static_name_+"ATMsymbolPE",ATMsymbolPE,True);
 		if (VoiceAlert == "Enable") { Say("ATM PE Order Triggered"); }
 		_TRACE("API Request : " + api_request);
@@ -532,7 +532,7 @@ if(EnableAlgo == "Enable")
 		exitsymbol = StaticVarGetText(static_name_+"ATMsymbolPE");
 		if(exitsymbol!="")
 		{
-		openalgo.exitorder(exitsymbol);
+		Layr0 IMC.exitorder(exitsymbol);
 		StaticVarSetText(static_name_+"ATMsymbolPE","");
 		if (VoiceAlert == "Enable") { Say("Exit ATM PE Order Triggered"); }
 		_TRACE("API Request : " + ex_api_request);
@@ -549,7 +549,7 @@ if(EnableAlgo == "Enable")
 	// ITM PE entry and exit logic
 	if (ITMPEButtonClick AND StaticVarGet(static_name_ + "ITMPEAlgo") == 0) {
 		_TRACE("Placing ITM PE Entry Order");
-		openalgo.placeorder(ITMsymbolPE, tradetype, quantity);
+		Layr0 IMC.placeorder(ITMsymbolPE, tradetype, quantity);
 		StaticVarSetText(static_name_+"ITMsymbolPE",ITMsymbolPE,True);
 		if (VoiceAlert == "Enable") { Say("ITM PE Order Triggered"); }
 		_TRACE("API Request : " + api_request);
@@ -563,7 +563,7 @@ if(EnableAlgo == "Enable")
 				exitsymbol = StaticVarGetText(static_name_+"ITMsymbolPE");
 		if(exitsymbol!="")
 		{
-		openalgo.exitorder(exitsymbol);
+		Layr0 IMC.exitorder(exitsymbol);
 		StaticVarSetText(static_name_+"ITMsymbolPE","");
 		if (VoiceAlert == "Enable") { Say("Exit ITM PE Order Triggered"); }
 		_TRACE("API Request : " + ex_api_request);
@@ -580,7 +580,7 @@ if(EnableAlgo == "Enable")
 	// OTM PE entry and exit logic
 	if (OTMPEButtonClick AND StaticVarGet(static_name_ + "OTMPEAlgo") == 0) {
 		_TRACE("Placing OTM PE Entry Order");
-		openalgo.placeorder(OTMsymbolPE, tradetype, quantity);
+		Layr0 IMC.placeorder(OTMsymbolPE, tradetype, quantity);
 		StaticVarSetText(static_name_+"OTMsymbolPE",OTMsymbolPE,True);
 		if (VoiceAlert == "Enable") { Say("OTM PE Order Triggered"); }
 		_TRACE("API Request : " + api_request);
@@ -593,7 +593,7 @@ if(EnableAlgo == "Enable")
 		exitsymbol = StaticVarGetText(static_name_+"OTMsymbolPE");
 		if(exitsymbol!="")
 		{
-		openalgo.exitorder(exitsymbol);
+		Layr0 IMC.exitorder(exitsymbol);
 		StaticVarSetText(static_name_+"OTMsymbolPE","");
 		if (VoiceAlert == "Enable") { Say("Exit OTM PE Order Triggered"); }
 		_TRACE("API Request : " + ex_api_request);
@@ -612,7 +612,7 @@ if(EnableAlgo == "Enable")
 	
 	if( CXButtonClick AND StaticVarGet(Name()+GetChartID()+"CXAlgo")==0 ) 
 	{
-		openalgo.Squareoffall();
+		Layr0 IMC.Squareoffall();
 		if(VoiceAlert == "Enable"){
 				Say("Squareoff All Triggered");  	
 			}

@@ -3,20 +3,20 @@
 ## Internet Functions Method (Modern)
 
 ```clike
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker Button Trading Module v1.0
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker Button Trading Module v1.0
 //Date - 10/12/2024
 
 
-_SECTION_BEGIN("OpenAlgo Button Trading - Modern Internet Functions");
+_SECTION_BEGIN("Layr0 IMC Button Trading - Modern Internet Functions");
 
 amiversion = Version();
 
 RequestTimedRefresh(1, False);
 
 // Define parameter controls
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Amibroker");
 symbol = ParamStr("Symbol", "RELIANCE");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");
@@ -253,18 +253,18 @@ _SECTION_END();
 ## VB Script Method (Legacy)
 
 ```clike
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker Button Trading Module v1.0
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker Button Trading Module v1.0
 //Date - 10/02/2024
 
 
 
-_SECTION_BEGIN("OpenAlgo Button Trading");
+_SECTION_BEGIN("Layr0 IMC Button Trading");
 
 RequestTimedRefresh(1,False);
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Amibroker");
 symbol = ParamStr("Symbol", "RELIANCE");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");
@@ -289,7 +289,7 @@ static_name_algo = static_name_+interval(2)+strategy+"algostatus";
 
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -318,7 +318,7 @@ StaticVarSet(static_name_algo, 0);
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -421,7 +421,7 @@ End Sub
 %>
 
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 
 
@@ -472,7 +472,7 @@ if(EnableAlgo == "Enable")
 	
 	if( BEButtonClick AND StaticVarGet(static_name_+"BEAlgo")==0 ) 
 	{
-		openalgo.placeorder("BUY",quantity);
+		Layr0 IMC.placeorder("BUY",quantity);
         if(VoiceAlert == "Enable"){
 				Say("Buy Order Triggered");  	
 			}
@@ -487,7 +487,7 @@ if(EnableAlgo == "Enable")
 	}
 	if( BXButtonClick AND StaticVarGet(static_name_+"BXAlgo")==0 ) 
 	{
-		openalgo.placeorder("SELL",quantity);
+		Layr0 IMC.placeorder("SELL",quantity);
         if(VoiceAlert == "Enable"){
 				Say("Sell Order Triggered");  	
 			}
@@ -502,7 +502,7 @@ if(EnableAlgo == "Enable")
 		
 	if( SEButtonClick AND StaticVarGet(static_name_+"SEAlgo")==0 ) 
 	{
-		openalgo.placeorder("SELL",quantity);
+		Layr0 IMC.placeorder("SELL",quantity);
         if(VoiceAlert == "Enable"){
 				Say("Short Order Triggered");  	
 			}
@@ -517,7 +517,7 @@ if(EnableAlgo == "Enable")
 
 	if( SXButtonClick AND StaticVarGet(static_name_+"SXAlgo")==0 ) 
 	{
-		openalgo.placeorder("BUY",quantity);
+		Layr0 IMC.placeorder("BUY",quantity);
         if(VoiceAlert == "Enable"){
 				Say("Cover Order Triggered");  	
 			}
@@ -532,7 +532,7 @@ if(EnableAlgo == "Enable")
 	
 	if( CXButtonClick AND StaticVarGet(Name()+GetChartID()+"CXAlgo")==0 ) 
 	{
-		openalgo.Squareoffall();
+		Layr0 IMC.Squareoffall();
 		if(VoiceAlert == "Enable"){
 				Say("Squareoff All Triggered");  	
 			}

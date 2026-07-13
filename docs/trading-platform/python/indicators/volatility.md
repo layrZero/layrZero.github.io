@@ -1,12 +1,12 @@
 # Volatility
 
-Volatility indicators measure the degree of price variation in financial instruments. They help traders assess market uncertainty, risk levels, and potential breakout conditions. OpenAlgo provides a comprehensive collection of volatility indicators optimized for performance and accuracy.
+Volatility indicators measure the degree of price variation in financial instruments. They help traders assess market uncertainty, risk levels, and potential breakout conditions. Layr0 IMC provides a comprehensive collection of volatility indicators optimized for performance and accuracy.
 
 ### Import Statement
 
 ```python
-from openalgo import ta
-from openalgo import api
+from Layr0 IMC import ta
+from Layr0 IMC import api
 
 # Initialize API client
 client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
@@ -639,7 +639,7 @@ print(df[['close', 'STARC_Upper', 'STARC_Middle', 'STARC_Lower']].tail())
 ### Complete Example: Volatility Analysis
 
 ```python
-from openalgo import ta, api
+from Layr0 IMC import ta, api
 import pandas as pd
 
 # Initialize API and get data

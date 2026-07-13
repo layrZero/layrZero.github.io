@@ -3,17 +3,17 @@
 ## Internet Function Method (Modern)
 
 ```clike
-// Rajandran R - Creator of OpenAlgo
-// Website - openalgo.in / marketcalls.in
-// OpenAlgo - Amibroker SmartOrder Chart Trading Module v2.0
+// Rajandran R - Creator of Layr0 IMC
+// Website - Layr0 IMC.in / layr0.in
+// Layr0 IMC - Amibroker SmartOrder Chart Trading Module v2.0
 // Date - 12/12/2024
 
-_SECTION_BEGIN("OpenAlgo SmartOrder Trading Module - Modern Methods");
+_SECTION_BEGIN("Layr0 IMC SmartOrder Trading Module - Modern Methods");
 
 RequestTimedRefresh(1, False);
 
 // Define parameter controls
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Amibroker");
 symbol = ParamStr("Symbol", "YESBANK");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");
@@ -45,7 +45,7 @@ static_name_algo = static_name_+interval(2)+strategy+"algostatus";
 
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -347,17 +347,17 @@ _SECTION_END();
 
 ```clike
 
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker SmartOrder Chart Trading Module v1.0
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker SmartOrder Chart Trading Module v1.0
 //Date - 10/02/2024
 
 
-_SECTION_BEGIN("OpenAlgo Trading Controls");
+_SECTION_BEGIN("Layr0 IMC Trading Controls");
 
 RequestTimedRefresh(1,False);
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Amibroker");
 symbol = ParamStr("Symbol", "YESBANK");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");
@@ -390,7 +390,7 @@ static_name_algo = static_name_+interval(2)+strategy+"algostatus";
 
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -439,7 +439,7 @@ GfxSetTextColor(colorWhite);
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -658,7 +658,7 @@ End Sub
 
 %>
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 //Execution Module
 
@@ -693,7 +693,7 @@ if(EnableAlgo != "Disable")
 		
 			if( BEButtonClick AND StaticVarGet(static_name_+"BEAlgo")==0 ) 
 			{
-				openalgo.placeorder("BUY",quantity);
+				Layr0 IMC.placeorder("BUY",quantity);
 				if(VoiceAlert == "Enable"){
 						Say("Buy Order Triggered");  	
 					}
@@ -708,7 +708,7 @@ if(EnableAlgo != "Disable")
 			}
 			if( BXButtonClick AND StaticVarGet(static_name_+"BXAlgo")==0 ) 
 			{
-				openalgo.placeorder("SELL",quantity);
+				Layr0 IMC.placeorder("SELL",quantity);
 				if(VoiceAlert == "Enable"){
 						Say("Sell Order Triggered");  	
 					}
@@ -723,7 +723,7 @@ if(EnableAlgo != "Disable")
 				
 			if( SEButtonClick AND StaticVarGet(static_name_+"SEAlgo")==0 ) 
 			{
-				openalgo.placeorder("SELL",quantity);
+				Layr0 IMC.placeorder("SELL",quantity);
 				if(VoiceAlert == "Enable"){
 						Say("Short Order Triggered");  	
 					}
@@ -738,7 +738,7 @@ if(EnableAlgo != "Disable")
 
 			if( SXButtonClick AND StaticVarGet(static_name_+"SXAlgo")==0 ) 
 			{
-				openalgo.placeorder("BUY",quantity);
+				Layr0 IMC.placeorder("BUY",quantity);
 				if(VoiceAlert == "Enable"){
 						Say("Cover Order Triggered");  	
 					}
@@ -753,7 +753,7 @@ if(EnableAlgo != "Disable")
 			
 			if( CXButtonClick AND StaticVarGet(Name()+GetChartID()+"CXAlgo")==0 ) 
 			{
-				openalgo.Squareoffall();
+				Layr0 IMC.Squareoffall();
 				if(VoiceAlert == "Enable"){
 						Say("Squareoff All Triggered");  	
 					}
@@ -774,7 +774,7 @@ if(EnableAlgo != "Disable")
             if (AlgoBuy==True AND AlgoCover == True AND StaticVarGet(static_name_+"buyCoverAlgo")==0 AND StaticVarGetText(static_name_+"buyCoverAlgo_barvalue") != lasttime )
             {
                             
-                openalgo.PlaceSmartOrder("BUY",quantity,quantity);
+                Layr0 IMC.PlaceSmartOrder("BUY",quantity,quantity);
                 if(VoiceAlert == "Enable"){
 						Say("Buy Order Triggered");  	
 					}
@@ -794,7 +794,7 @@ if(EnableAlgo != "Disable")
             if (AlgoBuy==True AND AlgoCover != True AND StaticVarGet(static_name_+"buyAlgo")==0 AND StaticVarGetText(static_name_+"buyAlgo_barvalue") != lasttime)
             {
             // Long Entry 
-                openalgo.PlaceOrder("BUY",quantity);
+                Layr0 IMC.PlaceOrder("BUY",quantity);
                 if(VoiceAlert == "Enable"){
 						Say("Buy Order Triggered");  	
 					}
@@ -813,7 +813,7 @@ if(EnableAlgo != "Disable")
             if (AlgoSell==true AND AlgoShort != True AND StaticVarGet(static_name_+"sellAlgo")==0 AND StaticVarGetText(static_name_+"sellAlgo_barvalue") != lasttime)
             {     
             // Long Exit 
-				openalgo.ExitOrder("SELL");
+				Layr0 IMC.ExitOrder("SELL");
                 if(VoiceAlert == "Enable"){
 						Say("Sell Exit Order Triggered");  	
 					}
@@ -832,7 +832,7 @@ if(EnableAlgo != "Disable")
             if (AlgoShort==True AND AlgoSell==True AND  StaticVarGet(static_name_+"ShortSellAlgo")==0 AND StaticVarGetText(static_name_+"ShortSellAlgo_barvalue") != lasttime)
             {
             // reverse Short Entry 
-				openalgo.PlaceSmartOrder("SELL",quantity,-1*quantity);
+				Layr0 IMC.PlaceSmartOrder("SELL",quantity,-1*quantity);
                 if(VoiceAlert == "Enable"){
 						Say("Short Order Triggered");  	
 					}
@@ -851,7 +851,7 @@ if(EnableAlgo != "Disable")
             if (AlgoShort==True  AND  AlgoSell != True AND StaticVarGet(static_name_+"ShortAlgo")==0 AND  StaticVarGetText(static_name_+"ShortAlgo_barvalue") != lasttime)
             {
             // Short Entry
-                openalgo.PlaceOrder("SELL",quantity);
+                Layr0 IMC.PlaceOrder("SELL",quantity);
                 if(VoiceAlert == "Enable"){
 						Say("Short Order Triggered");  	
 					}
@@ -869,7 +869,7 @@ if(EnableAlgo != "Disable")
             if (AlgoCover==true AND AlgoBuy != True AND StaticVarGet(static_name_+"CoverAlgo")==0 AND StaticVarGetText(static_name_+"CoverAlgo_barvalue") != lasttime)
             {
             // Short Exit
-				openalgo.ExitOrder("BUY");
+				Layr0 IMC.ExitOrder("BUY");
                 if(VoiceAlert == "Enable"){
 						Say("Short Exit Order Triggered");  	
 					}
@@ -893,7 +893,7 @@ if(EnableAlgo != "Disable")
             if (AlgoBuy==True AND StaticVarGet(static_name_+"buyAlgo")==0 AND StaticVarGetText(static_name_+"buyAlgo_barvalue") != lasttime)
             {  
             //  Long Entry
-                openalgo.PlaceOrder("BUY",quantity);
+                Layr0 IMC.PlaceOrder("BUY",quantity);
                 if(VoiceAlert == "Enable"){
 						Say("Buy Order Triggered");  	
 					}
@@ -911,7 +911,7 @@ if(EnableAlgo != "Disable")
             if (AlgoSell==true AND StaticVarGet(static_name_+"sellAlgo")==0 AND StaticVarGetText(static_name_+"sellAlgo_barvalue") != lasttime)
             {  
             // Long Exit
-                openalgo.ExitOrder("SELL");
+                Layr0 IMC.ExitOrder("SELL");
                 if(VoiceAlert == "Enable"){
 						Say("Sell Exit Order Triggered");  	
 					}
@@ -932,7 +932,7 @@ if(EnableAlgo != "Disable")
             if (AlgoShort==True AND StaticVarGet(static_name_+"ShortAlgo")==0 AND StaticVarGetText(static_name_+"ShortAlgo_barvalue") != lasttime)
             {
             // Short Entry
-                openalgo.PlaceOrder("SELL",quantity);
+                Layr0 IMC.PlaceOrder("SELL",quantity);
                 if(VoiceAlert == "Enable"){
 						Say("Short Order Triggered");  	
 					}
@@ -948,7 +948,7 @@ if(EnableAlgo != "Disable")
             if (AlgoCover==true AND StaticVarGet(static_name_+"CoverAlgo")==0 AND StaticVarGetText(static_name_+"CoverAlgo_barvalue") != lasttime)
             {
             // Short Exit
-                openalgo.ExitOrder("BUY");
+                Layr0 IMC.ExitOrder("BUY");
                 if(VoiceAlert == "Enable"){
 						Say("Short Exit Order Triggered");  	
 					}

@@ -1,6 +1,6 @@
 # Wisdom Capital
 
-Wisdom Capital provides API access through the Symphony Fintech XTS platform. This guide helps you integrate Wisdom Capital with OpenAlgo for both order execution and market data streaming.
+Wisdom Capital provides API access through the Symphony Fintech XTS platform. This guide helps you integrate Wisdom Capital with Layr0 IMC for both order execution and market data streaming.
 
 ***
 
@@ -23,8 +23,8 @@ After logging in:
 
 For each app, fill in the following:
 
-* **App Name**: OpenAlgo
-* **App Description**: OpenAlgo
+* **App Name**: Layr0 IMC
+* **App Description**: Layr0 IMC
 * **Select API Package**: Choose `Interactive Order API` or `Market Data API` depending on the app.
 
 
@@ -45,7 +45,7 @@ Once submitted, wait for the apps to be **approved**. The API status will show a
 
 ### Step 2: Setup Environment Variables
 
-Refer to the `.sample.env` file in OpenAlgo and prepare your `.env` with the following structure:
+Refer to the `.sample.env` file in Layr0 IMC and prepare your `.env` with the following structure:
 
 ```env
 # Broker Configuration
@@ -62,14 +62,14 @@ Replace placeholder values with actual credentials obtained after app approval.
 
 ***
 
-### Step 3: Start OpenAlgo
+### Step 3: Start Layr0 IMC
 
-Ensure `.env` is correctly configured and that both APIs (order and market data) are active. Then, start OpenAlgo.
+Ensure `.env` is correctly configured and that both APIs (order and market data) are active. Then, start Layr0 IMC.
 
-> You can now place live orders and get real-time market data via Wisdom Capital’s XTS API inside OpenAlgo.
+> You can now place live orders and get real-time market data via Wisdom Capital’s XTS API inside Layr0 IMC.
 
 ***
 
 ### Final Note
 
-Integrating OpenAlgo with Wisdom Capital's XTS API gives you access to real-time market data and order execution in a programmable environment. Follow best practices—keep your API keys secure, implement appropriate error handling, and regularly monitor your API usage to ensure a smooth trading experience.
+Integrating Layr0 IMC with Wisdom Capital's XTS API gives you access to real-time market data and order execution in a programmable environment. Follow best practices—keep your API keys secure, implement appropriate error handling, and regularly monitor your API usage to ensure a smooth trading experience.

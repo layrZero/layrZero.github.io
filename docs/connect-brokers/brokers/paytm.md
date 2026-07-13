@@ -31,11 +31,11 @@
 
 Fill out the app details as shown below:
 
-* **App Name:** `openalgo`
+* **App Name:** `Layr0 IMC`
 * **Product Type:** `Trading Bridge`
 * **Redirect URL:** `http://127.0.0.1:5000/paytm/callback`
 * **Postback URL:** _(leave empty)_
-* **Description:** `openalgo`
+* **Description:** `Layr0 IMC`
 * Upload a logo (optional)
 
 <img
@@ -51,20 +51,20 @@ Click **Create App**
 Once your app is in **Active** status:
 
 1. Go to **My Apps**
-2. Locate your app (e.g., `openalgo`)
+2. Locate your app (e.g., `Layr0 IMC`)
 3. Copy the **API Key** and **API Secret**
 
 <img
   src={require('@site/static/img/assets/image (3) (1) (1) (1).png').default}
 />
 
-Use these credentials in your OpenAlgo broker configuration.
+Use these credentials in your Layr0 IMC broker configuration.
 
 ***
 
 ### Configuration
 
-Once you have the credentials, add them to your OpenAlgo configuration:
+Once you have the credentials, add them to your Layr0 IMC configuration:
 
 ```json
 BROKER_API_KEY = 'your_api_key_here'
@@ -78,7 +78,7 @@ Make sure your local server is running and accessible at the callback URL you de
 
 #### What's Next?
 
-Integrating with the Paytm Money API opens the door to building high-performance, automated trading workflows within the OpenAlgo ecosystem. To ensure seamless integration and performance, it’s essential to follow recommended practices such as securely storing your API credentials, managing session states effectively, and implementing robust logging and error-handling routines. With the right setup, Paytm Money becomes a dependable backbone for executing your trading strategies with precision and confidence.
+Integrating with the Paytm Money API opens the door to building high-performance, automated trading workflows within the Layr0 IMC ecosystem. To ensure seamless integration and performance, it’s essential to follow recommended practices such as securely storing your API credentials, managing session states effectively, and implementing robust logging and error-handling routines. With the right setup, Paytm Money becomes a dependable backbone for executing your trading strategies with precision and confidence.
 
 ***
 

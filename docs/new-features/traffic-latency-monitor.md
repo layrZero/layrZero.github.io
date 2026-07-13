@@ -1,6 +1,6 @@
 # Traffic/Latency Monitor
 
-OpenAlgo introduces powerful tools for performance monitoring:
+Layr0 IMC introduces powerful tools for performance monitoring:
 
 1\. Latency Monitor (/latency):
 

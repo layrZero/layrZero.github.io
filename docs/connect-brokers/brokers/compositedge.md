@@ -2,7 +2,7 @@
 
 ## Compositedge (XTS) Broker Integration
 
-Compositedge is a Bangalore-based discount broker that provides API access via the XTS (Symphony Fintech) platform. This guide will help you integrate Compositedge with OpenAlgo.
+Compositedge is a Bangalore-based discount broker that provides API access via the XTS (Symphony Fintech) platform. This guide will help you integrate Compositedge with Layr0 IMC.
 
 ***
 
@@ -56,10 +56,10 @@ Once logged in:
 
 #### Details to Fill:
 
-* **App Name**: OpenAlgo
-* **App Description**: OpenAlgo
+* **App Name**: Layr0 IMC
+* **App Description**: Layr0 IMC
 * **Redirect URL(required only for Interactive Order API)**: `http://127.0.0.1:5000/compositedge/callback`
-* **Company Name**: OpenAlgo (or your own)
+* **Company Name**: Layr0 IMC (or your own)
 * Choose the correct **API Package** depending on the app (Order or Market Data).
 
 <img
@@ -72,7 +72,7 @@ Once submitted, wait for approval from the broker. After approval, the status wi
 
 ### Step 3: Setup Environment Variables
 
-Refer to the `.sample.env` file in your OpenAlgo folder and prepare your `.env` as follows:
+Refer to the `.sample.env` file in your Layr0 IMC folder and prepare your `.env` as follows:
 
 ```bash
 # Broker Configuration
@@ -89,16 +89,16 @@ Replace the values with actual credentials shown on your developer dashboard onc
 
 ***
 
-### Step 4: Start OpenAlgo
+### Step 4: Start Layr0 IMC
 
-Once all environment variables are set and your apps are **Active**, you can now start OpenAlgo.
+Once all environment variables are set and your apps are **Active**, you can now start Layr0 IMC.
 
-> Ensure you have installed dependencies and set up the broker configuration properly. OpenAlgo will now be able to place orders and fetch market data through Compositedge's XTS API.
+> Ensure you have installed dependencies and set up the broker configuration properly. Layr0 IMC will now be able to place orders and fetch market data through Compositedge's XTS API.
 
 ***
 
 
 
-This completes the integration process for Compositedge broker with OpenAlgo.
+This completes the integration process for Compositedge broker with Layr0 IMC.
 
-Integrating OpenAlgo with Compositedge’s XTS API empowers traders and developers to automate and streamline their trading workflows with precision and speed. By leveraging both order execution and market data APIs, users can build robust trading systems capable of reacting to market conditions in real time. Always ensure secure handling of API credentials, implement proper error handling, and monitor your integration to maintain reliability and compliance.
+Integrating Layr0 IMC with Compositedge’s XTS API empowers traders and developers to automate and streamline their trading workflows with precision and speed. By leveraging both order execution and market data APIs, users can build robust trading systems capable of reacting to market conditions in real time. Always ensure secure handling of API credentials, implement proper error handling, and monitor your integration to maintain reliability and compliance.

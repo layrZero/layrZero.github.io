@@ -1,6 +1,6 @@
 # Strategy Management
 
-The Strategy Module is a core component of the OpenAlgo platform that enables users to create, manage, and execute automated trading strategies through webhooks. This document provides a comprehensive overview of the strategy module's features, architecture, and usage.
+The Strategy Module is a core component of the Layr0 IMC platform that enables users to create, manage, and execute automated trading strategies through webhooks. This document provides a comprehensive overview of the strategy module's features, architecture, and usage.
 
 ### Overview
 
@@ -248,7 +248,7 @@ The webhook message format varies based on the trading mode of your strategy:
 
 ```json
 {
-    "symbol": "openalgo_symbol",
+    "symbol": "Layr0 IMC_symbol",
     "action": "{{strategy.order.action}}"
 }
 ```
@@ -257,7 +257,7 @@ The webhook message format varies based on the trading mode of your strategy:
 
 ```json
 {
-    "symbol": "openalgo_symbol",
+    "symbol": "Layr0 IMC_symbol",
     "action": "{{strategy.order.action}}",
     "position_size": "{{strategy.position_size}}"
 }
@@ -342,7 +342,7 @@ def send_strategy_signal(host_url, webhook_id, symbol, action, position_size=Non
     Send a strategy signal via webhook
     
     Args:
-        host_url (str): Base URL of the OpenAlgo server
+        host_url (str): Base URL of the Layr0 IMC server
         webhook_id (str): Strategy's webhook ID
         symbol (str): Trading symbol
         action (str): "BUY" or "SELL"

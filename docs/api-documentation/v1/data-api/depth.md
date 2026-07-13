@@ -125,7 +125,7 @@ Custom Domain:  POST https://<your-custom-domain>/api/v1/depth
 ## Error Responses
 
 - 401 Unauthorized: Invalid/expired broker session or unauthorized.
-- 403 Forbidden: Invalid OpenAlgo API key or permission error.
+- 403 Forbidden: Invalid IMC API key or permission error.
 - 429 Too Many Requests: Rate limit exceeded (where detectable).
 - 500 Internal Server Error: Unclassified internal failure.
 

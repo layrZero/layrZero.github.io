@@ -5,9 +5,9 @@ Here is a coding snippet of python based supertrend strategy implementing using 
 ```python
 
 
-#Coded by Rajandran R - www.marketcalls.in / www.openalgo.in
+#Coded by Rajandran R - www.layr0.in / www.Layr0 IMC.in
 
-from openalgo import api
+from Layr0 IMC import api
 import yfinance as yf
 import pandas as pd
 import numpy as np
@@ -16,12 +16,12 @@ import threading
 import os
 
 
-# Get API key from openalgo portal
-api_key = 'your_openalgo_apikey'
+# Get API key from Layr0 IMC portal
+api_key = 'your_Layr0 IMC_apikey'
 
 #set the StrategyName, broker code, Trading symbol, exchange, product and quantity
 strategy = "Supertrend Python"
-symbol = "RELIANCE"  #OpenAlgo Symbol
+symbol = "RELIANCE"  #Layr0 IMC Symbol
 exchange = "NSE"
 product="MIS"
 quantity = 1

@@ -18,13 +18,13 @@ import YouTube from '@site/src/components/YouTube';
 2. **Configure Alerts**: Once your strategy is defined, you set up alerts in TradingView that trigger when specific conditions of your strategy are met. These conditions could be anything that your strategy considers a signal, such as the crossing of moving averages or reaching a certain RSI level.
 3. **Set Up Webhook URL**: In the alert settings, you specify a webhook URL to which TradingView will send POST requests when the alert conditions are triggered. This URL is typically provided by the external service or trading bot that will execute the trades on your behalf. It's essential to ensure that this service can accept and process TradingView's webhook notifications.
 
-**OpenAlgo Configuration**
+**Layr0 IMC Configuration**
 
 
 
 > Ensure that if you are a windows user ngrok host url  is setup and configured in the .env file. If you are linux user ensure that host name (domain name/ip address) is configured in the .env file
 
-Login to the OpenAlgo Application and go to the tab **Tradingview**. The page comes with **Tradingview JSON Generator.**
+Login to the Layr0 IMC Application and go to the tab **Tradingview**. The page comes with **Tradingview JSON Generator.**
 
 Enter the valid trading **symbol**, select the **product** type, and press the **Generate JSON** Button
 

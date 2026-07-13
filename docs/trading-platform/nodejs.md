@@ -1,37 +1,37 @@
 # NodeJS
 
-To install the OpenAlgo Node.js library, use npm:
+To install the Layr0 IMC Node.js library, use npm:
 
 ```bash
-npm install openalgo
+npm install Layr0 IMC
 ```
 
-## OpenAlgo Node.js Library Documentation
+## Layr0 IMC Node.js Library Documentation
 
-### Get the OpenAlgo API Key
+### Get the Layr0 IMC API Key
 
-Make sure that your OpenAlgo Application is running. Login to the OpenAlgo Application with valid credentials and get the OpenAlgo API key.
+Make sure that your Layr0 IMC Application is running. Login to the Layr0 IMC Application with valid credentials and get the Layr0 IMC API key.
 
 \
-For detailed function parameters, refer to the [API Documentation](https://docs.openalgo.in/api-documentation/v1).
+For detailed function parameters, refer to the [API Documentation](https://docs.Layr0 IMC.in/api-documentation/v1).
 
-### Getting Started with OpenAlgo
+### Getting Started with Layr0 IMC
 
-First, import the OpenAlgo class from the library and initialize it with your API key:
+First, import the Layr0 IMC class from the library and initialize it with your API key:
 
 ```javascript
-import OpenAlgo from 'openalgo';
+import Layr0 IMC from 'Layr0 IMC';
 
 // Replace 'YOUR_API_KEY' with your actual API key
 // Specify the host URL with your hosted domain or ngrok domain.
 // If running locally in Windows then use the default host value.
-const openalgo = new OpenAlgo('YOUR_API_KEY', 'http://127.0.0.1:5000');
+const Layr0 IMC = new Layr0 IMC('YOUR_API_KEY', 'http://127.0.0.1:5000');
 ```
 
-### Check OpenAlgo Version
+### Check Layr0 IMC Version
 
 ```javascript
-import { version } from 'openalgo';
+import { version } from 'Layr0 IMC';
 console.log(version);
 ```
 
@@ -40,7 +40,7 @@ console.log(version);
 To place a new order:
 
 ```javascript
-const response = await openalgo.placeOrder({
+const response = await Layr0 IMC.placeOrder({
     strategy: "NodeJS",
     symbol: "RELIANCE", 
     action: "BUY",
@@ -57,7 +57,7 @@ console.log(response);
 To place a smart order considering the current position size:
 
 ```javascript
-const response = await openalgo.placeSmartOrder({
+const response = await Layr0 IMC.placeSmartOrder({
     strategy: "NodeJS",
     symbol: "TATAMOTORS",
     action: "SELL",
@@ -94,7 +94,7 @@ const basketOrders = [
     }
 ];
 
-const response = await openalgo.basketOrder({
+const response = await Layr0 IMC.basketOrder({
     strategy: "NodeJS",
     orders: basketOrders
 });
@@ -106,7 +106,7 @@ console.log(response);
 To place a new split order:
 
 ```javascript
-const response = await openalgo.splitOrder({
+const response = await Layr0 IMC.splitOrder({
     symbol: "YESBANK",
     exchange: "NSE",
     action: "SELL",
@@ -124,7 +124,7 @@ console.log(response);
 To modify an existing order:
 
 ```javascript
-const response = await openalgo.modifyOrder({
+const response = await Layr0 IMC.modifyOrder({
     orderId: "123456789",
     strategy: "NodeJS",
     symbol: "INFY",
@@ -143,7 +143,7 @@ console.log(response);
 To cancel an existing order:
 
 ```javascript
-const response = await openalgo.cancelOrder({
+const response = await Layr0 IMC.cancelOrder({
     orderId: "123456789",
     strategy: "NodeJS"
 });
@@ -155,7 +155,7 @@ console.log(response);
 To cancel all open orders and trigger pending orders:
 
 ```javascript
-const response = await openalgo.cancelAllOrder({
+const response = await Layr0 IMC.cancelAllOrder({
     strategy: "NodeJS"
 });
 console.log(response);
@@ -166,7 +166,7 @@ console.log(response);
 To close all open positions across various exchanges:
 
 ```javascript
-const response = await openalgo.closePosition({
+const response = await Layr0 IMC.closePosition({
     strategy: "NodeJS"
 });
 console.log(response);
@@ -177,19 +177,19 @@ console.log(response);
 To get the current order status:
 
 ```javascript
-const response = await openalgo.orderStatus({
+const response = await Layr0 IMC.orderStatus({
     orderId: "123456789",
     strategy: "NodeJS"
 });
 console.log(response);
 ```
 
-### OpenPosition Example
+### positionsopen Example
 
 To get the current open position:
 
 ```javascript
-const response = await openalgo.openPosition({
+const response = await Layr0 IMC.positionsopen({
     strategy: "NodeJS",
     symbol: "YESBANK",
     exchange: "NSE",
@@ -203,7 +203,7 @@ console.log(response);
 To get real-time quotes:
 
 ```javascript
-const response = await openalgo.quotes({
+const response = await Layr0 IMC.quotes({
     symbol: "RELIANCE", 
     exchange: "NSE"
 });
@@ -215,7 +215,7 @@ console.log(response);
 To get market depth data:
 
 ```javascript
-const response = await openalgo.depth({
+const response = await Layr0 IMC.depth({
     symbol: "SBIN", 
     exchange: "NSE"
 });
@@ -227,7 +227,7 @@ console.log(response);
 To get historical data:
 
 ```javascript
-const response = await openalgo.history({
+const response = await Layr0 IMC.history({
     symbol: "SBIN",
     exchange: "NSE",
     interval: "5m",
@@ -242,7 +242,7 @@ console.log(response);
 To get supported time intervals:
 
 ```javascript
-const response = await openalgo.intervals();
+const response = await Layr0 IMC.intervals();
 console.log(response);
 ```
 
@@ -251,7 +251,7 @@ console.log(response);
 To get symbol information:
 
 ```javascript
-const response = await openalgo.symbol({
+const response = await Layr0 IMC.symbol({
     symbol: "RELIANCE",
     exchange: "NSE"
 });
@@ -263,7 +263,7 @@ console.log(response);
 To get account funds information:
 
 ```javascript
-const response = await openalgo.funds();
+const response = await Layr0 IMC.funds();
 console.log(response);
 ```
 
@@ -272,7 +272,7 @@ console.log(response);
 To get the order book:
 
 ```javascript
-const response = await openalgo.orderbook();
+const response = await Layr0 IMC.orderbook();
 console.log(response);
 ```
 
@@ -281,7 +281,7 @@ console.log(response);
 To get the trade book:
 
 ```javascript
-const response = await openalgo.tradebook();
+const response = await Layr0 IMC.tradebook();
 console.log(response);
 ```
 
@@ -290,7 +290,7 @@ console.log(response);
 To get the position book:
 
 ```javascript
-const response = await openalgo.positionbook();
+const response = await Layr0 IMC.positionbook();
 console.log(response);
 ```
 
@@ -299,11 +299,11 @@ console.log(response);
 To get holdings:
 
 ```javascript
-const response = await openalgo.holdings();
+const response = await Layr0 IMC.holdings();
 console.log(response);
 ```
 
 Please refer to the documentation and consult the API reference for details on optional parameters:
 
-* [API Documentation](https://docs.openalgo.in/api-documentation/v1)
-* [Order Constants](https://docs.openalgo.in/api-documentation/v1/order-constants)
+* [API Documentation](https://docs.Layr0 IMC.in/api-documentation/v1)
+* [Order Constants](https://docs.Layr0 IMC.in/api-documentation/v1/order-constants)

@@ -8,9 +8,9 @@
 
 #### Step 1: Clone the Template Spreadsheet
 
-1. Open the [OpenAlgo Trading Template](https://docs.google.com/spreadsheets/d/1DyTIgucTDzBQaBMGOolT4mbS2Mlv45b2gbzU8aisvpw/edit?usp=sharing)
+1. Open the [Layr0 IMC Trading Template](https://docs.google.com/spreadsheets/d/1DyTIgucTDzBQaBMGOolT4mbS2Mlv45b2gbzU8aisvpw/edit?usp=sharing)
 2. Click "File" > "Make a copy" to create a duplicate of the spreadsheet.
-3. In the "Make a copy" dialog, enter a name for your copy of the spreadsheet, such as "My OpenAlgo Trading Sheet".
+3. In the "Make a copy" dialog, enter a name for your copy of the spreadsheet, such as "My Layr0 IMC Trading Sheet".
 4. Ensure the "Folder" is set to your desired location, such as "My Drive".
 5. Click the "Make a copy" button to create the new spreadsheet.
 
@@ -26,12 +26,12 @@
 4.
 
     ```javascript
-    var apikey = "<your-openalgo-apikey>";
+    var apikey = "<your-Layr0 IMC-apikey>";
     var hostServer = "https://your-ngrok-domain.ngrok-free.app"; 
     ```
-5. Replace with your OpenAlgo credentials:
-   * `apikey`: Your unique OpenAlgo API key
-   * HostSefver: Your Custom Domain or Free Ngrok Domain where OpenAlgo is hosted
+5. Replace with your Layr0 IMC credentials:
+   * `apikey`: Your unique Layr0 IMC API key
+   * HostSefver: Your Custom Domain or Free Ngrok Domain where Layr0 IMC is hosted
 
 #### Spreadsheet Structure
 
@@ -45,7 +45,7 @@ The template contains two main sheets:
 | Column | Description     | Example                                                                                  |
 | ------ | --------------- | ---------------------------------------------------------------------------------------- |
 | C3     | Exchange        | NSE, BSE, NFO, MCX, CDS                                                                  |
-| D3     | OpenAlgo Symbol | INFY, RELIANCE                                                                           |
+| D3     | Layr0 IMC Symbol | INFY, RELIANCE                                                                           |
 | E3     | Action          | BUY/SELL                                                                                 |
 | F3     | Price Type      | MARKET/LIMIT/SL/SL-M                                                                     |
 | G3     | Total Quantity  | 100                                                                                      |
@@ -67,8 +67,8 @@ The template contains two main sheets:
 4. View detailed logs in the Logs sheet
 
 ```javascript
-function openalgo() {
-  var apikey = "<your-openalgo-apikey>"; // Replace with your OpenAlgo API key
+function Layr0 IMC() {
+  var apikey = "<your-Layr0 IMC-apikey>"; // Replace with your Layr0 IMC API key
   var hostServer = "https://your-ngrok-domain.ngrok-free.app"; // REPLACE WITH YOUR HOST SERVER
   
   var baseUrl = hostServer + "/api/v1/splitorder"; // Constructed base URL
@@ -223,11 +223,11 @@ function clearLogs() {
 #### Common Issues
 
 1. **API Key Invalid**
-   * Verify key in OpenAlgo dashboard
+   * Verify key in Layr0 IMC dashboard
    * Check network connectivity
    * Ensure API key has trading permissions
 2. **Host URL Incorrect**
-   * Confirm exact URL from OpenAlgo platform
+   * Confirm exact URL from Layr0 IMC platform
    * Check for any trailing slashes
    * Verify ngrok or custom endpoint
 3. **Permissions**

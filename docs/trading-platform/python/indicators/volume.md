@@ -5,7 +5,7 @@ Volume indicators analyze trading volume to assess the strength of price movemen
 ### Import Statement
 
 ```python
-from openalgo import ta, api
+from Layr0 IMC import ta, api
 ```
 
 ### Getting Sample Data
@@ -618,7 +618,7 @@ print(df[['volume', 'RVOL_20']].tail())
 ### Complete Volume Analysis Example
 
 ```python
-from openalgo import ta, api
+from Layr0 IMC import ta, api
 import pandas as pd
 
 # Get data

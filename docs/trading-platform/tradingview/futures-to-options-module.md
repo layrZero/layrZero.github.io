@@ -10,7 +10,7 @@ The "Futures to Options Execution Module" is a highly modular and extensible Pin
 
 This module is structured into 8 distinct blocks, each with a specific function:
 
-1. **OpenAlgo API Controls**: Connects to OpenAlgo for live execution, allowing integration with real trading APIs.
+1. **Layr0 IMC API Controls**: Connects to Layr0 IMC for live execution, allowing integration with real trading APIs.
 2. **Backtesting & Risk Controls**: Defines trading timeframes, and configurable risk parameters including Stoploss/Target (fixed, percentage, or ATR-based).
 3. **Trading Strategy Block**: Users can plug in any logic here. The default implementation includes a HalfTrend + ATR channel-based strategy.
 4. **Signal Mapping & Intraday Filtering**: Converts strategy conditions into buy/sell signals and handles intraday session logic.
@@ -21,11 +21,11 @@ This module is structured into 8 distinct blocks, each with a specific function:
 
 ```coffeescript
 // This Pine Script™ code is subject to the terms of the Mozilla Public License 2.0 at https://mozilla.org/MPL/2.0/
-// © openalgo
+// © Layr0 IMC
 
 //Trading Block Description
 
-//Block1 : OpenAlgo API controls
+//Block1 : Layr0 IMC API controls
 //Block2 : Backtesting Controls & Target and Stoploss Controls
 //Block3: Trading Strategy and Controls (Write your strategy Block)
 //Block4: Intraday Function and Buy and Sell Signal Mapping (Signal Mapping is Required)
@@ -37,20 +37,20 @@ This module is structured into 8 distinct blocks, each with a specific function:
 //@version=6
 strategy("Futures to Options Execution Module", overlay=true, fill_orders_on_standard_ohlc = true)
 
-//Block1 :  OpenAlgo API controls
+//Block1 :  Layr0 IMC API controls
 
 // Input controls
-apikey = input.string("xxxxxxxxxxxx", title="OpenAlgo API Key", group="OpenAlgo")
-strategyType = input.string("Tradingview", title="Strategy", group="OpenAlgo")
-Underlying = input.symbol(title = "Underlying Symbol", defval = "NSE:NIFTY", group = "OpenAlgo")
-Expiry = input.string(title="Expiry Date",defval="30JAN25",group = "OpenAlgo")
-iInterval = input.int(title='Strike Interval',defval = 50, group = "OpenAlgo")
-lotsize = input.int(title = "LotSize", defval = 75,group="OpenAlgo")
-quantity = input.int(title = "Quantity(Lots)", defval = 1,group="OpenAlgo")
-offsetCE = input.int(title = "OffsetCE", defval = 0,minval=-40,maxval=40, step=1, group="OpenAlgo")
-offsetPE = input.int(title = "OffsetPE", defval = 0,minval=-40,maxval=40, step=1, group="OpenAlgo")
-exchange = input.string("NFO", title="Exchange", options=["NFO", "BFO", "MCX"], group="OpenAlgo")
-product = input.string("MIS", title="Product Type", options=["MIS", "NRML"], group="OpenAlgo")
+apikey = input.string("xxxxxxxxxxxx", title="Layr0 IMC API Key", group="Layr0 IMC")
+strategyType = input.string("Tradingview", title="Strategy", group="Layr0 IMC")
+Underlying = input.symbol(title = "Underlying Symbol", defval = "NSE:NIFTY", group = "Layr0 IMC")
+Expiry = input.string(title="Expiry Date",defval="30JAN25",group = "Layr0 IMC")
+iInterval = input.int(title='Strike Interval',defval = 50, group = "Layr0 IMC")
+lotsize = input.int(title = "LotSize", defval = 75,group="Layr0 IMC")
+quantity = input.int(title = "Quantity(Lots)", defval = 1,group="Layr0 IMC")
+offsetCE = input.int(title = "OffsetCE", defval = 0,minval=-40,maxval=40, step=1, group="Layr0 IMC")
+offsetPE = input.int(title = "OffsetPE", defval = 0,minval=-40,maxval=40, step=1, group="Layr0 IMC")
+exchange = input.string("NFO", title="Exchange", options=["NFO", "BFO", "MCX"], group="Layr0 IMC")
+product = input.string("MIS", title="Product Type", options=["MIS", "NRML"], group="Layr0 IMC")
 algomode = input.string(title="Algo Mode",defval = "ENABLE",options=['ENABLE',"LONGONLY","SHORTONLY"])
 
 // Hardcoded Price Type

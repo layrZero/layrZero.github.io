@@ -5,9 +5,9 @@ Hybrid indicators combine multiple analytical approaches to provide comprehensiv
 ### Import Statement
 
 ```python
-from openalgo import api, ta
+from Layr0 IMC import api, ta
 
-# Get data using OpenAlgo API
+# Get data using Layr0 IMC API
 client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
 df = client.history(symbol="SBIN", exchange="NSE", interval="5m", 
                    start_date="2025-04-01", end_date="2025-04-08")
@@ -341,7 +341,7 @@ print(df[['close', 'RWI_High', 'RWI_Low', 'RWI_Signal', 'Trend_Strength_RWI']].t
 
 ```python
 import pandas as pd
-from openalgo import api, ta
+from Layr0 IMC import api, ta
 
 # Get market data
 client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')

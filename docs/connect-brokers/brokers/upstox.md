@@ -22,13 +22,13 @@ Enter the App name, Redirect the URL and select I accept the terms and condition
   src={require('@site/static/img/assets/image (34).png').default}
 />
 
-API Key and API Secret Key generated for the app OpenAlgo
+API Key and API Secret Key generated for the app Layr0 IMC
 
 <img
   src={require('@site/static/img/assets/image (35).png').default}
 />
 
-Save the generated apikey and apisecret. Later we will be adding the apikey in the [environmental variable](https://docs.openalgo.in/getting-started/windows-installation/environmental-variables) along with the redirect url
+Save the generated apikey and apisecret. Later we will be adding the apikey in the [environmental variable](https://docs.Layr0 IMC.in/getting-started/windows-installation/environmental-variables) along with the redirect url
 
 Here is a sample of how the details would appear in a .env file for reference:
 
@@ -40,4 +40,4 @@ REDIRECT_URL = 'http://127.0.0.1:5000/upstox/callback'
 
 
 
-Integrating OpenAlgo with Upstox'sAPI opens up possibilities for automated trading strategies, providing a powerful tool for traders and developers to exploit market opportunities efficiently. It's essential to follow best practices for API integration, including handling rate limits, managing API keys securely, and ensuring robust error handling and logging mechanisms are in place.
+Integrating Layr0 IMC with Upstox'sAPI opens up possibilities for automated trading strategies, providing a powerful tool for traders and developers to exploit market opportunities efficiently. It's essential to follow best practices for API integration, including handling rate limits, managing API keys securely, and ensuring robust error handling and logging mechanisms are in place.

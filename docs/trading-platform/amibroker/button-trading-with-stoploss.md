@@ -1,20 +1,20 @@
 # Button Trading with Stoploss
 
 ```clike
-//Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker Button Trading Module v1.0 with Stoploss
+//Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker Button Trading Module v1.0 with Stoploss
 //Date - 13/08/2024
 
 
 
-_SECTION_BEGIN("OpenAlgo Button Trading");
+_SECTION_BEGIN("Layr0 IMC Button Trading");
 
 RequestTimedRefresh(1,False);
 SetOption("StaticVarAutoSave", 30 );
 EnableTextOutput(False);
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 strategy = ParamStr("Strategy", "Amibroker");
 symbol = ParamStr("Symbol", "RELIANCE");
 exchange = ParamList("Exchange", "NSE|NFO|BSE|MCX|CDS");
@@ -40,7 +40,7 @@ static_name_algo = static_name_+interval(2)+strategy+"algostatus";
 
 
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -69,7 +69,7 @@ StaticVarSet(static_name_algo, 0);
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -283,7 +283,7 @@ End Sub
 %>
 
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 _SECTION_BEGIN("Stoploss OrderID Display");
 
@@ -345,11 +345,11 @@ if(EnableAlgo == "Enable")
 	
 	if( BEButtonClick AND StaticVarGet(static_name_+"BEAlgo")==0 ) 
 	{
-		openalgo.placeorder("BUY",quantity);
+		Layr0 IMC.placeorder("BUY",quantity);
 		_TRACE("API Request : "+api_request);
 		_TRACE("API Response : "+api_response);
 		slprice = LastValue(Close + stops);
-		openalgo.placeSLorder("SELL",quantity,slprice);
+		Layr0 IMC.placeSLorder("SELL",quantity,slprice);
 		
 		orderid = StrExtract(sl_api_response,1,'{');
 		orderid = StrExtract(orderid,1,':');
@@ -378,12 +378,12 @@ if(EnableAlgo == "Enable")
 	{
 	
 		StaticVarBuySLOrderID = StaticVarGetText(static_name_ + "BuySLOrderID");
-		openalgo.cancelorder(StaticVarBuySLOrderID);
+		Layr0 IMC.cancelorder(StaticVarBuySLOrderID);
 		_TRACE("Cancel API Request : "+cancel_api_request);
 		_TRACE("Cancel API Response : "+cancel_api_response);
 		StaticVarSetText(static_name_+"BuySLOrderID","",True);
 		
-		openalgo.placeorder("SELL",quantity);
+		Layr0 IMC.placeorder("SELL",quantity);
         if(VoiceAlert == "Enable"){
 				Say("Sell Order Triggered");  	
 			}
@@ -398,11 +398,11 @@ if(EnableAlgo == "Enable")
 		
 	if( SEButtonClick AND StaticVarGet(static_name_+"SEAlgo")==0 ) 
 	{
-		openalgo.placeorder("SELL",quantity);
+		Layr0 IMC.placeorder("SELL",quantity);
 		_TRACE("API Request : "+api_request);
 		_TRACE("API Response : "+api_response);
 		slprice = LastValue(Close - stops);
-		openalgo.placeSLorder("BUY",quantity,slprice);
+		Layr0 IMC.placeSLorder("BUY",quantity,slprice);
 		
 		orderid = StrExtract(sl_api_response,1,'{');
 		orderid = StrExtract(orderid,1,':');
@@ -430,12 +430,12 @@ if(EnableAlgo == "Enable")
 	if( SXButtonClick AND StaticVarGet(static_name_+"SXAlgo")==0 ) 
 	{
 		StaticVarSellSLOrderID = StaticVarGetText(static_name_ + "ShortSLOrderID");
-		openalgo.cancelorder(StaticVarSellSLOrderID);
+		Layr0 IMC.cancelorder(StaticVarSellSLOrderID);
 		_TRACE("Cancel API Request : "+cancel_api_request);
 		_TRACE("Cancel API Response : "+cancel_api_response);
 		StaticVarSetText(static_name_+"ShortSLOrderID","",True);
 
-		openalgo.placeorder("BUY",quantity);
+		Layr0 IMC.placeorder("BUY",quantity);
         if(VoiceAlert == "Enable"){
 				Say("Cover Order Triggered");  	
 			}
@@ -450,7 +450,7 @@ if(EnableAlgo == "Enable")
 	
 	if( CXButtonClick AND StaticVarGet(Name()+GetChartID()+"CXAlgo")==0 ) 
 	{
-		openalgo.Squareoffall();
+		Layr0 IMC.Squareoffall();
 		if(VoiceAlert == "Enable"){
 				Say("Squareoff All Triggered");  	
 			}

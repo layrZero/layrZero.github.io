@@ -18,7 +18,7 @@ import YouTube from '@site/src/components/YouTube';
 ### Integrating with n8n for Scheduled Order Placement
 
 \
-This section guides you through creating a workflow in n8n, a powerful open-source workflow automation tool, to automatically place orders in OpenAlgo at a scheduled time. We'll use the example of placing a short straddle on NIFTY options at 9:20 AM IST every day.
+This section guides you through creating a workflow in n8n, a powerful open-source workflow automation tool, to automatically place orders in Layr0 IMC at a scheduled time. We'll use the example of placing a short straddle on NIFTY options at 9:20 AM IST every day.
 
 \
 
@@ -29,10 +29,10 @@ This section guides you through creating a workflow in n8n, a powerful open-sour
 
 **Prerequisites:**
 
-* **OpenAlgo:** You must have OpenAlgo installed and running in http://127.0.0.1:5000/. Ensure your broker is properly configured within OpenAlgo.
+* **Layr0 IMC:** You must have Layr0 IMC installed and running in http://127.0.0.1:5000/. Ensure your broker is properly configured within Layr0 IMC.
 * Install NodeJS as n8n backend relies on **Node.js runtime** to execute workflows, handle API calls, and manage automation.
 * **n8n:** n8n should be installed and running.&#x20;
-* **Broker API Key:** You'll need your broker's API key and API Secret that you have configured in OpenAlgo.
+* **Broker API Key:** You'll need your broker's API key and API Secret that you have configured in Layr0 IMC.
 * **Basic Understanding of Cron Expressions:** [Cron expressions](https://docs.n8n.io/integrations/builtin/core-nodes/n8n-nodes-base.scheduletrigger/#custom-cron-interval) are used to define schedules. We'll provide the specific expression you need, but it's helpful to have a basic understanding.
 
 #### **How to Start n8n on Windows**
@@ -147,16 +147,16 @@ Now you can start creating workflows.
 * Search for "HTTP Request" and select it.
 * Configure the node as follows:
   * **Method:** POST
-  * **URL:** http://127.0.0.1:5000/api/v1/placeorder (This assumes OpenAlgo is running on your local machine. Adjust if you're using a different URL.)
-  * **Authentication:** None (assuming your OpenAlgo instance doesn't require authentication for local requests. If you have authentication enabled, configure it accordingly.)
+  * **URL:** http://127.0.0.1:5000/api/v1/placeorder (This assumes Layr0 IMC is running on your local machine. Adjust if you're using a different URL.)
+  * **Authentication:** None (assuming your Layr0 IMC instance doesn't require authentication for local requests. If you have authentication enabled, configure it accordingly.)
   * **Send Body:** Check this box.
   * **Body Content Type:** JSON
   * **Specify Body:** Choose Using JSON
-  * **JSON:** Paste the following, replacing "YOUR\_OPENALGO\_API\_KEY" with your actual API key:
+  * **JSON:** Paste the following, replacing "YOUR\_Layr0 IMC\_API\_KEY" with your actual API key:
 
 ```
 {
-    "apikey": "YOUR_OPENALGO_API_KEY",
+    "apikey": "YOUR_Layr0 IMC_API_KEY",
     "strategy": "Test Strategy",
     "symbol": "NIFTY06MAR2522100CE",
     "exchange": "NFO",
@@ -172,8 +172,8 @@ Now you can start creating workflows.
 />
 
 * **Important Notes:**
-  * YOUR\_OPENALGO\_API\_KEY: Replace this with your OpenAlgo API key.
-  * strategy: You can name your strategy anything you like (e.g., "MyStraddleStrategy"). This helps you identify the source of the order within OpenAlgo.
+  * YOUR\_Layr0 IMC\_API\_KEY: Replace this with your Layr0 IMC API key.
+  * strategy: You can name your strategy anything you like (e.g., "MyStraddleStrategy"). This helps you identify the source of the order within Layr0 IMC.
   * symbol: Ensure this is the correct symbol for the NIFTY call option with the desired expiry and strike price. Double-check this!
   * exchange: Use "NFO" for NSE options.
   * action: "SELL" for the short straddle.
@@ -187,7 +187,7 @@ Now you can start creating workflows.
 
 ```
 {
-    "apikey": "YOUR_OPENALGO_API_KEY",
+    "apikey": "YOUR_Layr0 IMC_API_KEY",
     "strategy": "Test Strategy",
     "symbol": "NIFTY06MAR2522100PE",
     "exchange": "NFO",
@@ -215,7 +215,7 @@ Now you can start creating workflows.
 
 * Once the workflow is active, it will run automatically at 9:20 AM IST every day.
 * You can monitor the executions by clicking on the "Executions" tab in n8n. This will show you a history of when the workflow ran and whether it was successful.
-* You should also see the orders appearing in your OpenAlgo order book.
+* You should also see the orders appearing in your Layr0 IMC order book.
 
 **Troubleshooting**
 
@@ -224,16 +224,16 @@ Now you can start creating workflows.
   * **Cron expression:** Verify that your Cron expression is correct. You can use online Cron expression generators to test your expression.
   * **Timezone:** Make absolutely sure the timezone in n8n's settings is set to "Asia/Kolkata" (or your correct local timezone).
   * **n8n errors:** Check the n8n logs (accessible through the settings or the command line if you're running it locally) for any error messages.
-* **Orders not placing in OpenAlgo:**
+* **Orders not placing in Layr0 IMC:**
   * **API Key:** Double-check your API key in the HTTP Request nodes.
-  * **URL:** Make sure the URL is the correct OpenAlgo endpoint.
+  * **URL:** Make sure the URL is the correct Layr0 IMC endpoint.
   * **JSON Format:** Ensure your JSON body is correctly formatted. Any missing commas, brackets, or incorrect field names will cause errors.
-  * **OpenAlgo Logs:** Check the OpenAlgo logs for any error messages.
+  * **Layr0 IMC Logs:** Check the Layr0 IMC logs for any error messages.
 
-#### **Why Use n8n for OpenAlgo?**
+#### **Why Use n8n for Layr0 IMC?**
 
 * **No-code / Low-code Automation:** Simplifies complex trading workflows.
 * **Open-source & Self-hosted:** No expensive SaaS fees.
 * **Customizable & Scalable:** Adapt workflows based on trading needs.
-* **Supports Webhooks & APIs:** Seamless integration with OpenAlgo.
+* **Supports Webhooks & APIs:** Seamless integration with Layr0 IMC.
 

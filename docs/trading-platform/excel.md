@@ -1,16 +1,16 @@
 # Excel
 
-## OpenAlgo Excel Documentation
+## Layr0 IMC Excel Documentation
 
 ### Introduction
 
-OpenAlgo provides seamless integration with Excel for executing trading strategies, fetching market data, and managing orders. This documentation covers the available Excel functions, their usage, and examples.
+Layr0 IMC provides seamless integration with Excel for executing trading strategies, fetching market data, and managing orders. This documentation covers the available Excel functions, their usage, and examples.
 
 
 
-## Install the OpenAlgo - Excel Addins
+## Install the Layr0 IMC - Excel Addins
 
-Before installing OpenAlgo Excel Add-In, **ensure you are selecting the correct version** based on your Excel installation.
+Before installing Layr0 IMC Excel Add-In, **ensure you are selecting the correct version** based on your Excel installation.
 
 #### **📌 Steps to Check Your Excel Version**
 
@@ -24,15 +24,15 @@ Before installing OpenAlgo Excel Add-In, **ensure you are selecting the correct 
 * **If your Excel version is 64-bit → Install the 64-bit add-in** ✅ _(Recommended)_
 * **If your Excel version is 32-bit → Install the 32-bit add-in** ✅
 
-**Download the OpenAlgo Excel Addin**
+**Download the Layr0 IMC Excel Addin**
 
 
 
-[Get the Layr0 Excel plugin installer](https://github.com/marketcalls/OpenAlgo-Excel/releases)
+[Get the Layr0 Excel plugin installer](https://github.com/layr0/Layr0 IMC-Excel/releases)
 
 ### **⚠ .NET 6 Desktop Runtime is Required**
 
-OpenAlgo Excel Add-In is built using **Excel-DNA**, which requires the **.NET 6 Desktop Runtime** to run add-ins.
+Layr0 IMC Excel Add-In is built using **Excel-DNA**, which requires the **.NET 6 Desktop Runtime** to run add-ins.
 
 🔹 **If the add-in is not working or Excel does not recognize it, install the .NET 6 Desktop Runtime** from the link below:
 
@@ -234,20 +234,20 @@ OpenAlgo Excel Add-In is built using **Excel-DNA**, which requires the **.NET 6 
 
 #### Open a Position
 
-**Function:** `oa_openposition(strategy, symbol, exchange, product)`
+**Function:** `oa_positionsopen(strategy, symbol, exchange, product)`
 
 **Example Usage:**
 
 ```excel
-=oa_openposition("MyStrategy", "INFY", "NSE", "MIS")
+=oa_positionsopen("MyStrategy", "INFY", "NSE", "MIS")
 ```
 
 ***
 
 ### Notes
 
-* Test in **OpenAlgo Analyzer Mode** before using in live markets.
+* Test in **Layr0 IMC Analyzer Mode** before using in live markets.
 
 ### Support
 
-For more details, visit [OpenAlgo Docs](https://docs.openalgo.in/).
+For more details, visit [Layr0 IMC Docs](https://docs.Layr0 IMC.in/).

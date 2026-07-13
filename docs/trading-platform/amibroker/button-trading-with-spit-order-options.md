@@ -1,6 +1,6 @@
 # Button Trading with Spit Order (Options)
 
-This OpenAlgo SplitOrder Trading Module for AmiBroker is designed to seamlessly integrate manual button-based trading into an algorithmic workflow. It allows traders to place orders on options (ATM, ITM, OTM for both Calls and Puts) directly from the AmiBroker chart interface by clicking visual buttons. Each button sends orders through the OpenAlgo Bridge using the `/splitorder` endpoint, which intelligently splits large orders into smaller chunks as per the configured split size. The system dynamically calculates the ATM, ITM, and OTM strikes based on live market data, user-defined offsets, and strike intervals, ensuring that the correct option symbols are generated for execution. A graphical dashboard embedded in the chart shows the current calculated strikes, internal memory for each option leg, cumulative quantities traded, and the current algo enable/disable status, providing traders with full visibility and control.
+This Layr0 IMC SplitOrder Trading Module for AmiBroker is designed to seamlessly integrate manual button-based trading into an algorithmic workflow. It allows traders to place orders on options (ATM, ITM, OTM for both Calls and Puts) directly from the AmiBroker chart interface by clicking visual buttons. Each button sends orders through the Layr0 IMC Bridge using the `/splitorder` endpoint, which intelligently splits large orders into smaller chunks as per the configured split size. The system dynamically calculates the ATM, ITM, and OTM strikes based on live market data, user-defined offsets, and strike intervals, ensuring that the correct option symbols are generated for execution. A graphical dashboard embedded in the chart shows the current calculated strikes, internal memory for each option leg, cumulative quantities traded, and the current algo enable/disable status, providing traders with full visibility and control.
 
 <img
   src={require('@site/static/img/assets/Split Order - Options.png').default}
@@ -9,17 +9,17 @@ This OpenAlgo SplitOrder Trading Module for AmiBroker is designed to seamlessly 
 Additionally, the module tracks how many shares or lots have been cumulatively ordered through each button. This allows precise exits later by automatically sending exactly the accumulated quantity in the opposite direction, ensuring positions are squared off cleanly. It includes a “Close All” button that closes all open positions for all option legs using the exact quantities stored in memory, and also provides a “Clear Memory” button to reset internal counters without sending any orders. The system can be configured for both option buyers (to initiate long call or put positions) and option sellers (to short calls or puts and later cover), making it highly versatile for different option trading strategies. This entire workflow is designed for intraday or short-term traders who want to streamline order placement, reduce manual errors, and maintain a tight control over their option trades directly from their AmiBroker environment.
 
 ```clike
-//Rajandran R - Creator of OpenAlgo
-//OpenAlgo - Amibroker SplitOrder Module with cumulative qty & explicit current strikes
+//Rajandran R - Creator of Layr0 IMC
+//Layr0 IMC - Amibroker SplitOrder Module with cumulative qty & explicit current strikes
 //Date: 07/07/2025
 
-_SECTION_BEGIN("OpenAlgo Options SplitOrder Trading");
+_SECTION_BEGIN("Layr0 IMC Options SplitOrder Trading");
 
 RequestTimedRefresh(1,False);
 EnableTextOutput(False);
 SetOption("StaticVarAutoSave", 30 );
 
-apikey     = ParamStr("OpenAlgo API Key", "******");
+apikey     = ParamStr("Layr0 IMC API Key", "******");
 strategy   = ParamStr("Strategy Name", "Test Strategy");
 spot       = Paramlist("Spot Symbol","NIFTY|BANKNIFTY|FINNIFTY|SENSEX|CRUDEOILM");
 expiry     = ParamStr("Expiry Date","17JUL25");
@@ -55,7 +55,7 @@ bridgeurl = host+"/api/"+ver;
 static_name_ = Name()+GetChartID()+interval(2)+strategy;
 static_name_algo = Name()+GetChartID()+interval(2)+strategy+"algostatus";
 
-//OpenAlgo Dashboard
+//Layr0 IMC Dashboard
 
 GfxSelectFont( "BOOK ANTIQUA", 14, 100 );
 GfxSetBkMode( 1 );
@@ -122,7 +122,7 @@ printf("\n ATMsymbolPE = " + StaticVarGetText(static_name_+"ATMsymbolPE") + " | 
 printf("\n ITMsymbolPE = " + StaticVarGetText(static_name_+"ITMsymbolPE") + " | Qty: " + NumToStr(Nz(StaticVarGet(static_name_+"ITMsymbolPE_qty")),1.0));
 printf("\n OTMsymbolPE = " + StaticVarGetText(static_name_+"OTMsymbolPE") + " | Qty: " + NumToStr(Nz(StaticVarGet(static_name_+"OTMsymbolPE_qty")),1.0));
 
-_SECTION_BEGIN("OpenAlgo Bridge SplitOrder Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge SplitOrder Controls");
 
 EnableScript("VBScript");
 <%
@@ -158,7 +158,7 @@ Public Sub PlaceSplitOrder(symbol,action, quantity, splitsize)
     AFL("api_response") = oXMLHTTP.responseText
 End Sub
 %>
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 _SECTION_END();
 
 // Global TryClose
@@ -168,7 +168,7 @@ procedure TryClose(sym)
     totalQty = Nz(StaticVarGet(static_name_+sym+"_qty"),0);
     if(exitSymbol!="" AND totalQty>0)
     {
-        openalgo.PlaceSplitOrder(exitSymbol, "SELL", totalQty, splitsize);
+        Layr0 IMC.PlaceSplitOrder(exitSymbol, "SELL", totalQty, splitsize);
         _TRACE("CloseAll - " + sym + " API Request : " + api_request);
         _TRACE("CloseAll - " + sym + " API Response : " + api_response);
     }
@@ -199,7 +199,7 @@ procedure HandleTrade(symbolVar, memoryKey, buyText, exitText, x, y)
 
     if(btnClickBuy AND StaticVarGet(static_name_+memoryKey+"E")==0)
     {
-        openalgo.PlaceSplitOrder(symbolVar, tradetype, quantity, splitsize);
+        Layr0 IMC.PlaceSplitOrder(symbolVar, tradetype, quantity, splitsize);
         _TRACE("API Request : " + api_request);
         _TRACE("API Response : " + api_response);
 
@@ -223,7 +223,7 @@ procedure HandleTrade(symbolVar, memoryKey, buyText, exitText, x, y)
 
         if(exitSymbol!="" AND totalQty>0)
         {
-            openalgo.PlaceSplitOrder(exitSymbol, "SELL", totalQty, splitsize);
+            Layr0 IMC.PlaceSplitOrder(exitSymbol, "SELL", totalQty, splitsize);
             _TRACE("API Request : " + api_request);
             _TRACE("API Response : " + api_response);
             if(VoiceAlert=="Enable"){ Say("Exit "+exitText); }

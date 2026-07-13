@@ -1,6 +1,6 @@
 # Strategy Management
 
-OpenAlgo's Strategy Management Module allows you to automate your trading strategies using webhooks. This enables seamless integration with any platform or custom system that can send HTTP requests. The Strategy class provides a simple interface to send signals that trigger orders based on your strategy configuration in OpenAlgo.
+Layr0 IMC's Strategy Management Module allows you to automate your trading strategies using webhooks. This enables seamless integration with any platform or custom system that can send HTTP requests. The Strategy class provides a simple interface to send signals that trigger orders based on your strategy configuration in Layr0 IMC.
 
 
 
@@ -12,17 +12,17 @@ OpenAlgo's Strategy Management Module allows you to automate your trading strate
 
 ```python
 
-from openalgo import Strategy
+from Layr0 IMC import Strategy
 
 # Initialize strategy client
 client = Strategy(
-    host_url="http://127.0.0.1:5000",  # Your OpenAlgo server URL
-    webhook_id="your-webhook-id"        # Get this from OpenAlgo strategy section
+    host_url="http://127.0.0.1:5000",  # Your Layr0 IMC server URL
+    webhook_id="your-webhook-id"        # Get this from Layr0 IMC strategy section
 )
 
 
-# Example 1: Long/Short only mode (configured in OpenAlgo)
-#Trading Mode - Long/Short only mode (configured in OpenAlgo)
+# Example 1: Long/Short only mode (configured in Layr0 IMC)
+#Trading Mode - Long/Short only mode (configured in Layr0 IMC)
 client.strategyorder("RELIANCE", "BUY")
 client.strategyorder("RELIANCE", "SELL")
 
@@ -31,7 +31,7 @@ client.strategyorder("RELIANCE", "SELL")
 client.strategyorder("RELIANCE", "BUY",10)
 
 
-# Example 2: BOTH mode (configured in OpenAlgo)
+# Example 2: BOTH mode (configured in Layr0 IMC)
 #Trading Mode - BOTH - Long Exit
 client.strategyorder("RELIANCE", "SELL",0)
 

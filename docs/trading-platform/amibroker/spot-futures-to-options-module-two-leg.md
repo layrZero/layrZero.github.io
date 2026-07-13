@@ -15,7 +15,7 @@ A two-legged options trading strategy involves buying or selling two options at 
 ```clike
 
 /*
-OpenAlgo - Smart Spot/Futures to Two Leg Options Trading Module
+Layr0 IMC - Smart Spot/Futures to Two Leg Options Trading Module
 
 Supported Two Leg Strategies
 Strategies that be built using this module
@@ -30,22 +30,22 @@ Strategies that be built using this module
 9)Ratio Back Spread
 
 
-Created By : Rajandran R(Founder - Marketcalls / Creator - Openalgo )
+Created By : Rajandran R(Founder - layr0 / Creator - Layr0 IMC )
 Created on : 4 Jun 2024.
-Website : www.marketcalls.in / www.openalgo.in
+Website : www.layr0.in / www.Layr0 IMC.in
 */
 
 
 
 
-_SECTION_BEGIN("Openalgo - Order Controls");
+_SECTION_BEGIN("Layr0 IMC - Order Controls");
 
 // Send orders even if Amibroker is minimized or Chart is not active
 RequestTimedRefresh(1, False); 
 EnableTextOutput(False);
 
 
-apikey = ParamStr("OpenAlgo API Key", "******");
+apikey = ParamStr("Layr0 IMC API Key", "******");
 
 strategy = ParamStr("Strategy Name", "Test Strategy");
 
@@ -296,7 +296,7 @@ _SECTION_END();
 
 
 
-_SECTION_BEGIN("OpenAlgo Bridge Controls");
+_SECTION_BEGIN("Layr0 IMC Bridge Controls");
 
 EnableScript("VBScript"); 
 <%
@@ -438,7 +438,7 @@ End Sub
 
 %>
 
-openalgo = GetScriptObject();
+Layr0 IMC = GetScriptObject();
 
 
 
@@ -461,38 +461,38 @@ if(EnableAlgo != "Disable")
 				//Cover Signal
 				if(tradetype_shortleg1=="SELL")
 				{
-				openalgo.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response);
-				openalgo.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2"); 
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response);
 				}
 				else
 				{
-				openalgo.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2");
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response);
-				openalgo.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
 				}
 				//Buy Signal
 				if(tradetype_buyleg1=="BUY")
 				{
-				openalgo.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
-				openalgo.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
 				}
 				else
 				{
-				openalgo.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
-				openalgo.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
 				}
@@ -517,19 +517,19 @@ if(EnableAlgo != "Disable")
 				//Buy Signal
 				if(tradetype_buyleg1=="BUY")
 				{
-				openalgo.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
-				openalgo.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
 				}
 				else
 				{
-				openalgo.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
-				openalgo.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
 				}
@@ -550,19 +550,19 @@ if(EnableAlgo != "Disable")
 				//Sell Signal
 				if(tradetype_buyleg1=="SELL")
 				{
-				openalgo.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2"); 
+				Layr0 IMC.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2"); 
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
 				}
 				else
 				{
-				openalgo.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2");
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1");  
+				Layr0 IMC.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1");  
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
 				}
@@ -581,38 +581,38 @@ if(EnableAlgo != "Disable")
 				//Sell Signal
 				if(tradetype_buyleg1=="SELL")
 				{
-				openalgo.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2"); 
+				Layr0 IMC.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2"); 
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
 				}
 				else
 				{
-				openalgo.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2");
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response);  
 				}
 				//Short
 				if(tradetype_shortleg1=="BUY")
 				{
-				openalgo.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
-				openalgo.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
 				}
 				else
 				{
-				openalgo.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
-				openalgo.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
 				}
@@ -633,19 +633,19 @@ if(EnableAlgo != "Disable")
 				//Short
 				if(tradetype_shortleg1=="BUY")
 				{
-				openalgo.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
-				openalgo.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
 				}
 				else
 				{
-				openalgo.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
-				openalgo.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
 				}
@@ -665,19 +665,19 @@ if(EnableAlgo != "Disable")
 				//Cover Signal
 				if(tradetype_shortleg1=="SELL")
 				{
-				openalgo.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2"); 
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
 				}
 				else
 				{
-				openalgo.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2");
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1");  
+				Layr0 IMC.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1");  
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
 				}
@@ -702,19 +702,19 @@ if(EnableAlgo != "Disable")
 				//Buy Signal
 				if(tradetype_buyleg1=="BUY")
 				{
-				openalgo.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
-				openalgo.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
 				}
 				else
 				{
-				openalgo.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg2,opttype_buyleg2,quantity_leg2,expiry_leg2,"buy","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
-				openalgo.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_buyleg1,opttype_buyleg1,quantity_leg1,expiry_leg1,"buy","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
 				}
@@ -738,19 +738,19 @@ if(EnableAlgo != "Disable")
 				//Sell Signal
 				if(tradetype_buyleg1=="SELL")
 				{
-				openalgo.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2"); 
+				Layr0 IMC.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2"); 
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
 				}
 				else
 				{
-				openalgo.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2");
+				Layr0 IMC.ExitOrder(tradetype_buyleg2,opttype_buyleg2,expiry_leg2,"buy","leg2");
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1");  
+				Layr0 IMC.ExitOrder(tradetype_buyleg1,opttype_buyleg1,expiry_leg1,"buy","leg1");  
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
 				}
@@ -773,19 +773,19 @@ if(EnableAlgo != "Disable")
 				//Short
 				if(tradetype_shortleg1=="BUY")
 				{
-				openalgo.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
-				openalgo.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
 				}
 				else
 				{
-				openalgo.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg2,opttype_shortleg2,quantity_leg2,expiry_leg2,"short","leg2");
 				_TRACE("API Request leg2: "+api_request);
 				_TRACE("API Response leg2: "+api_response);
-				openalgo.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
+				Layr0 IMC.PlaceOrder(tradetype_shortleg1,opttype_shortleg1,quantity_leg1,expiry_leg1,"short","leg1");
 				_TRACE("API Request leg1: "+api_request);
 				_TRACE("API Response leg1: "+api_response);
 				}
@@ -805,19 +805,19 @@ if(EnableAlgo != "Disable")
 				//Cover Signal
 				if(tradetype_shortleg1=="SELL")
 				{
-				openalgo.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2"); 
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
 				}
 				else
 				{
-				openalgo.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2");
+				Layr0 IMC.ExitOrder(tradetype_shortleg2,opttype_shortleg2,expiry_leg2,"short","leg2");
 				_TRACE("Exit API Request leg2: "+ex_api_request);
 				_TRACE("Exit API Response leg2: "+ex_api_response); 
-				openalgo.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
+				Layr0 IMC.ExitOrder(tradetype_shortleg1,opttype_shortleg1,expiry_leg1,"short","leg1"); 
 				_TRACE("Exit API Request leg1: "+ex_api_request);
 				_TRACE("Exit API Response leg1: "+ex_api_response);  
 				}

@@ -3,7 +3,7 @@
 Sample code to Include the header file and creating input controls in your strategy
 
 ```cpp
-#include <OpenAlgo/OpenAlgoApi.mqh>
+#include <Layr0 IMC/Layr0 IMCApi.mqh>
 
 input string ApiUrl = "http://127.0.0.1:5000";
 input string ApiKey = "your_app_apikey";

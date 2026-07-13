@@ -1,15 +1,15 @@
 # Button Trading Module (Modern)
 
-This AmiBroker order pad lets you place **instant BUY or SELL orders directly from your chart** using OpenAlgo. Just enter your **OpenAlgo API key** (from your OpenAlgo app), fill in the **symbol, quantity, product type (MIS/CNC/NRML), and exchange (like NSE)**, then click the green BUY or red SELL button. Make sure **OpenAlgo is running.**
+This AmiBroker order pad lets you place **instant BUY or SELL orders directly from your chart** using Layr0 IMC. Just enter your **Layr0 IMC API key** (from your Layr0 IMC app), fill in the **symbol, quantity, product type (MIS/CNC/NRML), and exchange (like NSE)**, then click the green BUY or red SELL button. Make sure **Layr0 IMC is running.**
 
 All orders are **market orders** sent immediately, and you can see the detailed request and response in the AmiBroker **Trace Window** for full transparency.
 
 ```clike
-///Rajandran R - Creator of OpenAlgo
-//website - openalgo.in / marketcalls.in
-//OpenAlgo - Amibroker Button Trading Module (Modern) v1.0
+///Rajandran R - Creator of Layr0 IMC
+//website - Layr0 IMC.in / layr0.in
+//Layr0 IMC - Amibroker Button Trading Module (Modern) v1.0
 //Date - 03/07/2025
-_SECTION_BEGIN("OpenAlgo Button Trading Module (Modern)");
+_SECTION_BEGIN("Layr0 IMC Button Trading Module (Modern)");
 
 //Note : This Amibroker AFL Works only on 6.35 or higher version only.
 
@@ -109,7 +109,7 @@ function GfxSelect( id, csv, x, y, w, h, fg, bg )
     return sel;                               // ONE return
 }
 
-/* ------------------ OpenAlgo HTTP poster (unchanged) ------------------- */
+/* ------------------ Layr0 IMC HTTP poster (unchanged) ------------------- */
 function PostOA( host, act, qty, apiKey, sym, exch, iprod )
 {
     url  = host + "/api/v1/placeorder";
@@ -122,7 +122,7 @@ function PostOA( host, act, qty, apiKey, sym, exch, iprod )
            "\"product\":\""+iprod+"\","+
            "\"quantity\":\""+qty+"\"}";
 
-    _TRACEF("OpenAlgo request : %s",body);
+    _TRACEF("Layr0 IMC request : %s",body);
 
     InternetSetHeaders("Content-Type: application/json\r\n");
     ih = InternetPostRequest(url,body);
@@ -130,10 +130,10 @@ function PostOA( host, act, qty, apiKey, sym, exch, iprod )
     {
         rsp = "";
         while( ( iln = InternetReadString(ih) ) != "" ) rsp += iln;
-        _TRACEF("OpenAlgo response: %s",rsp);
+        _TRACEF("Layr0 IMC response: %s",rsp);
         InternetClose(ih);
     }
-    else _TRACE("OpenAlgo HTTP post failed");
+    else _TRACE("Layr0 IMC HTTP post failed");
     return 0;
 }
 
@@ -153,7 +153,7 @@ if ( Version() < ReqVer )
 }
 
 /*---------------------------------------------------------------------------
-      Amibroker GUI and GFX Controls to Place Order in OpenAlgo
+      Amibroker GUI and GFX Controls to Place Order in Layr0 IMC
 ---------------------------------------------------------------------------*/
 
 else 
