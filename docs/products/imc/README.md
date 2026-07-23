@@ -2,11 +2,15 @@
 slug: /products/imc
 ---
 
+import ProductFlowExplainer from '@site/src/components/ProductFlowExplainer';
+
 # Router-IMC: Layr0 India Market Connector
 
 Router-IMC is the Layr0 India Market Connector product. It connects a Layr0 Console product license, a licensed email login, one or more configured Indian broker accounts, and routed trade requests from supported automation sources.
 
 Router-IMC is one product inside the Layr0 company ecosystem. Layr0 Console controls product access and license generation; Router-IMC handles broker registration, broker session connection, API keys, routed execution, sandbox/analyzer workflows, semi-auto approvals, and account monitoring.
+
+<ProductFlowExplainer />
 
 ## Availability
 
