@@ -8,11 +8,15 @@
   --flow-cyan: #0ea5b7;
   --flow-amber: #b36b00;
   --flow-line: color-mix(in srgb, var(--flow-blue) 65%, var(--ifm-color-primary) 35%);
+  container-type: inline-size;
   position: relative;
+  width: 100%;
+  max-width: 100%;
   margin: 1.75rem 0 2rem;
   border: 1px solid var(--flow-border);
   border-radius: 8px;
   padding: 1.15rem;
+  overflow: hidden;
   background:
     linear-gradient(180deg, color-mix(in srgb, var(--ifm-background-surface-color) 92%, white 8%), var(--flow-bg)),
     var(--flow-bg);
@@ -58,9 +62,11 @@
 
 .pipeline {
   display: grid;
-  grid-template-columns: minmax(178px, 1.05fr) minmax(74px, 0.42fr) minmax(170px, 0.92fr) minmax(74px, 0.42fr) minmax(178px, 1.05fr);
-  gap: 0.75rem;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 0.55rem;
   align-items: center;
+  width: 100%;
+  max-width: 100%;
   min-width: 0;
 }
 
@@ -132,58 +138,62 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 96px;
+  justify-content: center;
+  min-width: 0;
+  min-height: 34px;
 }
 
 .packetRail::before {
   content: '';
   position: absolute;
-  left: 0;
-  right: 0;
-  top: 50%;
-  height: 3px;
+  left: 50%;
+  right: auto;
+  top: 0;
+  width: 3px;
+  height: 100%;
   border-radius: 999px;
-  background:
-    linear-gradient(90deg, transparent, var(--flow-line), transparent);
-  transform: translateY(-50%);
+  background: linear-gradient(180deg, transparent, var(--flow-line), transparent);
+  transform: translateX(-50%);
 }
 
 .packetRail::after {
   content: '';
   position: absolute;
-  right: -0.05rem;
-  top: 50%;
+  left: 50%;
+  right: auto;
+  top: auto;
+  bottom: -0.06rem;
   width: 0.52rem;
   height: 0.52rem;
   border-right: 3px solid var(--flow-line);
   border-top: 3px solid var(--flow-line);
-  transform: translateY(-50%) rotate(45deg);
+  transform: translateX(-50%) rotate(135deg);
 }
 
 .railLabel {
   position: absolute;
-  left: 50%;
-  top: calc(50% + 0.85rem);
-  width: max-content;
-  max-width: 7.5rem;
+  left: calc(50% + 1.4rem);
+  top: 50%;
+  max-width: min(10rem, calc(50cqw - 2rem));
   color: var(--flow-muted);
   font-size: 0.66rem;
   line-height: 1.1;
-  text-align: center;
-  transform: translateX(-50%);
+  overflow-wrap: anywhere;
+  text-align: left;
+  transform: translateY(-50%);
 }
 
 .packet {
   position: absolute;
-  left: 0;
-  top: 50%;
+  left: 50%;
+  top: 0;
   width: 0.48rem;
   height: 0.48rem;
   border-radius: 50%;
   background: var(--flow-cyan);
   box-shadow: 0 0 0 4px color-mix(in srgb, var(--flow-cyan) 18%, transparent);
   transform: translate(-50%, -50%);
-  animation: packetMove 2.7s linear infinite;
+  animation: packetMoveVertical 2.7s linear infinite;
 }
 
 .packet:nth-of-type(2) {
@@ -201,7 +211,7 @@
   justify-content: center;
   flex-direction: column;
   min-width: 0;
-  min-height: 236px;
+  min-height: 156px;
   border: 1px solid color-mix(in srgb, var(--flow-green) 62%, var(--flow-blue) 38%);
   border-radius: 8px;
   padding: 1rem 0.75rem;
@@ -299,16 +309,16 @@
   background: color-mix(in srgb, var(--flow-blue) 7%, var(--ifm-background-surface-color) 93%);
   font-size: 0.66rem;
   font-weight: 700;
-  overflow-wrap: normal;
+  overflow-wrap: anywhere;
   text-align: center;
-  white-space: nowrap;
   word-break: normal;
 }
 
 .monitorRail {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
+  flex-direction: column;
   gap: 0.75rem;
   margin-top: 0.85rem;
   border: 1px solid color-mix(in srgb, var(--flow-border) 70%, var(--flow-amber) 30%);
@@ -330,7 +340,8 @@
   display: flex;
   flex-wrap: wrap;
   gap: 0.4rem;
-  justify-content: flex-end;
+  justify-content: flex-start;
+  min-width: 0;
 }
 
 .monitorItems code,
@@ -351,6 +362,7 @@
   flex-wrap: wrap;
   gap: 0.42rem;
   margin-top: 0.65rem;
+  min-width: 0;
 }
 
 .safetyStrip code {
@@ -375,15 +387,96 @@
   color: var(--ifm-color-primary-lightest);
 }
 
+@container (min-width: 820px) {
+  .pipeline {
+    grid-template-columns: minmax(0, 1.05fr) minmax(54px, 0.32fr) minmax(160px, 0.9fr) minmax(54px, 0.32fr) minmax(0, 1.05fr);
+    gap: 0.7rem;
+  }
+
+  .packetRail {
+    min-height: 96px;
+  }
+
+  .packetRail::before {
+    left: 0;
+    right: 0;
+    top: 50%;
+    width: auto;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, var(--flow-line), transparent);
+    transform: translateY(-50%);
+  }
+
+  .packetRail::after {
+    left: auto;
+    right: -0.05rem;
+    top: 50%;
+    bottom: auto;
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  .railLabel {
+    left: 50%;
+    top: calc(50% + 0.85rem);
+    max-width: min(8rem, 100cqw);
+    text-align: center;
+    transform: translateX(-50%);
+  }
+
+  .packet {
+    left: 0;
+    top: 50%;
+    animation-name: packetMove;
+  }
+
+  .processor {
+    min-height: 236px;
+  }
+
+  .monitorRail {
+    align-items: center;
+    flex-direction: row;
+  }
+
+  .monitorItems {
+    justify-content: flex-end;
+  }
+}
+
+@container (max-width: 819px) {
+  .explainer {
+    padding: 0.85rem;
+  }
+
+  .lane {
+    padding: 0.65rem;
+  }
+
+  .node {
+    padding: 0.5rem 0.58rem;
+  }
+
+  .node strong,
+  .processor strong {
+    font-size: 0.95rem;
+  }
+
+  .header h2 {
+    font-size: 1.32rem;
+  }
+}
+
 @media (max-width: 996px) {
   .pipeline {
-    grid-template-columns: 1fr;
-    gap: 0.55rem;
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .explainer {
+    padding: 0.85rem;
   }
 
   .packetRail {
     min-height: 34px;
-    justify-content: center;
   }
 
   .packetRail::before {
@@ -407,6 +500,7 @@
   .railLabel {
     left: calc(50% + 1.4rem);
     top: 50%;
+    max-width: min(10rem, calc(50cqw - 2rem));
     text-align: left;
     transform: translateY(-50%);
   }
@@ -421,14 +515,6 @@
     min-height: 156px;
   }
 
-  .lane {
-    padding: 0.65rem;
-  }
-
-  .node {
-    padding: 0.5rem 0.58rem;
-  }
-
   .monitorRail {
     align-items: flex-start;
     flex-direction: column;
@@ -440,10 +526,6 @@
 }
 
 @media (max-width: 520px) {
-  .explainer {
-    padding: 0.85rem;
-  }
-
   .node strong,
   .processor strong {
     font-size: 0.95rem;
