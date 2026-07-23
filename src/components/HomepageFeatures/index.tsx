@@ -11,32 +11,32 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: 'Easy to Use',
+    title: 'Product sections',
     Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        Each Layr0 product has a dedicated documentation namespace, so setup,
+        APIs, integrations, and references stay grouped together.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'Current contracts',
     Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Product docs preserve exact API names, request fields, response fields,
+        and error codes that clients depend on.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Company hub',
     Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        The docs site is ready for future Layr0 products without making the
+        India Market Connector section carry company-wide responsibilities.
       </>
     ),
   },

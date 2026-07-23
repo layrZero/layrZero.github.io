@@ -43,10 +43,10 @@ Contact a moderator via direct message or use the `@moderator` tag in the #gener
 
 ### Resources
 
-* \[Layr0 IMC API Documentation]
-* \[Tutorials and Guides]
-* \[Trading Strategies and Tips]
-* \[Code Repositories]
+* [IMC API Documentation](/docs/products/imc/api-documentation/v1)
+* [IMC Integrations](/docs/products/imc/trading-platform)
+* [Strategy Management](strategy-management.md)
+* [Layr0 GitHub Repositories](https://github.com/layrZero)
 
 ### Contact Us
 

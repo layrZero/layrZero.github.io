@@ -1,3 +1,7 @@
+---
+slug: /products/imc/trading-platform/amibroker
+---
+
 # Amibroker
 
 AmiBroker is a popular software among traders for its advanced technical analysis and algorithmic trading capabilities. It suits algorithmic trading well due to several key features:

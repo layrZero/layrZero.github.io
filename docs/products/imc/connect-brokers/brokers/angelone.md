@@ -51,7 +51,7 @@ Goto the [Smart API Developer Portal](https://smartapi.angelbroking.com/signin) 
 
 Enter the App name, Redirect URL (use dummy url https://google.com) and your Angel Client ID
 
-Save the generated apikey. Later we will be adding the apikey in the [environmental variable](https://docs.Layr0 IMC.in/getting-started/windows-installation/environmental-variables)
+Save the generated apikey. Later we will be adding the apikey in the environment variables described in [Broker Setup And Local Deployment](../../broker-setup-and-local-deployment.md).
 
 Here is a sample of how the details would appear in a .env file for reference:
 

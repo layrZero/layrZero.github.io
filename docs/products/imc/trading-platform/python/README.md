@@ -1,3 +1,7 @@
+---
+slug: /products/imc/trading-platform/python
+---
+
 # Python
 
 To install the Layr0 IMC Python library, use pip:
@@ -10,7 +14,7 @@ pip install Layr0 IMC
 
 Make Sure that your Layr0 IMC Application is running. Login to Layr0 IMC Application with valid credentials and get the Layr0 IMC apikey
 
-For detailed function parameters refer to the [API Documentation](https://docs.Layr0 IMC.in/api-documentation/v1)
+For detailed function parameters refer to the [IMC API Documentation](/docs/products/imc/api-documentation/v1)
 
 ### Getting Started with Layr0 IMC
 

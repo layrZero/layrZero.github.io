@@ -1,6 +1,10 @@
+---
+slug: /products/imc/api-documentation/v1
+---
+
 # IMC API v1
 
-IMC exposes REST APIs under `/api/v1`.
+Layr0 India Market Connector exposes REST APIs under `/api/v1`.
 
 ```http
 Local Host   : http://127.0.0.1:5000/api/v1

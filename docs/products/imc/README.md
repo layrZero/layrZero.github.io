@@ -1,8 +1,12 @@
-# What is Layr0 India Market Connector?
+---
+slug: /products/imc
+---
 
-Layr0 India Market Connector (IMC) is a self-hosted broker gateway for Indian market automation. It gives trading apps, scripts, and internal tools one local REST and WebSocket interface while the connector handles broker-specific order routing, analyzer mode, account reads, market data, and strategy reconciliation.
+# Layr0 India Market Connector
 
-IMC is designed for local-first control. You run the connector, connect the broker account, generate an API key, and call `http://127.0.0.1:5000/api/v1/...` from your app or automation code.
+Layr0 India Market Connector (IMC) is a Layr0 product for self-hosted Indian market automation. It gives trading apps, scripts, and internal tools one local REST and WebSocket interface while the connector handles broker-specific order routing, analyzer mode, account reads, market data, and strategy reconciliation.
+
+IMC is designed for local-first control. You run the connector, connect the broker account, generate an API key, and call `http://127.0.0.1:5000/api/v1/...` from your app or automation code. The planned product host is `https://imc.layr0.org`; it is not yet hosted.
 
 ## Core Capabilities
 
@@ -15,7 +19,7 @@ IMC is designed for local-first control. You run the connector, connect the brok
 
 ## Typical Flow
 
-1. Start the IMC server locally or on your own host.
+1. Start the IMC product server locally or on your own host.
 2. Connect and authenticate the broker from the IMC UI.
 3. Generate an API key for the selected broker account.
 4. Read account/mode context from APIs such as `funds` or analyzer status.

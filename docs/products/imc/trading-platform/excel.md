@@ -250,4 +250,4 @@ Layr0 IMC Excel Add-In is built using **Excel-DNA**, which requires the **.NET 6
 
 ### Support
 
-For more details, visit [Layr0 IMC Docs](https://docs.Layr0 IMC.in/).
+For more details, visit the [IMC product documentation](../).

@@ -1,3 +1,7 @@
+---
+slug: /products/imc/api-documentation/v1/data-api
+---
+
 # Data API
 
 ## Standardized Error Handling

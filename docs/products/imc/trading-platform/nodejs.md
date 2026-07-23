@@ -13,7 +13,7 @@ npm install Layr0 IMC
 Make sure that your Layr0 IMC Application is running. Login to the Layr0 IMC Application with valid credentials and get the Layr0 IMC API key.
 
 \
-For detailed function parameters, refer to the [API Documentation](https://docs.Layr0 IMC.in/api-documentation/v1).
+For detailed function parameters, refer to the [IMC API Documentation](../api-documentation/v1/).
 
 ### Getting Started with Layr0 IMC
 
@@ -305,5 +305,5 @@ console.log(response);
 
 Please refer to the documentation and consult the API reference for details on optional parameters:
 
-* [API Documentation](https://docs.Layr0 IMC.in/api-documentation/v1)
-* [Order Constants](https://docs.Layr0 IMC.in/api-documentation/v1/order-constants)
+* [IMC API Documentation](../api-documentation/v1/)
+* [Order Constants](../api-documentation/v1/order-constants.md)

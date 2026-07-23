@@ -1,6 +1,10 @@
+---
+slug: /products/imc/new-features
+---
+
 # New Features
 
-Open Algo is constantly evolving to meet the needs of modern traders by introducing innovative features that enhance functionality, security, and user experience. Each new addition focuses on improving performance, streamlining workflows, and enabling more efficient trading strategies. From cutting-edge tools to seamless integrations, these updates are tailored to empower both traders and developers.
+IMC is evolving to meet the needs of modern traders by introducing features that enhance functionality, security, and user experience. Each addition focuses on improving performance, streamlining workflows, and enabling more efficient trading strategies. From focused tools to integrations, these updates are tailored to support both traders and developers.
 
 
 

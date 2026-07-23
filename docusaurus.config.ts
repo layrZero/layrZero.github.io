@@ -9,8 +9,8 @@ import { micromark } from 'micromark';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'Layr0 Org Documentation',
-  tagline: 'Official docs for Layr0 market Orchestrator',
+  title: 'Layr0 Product Documentation',
+  tagline: 'Company-wide documentation for Layr0 products',
   favicon: 'img/logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -100,9 +100,9 @@ const config: Config = {
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'productSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Products',
         },
         // {to: '/blog', label: 'Blog', position: 'left'},
         { href: 'https://github.com/layrZero/layrZero.github.io', label: 'GitHub', position: 'right' },
@@ -115,8 +115,12 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/SUMMARY',
+              label: 'Products',
+              to: '/docs/products',
+            },
+            {
+              label: 'IMC Documentation',
+              to: '/docs/products/imc',
             },
           ],
         },

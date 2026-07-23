@@ -75,7 +75,7 @@ Layr0 IMC makes algorithmic trading accessible and straightforward by providing 
   src={require('@site/static/img/assets/image (41).png').default}
 />
 
-Save the generated User\_Key, User\_ID, client\_id and Encryption\_Key. Later we will be adding the apikey in the [environmental variable](https://docs.Layr0 IMC.in/getting-started/windows-installation/environmental-variables) along with the redirect url
+Save the generated User\_Key, User\_ID, client\_id and Encryption\_Key. Later we will be adding the apikey in the environment variables described in [Broker Setup And Local Deployment](../../broker-setup-and-local-deployment.md) along with the redirect url.
 
 Here is a sample of how the details would appear in a .env file for reference:
 

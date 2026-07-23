@@ -21,3 +21,33 @@
   align-items: center;
   justify-content: center;
 }
+
+.productBand {
+  padding: 3rem 0;
+}
+
+.productGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+.productCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 1.25rem;
+}
+
+.productMeta {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.hostStatus {
+  color: var(--ifm-color-emphasis-700);
+  font-size: 0.9rem;
+}

@@ -1,6 +1,8 @@
-# Website
+# Layr0 Product Documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+This website is the company-wide product documentation hub for Layr0. It is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+
+The current product documentation is available under `docs/products/imc`.
 
 ## Installation
 

@@ -1,15 +1,17 @@
-# Table of contents
+# IMC Documentation
 
-* [What is Layr0 IMC?](README.md)
+This section contains the product documentation for Layr0 India Market Connector, one product in the Layr0 documentation hub.
+
+* [Layr0 India Market Connector](./)
 * [Broker Setup And Local Deployment](broker-setup-and-local-deployment.md)
 * [Python SDK](python-sdk.md)
 
 ## API Documentation
 
-* [IMC API v1](api-documentation/v1/README.md)
+* [IMC API v1](api-documentation/v1/)
   * [Authentication And Mode Preconditions](api-documentation/v1/authentication-and-mode-preconditions.md)
   * [Order Lifecycle And Reconciliation](api-documentation/v1/order-lifecycle-and-reconciliation.md)
-  * [Accounts API](api-documentation/v1/accounts-api/README.md)
+  * [Accounts API](api-documentation/v1/accounts-api/)
     * [Funds](api-documentation/v1/accounts-api/funds.md)
     * [Orderbook](api-documentation/v1/accounts-api/orderbook.md)
     * [Tradebook](api-documentation/v1/accounts-api/tradebook.md)
@@ -17,7 +19,7 @@
     * [Holdings](api-documentation/v1/accounts-api/holdings.md)
     * [Analyzer Status](api-documentation/v1/accounts-api/analyzer-status.md)
     * [Analyzer Toggle](api-documentation/v1/accounts-api/analyzer-toggle.md)
-  * [Orders API](api-documentation/v1/orders-api/README.md)
+  * [Orders API](api-documentation/v1/orders-api/)
     * [Placeorder](api-documentation/v1/orders-api/placeorder.md)
     * [PlaceSmartOrder](api-documentation/v1/orders-api/placesmartorder.md)
     * [BasketOrder](api-documentation/v1/orders-api/basketorder.md)

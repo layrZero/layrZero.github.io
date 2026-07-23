@@ -1,3 +1,7 @@
+---
+slug: /products/imc/trading-platform/python/indicators
+---
+
 # Indicators
 
 ## Layr0 IMC Technical Indicators Library
