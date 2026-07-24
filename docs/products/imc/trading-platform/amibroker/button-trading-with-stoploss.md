@@ -23,7 +23,7 @@ product = ParamList("Product", "MIS|NRML|CNC");
 quantity = Param("Quantity", 1,1,1000,1);
 stops = Param("Stoploss (points)",30,0.05,1000,0.05);
 
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 VoiceAlert = ParamList("Voice Alert","Disable|Enable",1);

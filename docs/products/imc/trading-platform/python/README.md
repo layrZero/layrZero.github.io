@@ -26,7 +26,7 @@ from Layr0 IMC import api
 # Replace 'your_api_key_here' with your actual API key
 # Specify the host URL with your hosted domain or ngrok domain. 
 # If running locally in windows then use the default host value. 
-client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
+client = api(api_key='your_api_key_here', host='https://imc.layr0.org')
 
 ```
 
@@ -902,8 +902,8 @@ import time
 # Initialize Layr0 IMC client
 client = api(
     api_key="your_api_key",                  # Replace with your actual Layr0 IMC API key
-    host="http://127.0.0.1:5000",            # REST API host
-    ws_url="ws://127.0.0.1:8765"             # WebSocket host
+    host="https://imc.layr0.org",            # REST API host
+    ws_url="wss://imc.layr0.org"             # WebSocket host
 )
 
 # Define instruments to subscribe for LTP
@@ -939,8 +939,8 @@ import time
 # Initialize Layr0 IMC client
 client = api(
     api_key="your_api_key",                  # Replace with your actual Layr0 IMC API key
-    host="http://127.0.0.1:5000",            # REST API host
-    ws_url="ws://127.0.0.1:8765"             # WebSocket host
+    host="https://imc.layr0.org",            # REST API host
+    ws_url="wss://imc.layr0.org"             # WebSocket host
 )
 
 # Instruments list
@@ -976,8 +976,8 @@ import time
 # Initialize Layr0 IMC client
 client = api(
     api_key="your_api_key",                  # Replace with your actual Layr0 IMC API key
-    host="http://127.0.0.1:5000",            # REST API host
-    ws_url="ws://127.0.0.1:8765"             # WebSocket host
+    host="https://imc.layr0.org",            # REST API host
+    ws_url="wss://imc.layr0.org"             # WebSocket host
 )
 
 # Instruments list for depth

@@ -5,7 +5,7 @@ Sample code to Include the header file and creating input controls in your strat
 ```cpp
 #include <Layr0 IMC/Layr0 IMCApi.mqh>
 
-input string ApiUrl = "http://127.0.0.1:5000";
+input string ApiUrl = "https://imc.layr0.org";
 input string ApiKey = "your_app_apikey";
 input string Strategy = "Metatrader 5 Strategy";
 input string Symbol = "SAIL-EQ";

@@ -60,7 +60,7 @@ Once generated, the Vendor Code and APP Key will be provided for the app. These 
 ```
 BROKER_API_KEY = 'your_vendor_code_here'
 BROKER_API_SECRET = 'your_appkey_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/zebu/callback'
+REDIRECT_URL = 'https://imc.layr0.org/zebu/callback'
 ```
 
 Make sure to store your API credentials securely and handle them with care to prevent unauthorized access.

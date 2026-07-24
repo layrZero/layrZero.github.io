@@ -49,7 +49,7 @@ OPTION_EXCHANGE = "NFO"
 STRIKE_INTERVAL = 50
 
 API_KEY = "YOU-Layr0 IMC-APIKEY"
-API_HOST = "http://127.0.0.1:5000"
+API_HOST = "https://imc.layr0.org"
 
 client = api(api_key=API_KEY, host=API_HOST)
 

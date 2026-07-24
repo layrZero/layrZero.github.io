@@ -85,8 +85,8 @@ from Layr0 IMC import api
 # Initialize Layr0 IMC client
 client = api(
     api_key="Layr0 IMC-api-key",
-    host="http://127.0.0.1:5000",
-    ws_url="ws://127.0.0.1:8765"
+    host="https://imc.layr0.org",
+    ws_url="wss://imc.layr0.org"
 )
 
 # Configuration

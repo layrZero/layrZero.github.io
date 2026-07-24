@@ -16,7 +16,7 @@ What if you want to migrate your strategy from Broker A to Broker B?
 
 That’s when most realize the broker SDK is just the starting point—not the solution.
 
-**Layr0 IMC is built to handle all that overhead for you.** It’s a full-stack automation framework, not just an API wrapper. And it’s fully **open source under the AGPL license**, meaning you have the freedom to modify, deploy, and self-host without vendor lock-in or commercial restriction.
+**Layr0 IMC is built to handle all that overhead for you.** It’s a hosted Layr0 product for broker-connected automation workflows, not just an API wrapper. It gives licensed users a managed product surface for broker sessions, API keys, execution controls, logs, and monitoring without making each team operate its own connector stack.
 
 <img
   src={require('@site/static/img/assets/image (110).png').default}
@@ -55,9 +55,9 @@ All REST APIs for placing orders, fetching positions, or getting quotes are **br
 
 ***
 
-### Deployment Comes Secure by Default
+### Hosted Product Controls Come Secure by Default
 
-Layr0 IMC ships with strong default protections:
+Router-IMC is hosted by Layr0 with strong product controls:
 
 * Cross-Origin Resource Sharing (CORS) rules
 * Content Security Policy (CSP) headers
@@ -65,7 +65,7 @@ Layr0 IMC ships with strong default protections:
 * Endpoint rate limiting
 * Session management and audit trail logs
 
-You can host it locally, on a VPS, or inside a secured cloud environment without manually configuring each of these layers.
+Users work through the hosted Router-IMC product instead of hosting a separate connector instance.
 
 ***
 
@@ -87,16 +87,16 @@ Layr0 IMC gives you all of this—**pre-wired, tested, documented**, and ready t
 
 ***
 
-### Open Source That Gives You Real Freedom
+### Hosted Product Access
 
-Layr0 IMC is licensed under **AGPL**, which means:
+Router-IMC access is managed through Layr0 Console licensing, which means:
 
-* You can self-host and modify everything
-* You can build commercial systems on top of it (with license compliance)
-* No per-order fees, no monthly licenses, no black-box lock-in
-* Full access to the source code, strategy engine, and integration layers
+* Product access is tied to the licensed email and selected license.
+* Broker credentials and sessions are configured per license.
+* API keys are broker-specific and generated inside Router-IMC.
+* Live, Analyze/Sandbox, Auto, and Semi-Auto controls remain visible in the product workflow.
 
-You’re not just running a script—you’re running an infrastructure designed to scale with your trading ideas.
+You’re not just calling a broker API directly. You’re using a hosted Router-IMC workflow designed to scale with your trading ideas.
 
 ***
 

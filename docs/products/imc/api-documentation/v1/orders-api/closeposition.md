@@ -7,9 +7,7 @@ After a successful close request, callers should verify exposure with `POST /api
 ## Endpoint URL
 
 ```
-Local Host   :  POST http://127.0.0.1:5000/api/v1/closeposition
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/closeposition
-Custom Domain:  POST https://<your-custom-domain>/api/v1/closeposition
+Hosted URL   :  POST https://imc.layr0.org/api/v1/closeposition
 ```
 
 

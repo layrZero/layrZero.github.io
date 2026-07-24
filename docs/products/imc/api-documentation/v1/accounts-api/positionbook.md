@@ -5,9 +5,7 @@
 This API Function fetches the PositionBook details from the broker
 
 ```http
-Local Host   :  POST http://127.0.0.1:5000/api/v1/positionbook
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/positionbook
-Custom Domain:  POST https://<your-custom-domain>/api/v1/positionbook
+Hosted URL   :  POST https://imc.layr0.org/api/v1/positionbook
 ```
 
 

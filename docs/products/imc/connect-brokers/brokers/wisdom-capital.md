@@ -55,7 +55,7 @@ BROKER_API_SECRET = 'YOUR_ORDER_API_SECRET'
 BROKER_API_KEY_MARKET = 'YOUR_WISDOM_MARKET_API_KEY'
 BROKER_API_SECRET_MARKET = 'YOUR_MARKET_API_SECRET'
 
-REDIRECT_URL = 'http://127.0.0.1:5000/wisdom/callback'
+REDIRECT_URL = 'https://imc.layr0.org/wisdom/callback'
 ```
 
 Replace placeholder values with actual credentials obtained after app approval.

@@ -166,7 +166,7 @@ GfxSetTextColor(colorWhite); GfxSetBkColor(colorBlack);
 /* Host */
 GfxDrawText("Host",_x0,_y0,_x0+lblW,_y0+row,DT_VCENTER);
 rc = GuiEdit(++IDset,_x0+lblW+gap,_y0,tbW,25,notifyEditChange);
-if(rc==guiNew)GuiSetText("http://127.0.0.1:5000",IDset);
+if(rc==guiNew)GuiSetText("https://imc.layr0.org",IDset);
 hostURL = GuiGetText(IDset);
 
 /* Buttons (top-right) */

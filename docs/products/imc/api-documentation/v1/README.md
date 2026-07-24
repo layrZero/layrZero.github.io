@@ -7,9 +7,7 @@ slug: /products/imc/api-documentation/v1
 Layr0 India Market Connector exposes REST APIs under `/api/v1`.
 
 ```http
-Local Host   : http://127.0.0.1:5000/api/v1
-Ngrok Domain : https://<your-ngrok-domain>.ngrok-free.app/api/v1
-Custom Domain: https://<your-custom-domain>/api/v1
+Hosted URL   : https://imc.layr0.org/api/v1
 ```
 
 Every endpoint that acts on a broker account requires an `apikey` in the JSON request body. Trading and write endpoints also require mode precondition fields so clients cannot trade against stale live/analyze state.

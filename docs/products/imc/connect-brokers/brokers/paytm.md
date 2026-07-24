@@ -33,7 +33,7 @@ Fill out the app details as shown below:
 
 * **App Name:** `Layr0 IMC`
 * **Product Type:** `Trading Bridge`
-* **Redirect URL:** `http://127.0.0.1:5000/paytm/callback`
+* **Redirect URL:** `https://imc.layr0.org/paytm/callback`
 * **Postback URL:** _(leave empty)_
 * **Description:** `Layr0 IMC`
 * Upload a logo (optional)
@@ -69,7 +69,7 @@ Once you have the credentials, add them to your Layr0 IMC configuration:
 ```json
 BROKER_API_KEY = 'your_api_key_here'
 BROKER_API_SECRET = 'your_api_secret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/paytm/callback'
+REDIRECT_URL = 'https://imc.layr0.org/paytm/callback'
 ```
 
 Make sure your local server is running and accessible at the callback URL you defined earlier.

@@ -21,7 +21,7 @@ quantity = Param("Quantity", 5000, 1, 10000, 1);  // Total quantity to be traded
 freezeqty = Param("Freeze Quantity", 1800, 1, 5000, 1);  // Maximum allowed quantity per order
 
 // Parameters for connectivity settings
-host = ParamStr("Host", "http://127.0.0.1:5000");
+host = ParamStr("Host", "https://imc.layr0.org");
 ver = ParamStr("API Version", "v1");
 
 // Control parameters for voice alerts and algo mode

@@ -3,9 +3,7 @@
 ## Endpoint URL
 
 ```http
-Local Host   :  POST http://127.0.0.1:5000/api/v1/cancelorder
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/cancelorder
-Custom Domain:  POST https://<your-custom-domain>/api/v1/cancelorder
+Hosted URL   :  POST https://imc.layr0.org/api/v1/cancelorder
 ```
 
 

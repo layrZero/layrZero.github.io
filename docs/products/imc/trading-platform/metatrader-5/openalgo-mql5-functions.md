@@ -30,7 +30,7 @@ Places an order with the specified parameters by sending a POST request to the L
 #### Usage:
 
 ```mql5
-PlaceOrder("BUY", 10, "http://127.0.0.1:5000", "your_api_key", "Meta Strategy", "SBIN-EQ", NSE, MIS, MARKET);
+PlaceOrder("BUY", 10, "https://imc.layr0.org", "your_api_key", "Meta Strategy", "SBIN-EQ", NSE, MIS, MARKET);
 ```
 
 ### `PlaceSmartOrder`
@@ -45,7 +45,7 @@ Places an order that considers the current open position size and matches the po
 #### Usage:
 
 ```mql5
-PlaceSmartOrder("SELL", 5, 10, "http://127.0.0.1:5000", "your_api_key", "ReversalStrategy", "TATASTEEL-EQ", NSE, MIS, LIMIT, 150.00);
+PlaceSmartOrder("SELL", 5, 10, "https://imc.layr0.org", "your_api_key", "ReversalStrategy", "TATASTEEL-EQ", NSE, MIS, LIMIT, 150.00);
 ```
 
 ### `ModifyOrder`
@@ -60,7 +60,7 @@ Modifies an existing order with new parameters.
 #### Usage:
 
 ```mql5
-ModifyOrder("123456789", "BUY", 10, 155.00, "http://127.0.0.1:5000", "your_api_key", "Meta Strategy", "YESBANK-EQ", NSE, CNC, LIMIT);
+ModifyOrder("123456789", "BUY", 10, 155.00, "https://imc.layr0.org", "your_api_key", "Meta Strategy", "YESBANK-EQ", NSE, CNC, LIMIT);
 ```
 
 ### `CancelOrder`
@@ -77,7 +77,7 @@ Cancels an existing order.
 #### Usage:
 
 ```mql5
-CancelOrder("123456789", "http://127.0.0.1:5000", "your_api_key", "Meta Strategy");
+CancelOrder("123456789", "https://imc.layr0.org", "your_api_key", "Meta Strategy");
 ```
 
 ### `ClosePosition`
@@ -93,7 +93,7 @@ Closes all open positions associated with a given strategy.
 #### Usage:
 
 ```mql5
-ClosePosition("http://127.0.0.1:5000", "your_api_key", "Meta Strategy");
+ClosePosition("https://imc.layr0.org", "your_api_key", "Meta Strategy");
 ```
 
 ### `CancelAllOrders`
@@ -109,9 +109,9 @@ Cancels all orders associated with a given strategy.
 #### Usage:
 
 ```mql5
-CancelAllOrders("http://127.0.0.1:5000", "your_api_key", "Meta Strategy");
+CancelAllOrders("https://imc.layr0.org", "your_api_key", "Meta Strategy");
 ```
 
 ***
 
-**Note**: Replace placeholder values like `"your_api_key"` and `"http://127.0.0.1:5000"` with actual API keys and URLs as required by your setup. All functions assume the existence of a network communication setup within the MetaTrader 5 environment, as well as an Layr0 IMC API that responds to the specified endpoints. Ensure proper error handling and API rate limiting as per the service provider's specifications.
+**Note**: Replace placeholder values like `"your_api_key"` and `"https://imc.layr0.org"` with actual API keys and URLs as required by your setup. All functions assume the existence of a network communication setup within the MetaTrader 5 environment, as well as an Layr0 IMC API that responds to the specified endpoints. Ensure proper error handling and API rate limiting as per the service provider's specifications.

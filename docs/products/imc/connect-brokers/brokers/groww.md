@@ -41,7 +41,7 @@ Here is how you would typically set up your environment variables in a .env file
 ```bash
 BROKER_API_KEY = 'your_groww_apikey_here'
 BROKER_API_SECRET = 'your_groww_apisecret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/groww/callback'
+REDIRECT_URL = 'https://imc.layr0.org/groww/callback'
 ```
 
 Integrating Layr0 IMC with Groww's trading API allows retail traders to leverage India’s most popular stockbroking platform for building and deploying their own algorithmic trading strategies. It’s a powerful combination for automating trading decisions while using a broker trusted by millions. As with any integration, be sure to handle token management carefully, log errors effectively, and build retry mechanisms to handle token expiry and downtime.

@@ -24,7 +24,7 @@ pricetype = ParamStr("Price Type", "MARKET");
 product = ParamList("Product", "MIS|NRML|CNC");
 quantity = Param("Quantity", 1, 1, 1000, 1);
 
-host = ParamStr("Host", "http://127.0.0.1:5000");
+host = ParamStr("Host", "https://imc.layr0.org");
 ver = ParamStr("API Version", "v1");
 
 VoiceAlert = ParamList("Voice Alert", "Disable|Enable", 1);
@@ -272,7 +272,7 @@ pricetype = ParamStr("Price Type", "MARKET");
 product = ParamList("Product", "MIS|NRML|CNC");
 quantity = Param("Quantity", 1,1,1000,1);
 
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 VoiceAlert = ParamList("Voice Alert","Disable|Enable",1);

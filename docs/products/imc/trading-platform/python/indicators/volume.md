@@ -12,7 +12,7 @@ from Layr0 IMC import ta, api
 
 ```python
 # Initialize API client
-client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
+client = api(api_key='your_api_key_here', host='https://imc.layr0.org')
 
 # Fetch historical data
 df = client.history(symbol="SBIN", 
@@ -622,7 +622,7 @@ from Layr0 IMC import ta, api
 import pandas as pd
 
 # Get data
-client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
+client = api(api_key='your_api_key_here', host='https://imc.layr0.org')
 df = client.history(symbol="SBIN", exchange="NSE", interval="5m", 
                    start_date="2025-04-01", end_date="2025-04-08")
 

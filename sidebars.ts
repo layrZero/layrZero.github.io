@@ -29,7 +29,11 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'products/imc/SUMMARY',
-        'products/imc/broker-setup-and-local-deployment',
+        {
+          type: 'doc',
+          id: 'products/imc/broker-setup-and-local-deployment',
+          label: 'Broker Setup',
+        },
         'products/imc/python-sdk',
         {
           type: 'category',

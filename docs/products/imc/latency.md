@@ -170,9 +170,9 @@ In these cases, the difference between 100ms and 200ms latency will have a negli
 
 **1. Latency isn’t everything**: For MFT or LFT strategies, focus on building reliable, consistent systems. Latency only becomes critical for HFT or scalping/arbitrage strategies.
 
-**2. Server location matters:** Hosting servers close to the exchange (e.g., Vultr Mumbai for Indian markets) can significantly reduce latency.
+**2. Route location matters:** For hosted Router-IMC usage, latency depends on the hosted product route, the broker API path, and the automation source that sends the request.
 
-**3. Ngrok is not for latency sensitive strategy**: While ngrok is great for development and testing, it’s not ideal for live trading systems that require low latency. If you are using NGROK for connecting your tradingview/chartink aware about the 500-800 ms of latency it could create if you are running in your local desktop.
+**3. Avoid unnecessary webhook hops**: For latency-sensitive strategies, send TradingView, Chartink, SDK, or API requests directly to the hosted Router-IMC endpoint whenever possible.
 
 **4. Plan for growth**: Investing in scalable infrastructure ensures your system can handle increased complexity or volume as you evolve.\
 

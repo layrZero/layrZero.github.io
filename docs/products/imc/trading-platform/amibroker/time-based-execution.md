@@ -26,7 +26,7 @@ exittime = ParamTime("Exit Time","19:51:00");
 
 
 
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 VoiceAlert = ParamList("Voice Alert","Disable|Enable",1);

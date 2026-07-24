@@ -309,7 +309,7 @@ Here are examples of how to send webhook requests using Python:
 import requests
 
 # Inputs: host URL and webhook ID
-host_url = "http://127.0.0.1:5000"
+host_url = "https://imc.layr0.org"
 webhook_id = "ee12219c-3ce1-4a2c-a9b0-0c67c5fa7e32"
 
 # Construct the full URL
@@ -372,7 +372,7 @@ def send_strategy_signal(host_url, webhook_id, symbol, action, position_size=Non
         print(f"Request failed: {e}")
 
 # Example usage
-host = "http://127.0.0.1:5000"
+host = "https://imc.layr0.org"
 webhook_id = "ee12219c-3ce1-4a2c-a9b0-0c67c5fa7e32"
 
 # Long entry example (BOTH mode)
@@ -464,7 +464,7 @@ class StrategyWebhook:
 # Usage example
 try:
     webhook = StrategyWebhook(
-        "http://127.0.0.1:5000",
+        "https://imc.layr0.org",
         "ee12219c-3ce1-4a2c-a9b0-0c67c5fa7e32"
     )
     

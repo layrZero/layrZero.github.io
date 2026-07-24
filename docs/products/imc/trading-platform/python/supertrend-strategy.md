@@ -25,7 +25,7 @@ atr_period = 5
 atr_multiplier = 1.0
 
 # Set the API Key
-client = api(api_key=api_key, host='http://127.0.0.1:5000')
+client = api(api_key=api_key, host='https://imc.layr0.org')
 
 def Supertrend(df, atr_period, multiplier):
     """

@@ -7,9 +7,7 @@ The Symbol Search API allows you to search for trading symbols across different 
 ### Endpoint
 
 ```
-Local Host   :  POST http://127.0.0.1:5000/api/v1/search
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/search
-Custom Domain:  POST https://<your-custom-domain>/api/v1/search
+Hosted URL   :  POST https://imc.layr0.org/api/v1/search
 ```
 
 ### Request Headers
@@ -99,7 +97,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 **Request:**
 
 ```bash
-curl -X POST http://127.0.0.1:5000/api/v1/search \
+curl -X POST https://imc.layr0.org/api/v1/search \
   -H "Content-Type: application/json" \
   -d '{
     "apikey": "your_api_key_here",
@@ -202,7 +200,7 @@ curl -X POST http://127.0.0.1:5000/api/v1/search \
 **Request:**
 
 ```bash
-curl -X POST http://127.0.0.1:5000/api/v1/search \
+curl -X POST https://imc.layr0.org/api/v1/search \
   -H "Content-Type: application/json" \
   -d '{
     "apikey": "your_api_key_here",
@@ -292,7 +290,7 @@ curl -X POST http://127.0.0.1:5000/api/v1/search \
 **Request:**
 
 ```bash
-curl -X POST http://127.0.0.1:5000/api/v1/search \
+curl -X POST https://imc.layr0.org/api/v1/search \
   -H "Content-Type: application/json" \
   -d '{
     "apikey": "your_api_key_here",

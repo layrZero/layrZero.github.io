@@ -33,7 +33,7 @@ from Layr0 IMC import api
 
 # ───────────── CONFIG (edit to suit) ─────────────────────────────────────
 API_KEY  = os.getenv("Layr0 IMC_API_KEY",  "Layr0 IMC-api-key")
-API_HOST = os.getenv("Layr0 IMC_API_HOST", "http://127.0.0.1:5000")
+API_HOST = os.getenv("Layr0 IMC_API_HOST", "https://imc.layr0.org")
 
 EXPIRY        = "31JUL25"      # ✅ option expiry
 RADIUS        = 20             # ± strikes
@@ -161,7 +161,7 @@ else:
 
 ```python
 Layr0 IMC_API_KEY  = "your_api_key_here"
-Layr0 IMC_API_HOST = "http://127.0.0.1:5000"
+Layr0 IMC_API_HOST = "https://imc.layr0.org"
 ```
 
 #### Parameters

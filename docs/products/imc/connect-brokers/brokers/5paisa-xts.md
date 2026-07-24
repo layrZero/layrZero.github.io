@@ -58,7 +58,7 @@ BROKER_API_SECRET = 'YOUR_ORDER_API_SECRET'
 BROKER_API_KEY_MARKET = 'YOUR_BROKER_MARKET_API_KEY'
 BROKER_API_SECRET_MARKET = 'YOUR_BROKER_MARKET_API_SECRET'
 
-REDIRECT_URL = 'http://127.0.0.1:5000/fivepaisaxts/callback'
+REDIRECT_URL = 'https://imc.layr0.org/fivepaisaxts/callback'
 ```
 
 Replace the values with actual credentials shown on your developer dashboard once approved.

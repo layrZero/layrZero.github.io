@@ -56,7 +56,7 @@ Here is how you would typically set up your environment variables in a `.env` fi
 ```bash
 BROKER_API_KEY = 'your_tradejini_clientcode_here'
 BROKER_API_SECRET = 'your_tradejini_apikey_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/tradejini/callback'
+REDIRECT_URL = 'https://imc.layr0.org/tradejini/callback'
 ```
 
 These credentials will be used by Layr0 IMC to authenticate, fetch session tokens, and access market feeds or place orders.

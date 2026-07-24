@@ -16,7 +16,7 @@ from Layr0 IMC import Strategy
 
 # Initialize strategy client
 client = Strategy(
-    host_url="http://127.0.0.1:5000",  # Your Layr0 IMC server URL
+    host_url="https://imc.layr0.org",  # Your Router-IMC hosted URL
     webhook_id="your-webhook-id"        # Get this from Layr0 IMC strategy section
 )
 

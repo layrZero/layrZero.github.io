@@ -35,7 +35,7 @@ Click on “+ Create App”.
 **Step 3 – Fill App Details**
 
 * App Name: `Layr0 IMC`
-* Redirect URL: `http://127.0.0.1:5000/pocketful/callback`
+* Redirect URL: `https://imc.layr0.org/pocketful/callback`
 * Accept the terms and conditions and click **Create App**
 
 <img
@@ -62,7 +62,7 @@ Here is a sample of how the details would appear in a `.env` file for reference:
 ```env
 BROKER_API_KEY = 'your_app_id_here'
 BROKER_API_SECRET = 'your_app_secret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/pocketful/callback'
+REDIRECT_URL = 'https://imc.layr0.org/pocketful/callback'
 ```
 
 ***
@@ -72,7 +72,7 @@ REDIRECT_URL = 'http://127.0.0.1:5000/pocketful/callback'
 Once your `.env` file is populated with the credentials, Layr0 IMC can initiate the login flow. This can be triggered locally:
 
 ```
-http://127.0.0.1:5000/pocketful/login
+https://imc.layr0.org/pocketful/login
 ```
 
 You will be redirected to Pocketful’s login screen. After successful login, the access token will be retrieved and stored locally, completing the authentication process.

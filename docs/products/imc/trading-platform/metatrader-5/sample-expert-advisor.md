@@ -15,7 +15,7 @@ Here is a sample EMA Crossover Based Simple Expert Advisor which places orders t
 
 #include <Layr0 IMC/Layr0 IMCApi.mqh>
 
-input string ApiUrl = "http://127.0.0.1:5000";
+input string ApiUrl = "https://imc.layr0.org";
 input string ApiKey = "your_app_apikey";
 input string Strategy = "Metatrader 5 Strategy";
 input string Symbol = "SAIL";

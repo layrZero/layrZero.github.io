@@ -31,5 +31,5 @@ To integrate Shoonya with Layr0 IMC, follow these steps to obtain your API key a
 ```bash
 BROKER_API_KEY = 'Your Vendor Code'
 BROKER_API_SECRET = 'Your API Key'
-REDIRECT_URL = 'http://127.0.0.1:5000/shoonya/callback'
+REDIRECT_URL = 'https://imc.layr0.org/shoonya/callback'
 ```

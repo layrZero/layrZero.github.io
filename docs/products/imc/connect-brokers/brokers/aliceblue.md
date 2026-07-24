@@ -8,7 +8,7 @@ Before proceeding, ensure you have the following:
 
 * An active AliceBlue trading account.
 * Access to the AliceBlue ANT website.
-* Layr0 IMC installed and configured on your local machine.
+* Access to the hosted Router-IMC product with an active Layr0 license.
 
 ### Steps to Create the AliceBlue API Secret Key
 
@@ -35,7 +35,7 @@ The AliceBlue login user ID is used as the API key. Below is a sample configurat
 # AliceBlue Broker Configuration
 BROKER_API_KEY = 'your_client_id'
 BROKER_API_SECRET = 'your_api_secret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/aliceblue/callback'
+REDIRECT_URL = 'https://imc.layr0.org/aliceblue/callback'
 
 ```
 

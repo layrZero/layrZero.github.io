@@ -27,11 +27,11 @@
 
     ```javascript
     var apikey = "<your-Layr0 IMC-apikey>";
-    var hostServer = "https://your-ngrok-domain.ngrok-free.app"; 
+    var hostServer = "https://imc.layr0.org"; 
     ```
 5. Replace with your Layr0 IMC credentials:
    * `apikey`: Your unique Layr0 IMC API key
-   * HostSefver: Your Custom Domain or Free Ngrok Domain where Layr0 IMC is hosted
+   * `hostServer`: The hosted Router-IMC product URL, `https://imc.layr0.org`
 
 #### Spreadsheet Structure
 

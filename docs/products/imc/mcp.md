@@ -29,13 +29,13 @@ This is a Model Context Protocol (MCP) server that provides trading and market d
 
 ### Prerequisites
 
-#### 1. Layr0 IMC Server Setup
+#### 1. Router-IMC Product Access
 
-Ensure your Layr0 IMC server is running and properly configured:
+Ensure your hosted Router-IMC product access is ready:
 
-1. **Start Layr0 IMC Server**: Your Layr0 IMC server should be running (e.g., on `http://127.0.0.1:5000`)
+1. **Open Router-IMC**: Use the hosted product at `https://imc.layr0.org`
 2. **Nodejs** : Ensure NodeJS is installed
-3. **Broker Authentication**: Ensure your broker credentials are properly configured in Layr0 IMC.
+3. **Broker Authentication**: Ensure your broker credentials and broker session are properly configured in Router-IMC.
 
 import YouTube from '@site/src/components/YouTube';
 
@@ -45,7 +45,7 @@ import YouTube from '@site/src/components/YouTube';
 
 To get your Layr0 IMC API key:
 
-1. Open your Layr0 IMC web interface (e.g., `http://127.0.0.1:5000`)
+1. Open your Layr0 IMC web interface (e.g., `https://imc.layr0.org`)
 2. Navigate to **Settings → API Keys**.
 3. Generate or copy your existing API key.
 
@@ -98,7 +98,7 @@ Add the following configuration to your MCP client, replacing the placeholder pa
       "args": [
         "/Users/your_username/Layr0 IMC/mcp/mcpserver.py",
         "YOUR_API_KEY_HERE",
-        "http://127.0.0.1:5000"
+        "https://imc.layr0.org"
       ]
     }
   }
@@ -123,7 +123,7 @@ Add the following configuration to your MCP client, replacing the placeholder pa
       "args": [
         "/home/your_username/Layr0 IMC/mcp/mcpserver.py",
         "YOUR_API_KEY_HERE",
-        "http://127.0.0.1:5000"
+        "https://imc.layr0.org"
       ]
     }
   }
@@ -138,9 +138,9 @@ Add the following configuration to your MCP client, replacing the placeholder pa
 
 #### Path Configuration Notes
 
-**Important**: Replace the paths in the examples above with your actual installation paths:
+**Important**: Replace the paths in the examples above with the path to your MCP adapter runtime:
 
-* **Windows**: Replace `D:\\Layr0 IMC-zerodha\\Layr0 IMC` with your actual Layr0 IMC installation path
+* **Windows**: Replace placeholder paths with your actual MCP adapter path
 * **macOS/Linux**: Replace `/Users/your_username` or `/home/your_username` with your actual home directory path
 
 To find your Python virtual environment path:
@@ -154,7 +154,7 @@ If your ChatGPT client supports MCP, use the appropriate path format for your op
 
 ### Available Tools
 
-The MCP server provides the following categories of tools:
+The MCP integration provides the following categories of tools:
 
 #### Order Management
 
@@ -221,11 +221,11 @@ Once configured, you can ask your AI assistant to:
 
 ### Security Note
 
-⚠️ **Important**: This server is designed for local use. For production environments, consider implementing additional security measures such as environment variables for sensitive data and restricting network access.
+⚠️ **Important**: Keep API keys and broker credentials private. Use the hosted Router-IMC product URL and a broker-specific API key when configuring MCP clients.
 
 ### Troubleshooting
 
-1. **Connection Issues**: Verify Layr0 IMC server is running on `http://127.0.0.1:5000`
+1. **Connection Issues**: Verify Router-IMC is reachable at `https://imc.layr0.org`
 2. **Authentication Errors**: Check your API key is correct and valid
 3. **Permission Errors**: Ensure the Python virtual environment has proper permissions
 4. **Order Failures**: Verify your broker connection and trading permissions

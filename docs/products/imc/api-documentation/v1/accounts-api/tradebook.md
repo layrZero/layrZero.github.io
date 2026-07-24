@@ -5,9 +5,7 @@
 This API Function fetches the TradeBook details from the broker
 
 ```http
-Local Host   :  POST http://127.0.0.1:5000/api/v1/tradebook
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/tradebook
-Custom Domain:  POST https://<your-custom-domain>/api/v1/tradebook
+Hosted URL   :  POST https://imc.layr0.org/api/v1/tradebook
 ```
 
 

@@ -98,7 +98,7 @@ Inside your Layr0 IMC project (or any backend using Dhan APIs), create or update
 ```bash
 BROKER_API_KEY = 'your_dhan_sandbox_clientid_here' 
 BROKER_API_SECRET = 'your_dhan_sandbox_token_here' 
-REDIRECT_URL = 'http://127.0.0.1:5000/dhan_sandbox/callback'
+REDIRECT_URL = 'https://imc.layr0.org/dhan_sandbox/callback'
 ```
 
 **Summary: Why It Matters for Layr0 IMC**

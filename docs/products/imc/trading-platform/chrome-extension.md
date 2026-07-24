@@ -46,7 +46,7 @@ import YouTube from '@site/src/components/YouTube';
 
 #### Getting Started
 
-1. **Start the Layr0 IMC Server**: Make sure the Layr0 IMC server is running (default: `http://127.0.0.1:5000`)
+1. **Start the Layr0 IMC Server**: Make sure the Layr0 IMC server is running (default: `https://imc.layr0.org`)
 
 <img
   src={require('@site/static/img/assets/image (92).png').default}
@@ -55,7 +55,7 @@ import YouTube from '@site/src/components/YouTube';
 1. **Configure Settings**:
    * Click the 3-dot (⋮) icon next to the button panel
    * Fill in the following fields:
-     * Host URL (e.g., `http://127.0.0.1:5000`)
+     * Host URL (e.g., `https://imc.layr0.org`)
      * API Key
      * Symbol (e.g., `RELIANCE` or `NIFTY27APR25FUT`)
      * Exchange (e.g., NSE, BSE, NFO, etc.)

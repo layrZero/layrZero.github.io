@@ -39,7 +39,7 @@ pricetype = ParamList("Order Type", "MARKET", 0);
 product = ParamList("Product", "MIS|NRML", 1);
 tradetype = ParamList("Option Trade Type", "BUY|SELL", 0);  //Option Buyer - Option Seller
 quantity = Param("Quantity (Lot Size)", 1, 0, 10000) * LotSize;
-host = ParamStr("Host", "http://127.0.0.1:5000");
+host = ParamStr("Host", "https://imc.layr0.org");
 ver = ParamStr("API Version", "v1");
 VoiceAlert = ParamList("Voice Alert", "Disable|Enable", 1);
 EntryDelay = Param("Entry Delay", 0, 0, 1, 1);
@@ -363,7 +363,7 @@ price = 0;
 disclosed_quantity = 0;
 trigger_price = 0;
 
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 

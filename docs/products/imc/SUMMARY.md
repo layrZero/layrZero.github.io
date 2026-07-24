@@ -3,7 +3,7 @@
 This section contains the product documentation for Layr0 India Market Connector, one product in the Layr0 documentation hub.
 
 * [Layr0 India Market Connector](./)
-* [Broker Setup And Local Deployment](broker-setup-and-local-deployment.md)
+* [Broker Setup](broker-setup-and-local-deployment.md)
 * [Python SDK](python-sdk.md)
 
 ## API Documentation

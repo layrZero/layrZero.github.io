@@ -3,10 +3,10 @@
 IMC exposes a WebSocket proxy for real-time market data.
 
 ```text
-ws://127.0.0.1:8765
+wss://imc.layr0.org
 ```
 
-For public deployments, place the proxy behind TLS and use `wss://`.
+Use the hosted `wss://imc.layr0.org` endpoint for WebSocket clients.
 
 ## Authentication
 

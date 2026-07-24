@@ -43,7 +43,7 @@ tradetype  = ParamList("Option Trade Type","BUY|SELL",0);
 quantity   = Param("Total Quantity(Lot Size)",1,0,10000,1)*LotSize;
 splitsize  = Param("Split Size",25,1,10000,1);
 
-host       = ParamStr("host","http://127.0.0.1:5000");
+host       = ParamStr("host","https://imc.layr0.org");
 ver        = ParamStr("API Version","v1");
 VoiceAlert = ParamList("Voice Alert","Disable|Enable",1);
 EnableAlgo = ParamList("AlgoStatus","Disable|Enable",0);

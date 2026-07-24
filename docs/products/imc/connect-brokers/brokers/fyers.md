@@ -30,7 +30,7 @@ Here is a sample of how the details would appear in a .env file for reference:
 ```bash
 BROKER_API_KEY = 'your_api_key_here'
 BROKER_API_SECRET = 'your_api_secret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/fyers/callback'
+REDIRECT_URL = 'https://imc.layr0.org/fyers/callback'
 ```
 
 Integrating with Fyers API marks the beginning of a new realm of possibilities for automated and algorithmic trading strategies, offering traders and developers a sophisticated platform to tap into market opportunities with agility and precision. To maximize the potential of the Fyers API, it's crucial to adhere to best practices for API integration. This includes being vigilant about handling rate limits, ensuring the secure management of API keys, and implementing comprehensive error handling and logging mechanisms. By doing so, one can ensure a reliable and effective trading experience that leverages the full capabilities of Fyers' advanced trading infrastructure.

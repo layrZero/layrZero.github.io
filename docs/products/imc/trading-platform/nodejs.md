@@ -25,7 +25,7 @@ import Layr0 IMC from 'Layr0 IMC';
 // Replace 'YOUR_API_KEY' with your actual API key
 // Specify the host URL with your hosted domain or ngrok domain.
 // If running locally in Windows then use the default host value.
-const Layr0 IMC = new Layr0 IMC('YOUR_API_KEY', 'http://127.0.0.1:5000');
+const Layr0 IMC = new Layr0 IMC('YOUR_API_KEY', 'https://imc.layr0.org');
 ```
 
 ### Check Layr0 IMC Version

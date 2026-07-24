@@ -7,9 +7,7 @@ It is used after `closeposition` and during lifecycle checks to confirm whether 
 ## Endpoint URL
 
 ```http
-POST http://127.0.0.1:5000/api/v1/positionsopen
-POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/positionsopen
-POST https://<your-custom-domain>/api/v1/positionsopen
+POST https://imc.layr0.org/api/v1/positionsopen
 ```
 
 ## Request

@@ -5,9 +5,7 @@
 This API Function responds with supported broker timeframe interval for fetching historical data
 
 ```http
-Local Host   :  POST http://127.0.0.1:5000/api/v1/intervals
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/intervals
-Custom Domain:  POST https://<your-custom-domain>/api/v1/intervals
+Hosted URL   :  POST https://imc.layr0.org/api/v1/intervals
 ```
 
 

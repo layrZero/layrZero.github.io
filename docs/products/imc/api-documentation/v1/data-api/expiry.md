@@ -5,9 +5,7 @@ The Expiry API allows you to retrieve expiry dates for F\&O (Futures and Options
 ### Endpoint
 
 ```
-Local Host   :  POST http://127.0.0.1:5000/api/v1/expiry
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/expiry
-Custom Domain:  POST https://<your-custom-domain>/api/v1/expiry
+Hosted URL   :  POST https://imc.layr0.org/api/v1/expiry
 ```
 
 ### Request Format

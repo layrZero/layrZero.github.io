@@ -28,14 +28,14 @@ API Key and API Secret Key generated for the app Layr0 IMC
   src={require('@site/static/img/assets/image (35).png').default}
 />
 
-Save the generated apikey and apisecret. Later we will be adding the apikey in the environment variables described in [Broker Setup And Local Deployment](../../broker-setup-and-local-deployment.md) along with the redirect url.
+Save the generated apikey and apisecret. Later we will be adding the apikey in the environment variables described in [Broker Setup](../../broker-setup-and-local-deployment.md) along with the redirect url.
 
 Here is a sample of how the details would appear in a .env file for reference:
 
 ```
 BROKER_API_KEY = 'your_api_key_here'
 BROKER_API_SECRET = 'your_api_secret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/upstox/callback'
+REDIRECT_URL = 'https://imc.layr0.org/upstox/callback'
 ```
 
 

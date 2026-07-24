@@ -27,7 +27,7 @@ RequestTimedRefresh(1, False); // Optional if you want periodic refresh
 strategy = ParamStr("Strategy Name", "Exploration Strategy");
 apikey = ParamStr("Layr0 IMC API Key", "******");
 pricetype = ParamStr("Price Type", "MARKET");
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 bridgeurl = host+"/api/"+ver;
@@ -389,7 +389,7 @@ _SECTION_BEGIN("Exploration Module Order Controls");
 strategy = ParamStr("Strategy Name", "Exploration Strategy");
 apikey = ParamStr("Layr0 IMC API Key", "******");
 pricetype = ParamStr("Price Type", "MARKET");
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 bridgeurl = host+"/api/"+ver;

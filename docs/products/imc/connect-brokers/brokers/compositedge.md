@@ -58,7 +58,7 @@ Once logged in:
 
 * **App Name**: Layr0 IMC
 * **App Description**: Layr0 IMC
-* **Redirect URL(required only for Interactive Order API)**: `http://127.0.0.1:5000/compositedge/callback`
+* **Redirect URL(required only for Interactive Order API)**: `https://imc.layr0.org/compositedge/callback`
 * **Company Name**: Layr0 IMC (or your own)
 * Choose the correct **API Package** depending on the app (Order or Market Data).
 
@@ -82,7 +82,7 @@ BROKER_API_SECRET = 'YOUR_ORDER_API_SECRET'
 BROKER_API_KEY_MARKET = 'YOUR_BROKER_MARKET_API_KEY'
 BROKER_API_SECRET_MARKET = 'YOUR_BROKER_MARKET_API_SECRET'
 
-REDIRECT_URL = 'http://127.0.0.1:5000/compositedge/callback'
+REDIRECT_URL = 'https://imc.layr0.org/compositedge/callback'
 ```
 
 Replace the values with actual credentials shown on your developer dashboard once approved.

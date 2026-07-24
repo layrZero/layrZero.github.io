@@ -17,9 +17,9 @@ Layr0 IMC supports integration with Chartink for automated trading based on scan
 
 ChartInk Paid Account (Supports Webhook Features to send Alerts to Layr0 IMC)
 
-Ngrok with Custom Domain Configuration (Provides Webhooks to Chartink/Tradingview) if hosted locally in Laptop/Desktop.&#x20;
+Use the hosted Router-IMC webhook URL from `https://imc.layr0.org` when configuring Chartink alerts.
 
-Configure the .env file with Custom Domain  (you cannot run Chartink by default with localhost or 127.0.0.1:5000)
+Chartink webhook alerts should point to the hosted Router-IMC endpoint, not a localhost URL.
 
 
 

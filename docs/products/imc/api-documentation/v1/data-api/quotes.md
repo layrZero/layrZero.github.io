@@ -5,9 +5,7 @@
 This API Function fetches Quotes from the Broker
 
 ```http
-Local Host   :  POST http://127.0.0.1:5000/api/v1/quotes
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/quotes
-Custom Domain:  POST https://<your-custom-domain>/api/v1/quotes
+Hosted URL   :  POST https://imc.layr0.org/api/v1/quotes
 ```
 
 

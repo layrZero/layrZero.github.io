@@ -5,9 +5,7 @@
 This API Function fetches the Orderbook details from the broker with basic orderbook statistics
 
 ```http
-Local Host   :  POST http://127.0.0.1:5000/api/v1/orderbook
-Ngrok Domain :  POST https://<your-ngrok-domain>.ngrok-free.app/api/v1/orderbook
-Custom Domain:  POST https://<your-custom-domain>/api/v1/orderbook
+Hosted URL   :  POST https://imc.layr0.org/api/v1/orderbook
 ```
 
 

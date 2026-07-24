@@ -51,14 +51,14 @@ Goto the [Smart API Developer Portal](https://smartapi.angelbroking.com/signin) 
 
 Enter the App name, Redirect URL (use dummy url https://google.com) and your Angel Client ID
 
-Save the generated apikey. Later we will be adding the apikey in the environment variables described in [Broker Setup And Local Deployment](../../broker-setup-and-local-deployment.md).
+Save the generated apikey. Later we will be adding the apikey in the environment variables described in [Broker Setup](../../broker-setup-and-local-deployment.md).
 
 Here is a sample of how the details would appear in a .env file for reference:
 
 ```
 BROKER_API_KEY = 'your_api_key_here'
 BROKER_API_SECRET = 'your_api_secret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/angel/callback'
+REDIRECT_URL = 'https://imc.layr0.org/angel/callback'
 ```
 
 

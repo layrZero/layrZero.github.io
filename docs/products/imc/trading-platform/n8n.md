@@ -29,7 +29,7 @@ This section guides you through creating a workflow in n8n, a powerful open-sour
 
 **Prerequisites:**
 
-* **Layr0 IMC:** You must have Layr0 IMC installed and running in http://127.0.0.1:5000/. Ensure your broker is properly configured within Layr0 IMC.
+* **Layr0 IMC:** You must have access to the hosted Router-IMC product at https://imc.layr0.org/. Ensure your broker is properly configured within Router-IMC.
 * Install NodeJS as n8n backend relies on **Node.js runtime** to execute workflows, handle API calls, and manage automation.
 * **n8n:** n8n should be installed and running.&#x20;
 * **Broker API Key:** You'll need your broker's API key and API Secret that you have configured in Layr0 IMC.
@@ -147,8 +147,8 @@ Now you can start creating workflows.
 * Search for "HTTP Request" and select it.
 * Configure the node as follows:
   * **Method:** POST
-  * **URL:** http://127.0.0.1:5000/api/v1/placeorder (This assumes Layr0 IMC is running on your local machine. Adjust if you're using a different URL.)
-  * **Authentication:** None (assuming your Layr0 IMC instance doesn't require authentication for local requests. If you have authentication enabled, configure it accordingly.)
+  * **URL:** https://imc.layr0.org/api/v1/placeorder
+  * **Authentication:** None for the HTTP Request node; include the broker-specific Router-IMC API key in the JSON body.
   * **Send Body:** Check this box.
   * **Body Content Type:** JSON
   * **Specify Body:** Choose Using JSON

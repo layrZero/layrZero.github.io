@@ -27,7 +27,7 @@ apikey = ParamStr("Layr0 IMC API Key", "******");
 exchange = ParamList("Exchange","NSE|BSE",0);
 pricetype = ParamStr("Price Type", "MARKET");
 product = ParamList("Product", "MIS|CNC",0);
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 bridgeurl = host+"/api/"+ver;
@@ -350,7 +350,7 @@ apikey = ParamStr("Layr0 IMC API Key", "******");
 exchange = ParamList("Exchange","NSE|BSE",0);
 pricetype = ParamStr("Price Type", "MARKET");
 product = ParamList("Product", "MIS|CNC",0);
-host = ParamStr("host","http://127.0.0.1:5000");
+host = ParamStr("host","https://imc.layr0.org");
 ver = ParamStr("API Version","v1");
 
 bridgeurl = host+"/api/"+ver;

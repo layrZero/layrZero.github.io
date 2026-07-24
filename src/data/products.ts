@@ -20,9 +20,9 @@ export const products: ProductDocsEntry[] = [
     status: 'available',
     docsPath: '/docs/products/imc',
     productHost: 'https://imc.layr0.org',
-    productHostStatus: 'Not yet hosted',
+    productHostStatus: 'Hosted by Layr0',
     sourceRepoPath: 'C:\\Users\\adyse\\Documents\\github\\India-marketConnector',
     description:
-      'Self-hosted broker gateway for Indian market automation, REST APIs, WebSocket market data, analyzer mode, and strategy reconciliation.',
+      'Layr0-hosted broker gateway for Indian market automation, REST APIs, WebSocket market data, analyzer mode, and strategy reconciliation.',
   },
 ];

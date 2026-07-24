@@ -11,7 +11,7 @@ import layr0_imc
 
 client = layr0_imc.api(
     api_key="YOUR_API_KEY",
-    host="http://127.0.0.1:5000",
+    host="https://imc.layr0.org",
 )
 ```
 
@@ -66,7 +66,7 @@ The SDK uses a shared HTTP client for REST calls and can reconnect WebSocket fee
 ```python
 client = layr0_imc.api(
     api_key="YOUR_API_KEY",
-    ws_url="ws://127.0.0.1:8765",
+    ws_url="wss://imc.layr0.org",
     auto_reconnect=True,
 )
 ```

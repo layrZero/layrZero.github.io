@@ -15,7 +15,7 @@ from Layr0 IMC import ta
 ```python
 from Layr0 IMC import api
 
-client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
+client = api(api_key='your_api_key_here', host='https://imc.layr0.org')
 
 # Fetch historical data
 df = client.history(symbol="SBIN", 
@@ -387,7 +387,7 @@ import pandas as pd
 from Layr0 IMC import api, ta
 
 # Get market data
-client = api(api_key='your_api_key_here', host='http://127.0.0.1:5000')
+client = api(api_key='your_api_key_here', host='https://imc.layr0.org')
 
 df = client.history(symbol="SBIN", 
                    exchange="NSE", 

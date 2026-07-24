@@ -54,14 +54,14 @@ Layr0 IMC Excel Add-In is built using **Excel-DNA**, which requires the **.NET 6
 
 ```excel
 =oa_api("your_api_key")
-=oa_api("your_api_key", "v1", "http://127.0.0.1:5000")
+=oa_api("your_api_key", "v1", "https://imc.layr0.org")
 ```
 
 **Parameters:**
 
 * `api_key` (Mandatory): API Key for authentication
 * `version` (Optional, default: "v1"): API version
-* `host_url` (Optional, default: "[http://127.0.0.1:5000](http://127.0.0.1:5000/)"): API host URL
+* `host_url` (Optional, default: "[https://imc.layr0.org](https://imc.layr0.org/)"): API host URL
 
 ***
 

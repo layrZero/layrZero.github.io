@@ -35,7 +35,7 @@ Here is how you would typically set up your environment variables in a .env file
 ```
 BROKER_API_KEY = 'your_dhan_clientid_here'
 BROKER_API_SECRET = 'your_dhan_token_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/dhan/callback'
+REDIRECT_URL = 'https://imc.layr0.org/dhan/callback'
 ```
 
 Integrating with the Dhan API opens up new possibilities for implementing automated and algorithmic trading strategies. It provides developers and traders with a robust platform to access market opportunities efficiently and effectively. To fully leverage the capabilities of the Dhan API, it is essential to follow best practices for API integration. This includes careful management of API rate limits, secure handling of API keys, and thorough error handling and logging. These practices help ensure a dependable and optimal trading experience using Dhan's advanced technological infrastructure.

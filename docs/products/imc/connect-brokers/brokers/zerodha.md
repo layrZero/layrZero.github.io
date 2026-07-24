@@ -33,7 +33,7 @@ Here is how you would typically store these details in a `.env` file:
 ```
 BROKER_API_KEY = 'your_api_key_here'
 BROKER_API_SECRET = 'your_api_secret_here'
-REDIRECT_URL = 'http://127.0.0.1:5000/zerodha/callback'
+REDIRECT_URL = 'https://imc.layr0.org/zerodha/callback'
 ```
 
 Utilizing the Kite API from Zerodha presents a wealth of opportunities for developers and traders aiming to create bespoke trading tools and strategies. Leveraging this API effectively calls for a commitment to best practices such as secure storage and management of API keys, mindful adherence to API rate limits, and the implementation of solid error handling and logging mechanisms. When harnessed properly, the Kite API can become a powerful asset in the arsenal of any trader or fintech application developer, enabling them to capitalize on the dynamism of financial markets with precision and efficiency.

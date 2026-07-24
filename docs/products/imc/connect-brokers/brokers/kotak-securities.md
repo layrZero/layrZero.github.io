@@ -68,7 +68,7 @@ Set up your environment variables in a `.env` file for Kotak's API:
 ```
 BROKER_API_KEY = 'your_kotak_consumer_key'
 BROKER_API_SECRET = 'your_kotak_consumer_secret'
-REDIRECT_URL = 'http://127.0.0.1:5000/kotak/callback'
+REDIRECT_URL = 'https://imc.layr0.org/kotak/callback'
 ```
 
 Integrating with the Kotak API opens up new possibilities for implementing automated and algorithmic trading strategies. It provides developers and traders with a robust platform to access market opportunities efficiently and effectively. To fully leverage the capabilities of the Kotak API, it is essential to follow best practices for API integration. This includes careful management of API rate limits, secure handling of API keys, and thorough error handling and logging. These practices help ensure a dependable and optimal trading experience using Kotak's advanced technological infrastructure.

@@ -14,7 +14,7 @@ Router-IMC is one product inside the Layr0 company ecosystem. Layr0 Console cont
 
 ## Availability
 
-The planned product host is `https://imc.layr0.org`; it is not yet hosted. Current documented operation is local, self-hosted, or deployment-host based. API examples commonly use a local host such as `http://127.0.0.1:5000`, or the configured deployment host for webhook access.
+Router-IMC is hosted by Layr0 as a product at `https://imc.layr0.org`. Users access the hosted product through Layr0 Console licensing, licensed email sign-in, OTP verification, license selection, broker setup, and broker session connection.
 
 ## What Router-IMC Does
 
@@ -75,7 +75,7 @@ Router-IMC keeps read paths and trading/write paths distinct:
 
 ## Where To Go Next
 
-- [Broker Setup And Local Deployment](/docs/products/imc/broker-setup-and-local-deployment)
+- [Broker Setup](/docs/products/imc/broker-setup-and-local-deployment)
 - [IMC API v1](/docs/products/imc/api-documentation/v1)
 - [Authentication And Mode Preconditions](/docs/products/imc/api-documentation/v1/authentication-and-mode-preconditions)
 - [Order Lifecycle And Reconciliation](/docs/products/imc/api-documentation/v1/order-lifecycle-and-reconciliation)

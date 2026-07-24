@@ -56,5 +56,5 @@ Click the eye icon  to view the API secret key. Copy API secret key
 ```bash
 BROKER_API_KEY = 'client_id:::api_key'
 BROKER_API_SECRET = 'api_secret'
-REDIRECT_URL = 'http://127.0.0.1:5000/flattrade/callback'
+REDIRECT_URL = 'https://imc.layr0.org/flattrade/callback'
 ```

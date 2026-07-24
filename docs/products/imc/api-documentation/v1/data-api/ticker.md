@@ -5,9 +5,7 @@
 The  Ticker  API provides historical price data for stocks in customizable time windows. It allows you to fetch OHLCV (Open, High, Low, Close, Volume) data for any stock with flexible interval options.
 
 ```http
-Local Host   :  GET http://127.0.0.1:5000/api/v1/ticker/{exchange}:{symbol}
-Ngrok Domain :  GET https://<your-ngrok-domain>.ngrok-free.app/api/v1/ticker/{exchange}:{symbol}
-Custom Domain:  GET https://<your-custom-domain>/api/v1/ticker/{exchange}:{symbol}
+Hosted URL   :  GET https://imc.layr0.org/api/v1/ticker/{exchange}:{symbol}
 ```
 
 ### Parameters
@@ -48,19 +46,19 @@ API key must be provided either:
 For AmiBroker users, use this exact URL template format to fetch historical quotes:
 
 ```
-http://127.0.0.1:5000/api/v1/ticker/{symbol}?apikey={api_key}&interval={interval_extra}&from={from_ymd}&to={to_ymd}&format=txt
+https://imc.layr0.org/api/v1/ticker/{symbol}?apikey={api_key}&interval={interval_extra}&from={from_ymd}&to={to_ymd}&format=txt
 ```
 
 Example:
 
 ```
-http://127.0.0.1:5000/api/v1/ticker/NSE:ICICIBANK?apikey=your_api_key_here&interval=1m&from=2025-06-04&to=2025-07-04&format=txt
+https://imc.layr0.org/api/v1/ticker/NSE:ICICIBANK?apikey=your_api_key_here&interval=1m&from=2025-06-04&to=2025-07-04&format=txt
 ```
 
 ### Example Request
 
 ```
-GET http://127.0.0.1:5000/api/v1/ticker/NSE:RELIANCE?apikey=your_api_key_here&interval=D&from=2023-01-09&to=2023-02-10&adjusted=true&sort=asc
+GET https://imc.layr0.org/api/v1/ticker/NSE:RELIANCE?apikey=your_api_key_here&interval=D&from=2023-01-09&to=2023-02-10&adjusted=true&sort=asc
 ```
 
 ### Response Format
@@ -100,7 +98,7 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 For example, to get 5-minute bars for RELIANCE stock from NSE:
 
 ```
-GET http://127.0.0.1:5000/api/v1/ticker/NSE:RELIANCE?apikey=your_api_key_here&interval=5m&from=2023-01-09&to=2023-02-10
+GET https://imc.layr0.org/api/v1/ticker/NSE:RELIANCE?apikey=your_api_key_here&interval=5m&from=2023-01-09&to=2023-02-10
 ```
 
 This will return 5-minute OHLCV bars for RELIANCE between January 9, 2023, and February 10, 2023.
@@ -225,7 +223,7 @@ To prevent large queries that could hit broker rate limits, the API automaticall
 
 If a request exceeds these limits, the start date will be automatically adjusted. For example:
 
-* Original request: `http://127.0.0.1:5000/api/v1/ticker/NSE:ICICIBANK?apikey=your_api_key_here&interval=1m&from=2000-06-01&to=2025-07-04&format=txt`
+* Original request: `https://imc.layr0.org/api/v1/ticker/NSE:ICICIBANK?apikey=your_api_key_here&interval=1m&from=2000-06-01&to=2025-07-04&format=txt`
 * Adjusted to: `from=2025-06-04&to=2025-07-04&interval=1m` (30 days for 1-minute data)
 
 ### Notes
