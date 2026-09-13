@@ -41,9 +41,10 @@ API key must be provided either:
 
 **Note**: The API key must be obtained from your IMC instance dashboard under the API Key section.
 
-#### AmiBroker Integration
+#### Client integration
 
-For AmiBroker users, use this exact URL template format to fetch historical quotes:
+Any authorized HTTP client can call the ticker endpoint. Use it only with the
+current IMC API contract:
 
 ```
 https://imc.layr0.org/api/v1/ticker/{symbol}?apikey={api_key}&interval={interval_extra}&from={from_ymd}&to={to_ymd}&format=txt

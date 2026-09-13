@@ -4,7 +4,9 @@ This section contains the product documentation for Layr0 India Market Connector
 
 * [Layr0 India Market Connector](./)
 * [Broker Setup](broker-setup-and-local-deployment.md)
-* [Python SDK](python-sdk.md)
+* [Python and REST API](python-sdk.md)
+* [Production brokers](connect-brokers/brokers/README.md)
+* [Integrations](trading-platform/README.md)
 
 ## API Documentation
 
@@ -42,4 +44,3 @@ This section contains the product documentation for Layr0 India Market Connector
 
 * [Symbol Format](symbol-format.md)
 * [Strategy Management](strategy-management.md)
-* [MCP](mcp.md)

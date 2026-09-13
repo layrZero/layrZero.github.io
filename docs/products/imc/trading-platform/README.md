@@ -2,20 +2,18 @@
 slug: /products/imc/trading-platform
 ---
 
-# IMC Integrations
+# Router-IMC Integrations
 
-IMC integrates with trading platforms, automation tools, SDKs, and spreadsheet workflows that call the IMC REST and WebSocket interfaces.
+These are the externally supported automation workflows documented for the
+current Layr0 India Market Connector release.
 
-Start with the integration that matches your workflow:
-
-| Integration | Documentation |
+| Workflow | Documentation |
 | --- | --- |
-| Python | [Python SDK and examples](/docs/products/imc/trading-platform/python) |
-| Node.js | [Node.js examples](nodejs.md) |
-| Excel | [Excel add-in](excel.md) |
-| Google Spreadsheets | [Google Spreadsheets](google-spreadsheets.md) |
-| TradingView | [TradingView](tradingview.md) |
-| Amibroker | [Amibroker](/docs/products/imc/trading-platform/amibroker) |
-| MetaTrader 5 | [MetaTrader 5](/docs/products/imc/trading-platform/metatrader-5) |
-| Chartink | [Chartink](chartink.md) |
-| n8n | [n8n](n8n.md) |
+| TradingView alerts | [TradingView](tradingview.md) |
+| ChartInk scanners | [ChartInk](chartink.md) |
+| GoCharting alerts | [GoCharting](gocharting.md) |
+| Python/API clients | [Python and REST API](../python-sdk.md) |
+
+All workflows require a valid IMC API key, a connected production broker, and
+payloads that match the public API contract. Generic tools that can call HTTP
+are not represented as native IMC integrations unless separately supported.

@@ -16,6 +16,12 @@ Router-IMC is one product inside the Layr0 company ecosystem. Layr0 Console cont
 
 Router-IMC is hosted by Layr0 as a product at `https://imc.layr0.org`. Users access the hosted product through Layr0 Console licensing, licensed email sign-in, OTP verification, license selection, broker setup, and broker session connection.
 
+## Production broker availability
+
+The production deployment allows registration only for Angel One, Fyers,
+Upstox, and Zerodha (`VALID_BROKERS=angel,upstox,zerodha,fyers`). Other broker
+adapters may exist for development or testing but are not production support.
+
 ## What Router-IMC Does
 
 Router-IMC is a broker connectivity and routed trade execution layer for Indian market workflows:

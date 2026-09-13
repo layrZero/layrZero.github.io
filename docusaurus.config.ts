@@ -40,12 +40,34 @@ const config: Config = {
       {
         redirects: [
           {
-            from: '/docs/trading-platform/metatrader-5/openalgo-mql5-functions',
-            to: '/docs/products/imc/trading-platform/metatrader-5/openalgo-mql5-functions',
+            from: [
+              '/docs/connect-brokers/angel',
+              '/docs/connect-brokers/brokers/angel',
+              '/docs/connect-brokers/angelone',
+              '/docs/connect-brokers/brokers/angelone',
+            ],
+            to: '/docs/products/imc/connect-brokers/brokers/angelone',
           },
           {
-            from: '/docs/connect-brokers/brokers/kotak-securities',
-            to: '/docs/products/imc/connect-brokers/brokers/kotak-securities',
+            from: [
+              '/docs/connect-brokers/fyers',
+              '/docs/connect-brokers/brokers/fyers',
+            ],
+            to: '/docs/products/imc/connect-brokers/brokers/fyers',
+          },
+          {
+            from: [
+              '/docs/connect-brokers/upstox',
+              '/docs/connect-brokers/brokers/upstox',
+            ],
+            to: '/docs/products/imc/connect-brokers/brokers/upstox',
+          },
+          {
+            from: [
+              '/docs/connect-brokers/zerodha',
+              '/docs/connect-brokers/brokers/zerodha',
+            ],
+            to: '/docs/products/imc/connect-brokers/brokers/zerodha',
           },
         ],
       },

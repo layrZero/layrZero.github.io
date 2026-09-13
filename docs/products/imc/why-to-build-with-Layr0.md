@@ -29,7 +29,9 @@ That’s when most realize the broker SDK is just the starting point—not the s
 
 #### Strategy Management Engine
 
-Define, activate, pause, and monitor strategies—whether they come from Python, TradingView, Amibroker, Excel, N8N, or Chartink. All strategies run through a centralized interface, complete with logs, execution metrics, and security enforcement.
+Define, activate, pause, and monitor workflows from Python, TradingView,
+ChartInk, and GoCharting. Requests run through the licensed IMC execution
+surface with analyzer diagnostics, logs, and approval controls.
 
 #### Real-Time Quote Layer (Common WebSockets)
 
@@ -41,7 +43,9 @@ Layr0 IMC maintains a **Common Symbol Format**, so a strategy written using one 
 
 #### Broker-Agnostic API Layer
 
-All REST APIs for placing orders, fetching positions, or getting quotes are **broker-agnostic**. That means the same API call works whether you're using Zerodha, AngelOne, Dhan, Upstox, or others. Build once, deploy across brokers with minimal change.
+The public REST APIs use one Layr0 contract across the four production brokers:
+Angel One, Fyers, Upstox, and Zerodha. Broker-specific capabilities and symbol
+rules still apply.
 
 
 
@@ -49,9 +53,9 @@ All REST APIs for placing orders, fetching positions, or getting quotes are **br
 
 ### Speed, Stability, and Control
 
-* **HTTP Connection Pooling** is baked into Layr0 IMC's broker interfaces. This drops your order latency to **50ms–120ms**, compared to **150ms–250ms** if you hit broker APIs directly via standalone scripts.
-* **Historify** module manages all your historical data download needs: 1-minute bars, EOD data, and master contract management are scheduled and stored automatically—no scripts required.
-* **API Analyzer** acts as a local sandbox to simulate trades and strategy inputs without sending real orders—perfect for debugging signals.
+* **API Analyzer** validates requests and webhook payloads in Analyze mode before live execution.
+* **Monitoring** exposes broker state, account reads, logs, traffic, latency, and reconciliation views.
+* **Master-contract tools** help confirm symbol readiness before requests are sent.
 
 ***
 

@@ -58,11 +58,11 @@ const sidebars: SidebarsConfig = {
           items: [
             'products/imc/symbol-format',
             'products/imc/strategy-management',
-            'products/imc/mcp',
             'products/imc/static-ip',
             'products/imc/latency',
+            'products/imc/monitoring',
+            'products/imc/api-analyzer',
             'products/imc/community-support',
-            'products/imc/mini-foss-universe',
             'products/imc/why-to-build-with-Layr0',
           ],
         },

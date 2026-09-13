@@ -2,29 +2,17 @@
 slug: /products/imc/connect-brokers/brokers
 ---
 
-# Brokers
+# Production Brokers
 
-List of Layr0 IMC supported brokers.
+Router-IMC production registration is restricted by `VALID_BROKERS` to the
+four brokers below. Installed development adapters are not public production
+support and are intentionally excluded from this site.
 
-1. [5paisa](./5paisa.md)
-2. [5paisa (XTS)](./5paisa-xts.md)
-3. [Aliceblue](./aliceblue.md)
-4. [AngelOne](./angelone.md)
-5. [Compositedge (XTS)](./compositedge.md)
-6. [Dhan](./dhan.md)
-7. [Dhan (Sandbox)](./dhan-sandbox.md)
-8. [Firstock](./firstock.md)
-9. [Flattrade](./flattrade.md)
-10. [Fyers](./fyers.md)
-11. [Groww](./groww.md)
-12. [IIFL (XTS)](./iifl-xts.md)
-13. [IndiaBulls](./indiabulls-securities.md)
-14. [IndMoney](./indmoney.md)
-15. [Kotak Securities](./kotak-securities.md)
-16. [Paytm](./paytm.md)
-17. [Pocketful](./pocketful.md)
-18. [Shoonya](./shoonya.md)
-19. [Upstox](./upstox.md)
-20. [Wisdom Capital (XTS)](./wisdom-capital.md)
-21. [Zebu](./zebu.md)
-22. [Zerodha](./zerodha.md)
+1. [Angel One](./angelone.md)
+2. [Fyers](./fyers.md)
+3. [Upstox](./upstox.md)
+4. [Zerodha](./zerodha.md)
+
+Before registering a broker, activate the Router-IMC product in Layr0 Console,
+complete the licensed sign-in flow, and use the callback/static-IP values shown
+by the IMC broker setup screen.
