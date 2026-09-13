@@ -23,6 +23,7 @@ const config: Config = {
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
+  trailingSlash: false,
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
@@ -32,6 +33,24 @@ const config: Config = {
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
+
+  plugins: [
+    [
+      '@docusaurus/plugin-client-redirects',
+      {
+        redirects: [
+          {
+            from: '/docs/trading-platform/metatrader-5/openalgo-mql5-functions',
+            to: '/docs/products/imc/trading-platform/metatrader-5/openalgo-mql5-functions',
+          },
+          {
+            from: '/docs/connect-brokers/brokers/kotak-securities',
+            to: '/docs/products/imc/connect-brokers/brokers/kotak-securities',
+          },
+        ],
+      },
+    ],
+  ],
 
   // Even if you don't use internationalization, you can use this field to set
   // useful metadata like html lang. For example, if your site is Chinese, you
