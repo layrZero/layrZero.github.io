@@ -74,7 +74,7 @@ The production broker contract is `VALID_BROKERS=angel,upstox,zerodha,fyers`. Ar
 - `docs - Deprecated/inherited-openalgo-strategy-examples/`: unverified strategy and indicator examples.
 - `docs - Deprecated/inherited-openalgo-product-pages/`: OpenAlgo-era, non-public, or unverified product pages.
 
-## Release gate
+## Release gate --
 
 The build may be released only after every row has a named evidence reference and review status, the public sitemap contains no archived route, and the production broker index contains only Angel One, Fyers, Upstox, and Zerodha.
 
