@@ -125,6 +125,28 @@ For developers, understanding the database schema is essential for managing data
 11. **instrumenttype:** The type of instrument (e.g., equity, future, option).
 12. **tick\_size:** The minimum price movement of the instrument on the exchange.
 
+### Master-contract option types
+
+API clients should use the standardized request value `instrumenttype:
+"options"`. They should not depend on the broker’s internal master-contract
+classification. Depending on the broker adapter, an option record may be
+stored internally as `OPTIDX`, `OPTSTK`, `OPTFUT`, `OPTCUR`, `OPTIRC`, `CE`, or
+`PE`. IMC treats the family types and the direct call/put types as options when
+discovering expiries.
+
+For example, the relation for an NSE stock is:
+
+```text
+RELIANCE on NSE
+  -> derivative contracts on NFO
+  -> RELIANCE + expiry + strike + CE/PE
+```
+
+The expiry endpoint uses the derivative exchange (`NFO`), while an option-chain
+request identifies the underlying quote exchange (`NSE`). This separation lets
+the service obtain the underlying price and resolve the exact CE/PE contracts
+from the instrument master without guessing strikes or broker symbols.
+
 <img
   src={require('@site/static/img/assets/image (33).png').default}
 />

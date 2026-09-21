@@ -236,8 +236,27 @@ See also: [HTTP Status Codes](../http-status-codes.md) for detailed meanings.
 * Expiry dates are returned in DD-MMM-YY format (e.g., "31-JUL-25")
 * Dates are sorted chronologically from earliest to latest
 * The API uses exact symbol matching to avoid confusion (e.g., "NIFTY" won't match "BANKNIFTY")
-* Different exchanges use different instrument type codes internally but the API accepts standardized "futures" and "options" parameters
+* The API accepts standardized `futures` and `options` values. Internally, broker master contracts may label options as `OPTSTK`, `OPTIDX`, `OPTFUT`, `OPTCUR`, `OPTIRC`, or direct `CE`/`PE` contract types; these labels are normalized by the service.
 * Rate limiting is applied as per your IMC server configuration
+
+### Stock option lookup example
+
+For a stock such as `RELIANCE`, the cash symbol is quoted on `NSE`, while its
+derivative contracts are listed on `NFO`:
+
+```text
+RELIANCE + NSE
+        -> derivative venue NFO
+        -> expiry(RELIANCE, NFO, options)
+        -> optionchain(RELIANCE, NSE, DDMMMYY)
+```
+
+Use `NFO` when requesting expiries. The option-chain request uses the
+underlying quote exchange (`NSE` for an NSE stock, `NSE_INDEX` for an NSE
+index), while the service resolves the actual option contracts on `NFO`.
+The expiry response remains an array of display values such as `31-JUL-25`;
+option-chain consumers must submit the canonical `DDMMMYY` form,
+`31JUL25`.
 
 ### Rate Limits
 
