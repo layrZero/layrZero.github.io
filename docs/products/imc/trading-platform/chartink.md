@@ -5,7 +5,7 @@ Router-IMC supports ChartInk scanner alerts for Indian-market strategies.
 ## Requirements
 
 - A valid Layr0 Console license for Router-IMC.
-- A connected production broker: Angel One, Fyers, Upstox, or Zerodha.
+- A connected production broker: Dhan, Upstox, Zerodha or FYERS.
 - ChartInk webhook access and an IMC API key.
 
 ## Setup

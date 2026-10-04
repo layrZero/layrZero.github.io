@@ -35,6 +35,7 @@ const sidebars: SidebarsConfig = {
           label: 'Broker Setup',
         },
         'products/imc/python-sdk',
+        'products/imc/releases/protected-order-release',
         {
           type: 'category',
           label: 'IMC API v1',

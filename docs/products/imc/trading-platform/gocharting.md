@@ -5,7 +5,7 @@ Router-IMC accepts GoCharting webhook alerts for Indian-market workflows.
 ## Requirements
 
 - An active Layr0 Console license for Router-IMC.
-- A connected production broker: Angel One, Fyers, Upstox, or Zerodha.
+- A connected production broker: Dhan, Upstox, Zerodha or FYERS.
 - GoCharting webhook access on the applicable GoCharting plan.
 - A Router-IMC API key and a strategy/webhook configuration created in IMC.
 

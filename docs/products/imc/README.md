@@ -18,8 +18,8 @@ Router-IMC is hosted by Layr0 as a product at `https://imc.layr0.org`. Users acc
 
 ## Production broker availability
 
-The production deployment allows registration only for Angel One, Fyers,
-Upstox, and Zerodha (`VALID_BROKERS=angel,upstox,zerodha,fyers`). Other broker
+The upcoming protected-order release allows production registration only for Dhan, Upstox,
+Zerodha and FYERS (`VALID_BROKERS=dhan,upstox,zerodha,fyers`). Other broker
 adapters may exist for development or testing but are not production support.
 
 ## What Router-IMC Does
@@ -86,3 +86,7 @@ Router-IMC keeps read paths and trading/write paths distinct:
 - [Authentication And Mode Preconditions](/docs/products/imc/api-documentation/v1/authentication-and-mode-preconditions)
 - [Order Lifecycle And Reconciliation](/docs/products/imc/api-documentation/v1/order-lifecycle-and-reconciliation)
 - [Integrations](/docs/products/imc/trading-platform)
+
+## Upcoming protected-order release
+
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, targeting IMC `364acaf`. Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is production-disabled. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.

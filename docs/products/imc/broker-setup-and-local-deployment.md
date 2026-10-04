@@ -19,3 +19,7 @@ Connect a broker account to the hosted Router-IMC product and prepare it for lic
 - Use analyzer mode before live trading.
 - Confirm the active broker and mode before running automated strategies.
 - Keep the WebSocket proxy reachable if your strategy needs streaming data.
+
+## Upcoming protected-order release
+
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, targeting IMC `364acaf`. Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is production-disabled. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.

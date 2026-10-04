@@ -6,4 +6,4 @@ security events, and Action Center approvals.
 
 Use these views to diagnose request delivery and broker responses. Monitoring
 data does not expand the production broker allowlist; production registration
-remains limited to Angel One, Fyers, Upstox, and Zerodha.
+remains limited to Dhan, Upstox, Zerodha and FYERS.

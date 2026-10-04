@@ -21,3 +21,7 @@ IMC keeps order execution and exposure verification explicit.
 `positionsopen` is not an order endpoint. It is a strategy-scoped reconciliation read. It answers one question: "does this strategy still have exposure for this symbol/product?"
 
 Because it is read-only, it is mode-checked but does not create a protected operation lease.
+
+## Protected entries
+
+For this release, use [protected-order lifecycle](protected-orders.md) to place broker-managed TP/SL with entry. Protected book v2 supplies actual cumulative fill evidence; no exposure alone must not release margin or invent a fill/P&L. Strategy closes verify linked protection cancellation before closing; generated working/uncertain exits block unsafe closes. Protection failure does not automatically liquidate the entry.
