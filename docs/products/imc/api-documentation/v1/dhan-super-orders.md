@@ -29,3 +29,47 @@ Cancel sends apikey, strategy, trigger_id, order_system SUPER, all mode fields, 
 Existing Forever records retain explicit `order_system: FOREVER` for legacy modify/cancel requests. Never use Super helpers for their IDs. The legacy GTT book checks both systems; protected book v2 provides execution evidence for protected operations. A day-scoped Dhan book or reused parent/exit IDs can leave overnight or exit state unknown; do not infer cancellation or invent a fill. Such uncertainty can block mode switching.
 
 See [protected-order Python examples](protected-orders.md) and [DDPI evidence](ddpi-status.md).
+
+### Modify target request
+
+```json
+{
+  "apikey": "YOUR_DHAN_IMC_KEY",
+  "expected_mode": "analyze",
+  "expected_balance_type": "sandbox",
+  "expected_mode_version": 7,
+  "request_id": "saved-DhanModifySuperTarget",
+  "order_system": "SUPER",
+  "strategy": "super-demo",
+  "exchange": "NSE",
+  "symbol": "TCS",
+  "action": "BUY",
+  "quantity": 1,
+  "product": "CNC",
+  "entry_pricetype": "LIMIT",
+  "entry_price": 3500,
+  "target_trigger": 3650,
+  "target_limit": 3650,
+  "stoploss_trigger": 3400,
+  "stoploss_limit": 3400,
+  "trailing_jump": 0,
+  "trigger_id": "BROKER_SUPER_PARENT_ID",
+  "leg_name": "TARGET_LEG"
+}
+```
+
+### Cancel exits request
+
+```json
+{
+  "apikey": "YOUR_DHAN_IMC_KEY",
+  "expected_mode": "analyze",
+  "expected_balance_type": "sandbox",
+  "expected_mode_version": 7,
+  "request_id": "saved-DhanCancelSuperExits",
+  "strategy": "super-demo",
+  "order_system": "SUPER",
+  "trigger_id": "BROKER_SUPER_PARENT_ID",
+  "cancel_scope": "EXITS"
+}
+```

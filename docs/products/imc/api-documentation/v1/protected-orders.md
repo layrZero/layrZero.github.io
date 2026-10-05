@@ -68,13 +68,9 @@ An explicit Live `closeposition(strategy=..., ...)` uses IMC's linked-protection
 
 ```python
 central = client.ddpistatus()
-dhan = client.ddpistatus("dhan")
-upstox = client.ddpistatus("upstox")
-zerodha = client.ddpistatus("zerodha")
-fyers = client.ddpistatus("fyers")
 ```
 
-POST `/api/v1/ddpistatus`, or `/api/v1/{broker}/ddpistatus`, with `{"apikey":"YOUR_BROKER_IMC_KEY"}`. Explicit broker routes must match the key. Unsupported brokers are rejected. Responses retain status, account identity, `ddpi_status`, `poa_status`, `unattended_delivery_authorization`, evidence source, checked timestamp and explanation. Missing/failed evidence stays unknown. Analyze does not check broker authorization.
+POST `/api/v1/ddpistatus` with `{"apikey":"YOUR_BROKER_IMC_KEY"}`. The key alone selects the broker and mode; there are no broker-specific DDPI routes. Unsupported brokers are rejected. Responses retain status, account identity, `ddpi_status`, `poa_status`, `unattended_delivery_authorization`, evidence source, checked timestamp and explanation. Missing/failed evidence stays unknown. Analyze does not check broker authorization.
 
 Dhan uses profile `ddpi`; Upstox DDPI/POA flags; FYERS `ddpi_enabled`; Zerodha demat consent confirms unattended authorization without identifying DDPI separately from POA. Login and transaction EDIS authorization must not be presented as DDPI activation.
 
@@ -111,3 +107,7 @@ POST `/api/v1/placeprotectedorder`:
 ```
 
 For Dhan add `"order_system": "SUPER"` and optional `"trailing_jump": 0`. Book uses only apikey and the four mode/request fields. Modify adds protected_order_id and all four exit price fields; cancel/recover add protected_order_id. All lifecycle paths share the `/api/v1/` prefix.
+
+## Playground request templates
+
+Playground lists one action per HTTP method and endpoint, with neutral GTT and protected-entry bodies. Populate common fields and copy the additional broker-required fields from this page or [Dhan Super Orders](dhan-super-orders.md). The key chooses the adapter, but does not make incompatible payloads interchangeable. Broker-specific examples belong in this documentation, not separate Playground menu entries.

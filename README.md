@@ -45,3 +45,5 @@ If you are using GitHub pages for hosting, this command is a convenient way to b
 ## Upcoming protected-order release
 
 SDK baseline 1.1.5; protected APIs in SDK 1.2.0, targeting IMC `364acaf`. Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is production-disabled. See [release and migration details](docs/products/imc/releases/protected-order-release.md). These feature branches are not yet published or deployed.
+
+Upcoming IMC DDPI uses only `/api/v1/ddpistatus`; the IMC key selects broker and mode. Playground exposes one action per endpoint; broker payload examples are maintained in the [GTT documentation](docs/products/imc/api-documentation/v1/options-and-gtt.md).

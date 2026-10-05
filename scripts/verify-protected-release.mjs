@@ -12,7 +12,7 @@ assert.ok(config.includes("'/docs/products/imc/connect-brokers/brokers/angelone'
 assert.ok(config.includes("to: '/docs/products/imc/releases/protected-order-release'"));
 const protectedDoc = read(root + 'api-documentation/v1/protected-orders.md');
 for (const endpoint of ['placeprotectedorder','protectedorderbook','modifyprotectedorder','cancelprotectedorder','recoverprotectedorder']) assert.ok(protectedDoc.includes('/api/v1/' + endpoint));
-for (const file of ['protected-orders','ddpi-status','dhan-super-orders']) {
+for (const file of ['protected-orders','ddpi-status','dhan-super-orders','options-and-gtt']) {
  const text = read(root + 'api-documentation/v1/' + file + '.md');
  for (const match of text.matchAll(/```json\n([\s\S]*?)```/g)) JSON.parse(match[1]);
 }
@@ -27,3 +27,13 @@ for (const path of ['products/imc/connect-brokers/brokers/angelone', 'connect-br
  assert.ok(read(file).includes('/docs/products/imc/releases/protected-order-release'));
 }
 console.log('Protected-release routes, JSON examples, broker list, archive, redirect and sitemap checks passed.');
+
+const ddpiDoc = read(root + "api-documentation/v1/ddpi-status.md");
+assert.ok(ddpiDoc.includes("POST `/api/v1/ddpistatus`"));
+for (const text of [ddpiDoc, protectedDoc]) {
+ assert.ok(!/\/api\/v1\/(dhan|upstox|zerodha|fyers|\{broker\})\/ddpistatus/.test(text));
+ assert.ok(!/ddpistatus\(["']/.test(text));
+}
+
+const gttDoc = read(root + "api-documentation/v1/options-and-gtt.md");
+for (const broker of ["Dhan", "Upstox", "Zerodha", "FYERS"]) assert.ok(gttDoc.includes("### " + broker));
