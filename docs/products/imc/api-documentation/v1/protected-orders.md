@@ -1,8 +1,8 @@
-# Protected orders — upcoming SDK 1.2.0 release
+# Protected orders â€” upcoming SDK 1.2.0 release
 
-This feature targets IMC commit `364acaf` on `codex/broker-gtt-endpoints`. It is not a published package or deployed-server announcement. Version **1.1.5** is the committed package-migration baseline; **1.2.0** adds these APIs. Distribution: `layr0-IMC`; import: `layr0_imc`. Until publication, install the SDK feature checkout with `pip install .`.
+This feature is verified against IMC commit `a995f3e` (contract v2 originated at `364acaf`) on `codex/broker-gtt-endpoints`. It is not a published package or deployed-server announcement. Version **1.1.5** is the committed package-migration baseline; **1.2.0** adds these APIs. Distribution: `layr0-IMC`; import: `layr0_imc`. Until publication, install the SDK feature checkout with `pip install .`.
 
-Production brokers for this release: **Dhan, Upstox, Zerodha, FYERS**. Angel One is production-disabled, including existing API bindings; manage existing Angel positions directly with Angel One. Development adapters are not production registration options.
+Production brokers for this release: **Dhan, Upstox, Zerodha, FYERS**. Angel One is blocked in development and production, including existing API bindings; manage existing Angel positions directly with Angel One. Development adapters are not production registration options.
 
 ## Client and mode context
 
@@ -41,7 +41,7 @@ For BUY, stop < LIMIT entry < target; SELL reverses that ordering. SELL exit lim
 
 A protected ID or HTTP acknowledgement is not a fill. The response can be pending, partial, protected, unprotected or uncertain. Placement waits for a bounded server poll (default 20 seconds, configured maximum 120), plus broker/network overhead. SDK protected placement defaults to 180 seconds; `protected_timeout` on the client or placement overrides it without changing the ordinary 120-second timeout. No retry, price worker or automatic closing trade is added.
 
-Structured non-2xx responses retain original entry/protection IDs and state, with SDK `code`/`error_type` added only when absent. Transport/invalid-JSON failures on new mutations return `status="unknown"`, the original `request_id` and `submission_state="unknown"`. Reconcile by the original ID; do not infer rejection or submit a replacement entry. Successful placement responses are immutable server snapshots, not current order state.
+Structured non-2xx responses retain original entry/protection IDs and state, with SDK `code`/`error_type` added only when absent. Transport/invalid-JSON failures on new mutations return `status="unknown"`, the original `request_id` and `submission_state="unknown"`. Reconcile by the original ID; do not infer rejection or submit a replacement entry. Successful and failed placement responses are immutable server snapshots, not current order state.
 
 ## Reconciliation and lifecycle
 
@@ -111,3 +111,12 @@ For Dhan add `"order_system": "SUPER"` and optional `"trailing_jump": 0`. Book u
 ## Playground request templates
 
 Playground lists one action per HTTP method and endpoint, with neutral GTT and protected-entry bodies. Populate common fields and copy the additional broker-required fields from this page or [Dhan Super Orders](dhan-super-orders.md). The key chooses the adapter, but does not make incompatible payloads interchangeable. Broker-specific examples belong in this documentation, not separate Playground menu entries.
+
+## Failed placement replay and current verification
+
+Verified against IMC `a995f3e`; protected book contract v2 originated at `364acaf`.
+Development and production both allow only Dhan, Upstox, Zerodha and FYERS. Angel One adapters and historical records are retained, but runtime access is blocked.
+
+Placement results are immutable for both success and failure. For example, replaying `zerodha-tcs-protected-001` after a Zerodha authentication repair returns its original saved identity-verification failure; it does not perform a fresh profile check or submit an entry. The corrected combined `api_key:access_token` authentication is internal to IMC. Clients send their IMC key, never a broker token.
+
+Use centralized `POST /api/v1/ddpistatus` with only `{"apikey":"YOUR_IMC_API_KEY"}` to check current account/authorization evidence. Reconcile the original operation through protected book v2 and check broker state before intentionally creating a new placement with a new ID. A successful DDPI check alone does not establish that an earlier order has no exposure. Gateway 502, malformed responses and timeouts leave outcomes uncertain; never automatically replace a request ID, resubmit, recover or fall back to ordinary placement. Book reads remain non-billable; DDPI and explicit lifecycle actions retain their server usage policies.

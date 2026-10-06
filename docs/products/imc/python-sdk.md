@@ -72,6 +72,6 @@ The client constructor has no `auto_reconnect` parameter; automatic reconnect is
 
 ## Upcoming protected-order release
 
-SDK baseline 1.1.5; protected APIs in SDK 1.2.0, targeting IMC `364acaf`. Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is production-disabled. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.
 
 See [protected API method signatures and examples](api-documentation/v1/protected-orders.md), [DDPI status](api-documentation/v1/ddpi-status.md), and [Dhan Super Orders](api-documentation/v1/dhan-super-orders.md).

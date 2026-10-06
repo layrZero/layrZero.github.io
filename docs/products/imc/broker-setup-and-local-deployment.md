@@ -22,4 +22,12 @@ Connect a broker account to the hosted Router-IMC product and prepare it for lic
 
 ## Upcoming protected-order release
 
-SDK baseline 1.1.5; protected APIs in SDK 1.2.0, targeting IMC `364acaf`. Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is production-disabled. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.
+
+## Development release roster
+
+Development Compose and `toggle_config.py --dev` use `VALID_BROKERS=dhan,upstox,zerodha,fyers`. Backend policy enforces the same roster in development and production, including existing bindings. Recreate affected development containers after environment/Compose changes; changing a source checkout alone is not proof of the running configuration. Preserve credentials and manage existing Angel positions directly with Angel One.
+
+## Development release roster
+
+Development Compose and `toggle_config.py --dev` use `VALID_BROKERS=dhan,upstox,zerodha,fyers`. Backend policy enforces the same roster in development and production, including existing bindings. Recreate affected development containers after environment/Compose changes; changing a source checkout alone is not proof of the running configuration. Preserve credentials and manage existing Angel positions directly with Angel One.

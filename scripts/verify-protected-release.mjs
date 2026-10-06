@@ -37,3 +37,7 @@ for (const text of [ddpiDoc, protectedDoc]) {
 
 const gttDoc = read(root + "api-documentation/v1/options-and-gtt.md");
 for (const broker of ["Dhan", "Upstox", "Zerodha", "FYERS"]) assert.ok(gttDoc.includes("### " + broker));
+
+assert.ok(protectedDoc.includes('a995f3e'));
+assert.ok(protectedDoc.includes('Successful and failed placement responses are immutable'));
+assert.ok(read(root + 'broker-setup-and-local-deployment.md').includes('toggle_config.py --dev'));

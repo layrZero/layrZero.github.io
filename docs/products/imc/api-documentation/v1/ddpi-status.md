@@ -1,6 +1,6 @@
 # DDPI and unattended delivery authorization
 
-Upcoming release targeting IMC `364acaf`; not an announcement of production deployment.
+Upcoming release verified against IMC `a995f3e` (contract v2 originated at `364acaf`); not an announcement of production deployment.
 
 POST `/api/v1/ddpistatus` is the only public DDPI route. The supplied IMC API key determines the broker and Live/Analyze mode. No broker argument, URL segment or request field is required. Playground shows one **DDPI Status** action.
 
