@@ -44,3 +44,10 @@ This section contains the product documentation for Layr0 India Market Connector
 
 * [Symbol Format](symbol-format.md)
 * [Strategy Management](strategy-management.md)
+
+## Upcoming protected-order release
+
+* [Release and broker decommissioning](releases/protected-order-release.md)
+* [Protected orders](api-documentation/v1/protected-orders.md)
+* [DDPI status](api-documentation/v1/ddpi-status.md)
+* [Dhan Super Orders](api-documentation/v1/dhan-super-orders.md)

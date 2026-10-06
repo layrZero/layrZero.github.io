@@ -44,7 +44,7 @@ Layr0 IMC maintains a **Common Symbol Format**, so a strategy written using one 
 #### Broker-Agnostic API Layer
 
 The public REST APIs use one Layr0 contract across the four production brokers:
-Angel One, Fyers, Upstox, and Zerodha. Broker-specific capabilities and symbol
+Dhan, Upstox, Zerodha and FYERS. Broker-specific capabilities and symbol
 rules still apply.
 
 

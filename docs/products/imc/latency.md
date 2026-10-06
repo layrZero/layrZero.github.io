@@ -121,7 +121,7 @@ The Mumbai server, being closer to the exchange, has significantly lower latency
 
 This includes:
 
-&#x31;**. Broker Latency**: Typically 30-80ms for AngelOne.
+&#x31;**. Broker Latency**: Typically broker-dependent; verify with the connected production broker.
 
 &#x32;**. Network Delay**: Approximately 50-70ms due to the distance from Bangalore to Mumbai.
 

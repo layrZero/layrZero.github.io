@@ -36,3 +36,7 @@ Errors preserve IMC-specific fields:
 ```
 
 Clients should not discard fields they do not immediately use. Mode metadata and `error_code` values are part of the public contract.
+
+## Upcoming protected-order release
+
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](../../releases/protected-order-release.md). These feature branches are not yet published or deployed.

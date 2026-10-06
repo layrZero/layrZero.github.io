@@ -1,3 +1,7 @@
+# Archived: Angel One production setup
+
+Production access is disabled in the protected-order release; manage existing positions directly with Angel One. The following historical instructions are not current production guidance.
+
 # Angel One
 
 Angel One is one of the four brokers enabled for Router-IMC production

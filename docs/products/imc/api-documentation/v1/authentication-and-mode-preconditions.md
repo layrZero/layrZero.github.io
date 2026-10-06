@@ -52,3 +52,9 @@ Example:
 Trading/write endpoints acquire protected mode leases before broker or analyzer side effects.
 
 `positionsopen` is different: it is a read-only reconciliation endpoint. It validates API key identity and mode preconditions, but it does not create an `ApiKeyModeLease`.
+
+## Protected-order release
+
+Protected placement, book, modification, cancellation and recovery require all mode fields above. For placement, request_id is a durable business idempotency key: retain its original payload after ambiguous outcomes. The server separately generates one-use mode-lease IDs. Protected book is non-billable but still mode-checked; DDPI routes require only apikey and retain their usage policy. See [protected contracts](protected-orders.md).
+
+Zero exposure alone is not confirmation of a closing fill or realized P&L.

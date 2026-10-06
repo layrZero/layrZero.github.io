@@ -41,3 +41,9 @@ GIT_USER=<Your GitHub username> yarn deploy
 ```
 
 If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+## Upcoming protected-order release
+
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](docs/products/imc/releases/protected-order-release.md). These feature branches are not yet published or deployed.
+
+Upcoming IMC DDPI uses only `/api/v1/ddpistatus`; the IMC key selects broker and mode. Playground exposes one action per endpoint; broker payload examples are maintained in the [GTT documentation](docs/products/imc/api-documentation/v1/options-and-gtt.md).

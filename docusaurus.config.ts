@@ -39,14 +39,16 @@ const config: Config = {
       '@docusaurus/plugin-client-redirects',
       {
         redirects: [
+          {from: ['/docs/connect-brokers/dhan', '/docs/connect-brokers/brokers/dhan'], to: '/docs/products/imc/connect-brokers/brokers/dhan'},
           {
             from: [
+              '/docs/products/imc/connect-brokers/brokers/angelone',
               '/docs/connect-brokers/angel',
               '/docs/connect-brokers/brokers/angel',
               '/docs/connect-brokers/angelone',
               '/docs/connect-brokers/brokers/angelone',
             ],
-            to: '/docs/products/imc/connect-brokers/brokers/angelone',
+            to: '/docs/products/imc/releases/protected-order-release',
           },
           {
             from: [

@@ -7,7 +7,7 @@ currently connected production broker.
 
 1. Activate Router-IMC in Layr0 Console and sign in at
    `https://imc.layr0.org`.
-2. Connect Angel One, Fyers, Upstox, or Zerodha and generate an IMC API key.
+2. Connect Dhan, Upstox, Zerodha or FYERS and generate an IMC API key.
 3. Open the TradingView integration in IMC and generate the webhook URL and
    JSON payload for the required symbol, exchange, quantity, product, and
    action.
