@@ -5,3 +5,7 @@ The IMC API Collections are a comprehensive set of tools designed to streamline 
 [Postman Collections](https://github.com/layr0/IMC/blob/main/collections/IMC_postman.json)
 
 [Bruno Collections](https://github.com/layr0/IMC/blob/main/collections/IMC_bruno.json)
+
+## Executable collections
+
+Bruno collections must not contain documentation blocks. Explanations belong in dedicated Markdown documentation; JSON bodies contain only valid API request fields. Invalid collection bodies and prohibited fields are rejected. See [request JSON validation](request-json-validation.md).

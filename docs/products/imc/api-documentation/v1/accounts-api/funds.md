@@ -1,5 +1,8 @@
 # Funds
 
+## POST `/api/v1/funds`
+
+
 ## Endpoint URL
 
 This API Function Fetches Funds and Margin Details of the Connected Trading Account

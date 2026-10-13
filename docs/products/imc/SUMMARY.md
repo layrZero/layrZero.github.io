@@ -12,7 +12,7 @@ This section contains the product documentation for Layr0 India Market Connector
 
 * [IMC API v1](api-documentation/v1/)
   * [Authentication And Mode Preconditions](api-documentation/v1/authentication-and-mode-preconditions.md)
-  * [Order Lifecycle And Reconciliation](api-documentation/v1/order-lifecycle-and-reconciliation.md)
+  * [Order Lifecycle And Reconciliation](./api-documentation/v1/orders-api/order-lifecycle-and-reconciliation.md)
   * [Accounts API](api-documentation/v1/accounts-api/)
     * [Funds](api-documentation/v1/accounts-api/funds.md)
     * [Orderbook](api-documentation/v1/accounts-api/orderbook.md)
@@ -32,10 +32,10 @@ This section contains the product documentation for Layr0 India Market Connector
     * [ClosePosition](api-documentation/v1/orders-api/closeposition.md)
     * [PositionsOpen](api-documentation/v1/orders-api/positionsopen.md)
     * [OrderStatus](api-documentation/v1/orders-api/orderstatus.md)
-  * [Market Data](api-documentation/v1/market-data.md)
-  * [Options And GTT](api-documentation/v1/options-and-gtt.md)
+  * [Market Data](./api-documentation/v1/data-api/market-data.md)
+  * [Options And GTT](./api-documentation/v1/orders-api/options-and-gtt.md)
   * [WebSockets](api-documentation/v1/websockets.md)
-  * [Order Constants](api-documentation/v1/order-constants.md)
+  * [Order Constants](./api-documentation/v1/orders-api/order-constants.md)
   * [HTTP Status Codes](api-documentation/v1/http-status-codes.md)
   * [Rate Limiting](api-documentation/v1/rate-limiting.md)
   * [API Collections](api-documentation/v1/api-collections.md)
@@ -45,9 +45,9 @@ This section contains the product documentation for Layr0 India Market Connector
 * [Symbol Format](symbol-format.md)
 * [Strategy Management](strategy-management.md)
 
-## Upcoming protected-order release
+## Protected-order availability and SDK compatibility
 
 * [Release and broker decommissioning](releases/protected-order-release.md)
-* [Protected orders](api-documentation/v1/protected-orders.md)
-* [DDPI status](api-documentation/v1/ddpi-status.md)
-* [Dhan Super Orders](api-documentation/v1/dhan-super-orders.md)
+* [Protected orders](./api-documentation/v1/orders-api/protected-orders.md)
+* [DDPI status](./api-documentation/v1/accounts-api/ddpi-status.md)
+* [Dhan Super Orders](./api-documentation/v1/orders-api/dhan-super-orders.md)

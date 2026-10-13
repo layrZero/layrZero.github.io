@@ -1,5 +1,8 @@
 # PlaceSmartOrder
 
+## POST `/api/v1/placesmartorder`
+
+
 Place Order Smartly by analyzing the current open position. It matches the Position Size with the given position book. Buy/Sell Signal Orders will be traded accordingly to the Position Size
 
 
@@ -14,18 +17,22 @@ Hosted URL   :  POST https://imc.layr0.org/api/v1/placesmartorder
 
 ```json
 {
-    "apikey": "<your_app_apikey>",
-    "strategy": "Test Strategy",
-    "exchange": "NSE",
-    "symbol": "IDEA",
-    "action": "BUY",
-    "product": "MIS",
-    "pricetype": "MARKET",
-    "quantity": "1",
-    "position_size": "5",
-    "price": "0",
-    "trigger_price": "0",
-    "disclosed_quantity": "0"
+  "apikey": "<your_app_apikey>",
+  "strategy": "Test Strategy",
+  "exchange": "NSE",
+  "symbol": "IDEA",
+  "action": "BUY",
+  "product": "MIS",
+  "pricetype": "MARKET",
+  "quantity": "1",
+  "position_size": "5",
+  "price": "0",
+  "trigger_price": "0",
+  "disclosed_quantity": "0",
+  "expected_mode": "analyze",
+  "expected_balance_type": "sandbox",
+  "expected_mode_version": 7,
+  "request_id": "saved-example-001"
 }
 ```
 
@@ -76,3 +83,16 @@ PlaceSmartOrder API function, which allows traders to build intelligent trading 
 | SELL   | 100       | -200           | -100             | SELL 100 to match Open Pos in API Param |
 
 \
+
+## Required mode metadata
+
+Copy the current mode, balance type and version from Funds or Analyzer; the values above are illustrative. A fresh request ID identifies each ordinary operation.
+
+| Field | Required | Meaning |
+| --- | --- | --- |
+| expected_mode | Yes | Current `live` or `analyze` state |
+| expected_balance_type | Yes | Current `live` or `sandbox` balance |
+| expected_mode_version | Yes | Current API-key mode version |
+| request_id | Yes | Caller-generated operation identifier |
+
+Documentation metadata is prohibited in executable requests. See [request validation](../request-json-validation.md).

@@ -1,8 +1,8 @@
-# Protected orders â€” upcoming SDK 1.2.0 release
+# Protected orders
 
-This feature is verified against IMC commit `a995f3e` (contract v2 originated at `364acaf`) on `codex/broker-gtt-endpoints`. It is not a published package or deployed-server announcement. Version **1.1.5** is the committed package-migration baseline; **1.2.0** adds these APIs. Distribution: `layr0-IMC`; import: `layr0_imc`. Until publication, install the SDK feature checkout with `pip install .`.
+The protected-order API is available in IMC and uses contract v2. This guide is verified against IMC commit `a995f3e` (contract v2 originated at `364acaf`). Python SDK **1.2.0** includes the corresponding client methods; **1.1.5** is the earlier package-migration baseline. Distribution: `layr0-IMC`; import: `layr0_imc`.
 
-Production brokers for this release: **Dhan, Upstox, Zerodha, FYERS**. Angel One is blocked in development and production, including existing API bindings; manage existing Angel positions directly with Angel One. Development adapters are not production registration options.
+Current production broker registration: **Dhan, Upstox, Zerodha, FYERS**. Angel One is blocked in development and production, including existing API bindings; manage existing Angel positions directly with Angel One. Development adapters are not production registration options.
 
 ## Client and mode context
 
@@ -110,7 +110,7 @@ For Dhan add `"order_system": "SUPER"` and optional `"trailing_jump": 0`. Book u
 
 ## Playground request templates
 
-Playground lists one action per HTTP method and endpoint, with neutral GTT and protected-entry bodies. Populate common fields and copy the additional broker-required fields from this page or [Dhan Super Orders](dhan-super-orders.md). The key chooses the adapter, but does not make incompatible payloads interchangeable. Broker-specific examples belong in this documentation, not separate Playground menu entries.
+Playground lists one action per HTTP method and endpoint, with neutral GTT and protected-entry bodies. Populate common fields and copy the additional broker-required fields from this page or [Dhan Super Orders](./dhan-super-orders.md). The key chooses the adapter, but does not make incompatible payloads interchangeable. Broker-specific examples belong in this documentation, not separate Playground menu entries.
 
 ## Failed placement replay and current verification
 
@@ -120,3 +120,15 @@ Development and production both allow only Dhan, Upstox, Zerodha and FYERS. Ange
 Placement results are immutable for both success and failure. For example, replaying `zerodha-tcs-protected-001` after a Zerodha authentication repair returns its original saved identity-verification failure; it does not perform a fresh profile check or submit an entry. The corrected combined `api_key:access_token` authentication is internal to IMC. Clients send their IMC key, never a broker token.
 
 Use centralized `POST /api/v1/ddpistatus` with only `{"apikey":"YOUR_IMC_API_KEY"}` to check current account/authorization evidence. Reconcile the original operation through protected book v2 and check broker state before intentionally creating a new placement with a new ID. A successful DDPI check alone does not establish that an earlier order has no exposure. Gateway 502, malformed responses and timeouts leave outcomes uncertain; never automatically replace a request ID, resubmit, recover or fall back to ordinary placement. Book reads remain non-billable; DDPI and explicit lifecycle actions retain their server usage policies.
+
+## Protected book collection explanation
+
+ProtectedOrderBook is a non-billable reconciliation read. Authentication, license validity, mode/version preconditions and rate limits still apply. Require response `contract_version: 2` before enabling app migration. Read `verification.entry` and `verification.exits` for cumulative fills and actual average prices. Missing or unverified evidence must never be treated as a completed exit. Explanations are maintained in Markdown rather than executable collection blocks.
+
+## Independent API pages
+
+- [Place protected order](./placeprotectedorder.md)
+- [Modify protected order](./modifyprotectedorder.md)
+- [Cancel protected order](./cancelprotectedorder.md)
+- [Protected order book](./protectedorderbook.md)
+- [Recover protected order](./recoverprotectedorder.md)

@@ -1,5 +1,8 @@
 # Expiry
 
+## POST `/api/v1/expiry`
+
+
 The Expiry API allows you to retrieve expiry dates for F\&O (Futures and Options) instruments for a given underlying symbol. This API helps you get all available expiry dates for futures or options contracts of a specific underlying asset.
 
 ### Endpoint

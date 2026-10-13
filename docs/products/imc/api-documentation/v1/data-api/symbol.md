@@ -1,5 +1,8 @@
 # Symbol
 
+## POST `/api/v1/symbol`
+
+
 ## Endpoint URL
 
 This API Function fetches Quotes from the Broker

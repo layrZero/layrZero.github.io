@@ -1,5 +1,8 @@
 # Search
 
+## POST `/api/v1/search`
+
+
 ## Symbol Search API
 
 The Symbol Search API allows you to search for trading symbols across different exchanges. This API is useful for finding specific instruments, including stocks, futures, and options contracts.

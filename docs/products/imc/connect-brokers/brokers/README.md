@@ -4,7 +4,7 @@ slug: /products/imc/connect-brokers/brokers
 
 # Production Brokers
 
-For the upcoming protected-order release, Router-IMC production registration is restricted by `VALID_BROKERS` to the
+Router-IMC production registration is restricted by `VALID_BROKERS` to the
 four brokers below. Installed development adapters are not public production
 support and are intentionally excluded from this site.
 

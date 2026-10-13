@@ -1,5 +1,8 @@
 # SplitOrder
 
+## POST `/api/v1/splitorder`
+
+
 ## Endpoint URL
 
 This API Function Place Split Orders to the Broker
@@ -14,15 +17,19 @@ Hosted URL   :  POST https://imc.layr0.org/api/v1/splitorder
 
 ```json
 {
-    "apikey": "<your_app_apikey>",
-    "strategy": "Test Strategy",
-    "exchange": "NSE",
-    "symbol": "YESBANK",
-    "action": "SELL",
-    "quantity": "105",
-    "splitsize": "20",
-    "pricetype": "MARKET",
-    "product": "MIS"
+  "apikey": "<your_app_apikey>",
+  "strategy": "Test Strategy",
+  "exchange": "NSE",
+  "symbol": "YESBANK",
+  "action": "SELL",
+  "quantity": "105",
+  "splitsize": "20",
+  "pricetype": "MARKET",
+  "product": "MIS",
+  "expected_mode": "analyze",
+  "expected_balance_type": "sandbox",
+  "expected_mode_version": 7,
+  "request_id": "saved-example-001"
 }
 ```
 
@@ -95,3 +102,16 @@ Hosted URL   :  POST https://imc.layr0.org/api/v1/splitorder
 | price               | Price              | Optional           | 0             |
 | trigger\_price      | Trigger price      | Optional           | 0             |
 | disclosed\_quantity | Disclosed quantity | Optional           | 0             |
+
+## Required mode metadata
+
+Copy the current mode, balance type and version from Funds or Analyzer; the values above are illustrative. A fresh request ID identifies each ordinary operation.
+
+| Field | Required | Meaning |
+| --- | --- | --- |
+| expected_mode | Yes | Current `live` or `analyze` state |
+| expected_balance_type | Yes | Current `live` or `sandbox` balance |
+| expected_mode_version | Yes | Current API-key mode version |
+| request_id | Yes | Caller-generated operation identifier |
+
+Documentation metadata is prohibited in executable requests. See [request validation](../request-json-validation.md).

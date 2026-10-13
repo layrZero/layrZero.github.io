@@ -1,5 +1,8 @@
 # Ticker
 
+## GET `/api/v1/ticker/<string:symbol>`
+
+
 ## Endpoint URL
 
 The  Ticker  API provides historical price data for stocks in customizable time windows. It allows you to fetch OHLCV (Open, High, Low, Close, Volume) data for any stock with flexible interval options.

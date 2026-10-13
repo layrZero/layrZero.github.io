@@ -1,5 +1,8 @@
 # Quotes
 
+## POST `/api/v1/quotes`
+
+
 ## Endpoint URL
 
 This API Function fetches Quotes from the Broker

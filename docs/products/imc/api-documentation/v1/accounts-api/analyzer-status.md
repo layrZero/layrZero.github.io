@@ -1,5 +1,8 @@
 # Analyzer Status
 
+## POST `/api/v1/analyzer`
+
+
 ## Endpoint URL
 
 This API Function fetches the stock holdings details from the broker

@@ -1,6 +1,9 @@
 # DDPI and unattended delivery authorization
 
-Upcoming release verified against IMC `a995f3e` (contract v2 originated at `364acaf`); not an announcement of production deployment.
+## POST `/api/v1/ddpistatus`
+
+
+The DDPI status API is available in IMC. Its contract is documented from the current source implementation.
 
 POST `/api/v1/ddpistatus` is the only public DDPI route. The supplied IMC API key determines the broker and Live/Analyze mode. No broker argument, URL segment or request field is required. Playground shows one **DDPI Status** action.
 
@@ -25,4 +28,4 @@ The `data` response contains broker, account ID, `ddpi_status`, `poa_status`, `u
 
 A failed Live check returns 502 with unknown evidence. Analyze returns unknown with `analyze_no_broker_call` evidence and makes no broker calls. Login and transaction EDIS are not DDPI activation. Protected CNC/MTF placement obtains a fresh authorization check; an earlier SDK result is not permission to bypass that check. Authorization does not prove holdings availability, settlement, funds or guaranteed fills.
 
-See [protected orders](protected-orders.md) for lifecycle and reconciliation.
+See [protected orders](../orders-api/protected-orders.md) for lifecycle and reconciliation.

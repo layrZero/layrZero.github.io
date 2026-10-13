@@ -1,5 +1,8 @@
 # ClosePosition
 
+## POST `/api/v1/closeposition`
+
+
 `POST /api/v1/closeposition` closes broker-side exposure for a submitted strategy.
 
 After a successful close request, callers should verify exposure with `POST /api/v1/positionsopen`. A `positionsopen` response with `quantity = 0` is zero-exposure proof. A `closeposition` response with `NO_STRATEGY_EXPOSURE` is also zero-exposure proof.

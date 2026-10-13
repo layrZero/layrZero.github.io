@@ -29,3 +29,15 @@ Use the IMC WebSocket proxy for streaming:
 - mode `3`: depth
 
 The Python SDK can reconnect and replay active subscriptions after transient WebSocket disconnects.
+
+## Independent API pages
+
+- [Chart preferences](../chart.md)
+- [Instruments](./instruments.md)
+- [Multiple quotes](./multiquotes.md)
+- [Market holidays](./market-holidays.md)
+- [Market timings](./market-timings.md)
+- [Option chain](./optionchain.md)
+- [Option Greeks](./optiongreeks.md)
+- [Option symbol](./optionsymbol.md)
+- [Synthetic future](../accounts-api/syntheticfuture.md)

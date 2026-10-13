@@ -1,5 +1,8 @@
 # History
 
+## POST `/api/v1/history`
+
+
 ## Endpoint URL
 
 This API Function to fetch historical data from the Broker

@@ -2,7 +2,7 @@
 
 Options helpers retain their current contracts. All four GTT routes—placegttorder, modifygttorder, cancelgttorder, gttorderbook—require apikey plus mode/version/request fields, including the book read.
 
-Upcoming production scope: Dhan, Upstox, Zerodha and FYERS. Dhan requires explicit [Super entry intent](dhan-super-orders.md). Zerodha/FYERS support SINGLE/OCO. Upstox SINGLE uses the legacy contract; protective-only OCO returns 501. Use [protected entry](protected-orders.md) for Upstox MULTIPLE with ENTRY/TARGET/STOPLOSS. Angel One is blocked in development and production.
+Production registration supports Dhan, Upstox, Zerodha and FYERS. Dhan requires explicit [Super entry intent](./dhan-super-orders.md). Zerodha/FYERS support SINGLE/OCO. Upstox SINGLE uses the legacy contract; protective-only OCO returns 501. Use [protected entry](./protected-orders.md) for Upstox MULTIPLE with ENTRY/TARGET/STOPLOSS. Angel One is blocked in development and production.
 
 Existing non-Dhan legacy GTT and ordinary order responses are preserved. New protected routes provide isolated entry/OCO lifecycle and contract-v2 fill evidence. Analyze is persistent CRUD only, without simulated price events or fills. Broker authentication is needed for later lifecycle queries. OCO trigger cancellation is not a guaranteed execution fill.
 
@@ -10,7 +10,7 @@ Options endpoints: optionchain, optiongreeks, optionsymbol, optionsorder, option
 
 ## Centralized routes and broker request examples
 
-Playground shows one action per endpoint with a neutral body. Use the examples below in that action; the supplied key selects the broker. There is no broker URL segment. All examples are upcoming-release contracts, not live orders. Replace mode version and identifiers with current values.
+Playground shows one action per endpoint with a neutral body. Use the examples below in that action; the supplied key selects the broker. There is no broker URL segment. The examples show request contracts and do not submit orders. Replace mode version and identifiers with current values.
 
 ### Zerodha
 
@@ -94,11 +94,11 @@ POST `/api/v1/placegttorder` with a Upstox-bound key:
 }
 ```
 
-SINGLE uses one trigger. Protective-only OCO is unsupported; use [protected entry](protected-orders.md) for the native ENTRY/TARGET/STOPLOSS workflow.
+SINGLE uses one trigger. Protective-only OCO is unsupported; use [protected entry](./protected-orders.md) for the native ENTRY/TARGET/STOPLOSS workflow.
 
 ### Dhan
 
-Use the centralized routes with explicit Super intent and entry details. See [Dhan Super placement, modification and cancellation examples](dhan-super-orders.md). New Forever placements are unavailable.
+Use the centralized routes with explicit Super intent and entry details. See [Dhan Super placement, modification and cancellation examples](./dhan-super-orders.md). New Forever placements are unavailable.
 
 ### Lifecycle requests
 
@@ -129,3 +129,15 @@ POST `/api/v1/gttorderbook` for any supported broker:
   "request_id": "saved-book-001"
 }
 ```
+
+## Independent API pages
+
+- [Option chain](../data-api/optionchain.md)
+- [Option Greeks](../data-api/optiongreeks.md)
+- [Option symbol](../data-api/optionsymbol.md)
+- [Options order](./optionsorder.md)
+- [Options multi-order](./optionsmultiorder.md)
+- [Place GTT order](./placegttorder.md)
+- [Modify GTT order](./modifygttorder.md)
+- [Cancel GTT order](./cancelgttorder.md)
+- [GTT order book](./gttorderbook.md)

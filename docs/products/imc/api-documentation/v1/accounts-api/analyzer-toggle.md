@@ -1,5 +1,8 @@
 # Analyzer Toggle
 
+## POST `/api/v1/analyzer/toggle`
+
+
 ## Endpoint URL
 
 This API Function fetches the stock holdings details from the broker

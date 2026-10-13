@@ -1,5 +1,8 @@
 # PositionsOpen
 
+## POST `/api/v1/positionsopen`
+
+
 `POST /api/v1/positionsopen` is the read-only reconciliation endpoint for strategy exposure.
 
 It is used after `closeposition` and during lifecycle checks to confirm whether a strategy still has broker-side exposure for a symbol/product. It does not place an order, does not close a position, and does not create a protected mode lease.

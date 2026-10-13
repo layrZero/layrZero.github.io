@@ -20,9 +20,9 @@ Connect a broker account to the hosted Router-IMC product and prepare it for lic
 - Confirm the active broker and mode before running automated strategies.
 - Keep the WebSocket proxy reachable if your strategy needs streaming data.
 
-## Upcoming protected-order release
+## Protected-order availability and SDK compatibility
 
-SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). The protected-order APIs are available in IMC. SDK 1.2.0 is the compatibility version that includes the corresponding Python client methods; SDK 1.1.5 is the prior package baseline.
 
 ## Development release roster
 

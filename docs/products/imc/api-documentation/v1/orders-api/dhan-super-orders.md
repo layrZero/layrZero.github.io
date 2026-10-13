@@ -1,6 +1,6 @@
 # Dhan Super Orders through IMC
 
-Upcoming production release: Dhan replaces Angel One. IMC uses Dhan Super Orders for new composite entries; new Forever placements are disabled.
+IMC production registration supports Dhan in place of Angel One. Dhan Super Orders are used for new composite entries; new Forever placements are disabled.
 
 Use a Dhan-bound IMC API key. The SDK helpers `placesuperorder`, `modifysuperorder`, `cancelsuperorder` send explicit `order_system: SUPER` to the centralized `/api/v1/placegttorder`, `/api/v1/modifygttorder`, `/api/v1/cancelgttorder` routes. The Super parent ID is returned as `trigger_id`.
 
@@ -28,7 +28,7 @@ Cancel sends apikey, strategy, trigger_id, order_system SUPER, all mode fields, 
 
 Existing Forever records retain explicit `order_system: FOREVER` for legacy modify/cancel requests. Never use Super helpers for their IDs. The legacy GTT book checks both systems; protected book v2 provides execution evidence for protected operations. A day-scoped Dhan book or reused parent/exit IDs can leave overnight or exit state unknown; do not infer cancellation or invent a fill. Such uncertainty can block mode switching.
 
-See [protected-order Python examples](protected-orders.md) and [DDPI evidence](ddpi-status.md).
+See [protected-order Python examples](./protected-orders.md) and [DDPI evidence](../accounts-api/ddpi-status.md).
 
 ### Modify target request
 
@@ -73,3 +73,15 @@ See [protected-order Python examples](protected-orders.md) and [DDPI evidence](d
   "cancel_scope": "EXITS"
 }
 ```
+
+## Independent API pages
+
+- [Place GTT order](./placegttorder.md)
+- [Modify GTT order](./modifygttorder.md)
+- [Cancel GTT order](./cancelgttorder.md)
+- [GTT order book](./gttorderbook.md)
+- [Place protected order](./placeprotectedorder.md)
+- [Protected order book](./protectedorderbook.md)
+- [Modify protected order](./modifyprotectedorder.md)
+- [Cancel protected order](./cancelprotectedorder.md)
+- [Recover protected order](./recoverprotectedorder.md)

@@ -1,5 +1,8 @@
 # Holdings
 
+## POST `/api/v1/holdings`
+
+
 ## Endpoint URL
 
 This API Function fetches the stock holdings details from the broker

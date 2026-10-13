@@ -70,8 +70,8 @@ connected = client.connect()
 
 The client constructor has no `auto_reconnect` parameter; automatic reconnect is not introduced by this release.
 
-## Upcoming protected-order release
+## Protected-order availability and SDK compatibility
 
-SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). The protected-order APIs are available in IMC. SDK 1.2.0 is the compatibility version that includes the corresponding Python client methods; SDK 1.1.5 is the prior package baseline.
 
-See [protected API method signatures and examples](api-documentation/v1/protected-orders.md), [DDPI status](api-documentation/v1/ddpi-status.md), and [Dhan Super Orders](api-documentation/v1/dhan-super-orders.md).
+See [protected API method signatures and examples](./api-documentation/v1/orders-api/protected-orders.md), [DDPI status](./api-documentation/v1/accounts-api/ddpi-status.md), and [Dhan Super Orders](./api-documentation/v1/orders-api/dhan-super-orders.md).

@@ -24,4 +24,4 @@ Because it is read-only, it is mode-checked but does not create a protected oper
 
 ## Protected entries
 
-For this release, use [protected-order lifecycle](protected-orders.md) to place broker-managed TP/SL with entry. Protected book v2 supplies actual cumulative fill evidence; no exposure alone must not release margin or invent a fill/P&L. Strategy closes verify linked protection cancellation before closing; generated working/uncertain exits block unsafe closes. Protection failure does not automatically liquidate the entry.
+Use [protected-order lifecycle](./protected-orders.md) to place broker-managed TP/SL with entry. Protected book v2 supplies actual cumulative fill evidence; no exposure alone must not release margin or invent a fill/P&L. Strategy closes verify linked protection cancellation before closing; generated working/uncertain exits block unsafe closes. Protection failure does not automatically liquidate the entry.

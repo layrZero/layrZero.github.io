@@ -1,5 +1,8 @@
 # Intervals
 
+## POST `/api/v1/intervals`
+
+
 ## Endpoint URL
 
 This API Function responds with supported broker timeframe interval for fetching historical data

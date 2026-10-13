@@ -27,10 +27,10 @@ The production broker contract is `VALID_BROKERS=angel,upstox,zerodha,fyers`. Ar
 | `docs/products/imc/api-documentation/v1/data-api/symbol.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/data-api/symbol.md` | no redirect | pending verification |
 | `docs/products/imc/api-documentation/v1/data-api/ticker.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/data-api/ticker.md` | no redirect | pending verification |
 | `docs/products/imc/api-documentation/v1/http-status-codes.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/http-status-codes.md` | no redirect | pending verification |
-| `docs/products/imc/api-documentation/v1/market-data.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/market-data.md` | no redirect | pending verification |
-| `docs/products/imc/api-documentation/v1/options-and-gtt.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/options-and-gtt.md` | no redirect | pending verification |
-| `docs/products/imc/api-documentation/v1/order-constants.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/order-constants.md` | no redirect | pending verification |
-| `docs/products/imc/api-documentation/v1/order-lifecycle-and-reconciliation.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/order-lifecycle-and-reconciliation.md` | no redirect | pending verification |
+| `docs/products/imc/api-documentation/v1/data-api/market-data.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/data-api/market-data.md` | no redirect | pending verification |
+| `docs/products/imc/api-documentation/v1/orders-api/options-and-gtt.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/orders-api/options-and-gtt.md` | no redirect | pending verification |
+| `docs/products/imc/api-documentation/v1/orders-api/order-constants.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/orders-api/order-constants.md` | no redirect | pending verification |
+| `docs/products/imc/api-documentation/v1/orders-api/order-lifecycle-and-reconciliation.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/orders-api/order-lifecycle-and-reconciliation.md` | no redirect | pending verification |
 | `docs/products/imc/api-documentation/v1/orders-api/basketorder.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/orders-api/basketorder.md` | no redirect | pending verification |
 | `docs/products/imc/api-documentation/v1/orders-api/cancelallorder.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/orders-api/cancelallorder.md` | no redirect | pending verification |
 | `docs/products/imc/api-documentation/v1/orders-api/cancelorder.md` | retain/rewrite | IMC source, route, configuration, or test evidence required before final publication | `/products/imc/api-documentation/v1/orders-api/cancelorder.md` | no redirect | pending verification |
@@ -78,3 +78,27 @@ The production broker contract is `VALID_BROKERS=angel,upstox,zerodha,fyers`. Ar
 
 The build may be released only after every row has a named evidence reference and review status, the public sitemap contains no archived route, and the production broker index contains only Angel One, Fyers, Upstox, and Zerodha.
 
+
+## 2026-10-12 endpoint correction evidence
+
+Branch: codex/imc-endpoint-wiring-validation. IMC baseline ec9832a; docs baseline 719dde9; SDK baseline 26c508b; Android baseline 112cb6a. Corrections are uncommitted working-tree changes, not a deployed release.
+
+| Change | Evidence | Review state |
+| --- | --- | --- |
+| Eight order examples with current mode fields | IMC tests/test_documentation_examples.py loads examples through actual schemas | Verified offline |
+| All 52 method/path contracts | static/imc-endpoint-contract.json and complete-endpoint-reference.md; IMC tests/test_public_endpoint_dispatch.py | Verified offline dispatch; broker pending |
+| Recursive prohibited-field rule | request-json-validation.md; IMC request/collection policy tests and SDK transport tests | Verified offline |
+| Source broker roster / archived guides | tests/public-docs-contract.test.js | Verified offline |
+| Protected-book non-billable/fill evidence | protected-orders.md; existing IMC reconciliation tests | Verified offline |
+
+Full commands/counts and the pre-existing Home knowledge-graph snapshot mismatch are recorded in IMC docs/api/verification-results.md. Production revision, broker execution and optional internal flows remain runtime pending. No publication or deployment was performed.
+
+## Independent API page coverage — 2026-10-12
+
+Added 25 dedicated pages. All 52 public method/URL combinations now map to 51 independent pages in `static/imc-endpoint-pages.json`; GET/POST chart share a page. Existing 26 pages remain, with explicit method headings. The API index, complete reference and grouped options/GTT/protected/market-data guides link to the endpoint pages. The existing autogenerated sidebar includes them.
+
+Evidence: **7 documentation tests passed**; Docusaurus production build passed; all **51 mapped HTML pages exist** in build output. IMC documentation checks: **5 passed**, including effective registration parity and real-schema loading for 24 new method examples plus three Dhan SUPER variants plus their full SDK outgoing payloads. Broker discovery and analytics use handler-specific validation. SDK: **29 examples executed with mocked HTTP**, with two new test cases; all **28 focused SDK tests passed** in total.
+
+The strategy analytics page distinguishes Live auto/semi_auto/all and sandbox filter behavior. Confirmed Live unified pagination does not slice records; malformed numeric pagination lacks controlled client validation. These limitations are recorded in IMC `issues/2026-10-12-strategy-analytics-pagination-limitations.md`; no backend correction or production claim is made. Broker-discovery SDK wording was corrected without changing its public interface.
+
+No remaining independent-page gaps exist in the current public REST inventory. Internal session/admin/callback routes and WebSocket commands remain separate from this public REST page mapping. No documentation publication or deployment occurred.

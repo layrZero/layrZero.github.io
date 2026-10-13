@@ -18,7 +18,7 @@ Router-IMC is hosted by Layr0 as a product at `https://imc.layr0.org`. Users acc
 
 ## Production broker availability
 
-The upcoming protected-order release allows production registration only for Dhan, Upstox,
+Current production broker registration is limited to Dhan, Upstox,
 Zerodha and FYERS (`VALID_BROKERS=dhan,upstox,zerodha,fyers`). Other broker
 adapters may remain in source for isolated testing; runtime development and production both enforce this four-broker roster. Configuration may narrow access but cannot add brokers outside it.
 
@@ -84,9 +84,9 @@ Router-IMC keeps read paths and trading/write paths distinct:
 - [Broker Setup](/docs/products/imc/broker-setup-and-local-deployment)
 - [IMC API v1](/docs/products/imc/api-documentation/v1)
 - [Authentication And Mode Preconditions](/docs/products/imc/api-documentation/v1/authentication-and-mode-preconditions)
-- [Order Lifecycle And Reconciliation](/docs/products/imc/api-documentation/v1/order-lifecycle-and-reconciliation)
+- [Order Lifecycle And Reconciliation](./api-documentation/v1/orders-api/order-lifecycle-and-reconciliation.md)
 - [Integrations](/docs/products/imc/trading-platform)
 
-## Upcoming protected-order release
+## Protected-order availability and SDK compatibility
 
-SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). These feature branches are not yet published or deployed.
+SDK baseline 1.1.5; protected APIs in SDK 1.2.0, verified against IMC `a995f3e` (contract v2 originated at `364acaf`). Production registration for this release: Dhan, Upstox, Zerodha and FYERS. Angel One is blocked in development and production. See [release and migration details](releases/protected-order-release.md). The protected-order APIs are available in IMC. SDK 1.2.0 is the compatibility version that includes the corresponding Python client methods; SDK 1.1.5 is the prior package baseline.
