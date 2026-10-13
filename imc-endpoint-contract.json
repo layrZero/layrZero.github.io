@@ -1,0 +1,2341 @@
+{
+  "baseline_revision": "ec9832a7bd461e07115315f990374e9c2450a0f1",
+  "branch": "codex/imc-endpoint-wiring-validation",
+  "working_tree_source_sha256": {
+    "app.py": "df7e54b228b827c0a8855df41dacac3394079da0a0d03f29f6ba2ae13e6f3e0d",
+    "blueprints\\playground.py": "5a9d9e8bb1b256396ab7382f5ffb9fac4618384b66bf9bed60c19774c6dfc742",
+    "restx_api\\__init__.py": "242c5dfa4fa32954aa6e8bfc9830158ae46d276d83b567015c494d648ade9dff",
+    "restx_api\\account_schema.py": "bb63ead144696772ac61c3ed7257a245198207604c686eef12ca46c0acf7ca46",
+    "restx_api\\analyzer.py": "7dd16b2d7f963cefd64ecbabaaaf4b309e246e6247c004f1779943cefa86218d",
+    "restx_api\\basket_order.py": "7bc193a32905302fbddc17ad798c5965dcc82d0d431b764926e6e763c71948fe",
+    "restx_api\\brokers.py": "5bb9df5e5a090913fb0e43768696286a94d5e0ae94e3c5a9144c2d8b4a843d51",
+    "restx_api\\cancel_all_order.py": "ea42de15e7a013ff22b376600390ad1227d696bcd9dd1abd9ea4ba63b9d55514",
+    "restx_api\\cancel_gtt_order.py": "262bd424ca3d1b7e411fb4712c7b48d0420e9203ba26d723a9639e931f7ad594",
+    "restx_api\\cancel_order.py": "8eca200d437be82fb6f95625cbbba639484b587309a5a6fbdd81137fddeea43f",
+    "restx_api\\chart_api.py": "ca5a0034684ef9d76cdfd5f7cdf4c20180ed4bc35c3af46ff264a94325a71a9d",
+    "restx_api\\close_position.py": "9595836c3e637b5cb25ee6edb1b0eee8acbf404ffabf1afb15ecfb96e9c938cc",
+    "restx_api\\data_schemas.py": "ebdd7b04f5f9d7ecc0eed67f9fe7af0497785aea303e1843c1fdb21837562e0f",
+    "restx_api\\ddpi_status.py": "32234e4e50b158e651ba8becbadbaeea9a012f9629bb53293d235b223b7b323d",
+    "restx_api\\depth.py": "185d59731d6a275fa48eff765ea2f35a04840688a3f88977fbf7326aa8b4baff",
+    "restx_api\\dhan_super_schema.py": "8ee5ef818d912463115d6faf8bc378a2fd45ffd24ca34ba57684c86eb80a9f7f",
+    "restx_api\\expiry.py": "a061134613578d021dfa04ed56bf600782a5c555f0f03940dab3c85537059f0e",
+    "restx_api\\funds.py": "bd06e01efc9cca3bd2b3ff931eba7657a724b8692240204b75c25aea0c6b27fe",
+    "restx_api\\gtt_mode.py": "ece732ed84bdf4e7295de54b335b12f44ed1e41919848b20e5f08037336b7871",
+    "restx_api\\gtt_orderbook.py": "3d4a52eb54203bc5062c9509e9381672cde6af3930b25be4f00f41c40ecbe0f4",
+    "restx_api\\history.py": "e5cad0acca10de1fa73b05a76578d51f8445777d6b1f9f6c7c16cbdaf0ec89a9",
+    "restx_api\\holdings.py": "0797f38cd0630bcadb9ecad2d4bf64b8e9f397d5751fe5d83728ad814d845943",
+    "restx_api\\instruments.py": "5a2c262f163157727934285dcc8d81c4df15c893e3c7231f1bc9afd1bb3cbf25",
+    "restx_api\\intervals.py": "af932498af56294f5502d25d8bb88836e54ea12d94874c79ae9898a56d9c4694",
+    "restx_api\\margin.py": "fe567864c1855e1b5332d8c6dc0b3f5852e110cfa7981f4811a02e8f82b358ec",
+    "restx_api\\market_holidays.py": "8b042f9e6010564be8a3010776f1de77fef094cbfab4f0550010b10169932cdc",
+    "restx_api\\market_timings.py": "8ebf6eeb83c803a50f38c540366bc75e1945c6e4f120fb0a3473423af4d3fa31",
+    "restx_api\\modify_gtt_order.py": "d101ecb38c3c21bae8224c245003215660c448878c3529bb96dc98bd4ad23f9f",
+    "restx_api\\modify_order.py": "4c5b32e0cbcbba7636f54f19048468352299478abff3e05cb3cf1505bc149ea9",
+    "restx_api\\multiquotes.py": "20edafc8b1e0995b7ccdc4d5df5803d85b95ee6cd49418aba49baabd219f1004",
+    "restx_api\\option_chain.py": "728c4c054f26771ace6ff2b878040012c118d97a15c7e0e28177b1cd46073c92",
+    "restx_api\\option_greeks.py": "91b18e6404f8bc049980e8df980dcff84b864e54ff524b31a96c012437227126",
+    "restx_api\\option_symbol.py": "03395b916ba94f44651ed065aae96a87c20d6fb016bec69994157963e0a6888b",
+    "restx_api\\options_multiorder.py": "6d7e42a8b011aa976cea4b90e600fccf982091bd8731603efa0cc90121163398",
+    "restx_api\\options_order.py": "cd18f11bd396691f1e8c17604145e4c9795895ddc471a57198cf2091ad956bb5",
+    "restx_api\\orderbook.py": "915daf2ce0184aac0a96b12e2bcef9ba19da2aa81c8555b6b5731b9ec8e1f4d7",
+    "restx_api\\orderstatus.py": "fd9fa60e0dde7e801397dd12e17790bd67602797da4c41338a9ca26c94ed09c1",
+    "restx_api\\ping.py": "e0bfd8b17b5b4bb7c50379a0771822ff90b4af722d51e5f3b8aec56fc07a7a83",
+    "restx_api\\place_gtt_order.py": "43874eeca1d3eff85193f95a0a771c38233e0cf2eedad6083a8ebd253bc3c1a5",
+    "restx_api\\place_order.py": "036450ab547d56b5b24e8eca6b060e937eb57dd3bc72ea75843e856a0e762333",
+    "restx_api\\place_smart_order.py": "bfabcaaec88d759cd0c2847727af4a344b70be0357589e56a3514645c4e6da39",
+    "restx_api\\pnl_symbols.py": "1d7ce876f696da50d28656289a77f108f23ea6ad552ec2372a43770b65cc5b59",
+    "restx_api\\positionbook.py": "1384a5e8e8296248534f330c3159b8578070846ba58ebd2dd9d2f850a0cdcfdb",
+    "restx_api\\positionsopen.py": "9b10f3bb4074e515faf0edfe5a5487664989050c37281f814228595df1c22509",
+    "restx_api\\protected_mode.py": "538cdb53a5aeeeaa4d15732939cb4ca7de38159720a614086b740e7bf3f1c460",
+    "restx_api\\protected_orders.py": "a98c64ae3e39bb3ee2ea1e3aabf2816fadd7de17e6f24a3193f87394c170e48d",
+    "restx_api\\quotes.py": "01240f0dd8cbd4754cc3ba365e1aa029e451895a51b48e3002976ac5365d9706",
+    "restx_api\\schemas.py": "722edb1ada6e6c086fe2f58e700cf936c65df45adc3db140abe041b4cb3baccd",
+    "restx_api\\search.py": "ff89b65ba5a24b635a40d1edf9574c6fefbdc6b8cba7514c172e17f56d55b1f0",
+    "restx_api\\split_order.py": "7e4d689196193cf5ba2c70834a98307841c2866cfcb67ee19b6a89f14bace41c",
+    "restx_api\\strategy_analytics_api.py": "235ef0cad0d0f711779ca9c5cb0ba1fed87d4d3856df34d58051d763cdf867ed",
+    "restx_api\\symbol.py": "e9b1d693a81d4966140c7eac9b77764c90d492bb791753ed16465539effddf5c",
+    "restx_api\\synthetic_future.py": "91a417d3262d667e74d4514f58c7af958b4594fb9b9d72c090872b1f9df0a099",
+    "restx_api\\ticker.py": "b781b23564d28f24f8539d06918d10aff731f80297780e96b5e7e41cfdad09f5",
+    "restx_api\\tradebook.py": "f196b1267a4cb7ff320b438871218ad493ce9b0f172147450a95969a555f9402",
+    "services\\action_center_service.py": "95c8ae9c1107bb1b46d671660b018ebe026db9c89c30a2267ba16d592c923c09",
+    "services\\analyzer_gtt_service.py": "ad472afc358786578ba75d96848ed0bcb9c71780511c41d351c7b2d893afa892",
+    "services\\analyzer_service.py": "b6d646894b6476bd517a6dd5c885dcee3276cd3aa3661d0d04f31fd165efae90",
+    "services\\basket_order_service.py": "4a717bbf8484ff286466a5aca5418623326fde21d9aedaa4e0dea6ce8891bf79",
+    "services\\broker_capabilities.py": "0aab18f000fe1e324630444420ab47ea488fbffd607e7dae5040f58b05d1abf4",
+    "services\\brokers_service.py": "fc0456a03d68580df352b2c1f7f3c3aad108a0ac280d528da69b7e5d2f068499",
+    "services\\cancel_all_order_service.py": "381a97aafd2c03e2c1acf7c12023b8aa13d74c40947cef3e5b08d173200358da",
+    "services\\cancel_gtt_order_service.py": "68899a8f3a3ec3f5fadfb9a956927b2167f14619a04f5cc19b593c203899b8da",
+    "services\\cancel_order_service.py": "ce30610a5df25a9a7eab83395ed5db75c2deccc46d7ce8f2dda92f59e69d26f6",
+    "services\\chart_service.py": "5e81e4221690127b7d9b6b8b40955dc5d945af413c30e8ea03f27189de05400a",
+    "services\\cleanup_service.py": "fb591540302e809f26ad26b455b9e0fd37d18f07ac46b48cdcd271330fe18d45",
+    "services\\close_position_service.py": "c79a48166604ff07fe22385c6b3b2972be57dbfdbc97cea0b13457386c12d416",
+    "services\\ddpi_service.py": "4364b641f6e267d4157f050f04ee462e5cee33ccfdd23c168aed4fb2002bbbb3",
+    "services\\depth_service.py": "76fe3e930f27d24b35350080f9ec377f1fd36d7f440c25d054705dbb05f88ac5",
+    "services\\dhan_gtt_service.py": "b7a7746c6b3f53330467d19dbb8a3fc3604e41c098e672add35ad3f998180593",
+    "services\\expiry_service.py": "087a1824e66122cdd4e499477b5bb916a7b125136ac4223a91e4549b42d39488",
+    "services\\funds_service.py": "3adbe6e4a06a849c005f6e1b63dec9840317676ec8e7667568db1be634ffb223",
+    "services\\gtt_mode.py": "26e3e19251a9c21eb01b8001988b9b188c673ce605b3975b9dfb477f8184e954",
+    "services\\gtt_orderbook_service.py": "9e5c2a50734e65cbc38350e5fbdd211c076826f733cf7463513d741ad45baa84",
+    "services\\history_service.py": "4cfe8910a04ba30da8f676d544859bc19fdc30fab467501c127d179e57dd4be7",
+    "services\\holdings_service.py": "3b89d08c36ee1d66584d933cda3a651402655f7163daccc3f5a3834ced6f0a31",
+    "services\\instruments_service.py": "498b6a7d2cead7ec6698a1cde2f0306ee229adb225ae5ea114160c7db6918e3a",
+    "services\\intervals_service.py": "1c366f848677c76c828fe0c7d8f66c306c1dcc1a9f1d0e1cf51ff9b3cac6d84a",
+    "services\\margin_service.py": "168b35b9a6ce532fd49c02a65bdd11c7fa83c82573213a061107cd093b715658",
+    "services\\market_calendar_service.py": "4ea1a5f3e26ce54ba610da95c9cf1e592b5ad123f676ab376def6831dc187179",
+    "services\\market_data_service.py": "5c884592c6560b304f10aedeaa556304abdeaf337938d06dff8a407d3a8e7258",
+    "services\\mode_context.py": "7f86ec600bac54bef2a60e662722e074bbaeb3dc27d0a8d09376367c2a15e328",
+    "services\\mode_switch_exposure.py": "994189fa2c9c1315d24137bee2836842d6263c574502b5e20b4aa0e539432cae",
+    "services\\modify_gtt_order_service.py": "22f8e1f452a86b4645d5c526e5cffaa3c40749745ed22f17bbf22833c9aa04c5",
+    "services\\modify_order_service.py": "839687d5cf03f833a2844e779b5ba5925086104f3903458e0a62abdb685fd16a",
+    "services\\option_chain_service.py": "35ad45391b2aebe728a94ce8a4a9843eb433fb5d37de39395b3cce00df66fc77",
+    "services\\option_greeks_service.py": "b50e30fd7430735f263c336ccc10e43d539cde19a844da9b65fe419ca83e550d",
+    "services\\option_symbol_service.py": "1296773f4d29c3dd7b04798dc83c6eb56a60bba9f3f8d57293cb31153eb7007b",
+    "services\\options_multiorder_service.py": "25ee12099929dea47720a010293ae9bbc6aefbe8d6b6464a05f053690ac69565",
+    "services\\order_router_service.py": "610c583ad013a1ddba00c4ed6f3837b74c3aef5b500e9131c44b8bf9a1c19b88",
+    "services\\orderbook_service.py": "3a02c19cfc95f08460e6249fb915c3d52a42807964b78ab4fd55c88bf0e4b08f",
+    "services\\orderstatus_service.py": "84790b0bc97d4c101f55b2e9234cec29f90dfbcde2c94e21c74c1fc4db03ca50",
+    "services\\otp_service.py": "1e784106a0cac528e99f48e55dbc8f6a0a47a631a9ad281a930e17ca8a96f5cf",
+    "services\\pending_order_execution_service.py": "16338fab05f4af76d8346968958dc69e7ae9bb0ed51c211ca8c3591ae5e4ecdc",
+    "services\\ping_service.py": "d2ca2c53130affa3ec8260daeb9de4b66b89e5680ef977299925a0880ecb6f51",
+    "services\\place_gtt_order_service.py": "a12e80742eacfe17aca7ed7233c17cbf4be9d3e2abd944c05ca4c09c1100c58c",
+    "services\\place_options_order_service.py": "98855c5322c098815522d4a6dc18bf411e5ec060d1dc99d5ba6ccbc7ee5338a8",
+    "services\\place_order_service.py": "137066031ae024c4053f8788dc6ecf538f30e6962b689ab0f8e62ea424b58eb7",
+    "services\\place_smart_order_service.py": "45085e646a3c569ff8d694793a12213763b7a9619e6310cc6512b76adc35bf4c",
+    "services\\positionbook_service.py": "01faf4d9a853d6a30692952134213265afa9da3e6c95262e29262c146e958051",
+    "services\\positionsopen_service.py": "2fdab60a18b7cda52dfbeb58ed37d027d614d88f90693b02dd2cc35fcd21e339",
+    "services\\protected_broker_common.py": "41473d67bacb2aef4947681cccec66c3ce86aabf6eb6bf1335cdb1219773d3f4",
+    "services\\protected_order_service.py": "07803300d2c4e8706907026ebb560dce48400a27722b12520f9603503477d389",
+    "services\\quotes_service.py": "6da23a9388ab55a23d2560ce9a0810bf0298c81586a0692984ed058db23b7668",
+    "services\\sandbox_analytics_service.py": "c821caedf21cbca51a49333910a48bf468c8179efe4895c97b5dc8ce37750df6",
+    "services\\sandbox_execution_service.py": "d750202b43ac9b21e1fb66ce2c62e2433a6f8f3b93aa2c827085c61585c6b30c",
+    "services\\sandbox_router_service.py": "ec19407d2916cd8b767aa936a7b125b89aaa89bd56f0d1ac8589c604a117c82d",
+    "services\\sandbox_service.py": "1bce39dc54d1bdeef22756a625217a34cf9a14bfc8f6ff19b03552ffbd3d2bc3",
+    "services\\search_service.py": "3d8828490c329b3a3e8e8886d3d5ff771d89060940fb6d878eb16bf5b768c14a",
+    "services\\split_order_service.py": "6b3db93f23e25c19804868a3f8eb5dfd0c30a2c35e90870845af24e6b7b024ba",
+    "services\\strategy_analytics_service.py": "315b60502cdfd56a402db99c2645577e316026115daef23c8de9bca36afc5b5a",
+    "services\\strategy_lifecycle.py": "740381a6e25d45e378d053e432f78d4fd68a9154f317638b1a591207604c2a1c",
+    "services\\strategy_order_tracking.py": "6292ec21f033654676bbabd6ee40054abab5c217056c73ae8dbd7ec9a256bd7b",
+    "services\\symbol_service.py": "a10d842115466f957fb7ad3f05c6f1893f68118b3b077da5b5ae40c41b609181",
+    "services\\synthetic_future_service.py": "b9f4a2962727097508348d9aba324a19e4eae9ea08a7ed7f559bdb9c3cf580c9",
+    "services\\tradebook_service.py": "6e36f5fa2797be9939e51cf0d211eaaee4ce27c25f273389b2f16dd696613866",
+    "services\\websocket_client.py": "a099dd7b61fb7b4694ef62d81e6fb58b4f0dde475ce75f8f4126d69e5b169388",
+    "services\\websocket_service.py": "04c66b0c113d9150c84fd9ffff22397eca11576050e3d0941dc9525edc8382e0",
+    "utils\\bruno_blocks.py": "b5029fb5a10758fb1b48c18b75723db2402ff55aa121840497174ef65fdf33db",
+    "utils\\request_json_policy.py": "eb98a53bc5fecb91d097f99b250eeff61756bf05b70bca6072a0fd439b546c63",
+    "websocket_proxy\\server.py": "0be3787453cf8b3ed39e9863ad8cc378e64538822cd5f6dfaa23eb1489476ce0"
+  },
+  "public": [
+    {
+      "method": "POST",
+      "path": "/api/v1/analyzer",
+      "handler": "restx_api.analyzer.AnalyzerStatus.post",
+      "services": [
+        "services.analyzer_service.get_analyzer_status"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/analyzer/toggle",
+      "handler": "restx_api.analyzer.AnalyzerToggle.post",
+      "services": [
+        "services.analyzer_service.toggle_analyzer_mode"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "mode": {
+          "type": "Boolean",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/basketorder",
+      "handler": "restx_api.basket_order.BasketOrder.post",
+      "services": [
+        "services.basket_order_service.emit_analyzer_error",
+        "services.basket_order_service.place_basket_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "orders": {
+          "type": "List",
+          "required": true,
+          "items": {
+            "type": "Nested",
+            "required": false,
+            "fields": {
+              "exchange": {
+                "type": "String",
+                "required": true
+              },
+              "symbol": {
+                "type": "String",
+                "required": true
+              },
+              "action": {
+                "type": "String",
+                "required": true
+              },
+              "quantity": {
+                "type": "Integer",
+                "required": true
+              },
+              "pricetype": {
+                "type": "String",
+                "required": false,
+                "default": "MARKET"
+              },
+              "product": {
+                "type": "String",
+                "required": false,
+                "default": "MIS"
+              },
+              "price": {
+                "type": "Float",
+                "required": false,
+                "default": 0.0
+              },
+              "trigger_price": {
+                "type": "Float",
+                "required": false,
+                "default": 0.0
+              },
+              "disclosed_quantity": {
+                "type": "Integer",
+                "required": false,
+                "default": 0
+              }
+            }
+          }
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/brokers/active",
+      "handler": "restx_api.brokers.ActiveBrokers.post",
+      "services": [
+        "services.brokers_service.get_active_brokers"
+      ],
+      "authentication": "application Authorization header (AUTH_MAGIC_KEY) plus apikey JSON",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelallorder",
+      "handler": "restx_api.cancel_all_order.CancelAllOrder.post",
+      "services": [
+        "services.cancel_all_order_service.cancel_all_orders",
+        "services.cancel_all_order_service.emit_analyzer_error"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": false,
+          "default": null
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelgttorder",
+      "handler": "restx_api.cancel_gtt_order.CancelGTTOrder.post",
+      "services": [
+        "services.cancel_gtt_order_service.cancel_gtt_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "trigger_id": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelorder",
+      "handler": "restx_api.cancel_order.CancelOrder.post",
+      "services": [
+        "services.cancel_order_service.cancel_order",
+        "services.cancel_order_service.emit_analyzer_error"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "orderid": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelprotectedorder",
+      "handler": "restx_api.protected_orders.CancelProtectedOrder.post",
+      "services": [
+        "services.protected_order_service.cancel_protected_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "protected_order_id": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/chart",
+      "handler": "restx_api.chart_api.ChartPreferencesResource.get",
+      "services": [
+        "services.chart_service.get_chart_preferences"
+      ],
+      "authentication": "apikey query",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chart",
+      "handler": "restx_api.chart_api.ChartPreferencesResource.post",
+      "services": [
+        "services.chart_service.update_chart_preferences"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/closeposition",
+      "handler": "restx_api.close_position.ClosePosition.post",
+      "services": [
+        "services.close_position_service.close_position",
+        "services.close_position_service.emit_analyzer_error"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": false,
+          "default": null
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ddpistatus",
+      "handler": "restx_api.ddpi_status.DDPIStatus.post",
+      "services": [
+        "services.ddpi_service.get_ddpi_status"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/depth",
+      "handler": "restx_api.depth.Depth.post",
+      "services": [
+        "services.depth_service.get_depth"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/expiry",
+      "handler": "restx_api.expiry.Expiry.post",
+      "services": [
+        "services.expiry_service.get_expiry_dates"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "instrumenttype": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/funds",
+      "handler": "restx_api.funds.Funds.post",
+      "services": [
+        "services.funds_service.get_funds"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/gttorderbook",
+      "handler": "restx_api.gtt_orderbook.GTTOrderBook.post",
+      "services": [
+        "services.gtt_orderbook_service.get_gtt_orderbook"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/history",
+      "handler": "restx_api.history.History.post",
+      "services": [
+        "services.history_service.get_history"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "interval": {
+          "type": "String",
+          "required": true
+        },
+        "start_date": {
+          "type": "Date",
+          "required": true
+        },
+        "end_date": {
+          "type": "Date",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/holdings",
+      "handler": "restx_api.holdings.Holdings.post",
+      "services": [
+        "services.holdings_service.get_holdings"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/instruments",
+      "handler": "restx_api.instruments.Instruments.get",
+      "services": [
+        "services.instruments_service.get_instruments"
+      ],
+      "authentication": "apikey query",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": false
+        },
+        "format": {
+          "type": "String",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/intervals",
+      "handler": "restx_api.intervals.Intervals.post",
+      "services": [
+        "services.intervals_service.get_intervals"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/margin",
+      "handler": "restx_api.margin.MarginCalculator.post",
+      "services": [
+        "services.margin_service.calculate_margin"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "positions": {
+          "type": "List",
+          "required": true,
+          "items": {
+            "type": "Nested",
+            "required": false,
+            "fields": {
+              "symbol": {
+                "type": "String",
+                "required": true
+              },
+              "exchange": {
+                "type": "String",
+                "required": true
+              },
+              "action": {
+                "type": "String",
+                "required": true
+              },
+              "quantity": {
+                "type": "String",
+                "required": true
+              },
+              "product": {
+                "type": "String",
+                "required": true
+              },
+              "pricetype": {
+                "type": "String",
+                "required": true
+              },
+              "price": {
+                "type": "String",
+                "required": false,
+                "default": "0"
+              },
+              "trigger_price": {
+                "type": "String",
+                "required": false,
+                "default": "0"
+              }
+            }
+          }
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/market/holidays",
+      "handler": "restx_api.market_holidays.MarketHolidays.post",
+      "services": [
+        "services.market_calendar_service.get_holidays"
+      ],
+      "authentication": "apikey schema-required; calendar service does not verify identity",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "year": {
+          "type": "Integer",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/market/timings",
+      "handler": "restx_api.market_timings.MarketTimings.post",
+      "services": [
+        "services.market_calendar_service.get_timings"
+      ],
+      "authentication": "apikey schema-required; calendar service does not verify identity",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "date": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/modifygttorder",
+      "handler": "restx_api.modify_gtt_order.ModifyGTTOrder.post",
+      "services": [
+        "services.modify_gtt_order_service.modify_gtt_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "trigger_type": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "product": {
+          "type": "String",
+          "required": true
+        },
+        "quantity": {
+          "type": "Float",
+          "required": true
+        },
+        "pricetype": {
+          "type": "String",
+          "required": false,
+          "default": "LIMIT"
+        },
+        "price": {
+          "type": "Float",
+          "required": true
+        },
+        "triggerprice_sl": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "triggerprice_tg": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "stoploss": {
+          "type": "Float",
+          "required": false,
+          "default": null
+        },
+        "target": {
+          "type": "Float",
+          "required": false,
+          "default": null
+        },
+        "trigger_id": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/modifyorder",
+      "handler": "restx_api.modify_order.ModifyOrder.post",
+      "services": [
+        "services.modify_order_service.emit_analyzer_error",
+        "services.modify_order_service.modify_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "orderid": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "product": {
+          "type": "String",
+          "required": true
+        },
+        "pricetype": {
+          "type": "String",
+          "required": true
+        },
+        "price": {
+          "type": "Float",
+          "required": true
+        },
+        "quantity": {
+          "type": "Integer",
+          "required": true
+        },
+        "disclosed_quantity": {
+          "type": "Integer",
+          "required": true
+        },
+        "trigger_price": {
+          "type": "Float",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/modifyprotectedorder",
+      "handler": "restx_api.protected_orders.ModifyProtectedOrder.post",
+      "services": [
+        "services.protected_order_service.modify_protected_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "protected_order_id": {
+          "type": "String",
+          "required": true
+        },
+        "target_trigger": {
+          "type": "Float",
+          "required": true
+        },
+        "target_limit": {
+          "type": "Float",
+          "required": true
+        },
+        "stoploss_trigger": {
+          "type": "Float",
+          "required": true
+        },
+        "stoploss_limit": {
+          "type": "Float",
+          "required": true
+        },
+        "trailing_jump": {
+          "type": "Float",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multiquotes",
+      "handler": "restx_api.multiquotes.MultiQuotes.post",
+      "services": [
+        "services.quotes_service.get_multiquotes"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "symbols": {
+          "type": "List",
+          "required": true,
+          "items": {
+            "type": "Nested",
+            "required": false,
+            "fields": {
+              "symbol": {
+                "type": "String",
+                "required": true
+              },
+              "exchange": {
+                "type": "String",
+                "required": true
+              }
+            }
+          }
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionchain",
+      "handler": "restx_api.option_chain.OptionChain.post",
+      "services": [
+        "services.option_chain_service.get_option_chain"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "underlying": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "expiry_date": {
+          "type": "String",
+          "required": true
+        },
+        "strike_count": {
+          "type": "Integer",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optiongreeks",
+      "handler": "restx_api.option_greeks.OptionGreeks.post",
+      "services": [
+        "services.option_greeks_service.get_option_greeks"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "interest_rate": {
+          "type": "Float",
+          "required": false
+        },
+        "forward_price": {
+          "type": "Float",
+          "required": false
+        },
+        "underlying_symbol": {
+          "type": "String",
+          "required": false
+        },
+        "underlying_exchange": {
+          "type": "String",
+          "required": false
+        },
+        "expiry_time": {
+          "type": "String",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionsmultiorder",
+      "handler": "restx_api.options_multiorder.OptionsMultiOrder.post",
+      "services": [
+        "services.options_multiorder_service.place_options_multiorder"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "underlying": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "expiry_date": {
+          "type": "String",
+          "required": false
+        },
+        "strike_int": {
+          "type": "Integer",
+          "required": false
+        },
+        "legs": {
+          "type": "List",
+          "required": true,
+          "items": {
+            "type": "Nested",
+            "required": false,
+            "fields": {
+              "offset": {
+                "type": "String",
+                "required": true
+              },
+              "option_type": {
+                "type": "String",
+                "required": true
+              },
+              "action": {
+                "type": "String",
+                "required": true
+              },
+              "quantity": {
+                "type": "Integer",
+                "required": true
+              },
+              "splitsize": {
+                "type": "Integer",
+                "required": false,
+                "default": 0
+              },
+              "expiry_date": {
+                "type": "String",
+                "required": false
+              },
+              "pricetype": {
+                "type": "String",
+                "required": false,
+                "default": "MARKET"
+              },
+              "product": {
+                "type": "String",
+                "required": false,
+                "default": "MIS"
+              },
+              "price": {
+                "type": "Float",
+                "required": false,
+                "default": 0.0
+              },
+              "trigger_price": {
+                "type": "Float",
+                "required": false,
+                "default": 0.0
+              },
+              "disclosed_quantity": {
+                "type": "Integer",
+                "required": false,
+                "default": 0
+              }
+            }
+          }
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionsorder",
+      "handler": "restx_api.options_order.OptionsOrder.post",
+      "services": [
+        "services.place_options_order_service.place_options_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "underlying": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "expiry_date": {
+          "type": "String",
+          "required": false
+        },
+        "strike_int": {
+          "type": "Integer",
+          "required": false
+        },
+        "offset": {
+          "type": "String",
+          "required": true
+        },
+        "option_type": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "quantity": {
+          "type": "Integer",
+          "required": true
+        },
+        "position_size": {
+          "type": "Integer",
+          "required": true
+        },
+        "splitsize": {
+          "type": "Integer",
+          "required": false,
+          "default": 0
+        },
+        "pricetype": {
+          "type": "String",
+          "required": false,
+          "default": "MARKET"
+        },
+        "product": {
+          "type": "String",
+          "required": false,
+          "default": "MIS"
+        },
+        "price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "trigger_price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "disclosed_quantity": {
+          "type": "Integer",
+          "required": false,
+          "default": 0
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionsymbol",
+      "handler": "restx_api.option_symbol.OptionSymbol.post",
+      "services": [
+        "services.option_symbol_service.get_option_symbol"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": false
+        },
+        "underlying": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "expiry_date": {
+          "type": "String",
+          "required": false
+        },
+        "strike_int": {
+          "type": "Integer",
+          "required": false
+        },
+        "offset": {
+          "type": "String",
+          "required": true
+        },
+        "option_type": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/orderbook",
+      "handler": "restx_api.orderbook.Orderbook.post",
+      "services": [
+        "services.orderbook_service.get_orderbook"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/orderstatus",
+      "handler": "restx_api.orderstatus.OrderStatus.post",
+      "services": [
+        "services.orderstatus_service.emit_analyzer_error",
+        "services.orderstatus_service.get_order_status"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "orderid": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ping",
+      "handler": "restx_api.ping.Ping.post",
+      "services": [
+        "services.ping_service.get_ping"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placegttorder",
+      "handler": "restx_api.place_gtt_order.PlaceGTTOrder.post",
+      "services": [
+        "services.place_gtt_order_service.place_gtt_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "trigger_type": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "product": {
+          "type": "String",
+          "required": true
+        },
+        "quantity": {
+          "type": "Float",
+          "required": true
+        },
+        "pricetype": {
+          "type": "String",
+          "required": false,
+          "default": "LIMIT"
+        },
+        "price": {
+          "type": "Float",
+          "required": true
+        },
+        "triggerprice_sl": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "triggerprice_tg": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "stoploss": {
+          "type": "Float",
+          "required": false,
+          "default": null
+        },
+        "target": {
+          "type": "Float",
+          "required": false,
+          "default": null
+        },
+        "expires_at": {
+          "type": "String",
+          "required": false,
+          "default": null
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placeorder",
+      "handler": "restx_api.place_order.PlaceOrder.post",
+      "services": [
+        "services.place_order_service.place_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "quantity": {
+          "type": "Integer",
+          "required": true
+        },
+        "pricetype": {
+          "type": "String",
+          "required": false,
+          "default": "MARKET"
+        },
+        "product": {
+          "type": "String",
+          "required": false,
+          "default": "MIS"
+        },
+        "price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "trigger_price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "disclosed_quantity": {
+          "type": "Integer",
+          "required": false,
+          "default": 0
+        },
+        "underlying_ltp": {
+          "type": "Float",
+          "required": false,
+          "default": null
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placeprotectedorder",
+      "handler": "restx_api.protected_orders.PlaceProtectedOrder.post",
+      "services": [
+        "services.protected_order_service.place_protected_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "quantity": {
+          "type": "Integer",
+          "required": true
+        },
+        "product": {
+          "type": "String",
+          "required": true
+        },
+        "entry_pricetype": {
+          "type": "String",
+          "required": true
+        },
+        "entry_price": {
+          "type": "Float",
+          "required": true
+        },
+        "target_trigger": {
+          "type": "Float",
+          "required": true
+        },
+        "target_limit": {
+          "type": "Float",
+          "required": true
+        },
+        "stoploss_trigger": {
+          "type": "Float",
+          "required": true
+        },
+        "stoploss_limit": {
+          "type": "Float",
+          "required": true
+        },
+        "order_system": {
+          "type": "String",
+          "required": false,
+          "default": null
+        },
+        "trailing_jump": {
+          "type": "Float",
+          "required": false,
+          "default": 0
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placesmartorder",
+      "handler": "restx_api.place_smart_order.SmartOrder.post",
+      "services": [
+        "services.place_smart_order_service.emit_analyzer_error",
+        "services.place_smart_order_service.place_smart_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "quantity": {
+          "type": "Integer",
+          "required": true
+        },
+        "position_size": {
+          "type": "Integer",
+          "required": true
+        },
+        "pricetype": {
+          "type": "String",
+          "required": false,
+          "default": "MARKET"
+        },
+        "product": {
+          "type": "String",
+          "required": false,
+          "default": "MIS"
+        },
+        "price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "trigger_price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "disclosed_quantity": {
+          "type": "Integer",
+          "required": false,
+          "default": 0
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pnl/symbols",
+      "handler": "restx_api.pnl_symbols.PnLSymbols.post",
+      "services": [
+        "services.mode_context.apply_mode_metadata",
+        "services.mode_context.get_mode_context",
+        "services.mode_context.invalid_api_key_response",
+        "services.sandbox_service.sandbox_get_pnl_symbols"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/positionbook",
+      "handler": "restx_api.positionbook.Positionbook.post",
+      "services": [
+        "services.positionbook_service.get_positionbook"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/positionsopen",
+      "handler": "restx_api.positionsopen.PositionsOpen.post",
+      "services": [
+        "services.mode_context.validate_mode_precondition_for_read",
+        "services.positionsopen_service.emit_analyzer_error",
+        "services.positionsopen_service.get_positions_open"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "product": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/protectedorderbook",
+      "handler": "restx_api.protected_orders.ProtectedOrderBook.post",
+      "services": [
+        "services.protected_order_service.protected_orderbook"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/quotes",
+      "handler": "restx_api.quotes.Quotes.post",
+      "services": [
+        "services.quotes_service.get_quotes"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/recoverprotectedorder",
+      "handler": "restx_api.protected_orders.RecoverProtectedOrder.post",
+      "services": [
+        "services.protected_order_service.recover_protected_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "protected_order_id": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/search",
+      "handler": "restx_api.search.Search.post",
+      "services": [
+        "services.search_service.search_symbols"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "query": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/splitorder",
+      "handler": "restx_api.split_order.SplitOrder.post",
+      "services": [
+        "services.split_order_service.emit_analyzer_error",
+        "services.split_order_service.split_order"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "expected_mode": {
+          "type": "String",
+          "required": true
+        },
+        "expected_balance_type": {
+          "type": "String",
+          "required": true
+        },
+        "expected_mode_version": {
+          "type": "Integer",
+          "required": true
+        },
+        "request_id": {
+          "type": "String",
+          "required": true
+        },
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "action": {
+          "type": "String",
+          "required": true
+        },
+        "quantity": {
+          "type": "Integer",
+          "required": true
+        },
+        "splitsize": {
+          "type": "Integer",
+          "required": true
+        },
+        "pricetype": {
+          "type": "String",
+          "required": false,
+          "default": "MARKET"
+        },
+        "product": {
+          "type": "String",
+          "required": false,
+          "default": "MIS"
+        },
+        "price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "trigger_price": {
+          "type": "Float",
+          "required": false,
+          "default": 0.0
+        },
+        "disclosed_quantity": {
+          "type": "Integer",
+          "required": false,
+          "default": 0
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/strategy/strategies",
+      "handler": "restx_api.strategy_analytics_api.StrategyAnalytics.get",
+      "services": [
+        "services.mode_context.get_mode_context"
+      ],
+      "authentication": "X-Layr0-Api-Key or apikey header",
+      "request_fields": {},
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/symbol",
+      "handler": "restx_api.symbol.Symbol.post",
+      "services": [
+        "services.symbol_service.get_symbol_info"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "symbol": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/syntheticfuture",
+      "handler": "restx_api.synthetic_future.SyntheticFuture.post",
+      "services": [
+        "services.synthetic_future_service.calculate_synthetic_future"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "underlying": {
+          "type": "String",
+          "required": true
+        },
+        "exchange": {
+          "type": "String",
+          "required": true
+        },
+        "expiry_date": {
+          "type": "String",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/ticker/<string:symbol>",
+      "handler": "restx_api.ticker.Ticker.get",
+      "services": [],
+      "authentication": "X-API-KEY header or apikey query",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "interval": {
+          "type": "String",
+          "required": true
+        },
+        "from": {
+          "type": "Date",
+          "required": true
+        },
+        "to": {
+          "type": "Date",
+          "required": true
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tradebook",
+      "handler": "restx_api.tradebook.Tradebook.post",
+      "services": [
+        "services.tradebook_service.get_tradebook"
+      ],
+      "authentication": "apikey JSON; identity checked in route/service",
+      "request_fields": {
+        "apikey": {
+          "type": "String",
+          "required": true
+        },
+        "strategy": {
+          "type": "String",
+          "required": false
+        }
+      },
+      "playground": true,
+      "json_policy": "recursive docs rejection before endpoint processing",
+      "status": "verified offline (registration, schema/mock dispatch and forbidden-field rejection); broker runtime pending"
+    }
+  ]
+}

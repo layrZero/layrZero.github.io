@@ -1,0 +1,265 @@
+{
+  "contract": "imc-endpoint-contract.json",
+  "pages": [
+    {
+      "method": "POST",
+      "path": "/api/v1/analyzer",
+      "page": "accounts-api/analyzer-status.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/analyzer/toggle",
+      "page": "accounts-api/analyzer-toggle.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/basketorder",
+      "page": "orders-api/basketorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/brokers/active",
+      "page": "accounts-api/brokers-active.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelallorder",
+      "page": "orders-api/cancelallorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelgttorder",
+      "page": "orders-api/cancelgttorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelorder",
+      "page": "orders-api/cancelorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/cancelprotectedorder",
+      "page": "orders-api/cancelprotectedorder.md"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/chart",
+      "page": "chart.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/chart",
+      "page": "chart.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/closeposition",
+      "page": "orders-api/closeposition.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ddpistatus",
+      "page": "accounts-api/ddpi-status.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/depth",
+      "page": "data-api/depth.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/expiry",
+      "page": "data-api/expiry.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/funds",
+      "page": "accounts-api/funds.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/gttorderbook",
+      "page": "orders-api/gttorderbook.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/history",
+      "page": "data-api/history.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/holdings",
+      "page": "accounts-api/holdings.md"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/instruments",
+      "page": "data-api/instruments.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/intervals",
+      "page": "data-api/intervals.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/margin",
+      "page": "accounts-api/margin.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/market/holidays",
+      "page": "data-api/market-holidays.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/market/timings",
+      "page": "data-api/market-timings.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/modifygttorder",
+      "page": "orders-api/modifygttorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/modifyorder",
+      "page": "orders-api/modifyorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/modifyprotectedorder",
+      "page": "orders-api/modifyprotectedorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/multiquotes",
+      "page": "data-api/multiquotes.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionchain",
+      "page": "data-api/optionchain.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optiongreeks",
+      "page": "data-api/optiongreeks.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionsmultiorder",
+      "page": "orders-api/optionsmultiorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionsorder",
+      "page": "orders-api/optionsorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/optionsymbol",
+      "page": "data-api/optionsymbol.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/orderbook",
+      "page": "accounts-api/orderbook.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/orderstatus",
+      "page": "orders-api/orderstatus.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/ping",
+      "page": "accounts-api/ping.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placegttorder",
+      "page": "orders-api/placegttorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placeorder",
+      "page": "orders-api/placeorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placeprotectedorder",
+      "page": "orders-api/placeprotectedorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/placesmartorder",
+      "page": "orders-api/placesmartorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/pnl/symbols",
+      "page": "accounts-api/pnl-symbols.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/positionbook",
+      "page": "accounts-api/positionbook.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/positionsopen",
+      "page": "orders-api/positionsopen.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/protectedorderbook",
+      "page": "orders-api/protectedorderbook.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/quotes",
+      "page": "data-api/quotes.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/recoverprotectedorder",
+      "page": "orders-api/recoverprotectedorder.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/search",
+      "page": "data-api/search.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/splitorder",
+      "page": "orders-api/splitorder.md"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/strategy/strategies",
+      "page": "accounts-api/strategy-analytics.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/symbol",
+      "page": "data-api/symbol.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/syntheticfuture",
+      "page": "accounts-api/syntheticfuture.md"
+    },
+    {
+      "method": "GET",
+      "path": "/api/v1/ticker/<string:symbol>",
+      "page": "data-api/ticker.md"
+    },
+    {
+      "method": "POST",
+      "path": "/api/v1/tradebook",
+      "page": "accounts-api/tradebook.md"
+    }
+  ]
+}
